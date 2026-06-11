@@ -22,6 +22,8 @@ export function scoreMatchK1(typ: Score, wynik: Score): MatchPoints {
   if (diff(typ) !== diff(wynik)) {
     return 3;
   }
+  // Tu różnica bramek jest już równa, więc równość bramek gospodarzy
+  // implikuje równość bramek gości — to dokładny wynik (5); inaczej 4.
   if (typ.home === wynik.home && typ.away === wynik.away) {
     return 5;
   }

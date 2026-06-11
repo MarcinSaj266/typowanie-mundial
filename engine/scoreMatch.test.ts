@@ -33,4 +33,16 @@ describe('scoreMatchK1', () => {
   it('bezbramkowy remis trafiony co do wyniku = 5', () => {
     expect(scoreMatchK1({ home: 0, away: 0 }, { home: 0, away: 0 })).toBe(5);
   });
+
+  it('dokładny wynik (wygrana gości) = 5', () => {
+    expect(scoreMatchK1({ home: 0, away: 2 }, { home: 0, away: 2 })).toBe(5);
+  });
+
+  it('trafiona różnica bramek (wygrana gości) = 4', () => {
+    expect(scoreMatchK1({ home: 0, away: 2 }, { home: 1, away: 3 })).toBe(4);
+  });
+
+  it('remis 0-0 typowany, faktyczny 1-1 (różna liczba bramek) = 4', () => {
+    expect(scoreMatchK1({ home: 0, away: 0 }, { home: 1, away: 1 })).toBe(4);
+  });
 });
