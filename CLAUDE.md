@@ -74,5 +74,6 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
 
 - **Silnik najpierw, TDD.** Ground truth = formuły z Excela; testy mają zgadzać się co do punktu.
 - Trzymaj granice modułów: silnik nie wie o Excelu ani UI.
-- Środowisko: Windows, PowerShell, Node.js (brak Pythona). Repo git zainicjalizowane (gałąź `master`, bez remote).
+- Środowisko: Windows, PowerShell, Node.js (brak Pythona). Repo git na GitHubie (prywatne):
+  `https://github.com/MarcinSaj266/typowanie-mundial`, gałąź `master` (śledzi `origin/master`).
 - Język interfejsu i komentarzy: **polski**.
