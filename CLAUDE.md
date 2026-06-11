@@ -21,7 +21,16 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
 - ✅ Rdzeń silnika Konkursu 1 (faza grupowa) — zaimplementowany, TDD, 27 testów zielonych.
   Moduł `engine/`: `scoreMatchK1`, `aggregateTurn`, `rankBy`, `buildSeason`, `generalTable` + typy (`engine/index.ts`).
   Setup: TypeScript + Vitest (`npm test`, `npm run typecheck`).
-- ⏳ Następne: ingest (parser `k1.xlsx` → JSON), tabele grup A–H end-to-end, Konkurs 2, faza pucharowa ×2, render.
+- ✅ Spec + plan ingestu K1: `docs/superpowers/specs/2026-06-12-ingest-k1-design.md`,
+  `docs/superpowers/plans/2026-06-12-ingest-k1.md`.
+- ✅ Ingest K1 — zaimplementowany, TDD, 50 testów zielonych (silnik 27 + ingest 23). Moduł `ingest/`:
+  generyczny czytnik xlsx bez zależności (`xlsx/zip` na `zlib` przez central directory, `xlsx/workbook`
+  = `openXlsx → Sheet`, `xlsx/cells`) + parser domenowy (`k1/parseGrup1`). **Źródło typów to master
+  `konkurs 2026.06.11.xlsx`, arkusz `grup-1`** (NIE pusty szablon `k1.xlsx` ani 56 osobnych plików).
+  CLI `npm run build:k1` → `data/k1/roster.json` (56 osób, grupy A–H) + `data/k1/tura-1.json`
+  (24 mecze + typy). Granice: `xlsx/` nie wie o konkursie, `k1/` nie wie o ZIP/XML.
+- ⏳ Następne: wyniki meczów (ręczny plik) + sklejka z silnikiem → `public/data/results.json`,
+  tabele grup A–H end-to-end (walidacja vs `r1`/`tab grup`), Konkurs 2, faza pucharowa ×2, render.
 
 ## Architektura (ustalona)
 
@@ -59,7 +68,10 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
 
 1. **Bonus `bns`** — w Excelu jest zalążek (15/10/5 + meta 4/3/2/1), niepodłączony; spisane zasady go
    nie wymieniają. Silnik: moduł konfigurowalny, domyślnie wyłączony. Czeka na organizatora.
-2. **Format plików typów** — 56 osobnych plików vs jeden master. Parser elastyczny; domknąć po realnych plikach.
+2. ✅ **ROZSTRZYGNIĘTE** — typy są w jednym masterze `konkurs 2026.06.11.xlsx`, arkusz `grup-1`
+   (układ pozycyjny: nagłówek meczu B+E+K, 28 wierszy uczestników, lewa kolumna grupy A–D / prawa E–H,
+   po 7). Parser `ingest/k1/parseGrup1` czyta to bezpośrednio. Tura 1 wypełniona; tury 2/3 dojdą tym
+   samym kodem (parser waliduje spójność każdego bloku z rosterem).
 3. **Kategoria „6" w fazie pucharowej** — co ją przyznaje. Przed startem pucharu.
 4. **Tiebreakery grup turniejowych FIFA** (do konkursu 2) — potwierdzić zestaw reguł.
 5. ✅ **ROZSTRZYGNIĘTE** — sezonowe „%" liczone sumarycznie (`suma_trafień / suma_rozegranych`,
