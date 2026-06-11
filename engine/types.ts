@@ -31,24 +31,6 @@ export interface TurnScore {
   hitRate: number;
 }
 
-/** Wiersz wejściowy do rankingu (tabela grupowa lub ogólna). */
-export interface RankableRow {
-  participantId: string;
-  /** Punkty będące podstawą sortowania. */
-  points: number;
-  /** „%" — pierwszy tiebreaker. */
-  hitRate: number;
-  /** Liczba dokładnych wyników (5) — drugi tiebreaker. */
-  exactCount: number;
-  /** Liczba „4" — trzeci tiebreaker. */
-  fourCount: number;
-}
-
-/** Wiersz po rankingu z przypisaną pozycją (1 = najlepszy). */
-export interface RankedRow extends RankableRow {
-  position: number;
-}
-
 /** Dorobek uczestnika w całej fazie grupowej + komponenty tabeli ogólnej. */
 export interface ParticipantSeason {
   participantId: string;
@@ -59,14 +41,22 @@ export interface ParticipantSeason {
   bns: number;
   /** Faza pucharowa — domyślnie 0 (poza zakresem tego planu). */
   puch: number;
-  /** Tiebreakery sezonowe (zagregowane ze wszystkich tur). */
+  /**
+   * Sezonowe „%" = łączne trafienia / łączne rozegrane (sekcja 2.2; w Excelu
+   * `SUM(S:V)/N1` w arkuszu „tabela"). Pierwszy tiebreaker po punktach.
+   */
   hitRate: number;
-  exactCount: number;
-  fourCount: number;
 }
 
-/** Wiersz tabeli ogólnej: ranking + jawna suma. */
-export interface GeneralRow extends RankedRow {
-  /** Suma = grI + grII + grIII + bns + puch (= points). */
+/**
+ * Wiersz tabeli ogólnej: dorobek sezonowy + policzona suma i pozycja.
+ * Tiebreakery (SORTBY w arkuszu „tabela"): pkt → % → puch → grIII → grII → grI.
+ */
+export interface GeneralRow extends ParticipantSeason {
+  /** Suma punktów = grI + grII + grIII + bns + puch. */
+  points: number;
+  /** Pozycja w tabeli (1 = najlepszy). */
+  position: number;
+  /** Jawna suma do wyświetlenia (= points). */
   total: number;
 }

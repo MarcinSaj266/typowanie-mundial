@@ -18,8 +18,8 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
 - ✅ Specyfikacja Fazy 1: `docs/superpowers/specs/2026-06-11-typowanie-mundial-design.md`
   (CZYTAJ JĄ — to źródło prawdy o zakresie i decyzjach).
 - ✅ Plan rdzenia silnika K1: `docs/superpowers/plans/2026-06-11-silnik-konkurs1.md`.
-- ✅ Rdzeń silnika Konkursu 1 (faza grupowa) — zaimplementowany, TDD, 22 testy zielone.
-  Moduł `engine/`: `scoreMatchK1`, `aggregateTurn`, `rankRows`, `generalTable` + typy (`engine/index.ts`).
+- ✅ Rdzeń silnika Konkursu 1 (faza grupowa) — zaimplementowany, TDD, 27 testów zielonych.
+  Moduł `engine/`: `scoreMatchK1`, `aggregateTurn`, `rankBy`, `buildSeason`, `generalTable` + typy (`engine/index.ts`).
   Setup: TypeScript + Vitest (`npm test`, `npm run typecheck`).
 - ⏳ Następne: ingest (parser `k1.xlsx` → JSON), tabele grup A–H end-to-end, Konkurs 2, faza pucharowa ×2, render.
 
@@ -37,7 +37,10 @@ Planowana struktura: `engine/` (silnik, testowalny), `ingest/` (parser → JSON)
 **Konkurs 1, mecz (grupa):** trafiony rezultat 3 → + różnica bramek +1 (też remisy) → + dokładny wynik +1.
 Wartość ∈ {0,3,4,5}. Suma w turze = `#3×3 + #4×4 + #5×5`.
 **Faza grupowa:** 8 stałych grup konkursowych A–H po 7 osób; 3 tury (grup I/II/III).
-Tabela: pkt → „%" → liczba dokładnych → … . Tabela ogólna = `grI+grII+grIII+bns+puch`.
+**Tiebreakery (z formuł `SORTBY` — NIE z liczby „5"/„4", to było błędne odczytanie!):**
+tabela grupowa `pkt → % → grIII → grI → grII` (arkusz `tab grup`); tabela ogólna
+`pkt → % → puch → grIII → grII → grI` (arkusz `tabela`). „%" = (#3+#4+#5[+#6 w ogólnej])/rozegrane.
+Tabela ogólna = `grI+grII+grIII+bns+puch`.
 **Faza pucharowa:** punkty ×2 (6/8/10/12), jedna wspólna tabela.
 **Konkurs 2:** miejsce w grupie 1, 1/16 → 2, 1/8 → 4, ćwierć → 6, półfinał → 8, finał → 10, mistrz → 12;
 tiebreak = dorobek z późniejszej fazy.
@@ -59,10 +62,13 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
 2. **Format plików typów** — 56 osobnych plików vs jeden master. Parser elastyczny; domknąć po realnych plikach.
 3. **Kategoria „6" w fazie pucharowej** — co ją przyznaje. Przed startem pucharu.
 4. **Tiebreakery grup turniejowych FIFA** (do konkursu 2) — potwierdzić zestaw reguł.
-5. **Semantyka sezonowego `hitRate`/`exactCount`/`fourCount`** (tiebreakery tabeli ogólnej) — `generalTable`
-   przyjmuje je gotowe per uczestnik, ale brak funkcji składającej 3 tury w `ParticipantSeason`. Czy `hitRate`
-   sezonowy to `suma_trafień / suma_rozegranych` łącznie (rekomendowane, spójne z „%" Excela), czy średnia tur?
-   Domknąć projektując `buildSeason(...)` w `engine/` (logika punktacji należy do silnika, nie do ingestu).
+5. ✅ **ROZSTRZYGNIĘTE** — sezonowe „%" liczone sumarycznie (`suma_trafień / suma_rozegranych`,
+   zgodne z `SUM(S:V)/N1` w arkuszu `tabela`); `buildSeason(...)` dodany do `engine/`. Przy okazji
+   wykryto i poprawiono błąd: silnik miał tiebreakery `#5/#4`, a Excel sortuje po dorobku fazowym
+   (patrz „Reguły punktacji" wyżej) — `rankBy(rows, keys)` przyjmuje teraz listę kluczy w kolejności.
+6. **Do potwierdzenia z organizatorem** (drobne, wynikły z analizy formuł): (a) tabela grupowa sortuje
+   `grIII → grI → grII`, a ogólna `grIII → grII → grI` — zamiana grI/grII w grupowej wygląda na literówkę
+   w arkuszu; (b) „%" w tabeli ogólnej wlicza też „6" (puchar), w grupowej nie.
 
 ## Jak pracować
 

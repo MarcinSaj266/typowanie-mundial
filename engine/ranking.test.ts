@@ -1,41 +1,51 @@
 import { describe, it, expect } from 'vitest';
-import { rankRows } from './ranking';
-import type { RankableRow } from './types';
+import { rankBy } from './ranking';
 
-const row = (over: Partial<RankableRow> & { participantId: string }): RankableRow => ({
+interface Row {
+  participantId: string;
+  points: number;
+  hitRate: number;
+  grIII: number;
+}
+
+const row = (over: Partial<Row> & { participantId: string }): Row => ({
   points: 0,
   hitRate: 0,
-  exactCount: 0,
-  fourCount: 0,
+  grIII: 0,
   ...over,
 });
 
-describe('rankRows', () => {
-  it('sortuje malejąco po punktach i przypisuje pozycje', () => {
-    const out = rankRows([
-      row({ participantId: 'a', points: 10 }),
-      row({ participantId: 'b', points: 20 }),
-    ]);
+describe('rankBy', () => {
+  it('sortuje malejąco po pierwszym kluczu i przypisuje pozycje', () => {
+    const out = rankBy(
+      [row({ participantId: 'a', points: 10 }), row({ participantId: 'b', points: 20 })],
+      ['points'],
+    );
     expect(out.map(r => r.participantId)).toEqual(['b', 'a']);
     expect(out[0].position).toBe(1);
     expect(out[1].position).toBe(2);
   });
 
-  it('przy remisie punktowym decyduje wyższy %', () => {
-    const out = rankRows([
-      row({ participantId: 'a', points: 10, hitRate: 0.4, exactCount: 5, fourCount: 5 }),
-      row({ participantId: 'b', points: 10, hitRate: 0.6, exactCount: 1, fourCount: 1 }),
-    ]);
-    expect(out.map(r => r.participantId)).toEqual(['b', 'a']);
+  it('stosuje kolejne klucze jako tiebreakery w podanej kolejności', () => {
+    const out = rankBy(
+      [
+        row({ participantId: 'a', points: 10, hitRate: 0.5, grIII: 2 }),
+        row({ participantId: 'b', points: 10, hitRate: 0.6, grIII: 0 }),
+        row({ participantId: 'c', points: 10, hitRate: 0.5, grIII: 9 }),
+      ],
+      ['points', 'hitRate', 'grIII'],
+    );
+    // b ma najwyższy %; przy remisie % decyduje grIII: c (9) > a (2).
+    expect(out.map(r => r.participantId)).toEqual(['b', 'c', 'a']);
   });
 
-  it('przy remisie pkt i % decyduje liczba dokładnych (5), potem liczba 4', () => {
-    const out = rankRows([
-      row({ participantId: 'a', points: 10, hitRate: 0.5, exactCount: 2, fourCount: 9 }),
-      row({ participantId: 'b', points: 10, hitRate: 0.5, exactCount: 3, fourCount: 0 }),
-      row({ participantId: 'c', points: 10, hitRate: 0.5, exactCount: 2, fourCount: 1 }),
-    ]);
-    expect(out.map(r => r.participantId)).toEqual(['b', 'a', 'c']);
+  it('kolejność kluczy ma znaczenie — inny porządek daje inny wynik', () => {
+    const rows = [
+      row({ participantId: 'a', hitRate: 0.9, grIII: 1 }),
+      row({ participantId: 'b', hitRate: 0.1, grIII: 9 }),
+    ];
+    expect(rankBy(rows, ['hitRate']).map(r => r.participantId)).toEqual(['a', 'b']);
+    expect(rankBy(rows, ['grIII']).map(r => r.participantId)).toEqual(['b', 'a']);
   });
 
   it('nie mutuje tablicy wejściowej', () => {
@@ -43,7 +53,7 @@ describe('rankRows', () => {
       row({ participantId: 'a', points: 10 }),
       row({ participantId: 'b', points: 20 }),
     ];
-    rankRows(input);
+    rankBy(input, ['points']);
     expect(input.map(r => r.participantId)).toEqual(['a', 'b']);
   });
 });

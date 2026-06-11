@@ -11,19 +11,18 @@ const season = (
   bns: 0,
   puch: 0,
   hitRate: 0,
-  exactCount: 0,
-  fourCount: 0,
   ...over,
 });
 
 describe('generalTable', () => {
   it('sumuje grI+grII+grIII i rankuje malejąco po sumie', () => {
     const out = generalTable([
-      season({ participantId: 'a', grI: 10, grII: 12, grIII: 8 }),  // 30
-      season({ participantId: 'b', grI: 20, grII: 5, grIII: 9 }),   // 34
+      season({ participantId: 'a', grI: 10, grII: 12, grIII: 8 }), // 30
+      season({ participantId: 'b', grI: 20, grII: 5, grIII: 9 }), // 34
     ]);
     expect(out[0].participantId).toBe('b');
     expect(out[0].total).toBe(34);
+    expect(out[0].points).toBe(34);
     expect(out[0].position).toBe(1);
     expect(out[1].total).toBe(30);
   });
@@ -35,11 +34,21 @@ describe('generalTable', () => {
     expect(out[0].total).toBe(31); // 10 + 0 + 0 + 15 + 6
   });
 
-  it('przy remisie sumy stosuje tiebreakery (%, dokładne, 4)', () => {
+  it('przy remisie sumy decyduje wyższy %', () => {
     const out = generalTable([
-      season({ participantId: 'a', grI: 10, hitRate: 0.4, exactCount: 1 }),
-      season({ participantId: 'b', grI: 10, hitRate: 0.6, exactCount: 1 }),
+      season({ participantId: 'a', grI: 10, hitRate: 0.4 }),
+      season({ participantId: 'b', grI: 10, hitRate: 0.6 }),
     ]);
     expect(out.map(r => r.participantId)).toEqual(['b', 'a']);
+  });
+
+  it('przy remisie sumy i % decyduje puch, potem grIII (zgodnie z SORTBY arkusza)', () => {
+    const out = generalTable([
+      season({ participantId: 'a', grI: 10, hitRate: 0.5 }), // suma 10, puch 0, grIII 0
+      season({ participantId: 'b', grI: 6, puch: 4, hitRate: 0.5 }), // suma 10, puch 4
+      season({ participantId: 'c', grI: 5, grIII: 5, hitRate: 0.5 }), // suma 10, puch 0, grIII 5
+    ]);
+    // b wygrywa na puch; wśród a/c (puch 0) decyduje grIII: c (5) > a (0).
+    expect(out.map(r => r.participantId)).toEqual(['b', 'c', 'a']);
   });
 });
