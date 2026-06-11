@@ -29,3 +29,39 @@ describe('assertCounts', () => {
     expect(() => assertCounts(fullRoster(), fixtures24.slice(0, 23))).toThrow(/24/);
   });
 });
+
+import { readFileSync } from 'node:fs';
+import { openXlsx } from '../xlsx/workbook';
+import { parseGrup1 } from './parseGrup1';
+
+const MASTER = 'konkurs 2026.06.11.xlsx';
+const parsed = parseGrup1(openXlsx(readFileSync(MASTER)).sheet('grup-1'));
+
+describe('parseGrup1 (realny grup-1)', () => {
+  it('56 uczestnikow, po 7 w kazdej grupie A–H', () => {
+    expect(parsed.participants).toHaveLength(56);
+    for (const g of GROUPS) {
+      expect(parsed.participants.filter((p) => p.group === g)).toHaveLength(7);
+    }
+  });
+
+  it('przydzial do grup wg pozycji', () => {
+    expect(parsed.participants.find((p) => p.id === 'Dario')?.group).toBe('A');
+    expect(parsed.participants.find((p) => p.id === 'Prozped')?.group).toBe('B');
+    expect(parsed.participants.find((p) => p.id === 'Talvik')?.group).toBe('E');
+  });
+
+  it('24 mecze; pierwszy = Meksyk vs RPA', () => {
+    expect(parsed.fixtures).toHaveLength(24);
+    expect(parsed.fixtures[0]).toMatchObject({ no: 1, home: 'Meksyk', away: 'RPA' });
+    expect(parsed.fixtures[0].kickoff).toContain('11 cze');
+  });
+
+  it('typy z meczu 1 zgadzaja sie ze zrodlem', () => {
+    expect(parsed.predictions['Dario'][1]).toEqual({ home: 1, away: 0 });
+    expect(parsed.predictions['Wojtek'][1]).toEqual({ home: 2, away: 1 });
+    expect(parsed.predictions['PiotreG'][1]).toEqual({ home: 0, away: 0 });
+    expect(parsed.predictions['Talvik'][1]).toEqual({ home: 2, away: 0 });
+    expect(parsed.predictions['MarekS'][1]).toEqual({ home: 2, away: 1 });
+  });
+});
