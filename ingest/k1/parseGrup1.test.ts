@@ -1,5 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { assertUniqueIds, assertCounts, type Participant, type Fixture, type Group } from './parseGrup1';
+import {
+  assertUniqueIds,
+  assertCounts,
+  assertBlockMatchesRoster,
+  type Participant,
+  type Fixture,
+  type Group,
+} from './parseGrup1';
 
 const GROUPS: Group[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 const mkGroup = (n: number, group: Group): Participant[] =>
@@ -27,6 +34,24 @@ describe('assertCounts', () => {
   });
   it('rzuca przy zlej liczbie meczow', () => {
     expect(() => assertCounts(fullRoster(), fixtures24.slice(0, 23))).toThrow(/24/);
+  });
+});
+
+describe('assertBlockMatchesRoster', () => {
+  const roster: Participant[] = [
+    { id: 'a', group: 'A' },
+    { id: 'b', group: 'E' },
+  ];
+  const r = (name: string) => ({ name, score: null, label: '' });
+
+  it('przepuszcza blok zgodny z rosterem', () => {
+    expect(() => assertBlockMatchesRoster(roster, [r('a')], [r('b')], 2)).not.toThrow();
+  });
+  it('rzuca przy przesunieciu kolejnosci', () => {
+    expect(() => assertBlockMatchesRoster(roster, [r('x')], [r('b')], 2)).toThrow(/pozycji 0/);
+  });
+  it('rzuca przy zlej liczbie osob w bloku', () => {
+    expect(() => assertBlockMatchesRoster(roster, [r('a')], [], 2)).toThrow(/oczekiwano 2/);
   });
 });
 
@@ -63,5 +88,12 @@ describe('parseGrup1 (realny grup-1)', () => {
     expect(parsed.predictions['PiotreG'][1]).toEqual({ home: 0, away: 0 });
     expect(parsed.predictions['Talvik'][1]).toEqual({ home: 2, away: 0 });
     expect(parsed.predictions['MarekS'][1]).toEqual({ home: 2, away: 1 });
+  });
+
+  it('typy z meczu 2 (kolejny blok) trafiaja do wlasciwych osob', () => {
+    expect(parsed.fixtures[1]).toMatchObject({ no: 2, home: 'Korea Płd.', away: 'Czechy' });
+    expect(parsed.predictions['Dario'][2]).toEqual({ home: 1, away: 1 });
+    expect(parsed.predictions['Wojtek'][2]).toEqual({ home: 1, away: 1 });
+    expect(parsed.predictions['Talvik'][2]).toEqual({ home: 2, away: 1 });
   });
 });

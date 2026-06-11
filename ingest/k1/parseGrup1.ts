@@ -90,6 +90,32 @@ function readBlock(sheet: Sheet, start: number): [Row[], Row[]] {
 }
 
 /**
+ * Sprawdza, że kolejność uczestników w bloku meczu jest zgodna z rosterem
+ * (ten sam skład, ta sama pozycja). Łapie przesunięcie wierszy, które inaczej
+ * po cichu przypisałoby typy złym osobom. Uruchamiane dla każdego bloku.
+ */
+export function assertBlockMatchesRoster(
+  participants: Participant[],
+  left: Row[],
+  right: Row[],
+  matchNo: number,
+): void {
+  const names = [...left, ...right].map((r) => r.name);
+  if (names.length !== participants.length) {
+    throw new Error(
+      `Mecz ${matchNo}: ${names.length} uczestnikow w bloku, oczekiwano ${participants.length}`,
+    );
+  }
+  names.forEach((name, i) => {
+    if (name !== participants[i].id) {
+      throw new Error(
+        `Mecz ${matchNo}: uczestnik na pozycji ${i} to "${name}", a roster ma "${participants[i].id}"`,
+      );
+    }
+  });
+}
+
+/**
  * Parsuje arkusz `grup-1` (tura 1) do kanonicznego modelu: roster + grupy A–H,
  * terminarz 24 meczów oraz typy K1. Rzuca, gdy struktura nie spełnia walidacji.
  */
@@ -120,6 +146,9 @@ export function parseGrup1(sheet: Sheet): ParsedTurn {
       const build = (rows: Row[], groups: Group[]) => {
         rows.forEach((p, i) => {
           const group = groups[Math.floor(i / PER_GROUP)];
+          if (p.name === '') {
+            throw new Error(`Mecz ${matchNo}: pusta nazwa uczestnika na pozycji ${i}`);
+          }
           if (i % PER_GROUP === 0 && p.label !== `Grupa ${group}`) {
             throw new Error(`Mecz ${matchNo}: etykieta "${p.label}" != "Grupa ${group}"`);
           }
@@ -130,6 +159,10 @@ export function parseGrup1(sheet: Sheet): ParsedTurn {
       build(right, RIGHT_GROUPS);
       assertUniqueIds(participants.map((p) => p.id));
     }
+
+    // Każdy blok musi powtarzać ten sam roster w tej samej kolejności —
+    // inaczej typy trafiłyby do złych osób (ochrona ścieżki tur 2/3).
+    assertBlockMatchesRoster(participants, left, right, matchNo);
 
     for (const p of left) setPred(p.name, matchNo, p.score);
     for (const p of right) setPred(p.name, matchNo, p.score);
