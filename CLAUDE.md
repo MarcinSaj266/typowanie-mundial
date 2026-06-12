@@ -50,7 +50,13 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   Wojtek nie dostawali punktów); nasz silnik liczył to dobrze od początku, bo liczy z typów, nie
   z formuł. Narzędzia diagnostyczne: `scripts/diffXlsx.ts`, `scripts/dumpRegion.ts`,
   `scripts/dumpFormulas.ts`.
-- ⏳ Następne: intro + muzyka + PWA, Konkurs 2, faza pucharowa ×2.
+- ✅ Bonus grupowy `bns` — reguła potwierdzona przez organizatora (2026-06-12), zaimplementowany
+  TDD (`engine/groupBonus`, 78 testów zielonych). Przyznawany automatycznie po komplecie wyników
+  3 tur (`groupStageComplete` w `compute/buildResults.ts`); do tego czasu `bns = 0`. Przy okazji
+  poprawione: tabele grupowe rankują i pokazują pkt = `grI+grII+grIII` (bez bns/puch), jak
+  `SUM` w arkuszu `tab grup` — bonus liczy się Z tabel grupowych, nie odwrotnie.
+- ⏳ Następne: intro + muzyka + PWA, Konkurs 2, faza pucharowa ×2 (reguły znane — patrz niżej;
+  silnik pucharowy napisać przed startem 1/16, zweryfikować interpretację z formułami `rpuch`).
 
 ## Architektura (ustalona)
 
@@ -77,8 +83,19 @@ Wartość ∈ {0,3,4,5}. Suma w turze = `#3×3 + #4×4 + #5×5`.
 UWAGA: formuły `SORTBY` w arkuszach organizatora mają inną kolejność (grupowa III→I→II,
 ogólna III→II→I) — organizator potwierdził, że właściwa jest I→II→III, więc jego arkusz
 wymaga poprawy (zgłoszone). „%" = (#3+#4+#5[+#6 w ogólnej])/rozegrane.
-Tabela ogólna = `grI+grII+grIII+bns+puch`.
-**Faza pucharowa:** punkty ×2 (6/8/10/12), jedna wspólna tabela.
+Tabela ogólna = `grI+grII+grIII+bns+puch`; tabela grupowa pokazuje pkt = `grI+grII+grIII`.
+**Bonus `bns` (potwierdzony 2026-06-12):** przyznawany NA ZAKOŃCZENIE fazy grupowej z końcowych
+tabel grupowych: miejsca 1–3 w każdej grupie → 15/10/5; w grupie o najlepszej łącznej sumie
+punktów 7 graczy miejsca 4–7 → 4/3/2/1 (przy remisie najlepszej sumy — wszystkie zremisowane
+grupy, jak `IF(suma=$D$44,...)` w `tab grup`, kol. M/Z). Implementacja: `engine/bonus.ts`.
+**Faza pucharowa (doprecyzowana 2026-06-12):** punkty ×2 (6/8/10/12), jedna wspólna tabela.
+Dogrywka: wynik po dogrywce liczy się jak wynik z 90 min. Karne: kto typuje remis, obowiązkowo
+wskazuje zwycięzcę karnych („krzyżyk"); trafiony zwycięzca +1, nietrafiony −1 do wartości
+bazowej: dokładny remis 5±1, remis bez dokładnego wyniku 4±1. Kategorie bazowe {3,4,5,6} są
+podwajane → {6,8,10,12} (interpretacja: ±1 PRZED podwojeniem — bo organizator podaje komplet
+wartości jako parzyste; ZWERYFIKOWAĆ z formułami `rpuch` przed startem pucharu).
+Kategoria „6" (= remis dokładny + trafione karne) nie daje osobnych punktów — służy do „%":
+w tabeli ogólnej „%" wlicza #6, w grupowej nie.
 **Konkurs 2:** miejsce w grupie 1, 1/16 → 2, 1/8 → 4, ćwierć → 6, półfinał → 8, finał → 10, mistrz → 12;
 tiebreak = dorobek z późniejszej fazy.
 
@@ -96,16 +113,18 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
 
 ## Pytania otwarte (potwierdzić)
 
-1. **Bonus `bns`** — w Excelu jest zalążek (15/10/5 + meta 4/3/2/1), niepodłączony; spisane zasady go
-   nie wymieniają. Silnik: moduł konfigurowalny, domyślnie wyłączony. ⏳ Organizator sprawdza
-   (zapytany 2026-06-12, „wrócę z odpowiedzią").
+1. ✅ **ROZSTRZYGNIĘTE** (2026-06-12) — organizator potwierdził regułę bonusu `bns` (opis
+   w „Reguły punktacji"). Zaimplementowany: `engine/bonus.ts` (`groupBonus`), podpięty w
+   `compute/buildResults.ts` — aktywuje się dopiero po komplecie wyników wszystkich 3 tur.
+   Zgodny z zalążkiem w `tab grup` (kol. M/Z: 15/10/5 + `IF(suma=$D$44, 4/3/2/1)`).
 2. ✅ **ROZSTRZYGNIĘTE** — typy są w jednym masterze `konkurs 2026.06.11.xlsx`, arkusz `grup-1`
    (układ pozycyjny: nagłówek meczu B+E+K, 28 wierszy uczestników, lewa kolumna grupy A–D / prawa E–H,
    po 7). Parser `ingest/k1/parseGrup1` czyta to bezpośrednio. Tura 1 wypełniona; tury 2/3 dojdą tym
    samym kodem (parser waliduje spójność każdego bloku z rosterem).
-3. **Kategoria „6" w fazie pucharowej** — co ją przyznaje. Przed startem pucharu.
-   ⏳ Organizator sprawdza (zapytany 2026-06-12). Tak samo: czy „%" w tabeli ogólnej
-   ma wliczać „6" (w grupowej nie wlicza).
+3. ✅ **ROZSTRZYGNIĘTE** (2026-06-12) — kategoria „6" = dokładny remis + trafiony zwycięzca
+   karnych (5+1); pełne reguły dogrywek/karnych w „Reguły punktacji". „%" w tabeli ogólnej
+   wlicza „6", w grupowej nie. Do zrobienia przed startem 1/16: silnik pucharowy (TDD) +
+   weryfikacja interpretacji „±1 przed podwojeniem" z formułami arkusza `rpuch`.
 4. ✅ **ROZSTRZYGNIĘTE pragmatycznie** (2026-06-12) — tiebreakerów FIFA NIE implementujemy:
    realne końcowe układy grup turnieju weźmiemy z oficjalnych tabel FIFA jako ręczne dane
    wejściowe (jak wyniki meczów). Arkusz `zasady` w `k2.xlsx` sprawdzony — opisuje tylko
@@ -119,8 +138,8 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
    tiebreakerów to **grI → grII → grIII** (obie tabele). Silnik zaktualizowany
    (`engine/generalTable.ts`, `GROUP_ORDER` w `compute/buildResults.ts`, TDD). Formuły `SORTBY`
    w jego arkuszach nadal mają starą kolejność — to błąd arkusza do poprawy po jego stronie.
-   ⏳ (b) „%" w tabeli ogólnej wlicza też „6" (puchar), w grupowej nie — organizator sprawdza.
-7. **ZGŁOSIĆ ORGANIZATOROWI — nowy błąd w masterze 06.12, arkusz `r1`, kolumna E (mecz 3,
+   ✅ (b) potwierdzone (2026-06-12): „%" w tabeli ogólnej wlicza też „6" (puchar), w grupowej nie.
+7. **ZGŁOSZONE organizatorowi (2026-06-12) — błąd w masterze 06.12, arkusz `r1`, kolumna E (mecz 3,
    Kanada–Bośnia):** wiersze `E33:E60` (uczestnicy grup E–H) odwołują się do `'grup-1'!H96:H123`
    (pusty wiersz przerwy + nagłówek + punkty MECZU 4 lewej strony) zamiast do `'grup-1'!N68:N95`
    (prawa kolumna meczu 3, tak jak w masterze 06.11). Dziś niewidoczne (mecz 3 nierozegrany, więc

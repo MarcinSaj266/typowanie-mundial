@@ -37,7 +37,7 @@ export interface ParticipantSeason {
   grI: number;
   grII: number;
   grIII: number;
-  /** Bonus grupowy — domyślnie 0 (moduł konfigurowalny w przyszłości). */
+  /** Bonus grupowy (groupBonus) — 0 do zakończenia fazy grupowej. */
   bns: number;
   /** Faza pucharowa — domyślnie 0 (poza zakresem tego planu). */
   puch: number;

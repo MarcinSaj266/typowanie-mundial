@@ -1,4 +1,5 @@
 import { aggregateTurn } from '../engine/aggregate';
+import { groupBonus } from '../engine/bonus';
 import { buildSeason } from '../engine/buildSeason';
 import { generalTable } from '../engine/generalTable';
 import { rankBy } from '../engine/ranking';
@@ -18,6 +19,18 @@ import type {
 
 /** Porządek tabeli grupowej: pkt → % → grI → grII → grIII (reguła organizatora, 2026-06-12). */
 const GROUP_ORDER = ['points', 'hitRate', 'grI', 'grII', 'grIII'] as const;
+
+/** Komplet fazy grupowej: wszystkie 3 tury wczytane i każdy ich mecz ma wynik. */
+function groupStageComplete(turns: TurnData[], results: ResultsByTurn): boolean {
+  return [1, 2, 3].every((n) => {
+    const t = turns.find((turn) => turn.turn === n);
+    return (
+      !!t &&
+      t.fixtures.length > 0 &&
+      t.fixtures.every((f) => results[String(n)]?.[String(f.no)] != null)
+    );
+  });
+}
 
 /** Zlicza turę uczestnika: typ z tury + wynik z results; brak wyniku = nierozegrany. */
 function scoreTurn(
@@ -81,7 +94,38 @@ export function buildResults(
     return buildSeason(p.id, ts);
   });
 
-  const general: TableRow[] = generalTable(seasons).map((g) => ({
+  // Tabele grupowe: pkt = suma samych tur (bez bns/puch) — jak SUM(grI:grIII)
+  // w arkuszu „tab grup"; bonus liczy się z tych tabel, nie odwrotnie.
+  const groupRows: Omit<TableRow, 'position'>[] = seasons.map((s) => ({
+    participantId: s.participantId,
+    group: groupOf.get(s.participantId)!,
+    points: s.grI + s.grII + s.grIII,
+    grI: s.grI,
+    grII: s.grII,
+    grIII: s.grIII,
+    bns: 0,
+    puch: s.puch,
+    hitRate: s.hitRate,
+    ...counts.get(s.participantId)!,
+  }));
+  const groups = Object.fromEntries(
+    ALL_GROUPS.map((g) => [
+      g,
+      rankBy(groupRows.filter((r) => r.group === g), GROUP_ORDER),
+    ]),
+  ) as Record<Group, TableRow[]>;
+
+  // Bonus bns przyznawany dopiero na zakończenie zmagań grupowych.
+  const bonuses = groupStageComplete(turns, results)
+    ? groupBonus(ALL_GROUPS.map((g) => groups[g]))
+    : {};
+  for (const g of ALL_GROUPS) {
+    for (const r of groups[g]) r.bns = bonuses[r.participantId] ?? 0;
+  }
+
+  const general: TableRow[] = generalTable(
+    seasons.map((s) => ({ ...s, bns: bonuses[s.participantId] ?? 0 })),
+  ).map((g) => ({
     participantId: g.participantId,
     group: groupOf.get(g.participantId)!,
     position: g.position,
@@ -94,13 +138,6 @@ export function buildResults(
     hitRate: g.hitRate,
     ...counts.get(g.participantId)!,
   }));
-
-  const groups = Object.fromEntries(
-    ALL_GROUPS.map((g) => [
-      g,
-      rankBy(general.filter((r) => r.group === g), GROUP_ORDER),
-    ]),
-  ) as Record<Group, TableRow[]>;
 
   return { generatedAt, general, groups, turns: buildTurns(roster, turns, results) };
 }

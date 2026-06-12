@@ -55,7 +55,7 @@ describe('buildResults (syntetycznie)', () => {
     expect(out.general[0]).toMatchObject({ grI: 9, grII: 0, grIII: 0, bns: 0, puch: 0 });
   });
 
-  it('tabele grupowe: tylko swoi, wlasne pozycje, te same punkty co w ogolnej', () => {
+  it('tabele grupowe: tylko swoi, wlasne pozycje; przy bns=puch=0 punkty rowne ogolnej', () => {
     expect(out.groups.A.map((r) => [r.participantId, r.position])).toEqual([['a1', 1], ['a2', 2]]);
     expect(out.groups.B.map((r) => [r.participantId, r.position])).toEqual([['b1', 1], ['b2', 2]]);
     expect(out.groups.C).toEqual([]);
@@ -94,6 +94,52 @@ describe('buildResults (syntetycznie)', () => {
       ['x', 5, 0],
       ['y', 0, 5],
     ]);
+  });
+});
+
+describe('buildResults: bonus grupowy (bns)', () => {
+  const bonusRoster: Participant[] = [
+    { id: 'a1', group: 'A' },
+    { id: 'a2', group: 'A' },
+    { id: 'b1', group: 'B' },
+    { id: 'b2', group: 'B' },
+  ];
+  const exact = { home: 1, away: 0 };
+  const fx = [{ no: 1, home: 'H', away: 'A', kickoff: 'k' }];
+  const turns: TurnData[] = [
+    { turn: 1, fixtures: fx, predictions: { a1: { '1': exact }, a2: {}, b1: { '1': exact }, b2: {} } },
+    { turn: 2, fixtures: fx, predictions: { a1: {}, a2: {}, b1: { '1': exact }, b2: {} } },
+    { turn: 3, fixtures: fx, predictions: { a1: {}, a2: {}, b1: {}, b2: { '1': exact } } },
+  ];
+  const fullResults: ResultsByTurn = {
+    '1': { '1': exact },
+    '2': { '1': exact },
+    '3': { '1': exact },
+  };
+
+  it('po komplecie wynikow 3 tur bns trafia do tabeli ogolnej (15/10 za miejsca w grupie)', () => {
+    const done = buildResults(bonusRoster, turns, fullResults, 'test');
+    // grupy: A -> a1 (5 pkt), a2 (0); B -> b1 (10), b2 (5); bonus 15/10 w kazdej.
+    expect(done.general.map((r) => [r.participantId, r.bns, r.points])).toEqual([
+      ['b1', 15, 25],
+      ['a1', 15, 20],
+      ['b2', 10, 15],
+      ['a2', 10, 10],
+    ]);
+  });
+
+  it('punkty tabeli grupowej NIE zawieraja bns (jak SUM(grI:grIII) w arkuszu tab grup)', () => {
+    const done = buildResults(bonusRoster, turns, fullResults, 'test');
+    expect(done.groups.A.map((r) => [r.participantId, r.points, r.bns])).toEqual([
+      ['a1', 5, 15],
+      ['a2', 0, 10],
+    ]);
+  });
+
+  it('przed kompletem wynikow fazy grupowej bns = 0 dla wszystkich', () => {
+    const partial: ResultsByTurn = { '1': { '1': exact }, '2': { '1': exact } };
+    const inProgress = buildResults(bonusRoster, turns, partial, 'test');
+    for (const r of inProgress.general) expect(r.bns).toBe(0);
   });
 });
 

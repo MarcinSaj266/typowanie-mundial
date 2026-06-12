@@ -50,7 +50,7 @@ export interface TableRow {
   group: Group;
   /** Pozycja w TEJ tabeli (ogólnej lub grupowej). */
   position: number;
-  /** Suma sezonu = grI + grII + grIII + bns + puch. */
+  /** Punkty w TEJ tabeli: ogólna = grI+grII+grIII+bns+puch; grupowa = grI+grII+grIII. */
   points: number;
   grI: number;
   grII: number;

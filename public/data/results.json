@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T12:30:12.229Z",
+  "generatedAt": "2026-06-12T12:50:38.849Z",
   "general": [
     {
       "participantId": "Talvik",
@@ -903,7 +903,6 @@
       {
         "participantId": "KasiaJ",
         "group": "A",
-        "position": 1,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -914,12 +913,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 1
       },
       {
         "participantId": "KrystianM",
         "group": "A",
-        "position": 2,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -930,12 +929,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 2
       },
       {
         "participantId": "PiotreG",
         "group": "A",
-        "position": 3,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -946,12 +945,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 3
       },
       {
         "participantId": "Dario",
         "group": "A",
-        "position": 4,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -962,12 +961,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 4
       },
       {
         "participantId": "Wojtek",
         "group": "A",
-        "position": 5,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -978,12 +977,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 5
       },
       {
         "participantId": "KamUla",
         "group": "A",
-        "position": 6,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -994,12 +993,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 6
       },
       {
         "participantId": "MagdaS",
         "group": "A",
-        "position": 7,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1010,14 +1009,14 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 7
       }
     ],
     "B": [
       {
         "participantId": "Sokółka",
         "group": "B",
-        "position": 1,
         "points": 7,
         "grI": 7,
         "grII": 0,
@@ -1028,12 +1027,12 @@
         "count3": 1,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 1
       },
       {
         "participantId": "DarekL",
         "group": "B",
-        "position": 2,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1044,12 +1043,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 2
       },
       {
         "participantId": "KrzysztoW",
         "group": "B",
-        "position": 3,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1060,12 +1059,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 3
       },
       {
         "participantId": "Prozped",
         "group": "B",
-        "position": 4,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -1076,12 +1075,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 4
       },
       {
         "participantId": "KasiaK",
         "group": "B",
-        "position": 5,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -1092,12 +1091,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 5
       },
       {
         "participantId": "Seweryn",
         "group": "B",
-        "position": 6,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -1108,12 +1107,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 6
       },
       {
         "participantId": "Artur",
         "group": "B",
-        "position": 7,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1124,14 +1123,14 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 7
       }
     ],
     "C": [
       {
         "participantId": "MateuszKn",
         "group": "C",
-        "position": 1,
         "points": 8,
         "grI": 8,
         "grII": 0,
@@ -1142,12 +1141,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 1
       },
       {
         "participantId": "Henryk",
         "group": "C",
-        "position": 2,
         "points": 6,
         "grI": 6,
         "grII": 0,
@@ -1158,12 +1157,12 @@
         "count3": 2,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 2
       },
       {
         "participantId": "Magiera",
         "group": "C",
-        "position": 3,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1174,12 +1173,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 3
       },
       {
         "participantId": "PPP",
         "group": "C",
-        "position": 4,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1190,12 +1189,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 4
       },
       {
         "participantId": "Żaklina",
         "group": "C",
-        "position": 5,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1206,12 +1205,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 5
       },
       {
         "participantId": "Dziobak",
         "group": "C",
-        "position": 6,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -1222,12 +1221,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 6
       },
       {
         "participantId": "Cezary",
         "group": "C",
-        "position": 7,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1238,14 +1237,14 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 7
       }
     ],
     "D": [
       {
         "participantId": "Borys",
         "group": "D",
-        "position": 1,
         "points": 7,
         "grI": 7,
         "grII": 0,
@@ -1256,12 +1255,12 @@
         "count3": 1,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 1
       },
       {
         "participantId": "MagdaP",
         "group": "D",
-        "position": 2,
         "points": 7,
         "grI": 7,
         "grII": 0,
@@ -1272,12 +1271,12 @@
         "count3": 1,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 2
       },
       {
         "participantId": "Turbo-Ryżu",
         "group": "D",
-        "position": 3,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1288,12 +1287,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 3
       },
       {
         "participantId": "Małgorzata",
         "group": "D",
-        "position": 4,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1304,12 +1303,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 4
       },
       {
         "participantId": "MichałCz",
         "group": "D",
-        "position": 5,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1320,12 +1319,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 5
       },
       {
         "participantId": "Przemek",
         "group": "D",
-        "position": 6,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1336,12 +1335,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 6
       },
       {
         "participantId": "KamilF",
         "group": "D",
-        "position": 7,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1352,14 +1351,14 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 7
       }
     ],
     "E": [
       {
         "participantId": "Talvik",
         "group": "E",
-        "position": 1,
         "points": 10,
         "grI": 10,
         "grII": 0,
@@ -1370,12 +1369,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 2,
-        "played": 2
+        "played": 2,
+        "position": 1
       },
       {
         "participantId": "DarekJell",
         "group": "E",
-        "position": 2,
         "points": 10,
         "grI": 10,
         "grII": 0,
@@ -1386,12 +1385,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 2,
-        "played": 2
+        "played": 2,
+        "position": 2
       },
       {
         "participantId": "Karolina",
         "group": "E",
-        "position": 3,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1402,12 +1401,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 3
       },
       {
         "participantId": "AndrzejO",
         "group": "E",
-        "position": 4,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1418,12 +1417,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 4
       },
       {
         "participantId": "PiotreM",
         "group": "E",
-        "position": 5,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -1434,12 +1433,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 5
       },
       {
         "participantId": "Rafał",
         "group": "E",
-        "position": 6,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1450,12 +1449,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 6
       },
       {
         "participantId": "MarekS",
         "group": "E",
-        "position": 7,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1466,14 +1465,14 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 7
       }
     ],
     "F": [
       {
         "participantId": "MichałeK",
         "group": "F",
-        "position": 1,
         "points": 8,
         "grI": 8,
         "grII": 0,
@@ -1484,12 +1483,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 1
       },
       {
         "participantId": "MaciejM",
         "group": "F",
-        "position": 2,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1500,12 +1499,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 2
       },
       {
         "participantId": "KSZ",
         "group": "F",
-        "position": 3,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1516,12 +1515,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 3
       },
       {
         "participantId": "MarekP",
         "group": "F",
-        "position": 4,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1532,12 +1531,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 4
       },
       {
         "participantId": "KleoPatra",
         "group": "F",
-        "position": 5,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1548,12 +1547,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 5
       },
       {
         "participantId": "Witek",
         "group": "F",
-        "position": 6,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1564,12 +1563,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 6
       },
       {
         "participantId": "RobertLat",
         "group": "F",
-        "position": 7,
         "points": 0,
         "grI": 0,
         "grII": 0,
@@ -1580,14 +1579,14 @@
         "count3": 0,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 7
       }
     ],
     "G": [
       {
         "participantId": "DeDe",
         "group": "G",
-        "position": 1,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1598,12 +1597,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 1
       },
       {
         "participantId": "Ruslan",
         "group": "G",
-        "position": 2,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1614,12 +1613,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 2
       },
       {
         "participantId": "Tabus",
         "group": "G",
-        "position": 3,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -1630,12 +1629,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 3
       },
       {
         "participantId": "AniaS",
         "group": "G",
-        "position": 4,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -1646,12 +1645,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 4
       },
       {
         "participantId": "KrzysztoWś",
         "group": "G",
-        "position": 5,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -1662,12 +1661,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 5
       },
       {
         "participantId": "Cypryjka",
         "group": "G",
-        "position": 6,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1678,12 +1677,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 6
       },
       {
         "participantId": "Pimozid",
         "group": "G",
-        "position": 7,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1694,14 +1693,14 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 7
       }
     ],
     "H": [
       {
         "participantId": "PiotreK",
         "group": "H",
-        "position": 1,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1712,12 +1711,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 1
       },
       {
         "participantId": "KaBed",
         "group": "H",
-        "position": 2,
         "points": 5,
         "grI": 5,
         "grII": 0,
@@ -1728,12 +1727,12 @@
         "count3": 0,
         "count4": 0,
         "count5": 1,
-        "played": 2
+        "played": 2,
+        "position": 2
       },
       {
         "participantId": "Mirella",
         "group": "H",
-        "position": 3,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -1744,12 +1743,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 3
       },
       {
         "participantId": "KrzysztofeR",
         "group": "H",
-        "position": 4,
         "points": 4,
         "grI": 4,
         "grII": 0,
@@ -1760,12 +1759,12 @@
         "count3": 0,
         "count4": 1,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 4
       },
       {
         "participantId": "Maria",
         "group": "H",
-        "position": 5,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1776,12 +1775,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 5
       },
       {
         "participantId": "Sławek",
         "group": "H",
-        "position": 6,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1792,12 +1791,12 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 6
       },
       {
         "participantId": "PawełSt",
         "group": "H",
-        "position": 7,
         "points": 3,
         "grI": 3,
         "grII": 0,
@@ -1808,7 +1807,8 @@
         "count3": 1,
         "count4": 0,
         "count5": 0,
-        "played": 2
+        "played": 2,
+        "position": 7
       }
     ]
   },
