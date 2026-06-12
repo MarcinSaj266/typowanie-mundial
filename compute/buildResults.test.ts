@@ -67,6 +67,34 @@ describe('buildResults (syntetycznie)', () => {
   it('generatedAt przechodzi z parametru', () => {
     expect(out.generatedAt).toBe('2026-06-12T00:00:00Z');
   });
+
+  it('tiebreak tabeli grupowej: przy remisie pkt i % decyduje grI przed grIII', () => {
+    // x trafia dokladny wynik w turze I, y identycznie w turze III:
+    // remis 5:5 pkt, ten sam %, ale dorobek wczesniejszej tury wygrywa.
+    const tieRoster: Participant[] = [
+      { id: 'x', group: 'A' },
+      { id: 'y', group: 'A' },
+    ];
+    const t1: TurnData = {
+      turn: 1,
+      fixtures: [{ no: 1, home: 'A', away: 'B', kickoff: 't1' }],
+      predictions: { x: { '1': { home: 1, away: 0 } }, y: {} },
+    };
+    const t3: TurnData = {
+      turn: 3,
+      fixtures: [{ no: 1, home: 'C', away: 'D', kickoff: 't3' }],
+      predictions: { x: {}, y: { '1': { home: 1, away: 0 } } },
+    };
+    const tieResults: ResultsByTurn = {
+      '1': { '1': { home: 1, away: 0 } },
+      '3': { '1': { home: 1, away: 0 } },
+    };
+    const tie = buildResults(tieRoster, [t1, t3], tieResults, 'test');
+    expect(tie.groups.A.map((r) => [r.participantId, r.grI, r.grIII])).toEqual([
+      ['x', 5, 0],
+      ['y', 0, 5],
+    ]);
+  });
 });
 
 describe('buildResults: sekcja turns', () => {

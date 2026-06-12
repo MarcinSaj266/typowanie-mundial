@@ -50,7 +50,7 @@ export interface ParticipantSeason {
 
 /**
  * Wiersz tabeli ogólnej: dorobek sezonowy + policzona suma i pozycja.
- * Tiebreakery (SORTBY w arkuszu „tabela"): pkt → % → puch → grIII → grII → grI.
+ * Tiebreakery (reguła organizatora, 2026-06-12): pkt → % → puch → grI → grII → grIII.
  */
 export interface GeneralRow extends ParticipantSeason {
   /** Suma punktów = grI + grII + grIII + bns + puch. */

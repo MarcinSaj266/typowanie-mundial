@@ -62,16 +62,21 @@ Struktura: `engine/` (silnik, testowalny), `ingest/` (parser → JSON), `compute
 `public/data/results.json`), `data/` (wejście), `app/` + `components/` (Next.js render — czyta
 WYŁĄCZNIE `public/data/results.json`; jedyna zależność od `compute/` to `import type`).
 Workflow aktualizacji: wynik meczu do `data/k1/results.json` → `npm run build:results` →
-commit+push → Vercel przebudowuje.
+commit+push → Vercel przebudowuje. Ustalenia z organizatorem (2026-06-12): wyniki meczów
+będzie wysyłał na bieżąco (alternatywnie sprawdzamy sami w oficjalnych źródłach); typy
+uczestników są zbierane PRZED KAŻDĄ turą i przyjdą kolejnym masterem (wtedy dopiąć parser
+do arkusza tury 2/3 — ten sam układ co `grup-1`); typy K2 też dośle.
 
 ## Reguły punktacji (skrót — pełne w specyfikacji)
 
 **Konkurs 1, mecz (grupa):** trafiony rezultat 3 → + różnica bramek +1 (też remisy) → + dokładny wynik +1.
 Wartość ∈ {0,3,4,5}. Suma w turze = `#3×3 + #4×4 + #5×5`.
 **Faza grupowa:** 8 stałych grup konkursowych A–H po 7 osób; 3 tury (grup I/II/III).
-**Tiebreakery (z formuł `SORTBY` — NIE z liczby „5"/„4", to było błędne odczytanie!):**
-tabela grupowa `pkt → % → grIII → grI → grII` (arkusz `tab grup`); tabela ogólna
-`pkt → % → puch → grIII → grII → grI` (arkusz `tabela`). „%" = (#3+#4+#5[+#6 w ogólnej])/rozegrane.
+**Tiebreakery (reguła organizatora, potwierdzona 2026-06-12):** tabela grupowa
+`pkt → % → grI → grII → grIII`; tabela ogólna `pkt → % → puch → grI → grII → grIII`.
+UWAGA: formuły `SORTBY` w arkuszach organizatora mają inną kolejność (grupowa III→I→II,
+ogólna III→II→I) — organizator potwierdził, że właściwa jest I→II→III, więc jego arkusz
+wymaga poprawy (zgłoszone). „%" = (#3+#4+#5[+#6 w ogólnej])/rozegrane.
 Tabela ogólna = `grI+grII+grIII+bns+puch`.
 **Faza pucharowa:** punkty ×2 (6/8/10/12), jedna wspólna tabela.
 **Konkurs 2:** miejsce w grupie 1, 1/16 → 2, 1/8 → 4, ćwierć → 6, półfinał → 8, finał → 10, mistrz → 12;
@@ -92,21 +97,29 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
 ## Pytania otwarte (potwierdzić)
 
 1. **Bonus `bns`** — w Excelu jest zalążek (15/10/5 + meta 4/3/2/1), niepodłączony; spisane zasady go
-   nie wymieniają. Silnik: moduł konfigurowalny, domyślnie wyłączony. Czeka na organizatora.
+   nie wymieniają. Silnik: moduł konfigurowalny, domyślnie wyłączony. ⏳ Organizator sprawdza
+   (zapytany 2026-06-12, „wrócę z odpowiedzią").
 2. ✅ **ROZSTRZYGNIĘTE** — typy są w jednym masterze `konkurs 2026.06.11.xlsx`, arkusz `grup-1`
    (układ pozycyjny: nagłówek meczu B+E+K, 28 wierszy uczestników, lewa kolumna grupy A–D / prawa E–H,
    po 7). Parser `ingest/k1/parseGrup1` czyta to bezpośrednio. Tura 1 wypełniona; tury 2/3 dojdą tym
    samym kodem (parser waliduje spójność każdego bloku z rosterem).
 3. **Kategoria „6" w fazie pucharowej** — co ją przyznaje. Przed startem pucharu.
-4. **Tiebreakery grup turniejowych FIFA** (do konkursu 2) — potwierdzić zestaw reguł.
+   ⏳ Organizator sprawdza (zapytany 2026-06-12). Tak samo: czy „%" w tabeli ogólnej
+   ma wliczać „6" (w grupowej nie wlicza).
+4. ✅ **ROZSTRZYGNIĘTE pragmatycznie** (2026-06-12) — tiebreakerów FIFA NIE implementujemy:
+   realne końcowe układy grup turnieju weźmiemy z oficjalnych tabel FIFA jako ręczne dane
+   wejściowe (jak wyniki meczów). Arkusz `zasady` w `k2.xlsx` sprawdzony — opisuje tylko
+   punktację K2 (1/2/4/6/8/10/12 + tiebreak „dorobek z późniejszej fazy"), zgodną z tym,
+   co już mamy w specyfikacji.
 5. ✅ **ROZSTRZYGNIĘTE** — sezonowe „%" liczone sumarycznie (`suma_trafień / suma_rozegranych`,
    zgodne z `SUM(S:V)/N1` w arkuszu `tabela`); `buildSeason(...)` dodany do `engine/`. Przy okazji
    wykryto i poprawiono błąd: silnik miał tiebreakery `#5/#4`, a Excel sortuje po dorobku fazowym
    (patrz „Reguły punktacji" wyżej) — `rankBy(rows, keys)` przyjmuje teraz listę kluczy w kolejności.
-6. **Do potwierdzenia z organizatorem** (drobne, wynikły z analizy formuł): (a) tabela grupowa sortuje
-   `grIII → grI → grII`, a ogólna `grIII → grII → grI` — zamiana grI/grII w grupowej wygląda na literówkę
-   w arkuszu; (b) „%" w tabeli ogólnej wlicza też „6" (puchar), w grupowej nie. (Master 06.12 niczego
-   tu nie zmienił — formuły `SORTBY` identyczne.)
+6. ✅ **ROZSTRZYGNIĘTE (a)** — organizator potwierdził (2026-06-12): właściwa kolejność
+   tiebreakerów to **grI → grII → grIII** (obie tabele). Silnik zaktualizowany
+   (`engine/generalTable.ts`, `GROUP_ORDER` w `compute/buildResults.ts`, TDD). Formuły `SORTBY`
+   w jego arkuszach nadal mają starą kolejność — to błąd arkusza do poprawy po jego stronie.
+   ⏳ (b) „%" w tabeli ogólnej wlicza też „6" (puchar), w grupowej nie — organizator sprawdza.
 7. **ZGŁOSIĆ ORGANIZATOROWI — nowy błąd w masterze 06.12, arkusz `r1`, kolumna E (mecz 3,
    Kanada–Bośnia):** wiersze `E33:E60` (uczestnicy grup E–H) odwołują się do `'grup-1'!H96:H123`
    (pusty wiersz przerwy + nagłówek + punkty MECZU 4 lewej strony) zamiast do `'grup-1'!N68:N95`

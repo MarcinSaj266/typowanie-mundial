@@ -9,8 +9,8 @@ export type NumericKey<T> = {
  * kolejne to tiebreakery rozstrzygane po remisie. Nie mutuje wejścia;
  * dopisuje pozycje 1..n w kolejności sortowania.
  *
- * Tabele K1 mają różne porządki tiebreakerów (grupowa: pkt → % → grIII → grI → grII;
- * ogólna: pkt → % → puch → grIII → grII → grI), dlatego klucze podaje wywołujący.
+ * Tabele K1 mają różne porządki tiebreakerów (grupowa: pkt → % → grI → grII → grIII;
+ * ogólna: pkt → % → puch → grI → grII → grIII), dlatego klucze podaje wywołujący.
  */
 export function rankBy<T extends { participantId: string }>(
   rows: readonly T[],

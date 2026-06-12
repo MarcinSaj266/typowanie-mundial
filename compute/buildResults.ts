@@ -16,8 +16,8 @@ import type {
   TurnOut,
 } from './types';
 
-/** Porządek tabeli grupowej (SORTBY arkusza „tab grup"): pkt → % → grIII → grI → grII. */
-const GROUP_ORDER = ['points', 'hitRate', 'grIII', 'grI', 'grII'] as const;
+/** Porządek tabeli grupowej: pkt → % → grI → grII → grIII (reguła organizatora, 2026-06-12). */
+const GROUP_ORDER = ['points', 'hitRate', 'grI', 'grII', 'grIII'] as const;
 
 /** Zlicza turę uczestnika: typ z tury + wynik z results; brak wyniku = nierozegrany. */
 function scoreTurn(
