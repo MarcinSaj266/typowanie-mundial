@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { openXlsx } from './xlsx/workbook';
 import { parseGrup1 } from './k1/parseGrup1';
 
-const MASTER = 'konkurs 2026.06.12.xlsx';
+const MASTER = 'konkurs 2026.06.12 - poprawiony.xlsx';
 const OUT_DIR = 'data/k1';
 
 const parsed = parseGrup1(openXlsx(readFileSync(MASTER)).sheet('grup-1'));

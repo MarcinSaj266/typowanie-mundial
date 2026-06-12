@@ -13,7 +13,7 @@
     "seed:results": "tsx compute/seedResults.ts",
     "build:results": "tsx compute/buildResultsCli.ts",
     "smoke": "tsx scripts/smoke.ts",
-    "validate:excel": "tsx scripts/validateVsExcel.ts \"konkurs 2026.06.12.xlsx\""
+    "validate:excel": "tsx scripts/validateVsExcel.ts \"konkurs 2026.06.12 - poprawiony.xlsx\""
   },
   "devDependencies": {
     "@types/node": "^25.9.3",
