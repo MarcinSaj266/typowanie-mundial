@@ -122,6 +122,90 @@ a { color: inherit; }
 .press-start { color: var(--zolty); animation: blink 1.2s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 
+/* ── Intro (sekwencja na ekranie tytułowym) ────────────────────── */
+.intro .game-title { animation: title-drop 0.6s cubic-bezier(0.2, 1.6, 0.4, 1) both; }
+@keyframes title-drop {
+  from { transform: translateY(-60vh); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+.ball-lane {
+  position: relative;
+  width: min(100%, 420px);
+  height: 32px;
+  overflow: hidden;
+}
+/* Pikselowa piłka 8×8 (piksel = 4px) rysowana box-shadow, jak sprite. */
+.pixel-ball {
+  position: absolute;
+  left: calc(50% - 16px);
+  top: 0;
+  width: 4px;
+  height: 4px;
+  background: transparent;
+  animation: ball-roll 0.9s steps(18) 0.5s both;
+  box-shadow:
+    8px 0 var(--bialy), 12px 0 var(--bialy), 16px 0 var(--bialy), 20px 0 var(--bialy),
+    4px 4px var(--bialy), 8px 4px var(--bialy), 12px 4px var(--bialy), 16px 4px var(--bialy),
+    20px 4px var(--bialy), 24px 4px var(--bialy),
+    0 8px var(--bialy), 4px 8px var(--bialy), 8px 8px var(--bialy), 12px 8px var(--czern),
+    16px 8px var(--czern), 20px 8px var(--bialy), 24px 8px var(--bialy), 28px 8px var(--bialy),
+    0 12px var(--bialy), 4px 12px var(--bialy), 8px 12px var(--czern), 12px 12px var(--czern),
+    16px 12px var(--czern), 20px 12px var(--czern), 24px 12px var(--bialy), 28px 12px var(--bialy),
+    0 16px var(--bialy), 4px 16px var(--bialy), 8px 16px var(--bialy), 12px 16px var(--czern),
+    16px 16px var(--czern), 20px 16px var(--bialy), 24px 16px var(--bialy), 28px 16px var(--bialy),
+    0 20px var(--bialy), 4px 20px var(--bialy), 8px 20px var(--bialy), 12px 20px var(--bialy),
+    16px 20px var(--bialy), 20px 20px var(--bialy), 24px 20px var(--bialy), 28px 20px var(--bialy),
+    4px 24px var(--bialy), 8px 24px var(--bialy), 12px 24px var(--bialy), 16px 24px var(--bialy),
+    20px 24px var(--bialy), 24px 24px var(--bialy),
+    8px 28px var(--bialy), 12px 28px var(--bialy), 16px 28px var(--bialy), 20px 28px var(--bialy);
+}
+@keyframes ball-roll {
+  from { left: -48px; }
+  to { left: calc(50% - 16px); }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.intro .subtitle { animation: fadein 0.4s both 1.5s; }
+.intro .menu { animation: fadein 0.4s both 1.7s; }
+.intro .press-start {
+  opacity: 0;
+  animation: fadein 0.3s forwards 2s, blink 1.2s steps(1) 2.4s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro .game-title,
+  .intro .subtitle,
+  .intro .menu,
+  .intro .press-start,
+  .intro .pixel-ball {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* ── Włącznik muzyki ───────────────────────────────────────────── */
+.music-toggle {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+  font-family: inherit;
+  font-size: 9px;
+  background: var(--czern);
+  color: var(--zolty);
+  border: 2px solid var(--zolty);
+  padding: 6px 8px;
+  cursor: pointer;
+}
+.music-toggle[aria-pressed='true'] {
+  background: var(--zolty);
+  color: var(--czern);
+}
+
 /* ── Mecze ─────────────────────────────────────────────────────── */
 .turn-heading { color: var(--zolty); font-size: 12px; font-weight: 400; }
 .match-card {

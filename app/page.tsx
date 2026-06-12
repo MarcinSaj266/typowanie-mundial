@@ -8,8 +8,11 @@ const MENU = [
 
 export default function MenuPage() {
   return (
-    <main className="screen title-screen">
+    <main className="screen title-screen intro">
       <h1 className="game-title">TYPOWANIE<br />MUNDIAL 2026</h1>
+      <div className="ball-lane" aria-hidden="true">
+        <span className="pixel-ball" />
+      </div>
       <p className="subtitle">★ KONKURS 1 ★</p>
       <nav className="menu">
         {MENU.map((m) => (

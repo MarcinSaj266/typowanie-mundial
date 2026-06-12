@@ -63,7 +63,20 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   mecz pucharowy w masterze jeszcze NIE ma (C:AH puste) — porównać z nimi, gdy organizator je dopnie.
   Do zrobienia przy starcie pucharu: ingest typów pucharowych (krzyżyk!), agregacja do `puch`
   i wkład #6 w „%" tabeli ogólnej.
-- ⏳ Następne: intro + muzyka + PWA, Konkurs 2 (silnik gotowy do napisania — reguły znane,
+- ✅ Poprawione typy uczestników (2026-06-12 wieczorem) — organizator przysłał
+  `konkurs 2026.06.12 - poprawiony.xlsx` (AKTUALNY master; 383 poprawione typy: wyłącznie
+  mecze 8–24, wyłącznie gracze grup E–H — naprawione przesunięcie wierszy po prawej stronie
+  `grup-1`; naprawia też zgłoszony błąd `r1!E33:E60`) oraz `Baza tura 1.xlsx` (płaska baza
+  56×24 typów). Krzyżowa walidacja `scripts/diffTura1.ts`: 1344/1344 typów zgodnych
+  (uwaga: 5 nicków w bazie ma inną pisownię niż master — mapa aliasów w skrypcie);
+  `validate:excel` na poprawionym masterze: 112 par, 0 rozbieżności.
+- ✅ Intro + muzyka — spec: `docs/superpowers/specs/2026-06-12-intro-muzyka-design.md`.
+  Sekwencja intro na `/` w czystym CSS (tytuł z bounce, pikselowa piłka box-shadow,
+  menu z opóźnieniem; `prefers-reduced-motion` wyłącza animacje). Muzyka:
+  `components/MusicToggle.tsx` — JEDYNY klientowy komponent, w layoucie (gra dalej między
+  widokami), `public/audio/full-time-glory.mp3` ładowany dopiero po kliknięciu ♪.
+  Smoke sprawdza markery intro i obecność mp3 w `out/`.
+- ⏳ Następne: PWA, Konkurs 2 (silnik gotowy do napisania — reguły znane,
   czekamy na typy K2 od organizatora).
 
 ## Architektura (ustalona)
@@ -111,9 +124,14 @@ tiebreak = dorobek z późniejszej fazy.
 
 - `k1.xlsx` — szablon typów konkursu 1 (3 tury × 24 mecze).
 - `k2.xlsx` — szablon konkursu 2 (arkusze `konkurs2`, `zasady`).
-- `konkurs 2026.06.12.xlsx` — AKTUALNY master organizatora (arkusze: `grup-1`, `tab grup`, `stat`,
-  `tabela`, `r1`, `rpuch`, `day by day`). **Tu siedzi cała logika w formułach** + realne wyniki
-  meczów 1–2. Naprawia błąd z 06.11 (brakujące formuły `H` w `grup-1`).
+- `konkurs 2026.06.12 - poprawiony.xlsx` — AKTUALNY master organizatora (arkusze: `grup-1`,
+  `tab grup`, `stat`, `tabela`, `r1`, `rpuch`, `day by day`). **Tu siedzi cała logika
+  w formułach** + realne wyniki meczów 1–2. Naprawia 383 błędne typy graczy grup E–H
+  (mecze 8–24) i błąd `r1!E33:E60` z wersji 06.12.
+- `Baza tura 1.xlsx` — płaska baza typów tury 1 od organizatora (1344 wiersze:
+  uczestnik × mecz × typ); użyta do krzyżowej walidacji (`scripts/diffTura1.ts`).
+- `konkurs 2026.06.12.xlsx` — poprzedni master (typy graczy E–H w meczach 8–24 przesunięte
+  o wiersz; naprawiał błąd z 06.11 — brakujące formuły `H` w `grup-1`).
 - `konkurs 2026.06.11.xlsx` — poprzedni master (zachowany do porównań; był źródłem analizy formuł).
 
 Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/worksheets/*.xml`,
@@ -148,7 +166,9 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
    (`engine/generalTable.ts`, `GROUP_ORDER` w `compute/buildResults.ts`, TDD). Formuły `SORTBY`
    w jego arkuszach nadal mają starą kolejność — to błąd arkusza do poprawy po jego stronie.
    ✅ (b) potwierdzone (2026-06-12): „%" w tabeli ogólnej wlicza też „6" (puchar), w grupowej nie.
-7. **ZGŁOSZONE organizatorowi (2026-06-12) — błąd w masterze 06.12, arkusz `r1`, kolumna E (mecz 3,
+7. ✅ **ROZSTRZYGNIĘTE** (2026-06-12 wieczorem) — organizator naprawił w masterze
+   „poprawiony" (E33:E60 → `'grup-1'!N68:N95`). Historyczny opis błędu:
+   błąd w masterze 06.12, arkusz `r1`, kolumna E (mecz 3,
    Kanada–Bośnia):** wiersze `E33:E60` (uczestnicy grup E–H) odwołują się do `'grup-1'!H96:H123`
    (pusty wiersz przerwy + nagłówek + punkty MECZU 4 lewej strony) zamiast do `'grup-1'!N68:N95`
    (prawa kolumna meczu 3, tak jak w masterze 06.11). Dziś niewidoczne (mecz 3 nierozegrany, więc
