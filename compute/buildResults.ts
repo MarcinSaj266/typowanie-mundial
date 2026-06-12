@@ -2,9 +2,19 @@ import { aggregateTurn } from '../engine/aggregate';
 import { buildSeason } from '../engine/buildSeason';
 import { generalTable } from '../engine/generalTable';
 import { rankBy } from '../engine/ranking';
+import { scoreMatchK1 } from '../engine/scoreMatch';
 import type { MatchEntry, TurnScore } from '../engine/types';
 import { ALL_GROUPS } from './types';
-import type { Group, Participant, ResultsByTurn, ResultsJson, TableRow, TurnData } from './types';
+import type {
+  Group,
+  MatchOut,
+  Participant,
+  ResultsByTurn,
+  ResultsJson,
+  TableRow,
+  TurnData,
+  TurnOut,
+} from './types';
 
 /** Porządek tabeli grupowej (SORTBY arkusza „tab grup"): pkt → % → grIII → grI → grII. */
 const GROUP_ORDER = ['points', 'hitRate', 'grIII', 'grI', 'grII'] as const;
@@ -22,6 +32,26 @@ function scoreTurn(
     result: results[String(turnNo)]?.[String(f.no)] ?? null,
   }));
   return aggregateTurn(entries);
+}
+
+/** Sekcja turns: szczegóły per mecz dla widoków „Mecze" i „Profil" (spec renderu, sekcja 1). */
+function buildTurns(roster: Participant[], turns: TurnData[], results: ResultsByTurn): TurnOut[] {
+  return [...turns]
+    .sort((a, b) => a.turn - b.turn)
+    .map((t) => ({
+      turn: t.turn,
+      matches: t.fixtures.map((f): MatchOut => {
+        const result = results[String(t.turn)]?.[String(f.no)] ?? null;
+        const predictions = Object.fromEntries(
+          roster.map((p) => {
+            const pick = t.predictions[p.id]?.[String(f.no)] ?? null;
+            const points = pick && result ? scoreMatchK1(pick, result) : null;
+            return [p.id, { pick, points }];
+          }),
+        );
+        return { no: f.no, home: f.home, away: f.away, kickoff: f.kickoff, result, predictions };
+      }),
+    }));
 }
 
 /**
@@ -72,5 +102,5 @@ export function buildResults(
     ]),
   ) as Record<Group, TableRow[]>;
 
-  return { generatedAt, general, groups, turns: [] };
+  return { generatedAt, general, groups, turns: buildTurns(roster, turns, results) };
 }

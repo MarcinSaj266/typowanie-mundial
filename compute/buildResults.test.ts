@@ -69,6 +69,60 @@ describe('buildResults (syntetycznie)', () => {
   });
 });
 
+describe('buildResults: sekcja turns', () => {
+  const t1 = out.turns[0];
+
+  it('jedna tura, mecze w kolejnosci fixtures z metadanymi', () => {
+    expect(out.turns).toHaveLength(1);
+    expect(t1.turn).toBe(1);
+    expect(t1.matches.map((m) => m.no)).toEqual([1, 2, 3]);
+    expect(t1.matches[0]).toMatchObject({
+      home: 'Meksyk',
+      away: 'RPA',
+      kickoff: 'czwartek, 11 cze godz.21.00',
+    });
+  });
+
+  it('wynik meczu z results; brak wyniku = null', () => {
+    expect(t1.matches[0].result).toEqual({ home: 2, away: 1 });
+    expect(t1.matches[2].result).toBeNull();
+  });
+
+  it('punkty per mecz zgodne ze scoreMatchK1', () => {
+    // mecz 1 (2:1): a1 typ 2:1 -> 5; a2 typ 1:0 -> 4; b1 typ 5:0 -> 3
+    const m1 = t1.matches[0].predictions;
+    expect(m1.a1).toEqual({ pick: { home: 2, away: 1 }, points: 5 });
+    expect(m1.a2).toEqual({ pick: { home: 1, away: 0 }, points: 4 });
+    expect(m1.b1).toEqual({ pick: { home: 5, away: 0 }, points: 3 });
+  });
+
+  it('brak typu: pick null, points null (takze na rozegranym meczu)', () => {
+    expect(t1.matches[0].predictions.b2).toEqual({ pick: null, points: null });
+  });
+
+  it('mecz nierozegrany: typ widoczny, points null', () => {
+    expect(t1.matches[2].predictions.a1).toEqual({
+      pick: { home: 1, away: 0 },
+      points: null,
+    });
+  });
+
+  it('komplet rosteru w predictions kazdego meczu', () => {
+    for (const m of t1.matches) {
+      expect(Object.keys(m.predictions).sort()).toEqual(['a1', 'a2', 'b1', 'b2']);
+    }
+  });
+
+  it('spojnosc: suma punktow z turns = points w tabeli ogolnej', () => {
+    for (const row of out.general) {
+      const sum = out.turns
+        .flatMap((t) => t.matches)
+        .reduce((acc, m) => acc + (m.predictions[row.participantId].points ?? 0), 0);
+      expect(sum).toBe(row.points);
+    }
+  });
+});
+
 import { readFileSync } from 'node:fs';
 
 describe('buildResults (realne dane + atrapy)', () => {
@@ -95,5 +149,13 @@ describe('buildResults (realne dane + atrapy)', () => {
 
   it('kazdy rozegral co najwyzej 24 mecze', () => {
     for (const r of real.general) expect(r.played).toBeLessThanOrEqual(24);
+  });
+
+  it('turns: tura 1 ma 24 mecze, kazdy z 56 typami', () => {
+    expect(real.turns).toHaveLength(1);
+    expect(real.turns[0].matches).toHaveLength(24);
+    for (const m of real.turns[0].matches) {
+      expect(Object.keys(m.predictions)).toHaveLength(56);
+    }
   });
 });
