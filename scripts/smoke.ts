@@ -16,7 +16,7 @@ if (matches !== results.turns[0].matches.length) {
 }
 // Intro + muzyka (spec intro, sekcja "Testy").
 const menu = readFileSync('out/index.html', 'utf8');
-for (const marker of ['pixel-ball', 'music-toggle', 'press-start']) {
+for (const marker of ['pixel-ball', 'music-toggle', 'press-start', 'Designed by MarcinS']) {
   if (!menu.includes(marker)) {
     console.error(`SMOKE FAIL: brak "${marker}" w out/index.html`);
     process.exit(1);

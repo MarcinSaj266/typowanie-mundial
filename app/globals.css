@@ -207,6 +207,15 @@ a { color: inherit; }
   }
 }
 
+/* ── Stopka ────────────────────────────────────────────────────── */
+.site-footer {
+  text-align: center;
+  color: var(--zolty);
+  font-size: 8px;
+  padding: 18px 60px 18px 10px; /* prawy margines, by nie wchodzić pod przycisk ♪ */
+  opacity: 0.75;
+}
+
 /* ── Włącznik muzyki ───────────────────────────────────────────── */
 .music-toggle {
   position: fixed;

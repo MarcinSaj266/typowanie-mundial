@@ -5,14 +5,14 @@
 //   więc gdy blokada zadziała, start następuje przy pierwszym geście użytkownika;
 // - 8-bitowe „blipy" (WebAudio, fala kwadratowa) przy kliknięciu w link/przycisk/summary.
 // Komponent żyje w layoucie: nawigacja App Routera go nie remontuje, muzyka gra dalej.
-// Przycisk ♪ wycisza całość (muzykę i blipy).
+// Przycisk ♪ steruje TYLKO muzyką — dźwięk klikania gra zawsze (decyzja użytkownika).
 import { useEffect, useRef, useState } from 'react';
 
 export default function RetroAudio() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const ctxRef = useRef<AudioContext | null>(null);
-  const wlaczoneRef = useRef(true);
-  const [wlaczone, setWlaczone] = useState(true);
+  const muzykaRef = useRef(true);
+  const [muzyka, setMuzyka] = useState(true);
 
   useEffect(() => {
     const audio = new Audio('/audio/full-time-glory.mp3');
@@ -21,7 +21,7 @@ export default function RetroAudio() {
     audioRef.current = audio;
 
     const startNaGest = () => {
-      if (wlaczoneRef.current) audio.play().catch(() => {});
+      if (muzykaRef.current) audio.play().catch(() => {});
       window.removeEventListener('pointerdown', startNaGest);
       window.removeEventListener('keydown', startNaGest);
     };
@@ -40,7 +40,7 @@ export default function RetroAudio() {
 
   useEffect(() => {
     const blip = (e: MouseEvent) => {
-      if (!wlaczoneRef.current) return;
+      // Blip gra niezależnie od stanu muzyki.
       if (!(e.target instanceof Element) || !e.target.closest('a, button, summary')) return;
       const ctx = (ctxRef.current ??= new AudioContext());
       if (ctx.state === 'suspended') void ctx.resume();
@@ -62,9 +62,9 @@ export default function RetroAudio() {
   }, []);
 
   function przelacz() {
-    const nast = !wlaczone;
-    setWlaczone(nast);
-    wlaczoneRef.current = nast;
+    const nast = !muzyka;
+    setMuzyka(nast);
+    muzykaRef.current = nast;
     if (nast) audioRef.current?.play().catch(() => {});
     else audioRef.current?.pause();
   }
@@ -73,11 +73,11 @@ export default function RetroAudio() {
     <button
       type="button"
       className="music-toggle"
-      aria-pressed={wlaczone}
-      aria-label={wlaczone ? 'Wyłącz dźwięk' : 'Włącz dźwięk'}
+      aria-pressed={muzyka}
+      aria-label={muzyka ? 'Wyłącz muzykę' : 'Włącz muzykę'}
       onClick={przelacz}
     >
-      ♪ {wlaczone ? 'ON' : 'OFF'}
+      ♪ {muzyka ? 'ON' : 'OFF'}
     </button>
   );
 }

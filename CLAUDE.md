@@ -74,7 +74,8 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   Intro CSS na `/`: tytuł z bounce + pikselowa piłka (box-shadow) turla się na środek; PRESS
   START (`components/PressStart.tsx`) turla piłeczkę od nowa. Dźwięk: `components/RetroAudio.tsx`
   w layoucie (muzyka gra między widokami; domyślnie ON — przy blokadzie autoplay start na
-  pierwszy gest; blipy WebAudio na klik w `a/button/summary`; przycisk ♪ wycisza całość).
+  pierwszy gest; blipy WebAudio na klik w `a/button/summary` GRAJĄ ZAWSZE; przycisk ♪ steruje
+  TYLKO muzyką). Stopka „Designed by MarcinS" w layoucie (na każdej stronie).
   `prefers-reduced-motion` wyłącza animacje. Smoke sprawdza markery w `out/`.
   UWAGA: wariant v2 (scenka piłkarzyka) WYCOFANY — kolizja klasy `.frame` sprite'ów z ramką
   `ScreenFrame` rozsypała wszystkie widoki + użytkownik wolał turlającą piłkę. Lekcja:

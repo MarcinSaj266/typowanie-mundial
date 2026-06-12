@@ -13,6 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="pl">
       <body>
         {children}
+        <footer className="site-footer">Designed by MarcinS</footer>
         <RetroAudio />
       </body>
     </html>
