@@ -10,8 +10,10 @@ export type {
 export type { NumericKey } from './ranking';
 export type { SeasonExtras } from './buildSeason';
 export type { BonusRow } from './bonus';
+export type { Side, PucharPoints, Karne } from './scoreMatchPuchar';
 
 export { scoreMatchK1 } from './scoreMatch';
+export { scoreMatchPuchar } from './scoreMatchPuchar';
 export { aggregateTurn } from './aggregate';
 export { rankBy } from './ranking';
 export { buildSeason } from './buildSeason';

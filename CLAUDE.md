@@ -55,8 +55,16 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   3 tur (`groupStageComplete` w `compute/buildResults.ts`); do tego czasu `bns = 0`. Przy okazji
   poprawione: tabele grupowe rankują i pokazują pkt = `grI+grII+grIII` (bez bns/puch), jak
   `SUM` w arkuszu `tab grup` — bonus liczy się Z tabel grupowych, nie odwrotnie.
-- ⏳ Następne: intro + muzyka + PWA, Konkurs 2, faza pucharowa ×2 (reguły znane — patrz niżej;
-  silnik pucharowy napisać przed startem 1/16, zweryfikować interpretację z formułami `rpuch`).
+- ✅ Silnik pucharowy `scoreMatchPuchar` (`engine/scoreMatchPuchar.ts`) — TDD, 87 testów zielonych.
+  Wynik po dogrywce jak z 90 min, bazowa punktacja `scoreMatchK1` ×2; przy remisie (karnych)
+  obowiązkowy krzyżyk na zwycięzcę karnych: ±1 do bazy PRZED podwojeniem (brak krzyżyka = −1).
+  Interpretacja ZWERYFIKOWANA z `rpuch`: `AI=AJ*6+AK*8+AL*10+AM*12`, `AJ:AM=COUNTIF(C:AH,6/8/10/12)`
+  — wartości meczowe są parzyste {6,8,10,12}, więc ±1 działa przed ×2. Formuł liczących pojedynczy
+  mecz pucharowy w masterze jeszcze NIE ma (C:AH puste) — porównać z nimi, gdy organizator je dopnie.
+  Do zrobienia przy starcie pucharu: ingest typów pucharowych (krzyżyk!), agregacja do `puch`
+  i wkład #6 w „%" tabeli ogólnej.
+- ⏳ Następne: intro + muzyka + PWA, Konkurs 2 (silnik gotowy do napisania — reguły znane,
+  czekamy na typy K2 od organizatora).
 
 ## Architektura (ustalona)
 
@@ -123,8 +131,9 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
    samym kodem (parser waliduje spójność każdego bloku z rosterem).
 3. ✅ **ROZSTRZYGNIĘTE** (2026-06-12) — kategoria „6" = dokładny remis + trafiony zwycięzca
    karnych (5+1); pełne reguły dogrywek/karnych w „Reguły punktacji". „%" w tabeli ogólnej
-   wlicza „6", w grupowej nie. Do zrobienia przed startem 1/16: silnik pucharowy (TDD) +
-   weryfikacja interpretacji „±1 przed podwojeniem" z formułami arkusza `rpuch`.
+   wlicza „6", w grupowej nie. Silnik pucharowy (`scoreMatchPuchar`) zaimplementowany,
+   interpretacja „±1 przed podwojeniem" zweryfikowana z agregacją `rpuch` (patrz Status);
+   przed startem 1/16 zostaje ingest typów pucharowych + wpięcie `puch` i #6 do tabel.
 4. ✅ **ROZSTRZYGNIĘTE pragmatycznie** (2026-06-12) — tiebreakerów FIFA NIE implementujemy:
    realne końcowe układy grup turnieju weźmiemy z oficjalnych tabel FIFA jako ręczne dane
    wejściowe (jak wyniki meczów). Arkusz `zasady` w `k2.xlsx` sprawdzony — opisuje tylko
