@@ -39,8 +39,14 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   `/gracz/[id]` (56 statycznych profili przez `generateStaticParams`). Retro 16-bit: Press Start 2P
   hostowany lokalnie (`public/fonts/`, `scripts/fetchFont.mjs`), czysty CSS w `app/globals.css`.
   Bramka jakości: `npm test && npm run typecheck && npm run build && npm run smoke`.
-- ⏳ Następne: podpięcie repo w Vercel (akcja organizatora), walidacja end-to-end vs `r1`/`tab grup`
-  (gdy organizator da master z realnymi wynikami), intro + muzyka + PWA, Konkurs 2, faza pucharowa ×2.
+- ✅ Wdrożenie na Vercel — projekt `marcinsaj266s-projects/typowanie_mundial`, **produkcja:
+  https://typowaniemundial.vercel.app** (deploy z CLI `vercel deploy`). Smoke na żywo OK.
+  ⚠️ Integracja Git NIE podpięta: `vercel git connect` odmawia dostępu do prywatnego repo —
+  trzeba zainstalować aplikację GitHub „Vercel" (https://github.com/apps/vercel) i dać jej dostęp
+  do `MarcinSaj266/typowanie-mundial`; do tego czasu publikacja = ręczne `vercel deploy --prod`.
+- ⏳ Następne: podpięcie integracji Git w Vercel (akcja organizatora, patrz wyżej), walidacja
+  end-to-end vs `r1`/`tab grup` (gdy organizator da master z realnymi wynikami), intro + muzyka +
+  PWA, Konkurs 2, faza pucharowa ×2.
 
 ## Architektura (ustalona)
 
