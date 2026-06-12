@@ -50,8 +50,8 @@ export default function RetroAudio() {
       osc.type = 'square';
       osc.frequency.setValueAtTime(660, t);
       osc.frequency.setValueAtTime(990, t + 0.045);
-      gain.gain.setValueAtTime(0.06, t);
-      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.09);
+      gain.gain.setValueAtTime(0.22, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
       osc.connect(gain);
       gain.connect(ctx.destination);
       osc.start(t);

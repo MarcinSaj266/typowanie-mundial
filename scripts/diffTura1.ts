@@ -1,6 +1,6 @@
 // Jednorazowe narzędzie: porównanie typów tury 1 (stary vs nowy ingest)
 // oraz krzyżowa walidacja nowego ingestu z plikiem "Baza tura 1.xlsx" organizatora.
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { openXlsx } from '../ingest/xlsx/workbook';
 
 type Pred = { home: number; away: number };
@@ -10,34 +10,36 @@ type Tura = {
   predictions: Record<string, Record<string, Pred>>;
 };
 
-const oldT: Tura = JSON.parse(readFileSync('data/k1/tura-1.OLD.json', 'utf8'));
 const newT: Tura = JSON.parse(readFileSync('data/k1/tura-1.json', 'utf8'));
 
-// --- 1. Diff stary vs nowy ingest ---
-console.log('=== DIFF stary master -> poprawiony master ===');
-let diffs = 0;
-for (const player of Object.keys(newT.predictions)) {
-  const o = oldT.predictions[player];
-  const n = newT.predictions[player];
-  if (!o) {
-    console.log(`NOWY GRACZ: ${player}`);
-    diffs++;
-    continue;
-  }
-  for (const m of Object.keys(n)) {
-    const op = o[m];
-    const np = n[m];
-    if (!op || op.home !== np.home || op.away !== np.away) {
-      const fx = newT.fixtures.find((f) => f.no === Number(m));
-      console.log(
-        `${player} mecz ${m} (${fx?.home}-${fx?.away}): ` +
-          `${op ? `${op.home}:${op.away}` : '∅'} => ${np.home}:${np.away}`,
-      );
+// --- 1. (opcjonalnie) Diff stary vs nowy ingest — gdy istnieje backup tura-1.OLD.json ---
+if (existsSync('data/k1/tura-1.OLD.json')) {
+  const oldT: Tura = JSON.parse(readFileSync('data/k1/tura-1.OLD.json', 'utf8'));
+  console.log('=== DIFF stary master -> poprawiony master ===');
+  let diffs = 0;
+  for (const player of Object.keys(newT.predictions)) {
+    const o = oldT.predictions[player];
+    const n = newT.predictions[player];
+    if (!o) {
+      console.log(`NOWY GRACZ: ${player}`);
       diffs++;
+      continue;
+    }
+    for (const m of Object.keys(n)) {
+      const op = o[m];
+      const np = n[m];
+      if (!op || op.home !== np.home || op.away !== np.away) {
+        const fx = newT.fixtures.find((f) => f.no === Number(m));
+        console.log(
+          `${player} mecz ${m} (${fx?.home}-${fx?.away}): ` +
+            `${op ? `${op.home}:${op.away}` : '∅'} => ${np.home}:${np.away}`,
+        );
+        diffs++;
+      }
     }
   }
+  console.log(`Rozbieżności: ${diffs}`);
 }
-console.log(`Rozbieżności: ${diffs}`);
 
 // --- 2. Walidacja nowego ingestu vs "Baza tura 1.xlsx" ---
 console.log('\n=== WALIDACJA nowy ingest vs Baza tura 1.xlsx ===');
