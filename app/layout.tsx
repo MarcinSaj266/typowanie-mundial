@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import MusicToggle from '../components/MusicToggle';
+import RetroAudio from '../components/RetroAudio';
 
 export const metadata: Metadata = {
   title: 'Typowanie Mundial 2026',
@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="pl">
       <body>
         {children}
-        <MusicToggle />
+        <RetroAudio />
       </body>
     </html>
   );

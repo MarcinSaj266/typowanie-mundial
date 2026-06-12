@@ -14,10 +14,12 @@ render czyta tylko `public/data/results.json`).
 
 | Element | Decyzja |
 |---|---|
-| Sekwencja intro | Czysty CSS na `/`: pas murawy wjeżdża, tytuł wpada z góry (bounce), pikselowa piłka (box-shadow art) przetacza się przez ekran, subtitle + menu pojawiają się z opóźnieniem (~2 s), PRESS START miga jak dotąd. Odtwarza się przy każdym wejściu na `/` (tanio, zero gatingu, zero JS). |
-| Muzyka | `MusicToggle` (`'use client'`, jedyny klientowy komponent w apce) w `app/layout.tsx`: stały przycisk ♪ w rogu, `<audio loop>` z `public/audio/full-time-glory.mp3` (plik od użytkownika: `muzyczka do aplikacji/Full_Time_Glory.mp3`, 2,9 MB — ładowany leniwie dopiero po włączeniu, `preload="none"`). Domyślnie wyłączona (autoplay i tak blokują przeglądarki); bez zapamiętywania preferencji (YAGNI — odtworzenie po powrocie i tak wymaga gestu). Przy nawigacji App Routera layout nie jest remontowany → muzyka gra dalej między widokami. |
-| Dostępność | `prefers-reduced-motion: reduce` wyłącza animacje intro (wszystko widoczne od razu). Przycisk z `aria-pressed` i czytelną etykietą. |
-| Poza zakresem | Efekty dźwiękowe per akcja, PWA, intro wideo, pomijanie intro (sekwencja trwa ~2 s — nie ma czego pomijać). |
+| Sekwencja intro (v2, feedback użytkownika 2026-06-12) | Czysty CSS na `/`: tytuł wpada z góry (bounce), potem scenka — pikselowy **piłkarzyk** (sprite'y box-shadow, 3 klatki: 2 biegu + kopnięcie, generator `scripts/genPixelArt.mjs`) wbiega, kopie piłkę, piłka leci do pikselowej bramki, błysk siatki, napis „GOL!"; następnie subtitle + menu + PRESS START (~3 s). Odtwarza się przy każdym wejściu na `/` (tanio, zero gatingu, zero JS). |
+| PRESS START | To AKCJA, nie dekoracja (feedback): link-przycisk do `/tabela/`, wyróżniony (żółte tło), miga do najechania. |
+| Muzyka (v2) | `RetroAudio` (`'use client'`, jedyny klientowy komponent w apce) w `app/layout.tsx`. **Domyślnie WŁĄCZONA** (feedback): próba autoplay od razu; gdy przeglądarka zablokuje (standardowa polityka autoplay — dźwięk wymaga gestu), start przy pierwszym pointerdown/keydown. Przycisk ♪ w rogu wyłącza/włącza CAŁY dźwięk (muzyka + blipy). Plik `public/audio/full-time-glory.mp3` (od użytkownika, 2,9 MB), `loop`, volume 0.55. Przy nawigacji App Routera layout nie jest remontowany → muzyka gra dalej między widokami. |
+| Odgłosy kliknięć (v2) | Generowane w locie przez WebAudio (fala kwadratowa 660→990 Hz, ~90 ms, obwiednia wykładnicza) — zero plików, 100% styl 8-bit. Globalny listener (capture) na `click` w `a, button, summary`. |
+| Dostępność | `prefers-reduced-motion: reduce` wyłącza animacje intro (stan końcowy widoczny od razu: piłka w bramce, „GOL!"). Przycisk ♪ z `aria-pressed` i etykietą. |
+| Poza zakresem | PWA, intro wideo, pomijanie intro (sekwencja trwa ~3 s — nie ma czego pomijać), dźwięki inne niż klik (np. fanfary gola). |
 
 ## Rozważone warianty
 

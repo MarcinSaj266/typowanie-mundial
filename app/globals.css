@@ -119,7 +119,21 @@ a { color: inherit; }
   text-decoration: none;
 }
 .menu-item:hover, .menu-item:focus { background: var(--zolty); color: var(--czern); }
-.press-start { color: var(--zolty); animation: blink 1.2s steps(1) infinite; }
+/* PRESS START = akcja: wejście do tabeli ogólnej. */
+.press-start {
+  display: inline-block;
+  background: var(--zolty);
+  color: var(--czern);
+  border: 4px solid var(--bialy);
+  padding: 12px 24px;
+  text-decoration: none;
+  animation: blink 1.2s steps(1) infinite;
+}
+.press-start:hover, .press-start:focus {
+  background: var(--neon);
+  animation: none;
+  opacity: 1;
+}
 @keyframes blink { 50% { opacity: 0; } }
 
 /* ── Intro (sekwencja na ekranie tytułowym) ────────────────────── */
@@ -129,21 +143,100 @@ a { color: inherit; }
   to { transform: none; opacity: 1; }
 }
 
-.ball-lane {
+/* Scenka: piłkarzyk wbiega, kopie, piłka leci do bramki, błysk siatki, GOL!
+   Sprite'y rysowane box-shadow (piksel = 4px); mapy ASCII w scripts/genPixelArt.mjs. */
+.intro-stage {
   position: relative;
-  width: min(100%, 420px);
-  height: 32px;
-  overflow: hidden;
+  width: min(100%, 480px);
+  height: 68px;
 }
-/* Pikselowa piłka 8×8 (piksel = 4px) rysowana box-shadow, jak sprite. */
-.pixel-ball {
+.frame {
   position: absolute;
-  left: calc(50% - 16px);
+  left: 0;
   top: 0;
   width: 4px;
   height: 4px;
+}
+
+.pixel-player {
+  position: absolute;
+  bottom: 0;
+  left: calc(40% - 44px);
+  width: 40px;
+  height: 64px;
+  animation: player-run 1.1s steps(14) 0.4s both;
+}
+@keyframes player-run {
+  from { left: -48px; }
+  to { left: calc(40% - 44px); }
+}
+.run-frames {
+  position: absolute;
+  inset: 0;
+  animation: znikaj 0.01s steps(1) 1.5s forwards;
+}
+.frame-a { animation: faza-a 0.28s steps(1) infinite; }
+.frame-b { opacity: 0; animation: faza-b 0.28s steps(1) infinite; }
+@keyframes faza-a { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes faza-b { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+.frame-kick { opacity: 0; animation: pokaz 0.01s steps(1) 1.5s forwards; }
+@keyframes znikaj { to { opacity: 0; } }
+@keyframes pokaz { to { opacity: 1; } }
+
+/* Klatki piłkarzyka — wygenerowane przez scripts/genPixelArt.mjs, nie edytuj ręcznie. */
+.pixel-player .frame-a {
+  box-shadow:
+    12px 0px var(--czern), 16px 0px var(--czern), 8px 4px var(--czern), 12px 4px var(--czern), 16px 4px var(--czern), 20px 4px var(--czern), 8px 8px #f2c094, 12px 8px #f2c094, 16px 8px #f2c094, 20px 8px #f2c094, 8px 12px #f2c094, 12px 12px #f2c094, 16px 12px #f2c094, 20px 12px #f2c094, 12px 16px var(--zolty), 16px 16px var(--zolty), 8px 20px var(--zolty), 12px 20px var(--zolty), 16px 20px var(--zolty), 20px 20px var(--zolty), 4px 24px #f2c094, 8px 24px var(--zolty), 12px 24px var(--zolty), 16px 24px var(--zolty), 20px 24px var(--zolty), 24px 24px #f2c094, 4px 28px #f2c094, 8px 28px var(--zolty), 12px 28px var(--zolty), 16px 28px var(--zolty), 20px 28px var(--zolty), 24px 28px #f2c094, 8px 32px var(--zolty), 12px 32px var(--zolty), 16px 32px var(--zolty), 20px 32px var(--zolty), 8px 36px var(--bialy), 12px 36px var(--bialy), 16px 36px var(--bialy), 20px 36px var(--bialy), 8px 40px var(--bialy), 12px 40px var(--bialy), 16px 40px var(--bialy), 20px 40px var(--bialy), 8px 44px #f2c094, 12px 44px #f2c094, 20px 44px #f2c094, 24px 44px #f2c094, 8px 48px #f2c094, 12px 48px #f2c094, 20px 48px #f2c094, 24px 48px #f2c094, 8px 52px #f2c094, 12px 52px #f2c094, 20px 52px #f2c094, 24px 52px #f2c094, 8px 56px #f2c094, 12px 56px #f2c094, 20px 56px #f2c094, 24px 56px #f2c094, 4px 60px var(--czern), 8px 60px var(--czern), 12px 60px var(--czern), 20px 60px var(--czern), 24px 60px var(--czern), 28px 60px var(--czern);
+}
+.pixel-player .frame-b {
+  box-shadow:
+    12px 0px var(--czern), 16px 0px var(--czern), 8px 4px var(--czern), 12px 4px var(--czern), 16px 4px var(--czern), 20px 4px var(--czern), 8px 8px #f2c094, 12px 8px #f2c094, 16px 8px #f2c094, 20px 8px #f2c094, 8px 12px #f2c094, 12px 12px #f2c094, 16px 12px #f2c094, 20px 12px #f2c094, 12px 16px var(--zolty), 16px 16px var(--zolty), 8px 20px var(--zolty), 12px 20px var(--zolty), 16px 20px var(--zolty), 20px 20px var(--zolty), 4px 24px #f2c094, 8px 24px var(--zolty), 12px 24px var(--zolty), 16px 24px var(--zolty), 20px 24px var(--zolty), 24px 24px #f2c094, 4px 28px #f2c094, 8px 28px var(--zolty), 12px 28px var(--zolty), 16px 28px var(--zolty), 20px 28px var(--zolty), 24px 28px #f2c094, 8px 32px var(--zolty), 12px 32px var(--zolty), 16px 32px var(--zolty), 20px 32px var(--zolty), 8px 36px var(--bialy), 12px 36px var(--bialy), 16px 36px var(--bialy), 20px 36px var(--bialy), 8px 40px var(--bialy), 12px 40px var(--bialy), 16px 40px var(--bialy), 20px 40px var(--bialy), 4px 44px #f2c094, 8px 44px #f2c094, 20px 44px #f2c094, 24px 44px #f2c094, 4px 48px #f2c094, 8px 48px #f2c094, 20px 48px #f2c094, 24px 48px #f2c094, 4px 52px #f2c094, 24px 52px #f2c094, 28px 52px #f2c094, 4px 56px #f2c094, 24px 56px #f2c094, 28px 56px #f2c094, 0px 60px var(--czern), 4px 60px var(--czern), 8px 60px var(--czern), 28px 60px var(--czern), 32px 60px var(--czern), 36px 60px var(--czern);
+}
+.pixel-player .frame-kick {
+  box-shadow:
+    12px 0px var(--czern), 16px 0px var(--czern), 8px 4px var(--czern), 12px 4px var(--czern), 16px 4px var(--czern), 20px 4px var(--czern), 8px 8px #f2c094, 12px 8px #f2c094, 16px 8px #f2c094, 20px 8px #f2c094, 8px 12px #f2c094, 12px 12px #f2c094, 16px 12px #f2c094, 20px 12px #f2c094, 12px 16px var(--zolty), 16px 16px var(--zolty), 8px 20px var(--zolty), 12px 20px var(--zolty), 16px 20px var(--zolty), 20px 20px var(--zolty), 4px 24px #f2c094, 8px 24px var(--zolty), 12px 24px var(--zolty), 16px 24px var(--zolty), 20px 24px var(--zolty), 24px 24px #f2c094, 4px 28px #f2c094, 8px 28px var(--zolty), 12px 28px var(--zolty), 16px 28px var(--zolty), 20px 28px var(--zolty), 24px 28px #f2c094, 8px 32px var(--zolty), 12px 32px var(--zolty), 16px 32px var(--zolty), 20px 32px var(--zolty), 8px 36px var(--bialy), 12px 36px var(--bialy), 16px 36px var(--bialy), 20px 36px var(--bialy), 8px 40px var(--bialy), 12px 40px var(--bialy), 16px 40px var(--bialy), 20px 40px var(--bialy), 8px 44px #f2c094, 12px 44px #f2c094, 8px 48px #f2c094, 12px 48px #f2c094, 24px 48px #f2c094, 28px 48px #f2c094, 8px 52px #f2c094, 12px 52px #f2c094, 28px 52px #f2c094, 32px 52px #f2c094, 36px 52px var(--czern), 8px 56px #f2c094, 12px 56px #f2c094, 4px 60px var(--czern), 8px 60px var(--czern), 12px 60px var(--czern);
+}
+
+.pixel-goal {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 44px;
+  height: 62px;
+  border: 4px solid var(--bialy);
+  border-bottom: none;
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.25) 0 1px, transparent 1px 7px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0 1px, transparent 1px 7px);
+  animation: net-flash 0.25s steps(2) 1.95s 2;
+}
+@keyframes net-flash {
+  50% { background-color: rgba(118, 255, 3, 0.45); }
+}
+
+.gol-text {
+  position: absolute;
+  top: -4px;
+  right: 56px;
+  color: var(--neon);
+  font-size: 13px;
+  opacity: 0;
+  animation: gol-pop 0.3s steps(3) 2s forwards;
+}
+@keyframes gol-pop {
+  from { opacity: 0; transform: scale(0.3); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Pikselowa piłka 8×8: czeka na kopnięcie, potem strzał do bramki. */
+.pixel-ball {
+  position: absolute;
+  bottom: 28px; /* piksele box-shadow biegną w dół: 32px piłki kończy się na dnie sceny */
+  left: calc(100% - 40px);
+  width: 4px;
+  height: 4px;
   background: transparent;
-  animation: ball-roll 0.9s steps(18) 0.5s both;
+  animation: ball-shot 0.35s steps(7) 1.6s both;
   box-shadow:
     8px 0 var(--bialy), 12px 0 var(--bialy), 16px 0 var(--bialy), 20px 0 var(--bialy),
     4px 4px var(--bialy), 8px 4px var(--bialy), 12px 4px var(--bialy), 16px 4px var(--bialy),
@@ -160,20 +253,24 @@ a { color: inherit; }
     20px 24px var(--bialy), 24px 24px var(--bialy),
     8px 28px var(--bialy), 12px 28px var(--bialy), 16px 28px var(--bialy), 20px 28px var(--bialy);
 }
-@keyframes ball-roll {
-  from { left: -48px; }
-  to { left: calc(50% - 16px); }
+@keyframes ball-shot {
+  from { left: calc(40% - 4px); }
+  to { left: calc(100% - 40px); }
 }
 
 @keyframes fadein {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-.intro .subtitle { animation: fadein 0.4s both 1.5s; }
-.intro .menu { animation: fadein 0.4s both 1.7s; }
+.intro .subtitle { animation: fadein 0.4s both 2.5s; }
+.intro .menu { animation: fadein 0.4s both 2.7s; }
 .intro .press-start {
   opacity: 0;
-  animation: fadein 0.3s forwards 2s, blink 1.2s steps(1) 2.4s infinite;
+  animation: fadein 0.3s forwards 3s, blink 1.2s steps(1) 3.4s infinite;
+}
+.intro .press-start:hover, .intro .press-start:focus {
+  animation: none;
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -181,8 +278,20 @@ a { color: inherit; }
   .intro .subtitle,
   .intro .menu,
   .intro .press-start,
-  .intro .pixel-ball {
+  .intro .pixel-player,
+  .intro .run-frames,
+  .intro .frame-a,
+  .intro .frame-b,
+  .intro .pixel-ball,
+  .intro .pixel-goal,
+  .intro .gol-text {
     animation: none;
+  }
+  .intro .game-title,
+  .intro .subtitle,
+  .intro .menu,
+  .intro .press-start,
+  .intro .gol-text {
     opacity: 1;
   }
 }

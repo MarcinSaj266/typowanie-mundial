@@ -70,12 +70,13 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   56×24 typów). Krzyżowa walidacja `scripts/diffTura1.ts`: 1344/1344 typów zgodnych
   (uwaga: 5 nicków w bazie ma inną pisownię niż master — mapa aliasów w skrypcie);
   `validate:excel` na poprawionym masterze: 112 par, 0 rozbieżności.
-- ✅ Intro + muzyka — spec: `docs/superpowers/specs/2026-06-12-intro-muzyka-design.md`.
-  Sekwencja intro na `/` w czystym CSS (tytuł z bounce, pikselowa piłka box-shadow,
-  menu z opóźnieniem; `prefers-reduced-motion` wyłącza animacje). Muzyka:
-  `components/MusicToggle.tsx` — JEDYNY klientowy komponent, w layoucie (gra dalej między
-  widokami), `public/audio/full-time-glory.mp3` ładowany dopiero po kliknięciu ♪.
-  Smoke sprawdza markery intro i obecność mp3 w `out/`.
+- ✅ Intro + dźwięk (v2 po feedbacku) — spec: `docs/superpowers/specs/2026-06-12-intro-muzyka-design.md`.
+  Scenka CSS na `/`: piłkarzyk (sprite'y box-shadow z generatora `scripts/genPixelArt.mjs`)
+  wbiega, kopie, piłka leci do bramki, „GOL!"; PRESS START = link do `/tabela/`.
+  Dźwięk: `components/RetroAudio.tsx` — JEDYNY klientowy komponent, w layoucie (muzyka gra
+  między widokami). Muzyka domyślnie ON (`public/audio/full-time-glory.mp3`; przy blokadzie
+  autoplay start na pierwszy gest), blipy WebAudio na klik w `a/button/summary`, przycisk ♪
+  wycisza całość. `prefers-reduced-motion` wyłącza animacje. Smoke sprawdza markery w `out/`.
 - ⏳ Następne: PWA, Konkurs 2 (silnik gotowy do napisania — reguły znane,
   czekamy na typy K2 od organizatora).
 
