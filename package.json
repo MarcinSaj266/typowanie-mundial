@@ -12,7 +12,8 @@
     "build:k1": "tsx ingest/buildK1.ts",
     "seed:results": "tsx compute/seedResults.ts",
     "build:results": "tsx compute/buildResultsCli.ts",
-    "smoke": "tsx scripts/smoke.ts"
+    "smoke": "tsx scripts/smoke.ts",
+    "validate:excel": "tsx scripts/validateVsExcel.ts \"konkurs 2026.06.12.xlsx\""
   },
   "devDependencies": {
     "@types/node": "^25.9.3",

@@ -25,8 +25,9 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   `docs/superpowers/plans/2026-06-12-ingest-k1.md`.
 - ✅ Ingest K1 — zaimplementowany, TDD, 50 testów zielonych (silnik 27 + ingest 23). Moduł `ingest/`:
   generyczny czytnik xlsx bez zależności (`xlsx/zip` na `zlib` przez central directory, `xlsx/workbook`
-  = `openXlsx → Sheet`, `xlsx/cells`) + parser domenowy (`k1/parseGrup1`). **Źródło typów to master
-  `konkurs 2026.06.11.xlsx`, arkusz `grup-1`** (NIE pusty szablon `k1.xlsx` ani 56 osobnych plików).
+  = `openXlsx → Sheet`, `xlsx/cells`) + parser domenowy (`k1/parseGrup1`). **Źródło typów to
+  NAJNOWSZY master organizatora (obecnie `konkurs 2026.06.12.xlsx`), arkusz `grup-1`** (NIE pusty
+  szablon `k1.xlsx` ani 56 osobnych plików).
   CLI `npm run build:k1` → `data/k1/roster.json` (56 osób, grupy A–H) + `data/k1/tura-1.json`
   (24 mecze + typy). Granice: `xlsx/` nie wie o konkursie, `k1/` nie wie o ZIP/XML.
 - ✅ Warstwa compute — `compute/buildResults` skleja silnik z danymi (`roster` + tury + ręczny
@@ -42,8 +43,14 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
 - ✅ Wdrożenie na Vercel — projekt `marcinsaj266s-projects/typowanie_mundial`, **produkcja:
   https://typowaniemundial.vercel.app**. Integracja Git podpięta (aplikacja GitHub „Vercel" ma
   dostęp do repo): push na `master` automatycznie przebudowuje produkcję.
-- ⏳ Następne: walidacja end-to-end vs `r1`/`tab grup` (gdy organizator da master z realnymi
-  wynikami), intro + muzyka + PWA, Konkurs 2, faza pucharowa ×2.
+- ✅ Walidacja end-to-end vs master z realnymi wynikami (`konkurs 2026.06.12.xlsx`, mecze 1–2):
+  `npm run validate:excel` (`scripts/validateVsExcel.ts`) porównuje punkty per gracz/mecz z naszego
+  silnika z cache formuł Excela (`grup-1`, kolumny H/N) — **112 par, 0 rozbieżności**. Master 06.12
+  naprawił błąd Excela (brak formuł `H` dla 2 pierwszych wierszy bloku w meczach 2–24 — Dario i
+  Wojtek nie dostawali punktów); nasz silnik liczył to dobrze od początku, bo liczy z typów, nie
+  z formuł. Narzędzia diagnostyczne: `scripts/diffXlsx.ts`, `scripts/dumpRegion.ts`,
+  `scripts/dumpFormulas.ts`.
+- ⏳ Następne: intro + muzyka + PWA, Konkurs 2, faza pucharowa ×2.
 
 ## Architektura (ustalona)
 
@@ -74,8 +81,10 @@ tiebreak = dorobek z późniejszej fazy.
 
 - `k1.xlsx` — szablon typów konkursu 1 (3 tury × 24 mecze).
 - `k2.xlsx` — szablon konkursu 2 (arkusze `konkurs2`, `zasady`).
-- `konkurs 2026.06.11.xlsx` — master organizatora (arkusze: `grup-1`, `tab grup`, `stat`, `tabela`,
-  `r1`, `rpuch`, `day by day`). **Tu siedzi cała logika w formułach** — to było źródło analizy.
+- `konkurs 2026.06.12.xlsx` — AKTUALNY master organizatora (arkusze: `grup-1`, `tab grup`, `stat`,
+  `tabela`, `r1`, `rpuch`, `day by day`). **Tu siedzi cała logika w formułach** + realne wyniki
+  meczów 1–2. Naprawia błąd z 06.11 (brakujące formuły `H` w `grup-1`).
+- `konkurs 2026.06.11.xlsx` — poprzedni master (zachowany do porównań; był źródłem analizy formuł).
 
 Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/worksheets/*.xml`,
 `xl/sharedStrings.xml`). Python NIE jest dostępny; jest Node.js.
@@ -96,7 +105,15 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
    (patrz „Reguły punktacji" wyżej) — `rankBy(rows, keys)` przyjmuje teraz listę kluczy w kolejności.
 6. **Do potwierdzenia z organizatorem** (drobne, wynikły z analizy formuł): (a) tabela grupowa sortuje
    `grIII → grI → grII`, a ogólna `grIII → grII → grI` — zamiana grI/grII w grupowej wygląda na literówkę
-   w arkuszu; (b) „%" w tabeli ogólnej wlicza też „6" (puchar), w grupowej nie.
+   w arkuszu; (b) „%" w tabeli ogólnej wlicza też „6" (puchar), w grupowej nie. (Master 06.12 niczego
+   tu nie zmienił — formuły `SORTBY` identyczne.)
+7. **ZGŁOSIĆ ORGANIZATOROWI — nowy błąd w masterze 06.12, arkusz `r1`, kolumna E (mecz 3,
+   Kanada–Bośnia):** wiersze `E33:E60` (uczestnicy grup E–H) odwołują się do `'grup-1'!H96:H123`
+   (pusty wiersz przerwy + nagłówek + punkty MECZU 4 lewej strony) zamiast do `'grup-1'!N68:N95`
+   (prawa kolumna meczu 3, tak jak w masterze 06.11). Dziś niewidoczne (mecz 3 nierozegrany, więc
+   strażnik `IF($G$66="",...)` zwraca puste), ale po wpisaniu wyniku meczu 3 Excel pokaże tym 28
+   osobom złe punkty. Nasza apka liczy z typów, więc NIE jest dotknięta; `npm run validate:excel`
+   wykryje rozbieżność automatycznie po rozegraniu meczu 3.
 
 ## Jak pracować
 

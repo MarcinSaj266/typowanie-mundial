@@ -59,7 +59,7 @@ import { readFileSync } from 'node:fs';
 import { openXlsx } from '../xlsx/workbook';
 import { parseGrup1 } from './parseGrup1';
 
-const MASTER = 'konkurs 2026.06.11.xlsx';
+const MASTER = 'konkurs 2026.06.12.xlsx';
 const parsed = parseGrup1(openXlsx(readFileSync(MASTER)).sheet('grup-1'));
 
 describe('parseGrup1 (realny grup-1)', () => {

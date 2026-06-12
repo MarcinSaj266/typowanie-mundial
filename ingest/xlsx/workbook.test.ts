@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { openXlsx } from './workbook';
 
-const MASTER = 'konkurs 2026.06.11.xlsx';
+const MASTER = 'konkurs 2026.06.12.xlsx';
 
 describe('openXlsx', () => {
   it('wymienia arkusze mastera', () => {
