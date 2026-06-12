@@ -12,7 +12,11 @@ const roster: Participant[] = [
 
 const turn1: TurnData = {
   turn: 1,
-  fixtures: [{ no: 1 }, { no: 2 }, { no: 3 }],
+  fixtures: [
+    { no: 1, home: 'Meksyk', away: 'RPA', kickoff: 'czwartek, 11 cze godz.21.00' },
+    { no: 2, home: 'Korea Płd.', away: 'Czechy', kickoff: 'piątek, 12 cze godz. 04.00' },
+    { no: 3, home: 'Kanada', away: 'Bośnia', kickoff: 'piątek 12 cze godz. 21.00' },
+  ],
   predictions: {
     a1: { '1': { home: 2, away: 1 }, '2': { home: 1, away: 1 }, '3': { home: 1, away: 0 } },
     a2: { '1': { home: 1, away: 0 }, '2': { home: 1, away: 0 } },

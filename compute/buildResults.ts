@@ -72,5 +72,5 @@ export function buildResults(
     ]),
   ) as Record<Group, TableRow[]>;
 
-  return { generatedAt, general, groups };
+  return { generatedAt, general, groups, turns: [] };
 }

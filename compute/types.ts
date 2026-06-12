@@ -4,11 +4,44 @@ import type { Group, Participant } from '../ingest/k1/parseGrup1';
 /** Wyniki meczów: numer tury → numer meczu → wynik. Brak klucza = mecz nierozegrany. */
 export type ResultsByTurn = Record<string, Record<string, Score>>;
 
-/** Dane tury z ingestu (kształt data/k1/tura-N.json; z fixtures potrzebny tylko numer). */
+/** Mecz w turze (kształt fixtures z data/k1/tura-N.json). */
+export interface Fixture {
+  no: number;
+  home: string;
+  away: string;
+  kickoff: string;
+}
+
+/** Dane tury z ingestu (kształt data/k1/tura-N.json). */
 export interface TurnData {
   turn: number;
-  fixtures: { no: number }[];
+  fixtures: Fixture[];
   predictions: Record<string, Record<string, Score>>;
+}
+
+/** Typ uczestnika na mecz w wyjściowym results.json.
+ *  pick: null = brak typu; points: null = mecz nierozegrany LUB brak typu. */
+export interface PredictionOut {
+  pick: Score | null;
+  points: number | null;
+}
+
+/** Mecz w sekcji turns wyjściowego results.json. */
+export interface MatchOut {
+  no: number;
+  home: string;
+  away: string;
+  kickoff: string;
+  /** null = mecz nierozegrany. */
+  result: Score | null;
+  /** Klucz = participantId; komplet osób z rosteru. */
+  predictions: Record<string, PredictionOut>;
+}
+
+/** Tura w sekcji turns wyjściowego results.json. */
+export interface TurnOut {
+  turn: number;
+  matches: MatchOut[];
 }
 
 /** Wiersz tabeli (ogólnej lub grupowej) w wyjściowym results.json. */
@@ -37,6 +70,7 @@ export interface ResultsJson {
   generatedAt: string;
   general: TableRow[];
   groups: Record<Group, TableRow[]>;
+  turns: TurnOut[];
 }
 
 export const ALL_GROUPS: Group[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
