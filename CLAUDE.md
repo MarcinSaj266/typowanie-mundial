@@ -29,8 +29,18 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   `konkurs 2026.06.11.xlsx`, arkusz `grup-1`** (NIE pusty szablon `k1.xlsx` ani 56 osobnych plików).
   CLI `npm run build:k1` → `data/k1/roster.json` (56 osób, grupy A–H) + `data/k1/tura-1.json`
   (24 mecze + typy). Granice: `xlsx/` nie wie o konkursie, `k1/` nie wie o ZIP/XML.
-- ⏳ Następne: wyniki meczów (ręczny plik) + sklejka z silnikiem → `public/data/results.json`,
-  tabele grup A–H end-to-end (walidacja vs `r1`/`tab grup`), Konkurs 2, faza pucharowa ×2, render.
+- ✅ Warstwa compute — `compute/buildResults` skleja silnik z danymi (`roster` + tury + ręczny
+  `data/k1/results.json`) → `public/data/results.json` (tabela ogólna, grupy A–H, sekcja `turns`
+  ze szczegółami per mecz). CLI `npm run build:results`. Wyniki tury 1 wpisywane ręcznie.
+- ✅ Render MVP — spec: `docs/superpowers/specs/2026-06-12-render-mvp-design.md`, plan:
+  `docs/superpowers/plans/2026-06-12-render-mvp.md`. Next.js App Router, static export
+  (`output: 'export'`, `trailingSlash`), 4 widoki: menu (ekran tytułowy), `/tabela`, `/grupy`
+  (kotwice #A–#H), `/mecze` (rozwijanie typów natywnym `<details>` — zero klientowego JS),
+  `/gracz/[id]` (56 statycznych profili przez `generateStaticParams`). Retro 16-bit: Press Start 2P
+  hostowany lokalnie (`public/fonts/`, `scripts/fetchFont.mjs`), czysty CSS w `app/globals.css`.
+  Bramka jakości: `npm test && npm run typecheck && npm run build && npm run smoke`.
+- ⏳ Następne: podpięcie repo w Vercel (akcja organizatora), walidacja end-to-end vs `r1`/`tab grup`
+  (gdy organizator da master z realnymi wynikami), intro + muzyka + PWA, Konkurs 2, faza pucharowa ×2.
 
 ## Architektura (ustalona)
 
@@ -38,8 +48,11 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
 → generuje `public/data/results.json` → render Next.js (statyczny) na Vercel (PWA, link dla uczestników,
 bez logowania). Wyniki meczów: ręczny plik teraz, hak na API piłkarskie później.
 
-Planowana struktura: `engine/` (silnik, testowalny), `ingest/` (parser → JSON), `data/` (wejście),
-`app/` (Next.js render).
+Struktura: `engine/` (silnik, testowalny), `ingest/` (parser → JSON), `compute/` (sklejka →
+`public/data/results.json`), `data/` (wejście), `app/` + `components/` (Next.js render — czyta
+WYŁĄCZNIE `public/data/results.json`; jedyna zależność od `compute/` to `import type`).
+Workflow aktualizacji: wynik meczu do `data/k1/results.json` → `npm run build:results` →
+commit+push → Vercel przebudowuje.
 
 ## Reguły punktacji (skrót — pełne w specyfikacji)
 
