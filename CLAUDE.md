@@ -80,6 +80,19 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   UWAGA: wariant v2 (scenka piłkarzyka) WYCOFANY — kolizja klasy `.frame` sprite'ów z ramką
   `ScreenFrame` rozsypała wszystkie widoki + użytkownik wolał turlającą piłkę. Lekcja:
   nowe klasy CSS prefiksować, kolizje sprawdzać grepem przed dodaniem.
+- ✅ Auto-pobieranie wyników (2026-06-13) — moduł `ingest/scores/` + robot GitHub Actions.
+  Źródło: **football-data.org** (darmowy plan, competition `WC`; spike potwierdził pełne
+  pokrycie MŚ 2026 i zgodność 4 rozegranych meczów z naszym `results.json`). Granice jak reszta:
+  `teamMap.ts` (48 drużyn PL→API, brak = twardy błąd), `matchScores.ts` (CZYSTA `mergeScores`,
+  TDD 7 testów — dopasowanie po nieuporządkowanej parze, wynik w orientacji NASZEGO fixture'a,
+  tylko `FINISHED`, NIE nadpisuje istniejących = ręczna nadpiska wygrywa), `footballData.ts`
+  (klient, token z env `FOOTBALL_DATA_TOKEN`), `fetchScoresCli.ts` (`npm run fetch:scores` —
+  czyta `tura-*.json` + `results.json`, dokleja tylko brakujące). Robot
+  `.github/workflows/auto-scores.yml`: cron `*/30 * * * *` + `workflow_dispatch` →
+  fetch:scores → (gdy zmiana) build:results → commit (autor noreply!) → push master → Vercel.
+  Sekret `FOOTBALL_DATA_TOKEN` w GitHub Actions. **Świadomie BEZ `[skip ci]`** (Vercel pomija
+  deploy przy `[skip ci]`, a my chcemy go wywołać). Zweryfikowane e2e przez `workflow_dispatch`
+  (bieg `success`, idempotentny). Poza zakresem: mecze pucharowe (powtórki par — po dacie).
 - ⏳ Następne: PWA, Konkurs 2 (silnik gotowy do napisania — reguły znane,
   czekamy na typy K2 od organizatora).
 
