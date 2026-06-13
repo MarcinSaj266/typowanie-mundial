@@ -17,8 +17,9 @@ import type {
   TurnOut,
 } from './types';
 
-/** Porządek tabeli grupowej: pkt → % → grI → grII → grIII (reguła organizatora, 2026-06-12). */
-const GROUP_ORDER = ['points', 'hitRate', 'grI', 'grII', 'grIII'] as const;
+/** Porządek tabeli grupowej: pkt → % → grIII → grII → grI (reguła organizatora, 2026-06-13:
+ * późniejsza tura bije wcześniejszą). */
+const GROUP_ORDER = ['points', 'hitRate', 'grIII', 'grII', 'grI'] as const;
 
 /** Komplet fazy grupowej: wszystkie 3 tury wczytane i każdy ich mecz ma wynik. */
 function groupStageComplete(turns: TurnData[], results: ResultsByTurn): boolean {

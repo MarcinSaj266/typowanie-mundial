@@ -42,14 +42,14 @@ describe('generalTable', () => {
     expect(out.map(r => r.participantId)).toEqual(['b', 'a']);
   });
 
-  it('przy remisie sumy i % decyduje puch, potem grI → grII → grIII (reguła organizatora)', () => {
+  it('przy remisie sumy i % decyduje puch, potem grIII → grII → grI (reguła organizatora 2026-06-13)', () => {
     const out = generalTable([
-      season({ participantId: 'a', grI: 10, hitRate: 0.5 }), // suma 10, puch 0, grI 10
+      season({ participantId: 'a', grI: 10, hitRate: 0.5 }), // suma 10, puch 0, grIII 0
       season({ participantId: 'b', grI: 6, puch: 4, hitRate: 0.5 }), // suma 10, puch 4
-      season({ participantId: 'c', grI: 5, grIII: 5, hitRate: 0.5 }), // suma 10, puch 0, grI 5
+      season({ participantId: 'c', grI: 5, grIII: 5, hitRate: 0.5 }), // suma 10, puch 0, grIII 5
     ]);
-    // b wygrywa na puch; wśród a/c (puch 0) decyduje grI: a (10) > c (5),
-    // mimo że c ma wyższe grIII — dorobek wcześniejszej tury ma pierwszeństwo.
-    expect(out.map(r => r.participantId)).toEqual(['b', 'a', 'c']);
+    // b wygrywa na puch; wśród a/c (puch 0) decyduje grIII: c (5) > a (0),
+    // mimo że a ma wyższe grI — późniejsza tura ma pierwszeństwo.
+    expect(out.map(r => r.participantId)).toEqual(['b', 'c', 'a']);
   });
 });

@@ -116,11 +116,14 @@ do arkusza tury 2/3 — ten sam układ co `grup-1`); typy K2 też dośle.
 **Konkurs 1, mecz (grupa):** trafiony rezultat 3 → + różnica bramek +1 (też remisy) → + dokładny wynik +1.
 Wartość ∈ {0,3,4,5}. Suma w turze = `#3×3 + #4×4 + #5×5`.
 **Faza grupowa:** 8 stałych grup konkursowych A–H po 7 osób; 3 tury (grup I/II/III).
-**Tiebreakery (reguła organizatora, potwierdzona 2026-06-12):** tabela grupowa
-`pkt → % → grI → grII → grIII`; tabela ogólna `pkt → % → puch → grI → grII → grIII`.
-UWAGA: formuły `SORTBY` w arkuszach organizatora mają inną kolejność (grupowa III→I→II,
-ogólna III→II→I) — organizator potwierdził, że właściwa jest I→II→III, więc jego arkusz
-wymaga poprawy (zgłoszone). „%" = (#3+#4+#5[+#6 w ogólnej])/rozegrane.
+**Tiebreakery (reguła organizatora, POPRAWIONA 2026-06-13):** tabela grupowa
+`pkt → % → grIII → grII → grI`; tabela ogólna `pkt → % → puch → grIII → grII → grI`.
+Zasada organizatora: „im późniejsze punkty, tym większe znaczenie przy tej samej liczbie pkt
+i tej samej %" → PÓŹNIEJSZA tura bije wcześniejszą (tura3 > tura2 > tura1). Obowiązuje od tury 2
+(czwartek 2026-06-18). UWAGA HISTORYCZNA: 2026-06-12 organizator powiedział nam I→II→III i
+zgłosiliśmy mu jego `SORTBY` (III→II→I) jako błąd — 2026-06-13 WYCOFAŁ to: właściwa jest III→II→I,
+czyli wraca do pierwotnego SORTBY. Zaimplementowane w `engine/generalTable.ts` i `GROUP_ORDER`
+w `compute/buildResults.ts` (TDD). „%" = (#3+#4+#5[+#6 w ogólnej])/rozegrane.
 Tabela ogólna = `grI+grII+grIII+bns+puch`; tabela grupowa pokazuje pkt = `grI+grII+grIII`.
 **Bonus `bns` (potwierdzony 2026-06-12):** przyznawany NA ZAKOŃCZENIE fazy grupowej z końcowych
 tabel grupowych: miejsca 1–3 w każdej grupie → 15/10/5; w grupie o najlepszej łącznej sumie
@@ -178,10 +181,12 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
    zgodne z `SUM(S:V)/N1` w arkuszu `tabela`); `buildSeason(...)` dodany do `engine/`. Przy okazji
    wykryto i poprawiono błąd: silnik miał tiebreakery `#5/#4`, a Excel sortuje po dorobku fazowym
    (patrz „Reguły punktacji" wyżej) — `rankBy(rows, keys)` przyjmuje teraz listę kluczy w kolejności.
-6. ✅ **ROZSTRZYGNIĘTE (a)** — organizator potwierdził (2026-06-12): właściwa kolejność
-   tiebreakerów to **grI → grII → grIII** (obie tabele). Silnik zaktualizowany
-   (`engine/generalTable.ts`, `GROUP_ORDER` w `compute/buildResults.ts`, TDD). Formuły `SORTBY`
-   w jego arkuszach nadal mają starą kolejność — to błąd arkusza do poprawy po jego stronie.
+6. ✅ **ROZSTRZYGNIĘTE (a) — ODWRÓCONE 2026-06-13:** właściwa kolejność tiebreakerów to
+   **grIII → grII → grI** (obie tabele) — późniejsza tura bije wcześniejszą („im późniejsze punkty,
+   tym większe znaczenie"). To odwraca decyzję z 2026-06-12 (była grI→grII→grIII) i zgadza się z
+   pierwotnym `SORTBY` III→II→I w jego arkuszu, więc arkusz NIE wymaga już poprawy w tym zakresie.
+   Silnik zaktualizowany (`engine/generalTable.ts`, `GROUP_ORDER` w `compute/buildResults.ts`, TDD).
+   Obowiązuje od tury 2 (2026-06-18).
    ✅ (b) potwierdzone (2026-06-12): „%" w tabeli ogólnej wlicza też „6" (puchar), w grupowej nie.
 7. ✅ **ROZSTRZYGNIĘTE** (2026-06-12 wieczorem) — organizator naprawił w masterze
    „poprawiony" (E33:E60 → `'grup-1'!N68:N95`). Historyczny opis błędu:

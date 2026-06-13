@@ -68,9 +68,9 @@ describe('buildResults (syntetycznie)', () => {
     expect(out.generatedAt).toBe('2026-06-12T00:00:00Z');
   });
 
-  it('tiebreak tabeli grupowej: przy remisie pkt i % decyduje grI przed grIII', () => {
+  it('tiebreak tabeli grupowej: przy remisie pkt i % decyduje grIII przed grI (reguła organizatora 2026-06-13)', () => {
     // x trafia dokladny wynik w turze I, y identycznie w turze III:
-    // remis 5:5 pkt, ten sam %, ale dorobek wczesniejszej tury wygrywa.
+    // remis 5:5 pkt, ten sam %, ale dorobek pozniejszej tury wygrywa.
     const tieRoster: Participant[] = [
       { id: 'x', group: 'A' },
       { id: 'y', group: 'A' },
@@ -91,8 +91,8 @@ describe('buildResults (syntetycznie)', () => {
     };
     const tie = buildResults(tieRoster, [t1, t3], tieResults, 'test');
     expect(tie.groups.A.map((r) => [r.participantId, r.grI, r.grIII])).toEqual([
-      ['x', 5, 0],
       ['y', 0, 5],
+      ['x', 5, 0],
     ]);
   });
 });
