@@ -19,11 +19,14 @@ function groupHits(typ: GroupStandings, fakt: GroupStandings): number {
 /** Liczność przecięcia dwóch zbiorów drużyn (po nazwie; defensywnie bez duplikatów). */
 function intersectionSize(typ: readonly TeamId[], fakt: readonly TeamId[]): number {
   const typed = new Set(typ);
-  const counted = new Set<TeamId>();
+  const seen = new Set<TeamId>();
   let n = 0;
+  // Pustkę ("") pomijamy po stronie fakt (brak danych = nie trafia); to jedyne
+  // miejsce egzekwowania tej zasady — "" w typ jest nieszkodliwe, bo bez
+  // dopasowania w fakt nigdy nie wejdzie do licznika.
   for (const team of fakt) {
-    if (team !== '' && typed.has(team) && !counted.has(team)) {
-      counted.add(team);
+    if (team !== '' && typed.has(team) && !seen.has(team)) {
+      seen.add(team);
       n += 1;
     }
   }

@@ -51,7 +51,7 @@ describe('scoreK2 — grupy', () => {
 });
 
 describe('scoreK2 — fazy pucharowe', () => {
-  const noGroups = {} as K2Entry['groups'];
+  const noGroups: K2Entry['groups'] = {};
 
   it('każda faza punktuje przecięcie zbiorów swoją wagą', () => {
     const typ = entry(noGroups, {
@@ -93,6 +93,15 @@ describe('scoreK2 — fazy pucharowe', () => {
     });
     const s = scoreK2('p1', e, e);
     expect(s.total).toBe(2 + 4 + 6 + 8 + 10 + 12);
+  });
+
+  it('faza nierozegrana (pusty zbiór faktów) → 0 pkt', () => {
+    const typ = entry(noGroups, { r32: ['A', 'B'], r16: ['A'] });
+    const fakt = entry(noGroups, {}); // turniej nie doszedł jeszcze do tych faz
+    const s = scoreK2('p1', typ, fakt);
+    expect(s.r32).toBe(0);
+    expect(s.r16).toBe(0);
+    expect(s.total).toBe(0);
   });
 
   it('total = suma wszystkich składników (grupy + fazy)', () => {
