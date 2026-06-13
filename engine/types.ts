@@ -60,3 +60,57 @@ export interface GeneralRow extends ParticipantSeason {
   /** Jawna suma do wyświetlenia (= points). */
   total: number;
 }
+
+/** Identyfikator drużyny. KONWENCJA: pełna nazwa PL jak w arkuszu
+ * (np. "Bośnia i Hercegowina", "Korea Płd."). Dla silnika nieprzezroczysty string;
+ * spójność pisowni pilnuje przyszły ingest. "" = brak/nieznana drużyna. */
+export type TeamId = string;
+
+/** Końcowe miejsca w grupie: 4 drużyny w kolejności miejsc 1→4. Klucz grupy: "A".."L". */
+export type GroupStandings = Record<string, [TeamId, TeamId, TeamId, TeamId]>;
+
+/** Obsada faz pucharowych — zbiory drużyn obecnych w danej fazie. */
+export interface PhaseRosters {
+  /** 1/16 finału — 32 drużyny. */
+  r32: TeamId[];
+  /** 1/8 finału — 16 drużyn. */
+  r16: TeamId[];
+  /** Ćwierćfinał — 8 drużyn. */
+  qf: TeamId[];
+  /** Półfinał — 4 drużyny. */
+  sf: TeamId[];
+  /** Finał — 2 drużyny (obaj finaliści). */
+  final: TeamId[];
+  /** Mistrz — 1 drużyna; "" gdy brak typu. */
+  champion: TeamId;
+}
+
+/** Komplet rozstrzygnięć K2 — ten sam kształt dla typu uczestnika i dla faktów. */
+export interface K2Entry {
+  groups: GroupStandings;
+  phases: PhaseRosters;
+}
+
+/**
+ * Punkty K2 jednego uczestnika, rozbite per faza (odwzorowanie H19/H37/H49/H59/H65/H69
+ * z arkusza; finał i mistrz rozbite na osobne pola).
+ */
+export interface K2Score {
+  participantId: string;
+  /** Grupy: Σ trafionych pozycji × 1 (max 48). */
+  group: number;
+  /** 1/16: |typ ∩ fakt| × 2. */
+  r32: number;
+  /** 1/8: × 4. */
+  r16: number;
+  /** Ćwierćfinał: × 6. */
+  qf: number;
+  /** Półfinał: × 8. */
+  sf: number;
+  /** Finał: |typ ∩ fakt| × 10. */
+  final: number;
+  /** Mistrz: 12 gdy trafiony, inaczej 0. */
+  champion: number;
+  /** Suma wszystkich składników. */
+  total: number;
+}
