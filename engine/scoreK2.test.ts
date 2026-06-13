@@ -42,4 +42,73 @@ describe('scoreK2 — grupy', () => {
     // Pozycja 1 to "" w obu — NIE punktujemy; pozostałe 3 trafione.
     expect(scoreK2('p1', typ, fakt).group).toBe(3);
   });
+
+  it('grupa nieobecna w faktach nie daje punktów', () => {
+    const typ = entry({ A: ['Meksyk', 'Korea Płd.', 'Czechy', 'RPA'] });
+    const fakt = entry({});
+    expect(scoreK2('p1', typ, fakt).group).toBe(0);
+  });
+});
+
+describe('scoreK2 — fazy pucharowe', () => {
+  const noGroups = {} as K2Entry['groups'];
+
+  it('każda faza punktuje przecięcie zbiorów swoją wagą', () => {
+    const typ = entry(noGroups, {
+      r32: ['A', 'B', 'C'],
+      r16: ['A', 'B'],
+      qf: ['A', 'X'],
+      sf: ['A'],
+      final: ['A', 'Y'],
+    });
+    const fakt = entry(noGroups, {
+      r32: ['A', 'B', 'Z'],
+      r16: ['A', 'Q'],
+      qf: ['A'],
+      sf: ['A'],
+      final: ['A', 'W'],
+    });
+    const s = scoreK2('p1', typ, fakt);
+    expect(s.r32).toBe(2 * 2); // A,B
+    expect(s.r16).toBe(1 * 4); // A
+    expect(s.qf).toBe(1 * 6); // A
+    expect(s.sf).toBe(1 * 8); // A
+    expect(s.final).toBe(1 * 10); // A
+  });
+
+  it('mistrz: 12 gdy trafiony, 0 gdy nie', () => {
+    const fakt = entry(noGroups, { champion: 'A' });
+    expect(scoreK2('p1', entry(noGroups, { champion: 'A' }), fakt).champion).toBe(12);
+    expect(scoreK2('p1', entry(noGroups, { champion: 'B' }), fakt).champion).toBe(0);
+  });
+
+  it('pusty typ mistrza ("") nie trafia w pustego mistrza faktów', () => {
+    const fakt = entry(noGroups, { champion: '' });
+    expect(scoreK2('p1', entry(noGroups, { champion: '' }), fakt).champion).toBe(0);
+  });
+
+  it('kumulacja: drużyna typowana od 1/16 do tytułu → 2+4+6+8+10+12 = 42', () => {
+    const e = entry(noGroups, {
+      r32: ['A'], r16: ['A'], qf: ['A'], sf: ['A'], final: ['A'], champion: 'A',
+    });
+    const s = scoreK2('p1', e, e);
+    expect(s.total).toBe(2 + 4 + 6 + 8 + 10 + 12);
+  });
+
+  it('total = suma wszystkich składników (grupy + fazy)', () => {
+    const typ = entry(
+      { A: ['Meksyk', 'Korea Płd.', 'Czechy', 'RPA'] },
+      { r32: ['A'], final: ['A', 'B'], champion: 'A' },
+    );
+    const fakt = entry(
+      { A: ['Meksyk', 'Korea Płd.', 'Czechy', 'RPA'] },
+      { r32: ['A'], final: ['A', 'C'], champion: 'A' },
+    );
+    const s = scoreK2('p1', typ, fakt);
+    expect(s.group).toBe(4);
+    expect(s.r32).toBe(2);
+    expect(s.final).toBe(10);
+    expect(s.champion).toBe(12);
+    expect(s.total).toBe(4 + 2 + 10 + 12);
+  });
 });
