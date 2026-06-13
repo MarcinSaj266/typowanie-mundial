@@ -1,0 +1,61 @@
+name: Auto-pobieranie wyników
+
+# Robot: co ~30 min pobiera wyniki meczów MŚ z football-data.org, dokleja tylko
+# brakujące (FINISHED), przelicza tabele i pushuje na master → Vercel przebudowuje produkcję.
+# Ręczna nadpiska w data/k1/results.json zawsze wygrywa (robot jej nie rusza).
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch: {}
+
+# Push wyników wymaga prawa zapisu do repo.
+permissions:
+  contents: write
+
+# Bez nakładających się biegów.
+concurrency:
+  group: auto-scores
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Pobierz wyniki z API
+        run: npm run fetch:scores
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+
+      - name: Wykryj zmianę w results.json
+        id: zmiana
+        run: |
+          if [ -n "$(git status --porcelain data/k1/results.json)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Przelicz tabele
+        if: steps.zmiana.outputs.changed == 'true'
+        run: npm run build:results
+
+      - name: Commit i push na master
+        if: steps.zmiana.outputs.changed == 'true'
+        run: |
+          # Autor MUSI być noreply powiązany z kontem GitHub MarcinSaj266 —
+          # inaczej Vercel blokuje deploy (COMMIT_AUTHOR_REQUIRED).
+          git config user.name "Marcin"
+          git config user.email "269284640+MarcinSaj266@users.noreply.github.com"
+          git add data/k1/results.json public/data/results.json
+          git commit -m "chore(k1): auto-aktualizacja wyników z football-data.org"
+          git push
