@@ -93,8 +93,23 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   Sekret `FOOTBALL_DATA_TOKEN` w GitHub Actions. **Świadomie BEZ `[skip ci]`** (Vercel pomija
   deploy przy `[skip ci]`, a my chcemy go wywołać). Zweryfikowane e2e przez `workflow_dispatch`
   (bieg `success`, idempotentny). Poza zakresem: mecze pucharowe (powtórki par — po dacie).
-- ⏳ Następne: PWA, Konkurs 2 (silnik gotowy do napisania — reguły znane,
-  czekamy na typy K2 od organizatora).
+- ✅ Silnik Konkursu 2 (2026-06-13) — TDD, 16 testów K2 (110 w całym zestawie). Spec:
+  `docs/superpowers/specs/2026-06-13-silnik-konkurs2-design.md`, plan:
+  `docs/superpowers/plans/2026-06-13-silnik-konkurs2.md`. Reguły ZWERYFIKOWANE z formuł
+  `k2.xlsx` (`zasady`/`konkurs2`/`wyniki`): grupa 1 pkt za drużynę na trafionym miejscu (max 48);
+  fazy pucharowe KUMULOWANE (`H72=H19+H37+H49+H59+H65+H69`) — obecność drużyny w fazie ×
+  waga 1/16→2, 1/8→4, ćwierć→6, półfinał→8, finał→10 (obaj finaliści), mistrz→12; tiebreak
+  tabeli końcowej = punkty z PÓŹNIEJSZEJ fazy. Wariant A: silnik punktuje GOTOWE, rozwiązane
+  zbiory — `scoreK2(participantId, typ, fakt)` (`engine/scoreK2.ts`: dopasowanie pozycji w
+  grupach + przecięcie zbiorów per faza × waga) i `k2Table` (`engine/k2Table.ts`: reuse `rankBy`
+  z kluczami total→champion→final→sf→qf→r16→r32→group). Typy K2 w `engine/types.ts`
+  (`K2Entry`, `PhaseRosters`, `GroupStandings`, `K2Score`; `TeamId` = pełna nazwa PL jak w arkuszu).
+  Granica jak reszta: silnik nie zna drabinki/Excela/UI.
+  Do zrobienia po danych K2: ingest typów z arkusza `konkurs2` (parser + rozwiązanie drabinki:
+  typy „1/2", rozstawienie, wariant 3. miejsc, karne finału → `champion`), ręczne faktyczne dane
+  (`data/k2/results.json`), wpięcie w `compute/` + render.
+- ⏳ Następne: PWA (odłożone — patrz rozmowy), ingest + render Konkursu 2 (czekamy na typy K2
+  od organizatora), ingest typów pucharowych K1 (przy starcie 1/16).
 
 ## Architektura (ustalona)
 
