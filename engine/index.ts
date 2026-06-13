@@ -6,6 +6,11 @@ export type {
   TurnScore,
   ParticipantSeason,
   GeneralRow,
+  TeamId,
+  GroupStandings,
+  PhaseRosters,
+  K2Entry,
+  K2Score,
 } from './types';
 export type { NumericKey } from './ranking';
 export type { SeasonExtras } from './buildSeason';
@@ -19,3 +24,5 @@ export { rankBy } from './ranking';
 export { buildSeason } from './buildSeason';
 export { generalTable } from './generalTable';
 export { groupBonus } from './bonus';
+export { scoreK2 } from './scoreK2';
+export { k2Table } from './k2Table';
