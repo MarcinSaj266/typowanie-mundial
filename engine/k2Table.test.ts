@@ -36,6 +36,15 @@ describe('k2Table', () => {
     expect(out.map(r => r.participantId)).toEqual(['y', 'x']);
   });
 
+  it('remis we wszystkich fazach → group rozstrzyga jako najwcześniejsza faza', () => {
+    // Identyczny total i wszystkie fazy pucharowe = 0; różni tylko group.
+    const out = k2Table([
+      sc({ participantId: 'a', total: 10, group: 8 }),
+      sc({ participantId: 'b', total: 10, group: 10 }),
+    ]);
+    expect(out.map(r => r.participantId)).toEqual(['b', 'a']);
+  });
+
   it('nie mutuje wejścia', () => {
     const input = [sc({ participantId: 'a', total: 10 }), sc({ participantId: 'b', total: 20 })];
     k2Table(input);
