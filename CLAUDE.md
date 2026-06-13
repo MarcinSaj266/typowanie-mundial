@@ -93,6 +93,16 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   Sekret `FOOTBALL_DATA_TOKEN` w GitHub Actions. **Świadomie BEZ `[skip ci]`** (Vercel pomija
   deploy przy `[skip ci]`, a my chcemy go wywołać). Zweryfikowane e2e przez `workflow_dispatch`
   (bieg `success`, idempotentny). Poza zakresem: mecze pucharowe (powtórki par — po dacie).
+  ZNANE OGRANICZENIE (2026-06-13): GitHub `schedule` nie ma gwarancji — opóźnia/pomija crony,
+  więc realnie biegi idą co ~80–95 min, nie co 30. Skutek: wynik meczu potrafi wskoczyć z lagiem
+  ~1–1,5h po zakończeniu (zaobserwowane na meczu 5 Katar 1:1 Szwajcaria — doklejony dopiero po
+  ręcznym `workflow_dispatch`). Fallback: ręczny „Run workflow". POMYSŁ NA PRZYSZŁOŚĆ (świadomie
+  NIE robione mid-turniej, 2026-06-13): zamiast pollować całą dobę, ograniczyć biegi do OKIEN wokół
+  zakończeń meczów, ale W OKNIE pollować kilka razy (np. co 15 min przez ~1h) — łączy oszczędność
+  z odpornością na pominięte crony i ogarnia dogrywki + opóźnienie API (darmowy plan oznacza
+  `FINISHED` z poślizgiem). WARUNEK WSTĘPNY: godziny meczów w formie maszynowej (dziś `kickoff`
+  to wolny tekst PL, np. `"czwartek, 11 cze godz.21.00"`, w dodatku niespójny `godz.21.00`/`godz. 21.00`)
+  — najpierw ustrukturyzować datę+czas+strefę, dopiero potem liczyć z nich okna cron (UTC).
 - ✅ Silnik Konkursu 2 (2026-06-13) — TDD, 16 testów K2 (110 w całym zestawie). Spec:
   `docs/superpowers/specs/2026-06-13-silnik-konkurs2-design.md`, plan:
   `docs/superpowers/plans/2026-06-13-silnik-konkurs2.md`. Reguły ZWERYFIKOWANE z formuł
