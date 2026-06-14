@@ -48,6 +48,13 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error(err instanceof Error ? err.message : err);
+  // undici chowa prawdziwą przyczynę "fetch failed" w err.cause — pokaż ją, żeby
+  // logi robota dało się diagnozować (a nie tylko gołe "fetch failed").
+  if (err instanceof Error) {
+    const cause = (err as { cause?: unknown }).cause;
+    console.error(cause ? `${err.message} (cause: ${cause instanceof Error ? cause.message : String(cause)})` : err.message);
+  } else {
+    console.error(err);
+  }
   process.exit(1);
 });

@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit",
     "build:k1": "tsx ingest/buildK1.ts",
     "fetch:scores": "tsx ingest/scores/fetchScoresCli.ts",
+    "check:stale": "tsx ingest/scores/staleCheckCli.ts",
     "seed:results": "tsx compute/seedResults.ts",
     "build:results": "tsx compute/buildResultsCli.ts",
     "smoke": "tsx scripts/smoke.ts",

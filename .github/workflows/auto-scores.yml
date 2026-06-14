@@ -9,9 +9,10 @@ on:
     - cron: '*/30 * * * *'
   workflow_dispatch: {}
 
-# Push wyników wymaga prawa zapisu do repo.
+# Push wyników wymaga prawa zapisu do repo; alert nieświeżości zakłada issue.
 permissions:
   contents: write
+  issues: write
 
 # Bez nakładających się biegów.
 concurrency:
@@ -59,3 +60,48 @@ jobs:
           git add data/k1/results.json public/data/results.json
           git commit -m "chore(k1): auto-aktualizacja wyników z football-data.org"
           git push
+
+      # Alert: mecz, który powinien już mieć wynik (FINISHED w API albo dawno po starcie),
+      # a wciąż go nie ma. continue-on-error, żeby brak świeżości nie wywracał biegu —
+      # sygnalizujemy go issue'em, nie czerwonym workflow.
+      - name: Sprawdź nieświeżość wyników
+        id: stale
+        continue-on-error: true
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: |
+          set +e
+          npm run check:stale > stale-report.txt 2>&1
+          code=$?
+          cat stale-report.txt
+          exit $code
+
+      - name: Alert o nieświeżości (issue)
+        if: steps.stale.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          OPEN=$(gh issue list --state open --json number,title \
+            --jq 'map(select(.title|startswith("[alert-stale]")))|.[0].number // empty')
+          if [ -z "$OPEN" ]; then
+            gh issue create --title "[alert-stale] Wynik meczu się spóźnia" --body-file stale-report.txt
+            echo "Założono issue alertu nieświeżości."
+          else
+            echo "Alert nieświeżości już otwarty (#$OPEN) — nie duplikuję."
+          fi
+
+      # Alert: bieg robota padł (np. API niedostępne, wygasły/zepsuty token, nieznana drużyna).
+      # cron-job.org łapie odrzucenie dispatchu, ale NIE złapie błędu samego zadania — to łapie tu.
+      - name: Alert o awarii robota (issue)
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          OPEN=$(gh issue list --state open --json number,title \
+            --jq 'map(select(.title|startswith("[alert-fail]")))|.[0].number // empty')
+          BODY="Bieg robota zakończył się błędem: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          if [ -z "$OPEN" ]; then
+            gh issue create --title "[alert-fail] Robot wyników padł" --body "$BODY"
+          else
+            echo "Alert awarii już otwarty (#$OPEN)."
+          fi
