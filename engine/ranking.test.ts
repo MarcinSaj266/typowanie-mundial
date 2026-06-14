@@ -48,6 +48,33 @@ describe('rankBy', () => {
     expect(rankBy(rows, ['grIII']).map(r => r.participantId)).toEqual(['b', 'a']);
   });
 
+  it('przy pełnym remisie wszystkich kluczy rozstrzyga alfabetycznie wg participantId', () => {
+    // Wszystkie klucze liczbowe równe → o kolejności decyduje nick (jak stabilny
+    // SORTBY organizatora nad alfabetyczną listą). Wejście w kolejności NIE-alfabetycznej.
+    const out = rankBy(
+      [
+        row({ participantId: 'KasiaJ', points: 11, hitRate: 0.38 }),
+        row({ participantId: 'DeDe', points: 11, hitRate: 0.38 }),
+        row({ participantId: 'Karolina', points: 11, hitRate: 0.38 }),
+      ],
+      ['points', 'hitRate', 'grIII'],
+    );
+    expect(out.map(r => r.participantId)).toEqual(['DeDe', 'Karolina', 'KasiaJ']);
+  });
+
+  it('alfabetyczny tiebreak jest bez uwzględniania wielkości liter i z polską kolejnością', () => {
+    const out = rankBy(
+      [
+        row({ participantId: 'Maria' }),
+        row({ participantId: 'Żaklina' }),
+        row({ participantId: 'Małgorzata' }),
+      ],
+      ['points'],
+    );
+    // pl: 'ł' między 'l' a 'm' → Małgorzata < Maria; 'Ż' na końcu.
+    expect(out.map(r => r.participantId)).toEqual(['Małgorzata', 'Maria', 'Żaklina']);
+  });
+
   it('nie mutuje tablicy wejściowej', () => {
     const input = [
       row({ participantId: 'a', points: 10 }),

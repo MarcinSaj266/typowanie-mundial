@@ -11,6 +11,11 @@ export type NumericKey<T> = {
  *
  * Tabele K1 mają różne porządki tiebreakerów (grupowa: pkt → % → grI → grII → grIII;
  * ogólna: pkt → % → puch → grI → grII → grIII), dlatego klucze podaje wywołujący.
+ *
+ * Ostateczny tiebreaker (po wyczerpaniu kluczy liczbowych) jest niejawny:
+ * alfabetycznie wg `participantId` w polskiej kolejności, bez względu na wielkość liter.
+ * Odwzorowuje to zachowanie arkusza organizatora, gdzie stabilny `SORTBY` nad
+ * alfabetyczną listą uczestników przy pełnym remisie zostawia ich w kolejności nicków.
  */
 export function rankBy<T extends { participantId: string }>(
   rows: readonly T[],
@@ -23,7 +28,7 @@ export function rankBy<T extends { participantId: string }>(
         return diff;
       }
     }
-    return 0;
+    return a.participantId.localeCompare(b.participantId, 'pl', { sensitivity: 'accent' });
   });
   return sorted.map((r, i) => ({ ...r, position: i + 1 }));
 }

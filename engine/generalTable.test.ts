@@ -42,6 +42,17 @@ describe('generalTable', () => {
     expect(out.map(r => r.participantId)).toEqual(['b', 'a']);
   });
 
+  it('przy pełnym remisie wszystkich kluczy rozstrzyga alfabetycznie wg nicka (jak arkusz organizatora)', () => {
+    // Realny przypadek ze zrzutu tabeli ogólnej: wielu graczy 11 pkt / 38%, reszta 0.
+    // Organizator ustawia ich alfabetycznie, niezależnie od kolejności w rosterze.
+    const out = generalTable([
+      season({ participantId: 'KasiaJ', grI: 11, hitRate: 0.38 }),
+      season({ participantId: 'DeDe', grI: 11, hitRate: 0.38 }),
+      season({ participantId: 'Karolina', grI: 11, hitRate: 0.38 }),
+    ]);
+    expect(out.map(r => r.participantId)).toEqual(['DeDe', 'Karolina', 'KasiaJ']);
+  });
+
   it('przy remisie sumy i % decyduje puch, potem grIII → grII → grI (reguła organizatora 2026-06-13)', () => {
     const out = generalTable([
       season({ participantId: 'a', grI: 10, hitRate: 0.5 }), // suma 10, puch 0, grIII 0
