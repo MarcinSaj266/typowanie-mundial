@@ -1,4 +1,4 @@
-import type { Score } from '../engine/types';
+import type { Score, CardStats } from '../engine/types';
 import type { Group, Participant } from '../ingest/k1/parseGrup1';
 
 /** Wyniki meczów: numer tury → numer meczu → wynik. Brak klucza = mecz nierozegrany. */
@@ -71,7 +71,9 @@ export interface ResultsJson {
   general: TableRow[];
   groups: Record<Group, TableRow[]>;
   turns: TurnOut[];
+  /** Statystyki karty zawodnika per uczestnik (nick → komplet stat). */
+  cards: Record<string, CardStats>;
 }
 
 export const ALL_GROUPS: Group[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-export type { Group, Participant, Score };
+export type { Group, Participant, Score, CardStats };

@@ -4,7 +4,8 @@ import { buildSeason } from '../engine/buildSeason';
 import { generalTable } from '../engine/generalTable';
 import { rankBy } from '../engine/ranking';
 import { scoreMatchK1 } from '../engine/scoreMatch';
-import type { MatchEntry, TurnScore } from '../engine/types';
+import { playerCard } from '../engine/playerCard';
+import type { MatchEntry, TurnScore, CardStats, PlayerCardInput } from '../engine/types';
 import { ALL_GROUPS } from './types';
 import type {
   Group,
@@ -140,5 +141,33 @@ export function buildResults(
     ...counts.get(g.participantId)!,
   }));
 
-  return { generatedAt, general, groups, turns: buildTurns(roster, turns, results) };
+  // Karty: hero z tabeli ogólnej (evergreen), miejsce w grupie z tabeli grupowej,
+  // sekcje szczegółowe z tur fazy grupowej.
+  const generalPosOf = new Map(general.map((r) => [r.participantId, r.position]));
+  const totalPointsOf = new Map(general.map((r) => [r.participantId, r.points]));
+  const groupPosOf = new Map<string, number>();
+  for (const g of ALL_GROUPS) groups[g].forEach((r, i) => groupPosOf.set(r.participantId, i + 1));
+
+  const sortedTurns = [...turns].sort((a, b) => a.turn - b.turn);
+  const cards = Object.fromEntries(
+    roster.map((p) => {
+      const input: PlayerCardInput = {
+        group: groupOf.get(p.id)!,
+        groupPos: groupPosOf.get(p.id)!,
+        generalPos: generalPosOf.get(p.id)!,
+        totalPoints: totalPointsOf.get(p.id)!,
+        turns: sortedTurns.map((t) => ({
+          turn: t.turn,
+          matches: t.fixtures.map((f) => ({
+            pick: t.predictions[p.id]?.[String(f.no)] ?? null,
+            result: results[String(t.turn)]?.[String(f.no)] ?? null,
+            allPicks: roster.map((q) => t.predictions[q.id]?.[String(f.no)] ?? null),
+          })),
+        })),
+      };
+      return [p.id, playerCard(input)] as const;
+    }),
+  ) as Record<string, CardStats>;
+
+  return { generatedAt, general, groups, turns: buildTurns(roster, turns, results), cards };
 }
