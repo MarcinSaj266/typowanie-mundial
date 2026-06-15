@@ -11,6 +11,13 @@ export type {
   PhaseRosters,
   K2Entry,
   K2Score,
+  Forma,
+  Osobowosc,
+  BestTurn,
+  PlayerCardMatch,
+  PlayerCardTurn,
+  PlayerCardInput,
+  CardStats,
 } from './types';
 export type { NumericKey } from './ranking';
 export type { SeasonExtras } from './buildSeason';

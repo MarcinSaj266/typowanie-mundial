@@ -114,3 +114,96 @@ export interface K2Score {
   /** Suma wszystkich składników. */
   total: number;
 }
+
+/** Trend formy między dwiema ostatnimi turami z wynikami. */
+export type Forma = 'UP' | 'DOWN' | 'FLAT';
+
+/** Plakietka osobowości z ZGODNOŚCI Z TŁUMEM. */
+export type Osobowosc = 'INDYWIDUALISTA' | 'OWCZY PĘD' | 'NEUTRALNY';
+
+/** Najlepsza tura: jej numer i dorobek. */
+export interface BestTurn {
+  turn: number;
+  points: number;
+}
+
+/** Jeden mecz w wejściu karty: typ gracza, wynik i typy WSZYSTKICH uczestników (do ZGODNOŚCI). */
+export interface PlayerCardMatch {
+  /** Typ gracza; null = brak typu. */
+  pick: Score | null;
+  /** Faktyczny wynik; null = mecz nierozegrany (pomijany). */
+  result: Score | null;
+  /** Typy wszystkich uczestników na ten mecz (w tym gracza); null = brak typu. */
+  allPicks: (Score | null)[];
+}
+
+/** Tura w wejściu karty. */
+export interface PlayerCardTurn {
+  turn: number;
+  matches: PlayerCardMatch[];
+}
+
+/**
+ * Wejście czystej funkcji playerCard.
+ * Pozycje i punkty całkowite podawane z GOTOWYCH tabel (silnik nie rankuje tu sam):
+ * - generalPos/totalPoints z tabeli ogólnej (hero, evergreen),
+ * - groupPos z tabeli grupowej (wiersz stat).
+ * turns = wyłącznie faza grupowa (źródło sekcji WYNIKI/STYL GRY/PO TURZE 2).
+ */
+export interface PlayerCardInput {
+  /** Grupa gracza (A–H). */
+  group: string;
+  /** Miejsce w tabeli grupowej (1 = najlepszy). */
+  groupPos: number;
+  /** Miejsce w tabeli ogólnej (1 = najlepszy) — hero. */
+  generalPos: number;
+  /** Całkowity dorobek z tabeli ogólnej (grI+grII+grIII+bns+puch) — hero. */
+  totalPoints: number;
+  /** Tury fazy grupowej w kolejności; mecze nierozegrane mają result=null. */
+  turns: PlayerCardTurn[];
+}
+
+/**
+ * Komplet statystyk karty zawodnika (sekcja `cards` w results.json).
+ * `*Pct` to zaokrąglone liczby całkowite (np. 38 = 38%). `*Nd` = „nie dotyczy" (render pokazuje „—").
+ */
+export interface CardStats {
+  group: string;
+  /** Hero: miejsce w tabeli ogólnej. */
+  generalPos: number;
+  /** Hero: całkowity dorobek (grI+grII+grIII+bns+puch). Evergreen. */
+  points: number;
+  /** Wiersz stat: miejsce w grupie. */
+  groupPos: number;
+  /** % trafionych meczów (3/4/5) z rozegranych (faza grupowa). */
+  celnoscPct: number;
+  /** Liczba dokładnych wyników (count5). */
+  dokladne: number;
+  /** Średni dorobek na rozegrany mecz fazy grupowej (1 miejsce po przecinku). */
+  srPktMecz: number;
+  /** % typów spoza zbioru „bezpiecznych" {1:0,0:1,1:1,0:0}. */
+  odwagaPct: number;
+  /** trafione remisy / wytypowane remisy (%). */
+  nosRemisowPct: number;
+  /** true gdy gracz nie wytypował żadnego remisu. */
+  nosRemisowNd: boolean;
+  /** Najdłuższy ciąg trafień pod rząd (w kolejności meczów). */
+  seria: number;
+  /** Śr. liczba goli w typach gracza (home+away). */
+  ofensywa: number;
+  /** Śr. pkt liczona tylko z trafionych meczów. */
+  pewniak: number;
+  /** true gdy zero trafień. */
+  pewniakNd: boolean;
+  /** Najczęściej typowany wynik ("h:a"); "—" gdy brak typów. */
+  ulubionyWynik: string;
+  /** Śr. (po meczach) % graczy z identycznym typem. */
+  zgodnoscPct: number;
+  osobowosc: Osobowosc;
+  /** Trend ostatniej tury vs poprzedniej; null gdy <2 tury z wynikami. */
+  forma: Forma | null;
+  /** Najlepsza tura; null gdy <2 tury z wynikami. */
+  najlepszaTura: BestTurn | null;
+  /** true gdy ≥2 tury mają wyniki (sekcja PO TURZE 2 aktywna). */
+  poTurze2Aktywne: boolean;
+}
