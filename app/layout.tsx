@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import RetroAudio from '../components/RetroAudio';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://typowaniemundial.vercel.app'),
   title: 'Typowanie Mundial 2026',
   description: 'Wyniki i tabele konkursu typowania Mistrzostw Świata 2026',
 };

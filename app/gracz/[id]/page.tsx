@@ -17,6 +17,7 @@ export default async function GraczPage({ params }: { params: Promise<{ id: stri
 
   return (
     <ScreenFrame title={id.toUpperCase()}>
+      <a className="card-cta" href={`/gracz/${encodeURIComponent(id)}/karta/`}>★ KARTA ZAWODNIKA →</a>
       <div className="player-summary">
         <div><span className="label">PUNKTY</span><span className="stat">{row.points}</span></div>
         <div><span className="label">TABELA OGÓLNA</span><span className="stat">{row.position}. / {data.general.length}</span></div>
