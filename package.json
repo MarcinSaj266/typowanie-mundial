@@ -14,6 +14,7 @@
     "check:stale": "tsx ingest/scores/staleCheckCli.ts",
     "seed:results": "tsx compute/seedResults.ts",
     "build:results": "tsx compute/buildResultsCli.ts",
+    "build:cards": "node scripts/buildCards.mjs",
     "smoke": "tsx scripts/smoke.ts",
     "validate:excel": "tsx scripts/validateVsExcel.ts \"konkurs 2026.06.12 - poprawiony.xlsx\""
   },
