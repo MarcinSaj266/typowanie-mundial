@@ -1,5 +1,5 @@
 // Smoke po `npm run build`: HTML tabeli zawiera lidera z results.json (spec renderu, sekcja 5).
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 
 const results = JSON.parse(readFileSync('public/data/results.json', 'utf8'));
 const lider: string = results.general[0].participantId;
@@ -26,4 +26,25 @@ if (!existsSync('out/audio/full-time-glory.mp3')) {
   console.error('SMOKE FAIL: brak out/audio/full-time-glory.mp3');
   process.exit(1);
 }
-console.log(`SMOKE OK: lider "${lider}" w tabeli, ${matches} meczy w widoku meczow, intro + muzyka na miejscu`);
+// Karta zawodnika: PNG per gracz, przycisk na profilu, og:image + legenda na podstronie karty.
+const kartyCount = existsSync('out/karty')
+  ? readdirSync('out/karty').filter((f) => f.endsWith('.png')).length
+  : 0;
+if (kartyCount !== results.general.length) {
+  console.error(`SMOKE FAIL: ${kartyCount} kart w out/karty, oczekiwano ${results.general.length}`);
+  process.exit(1);
+}
+const graczDir = readdirSync('out/gracz')[0];
+const profilHtml = readFileSync(`out/gracz/${graczDir}/index.html`, 'utf8');
+if (!profilHtml.includes('KARTA ZAWODNIKA')) {
+  console.error(`SMOKE FAIL: brak przycisku „KARTA ZAWODNIKA" w out/gracz/${graczDir}/index.html`);
+  process.exit(1);
+}
+const kartaHtml = readFileSync(`out/gracz/${graczDir}/karta/index.html`, 'utf8');
+for (const marker of ['og:image', '/karty/', 'summary_large_image', 'JAK TO LICZYMY']) {
+  if (!kartaHtml.includes(marker)) {
+    console.error(`SMOKE FAIL: brak "${marker}" w out/gracz/${graczDir}/karta/index.html`);
+    process.exit(1);
+  }
+}
+console.log(`SMOKE OK: lider "${lider}" w tabeli, ${matches} meczy, ${kartyCount} kart, przycisk + podstrona karty (og:image, legenda), intro + muzyka`);
