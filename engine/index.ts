@@ -25,6 +25,7 @@ export type { BonusRow } from './bonus';
 export type { Side, PucharPoints, Karne } from './scoreMatchPuchar';
 
 export { scoreMatchK1 } from './scoreMatch';
+export { playerCard } from './playerCard';
 export { scoreMatchPuchar } from './scoreMatchPuchar';
 export { aggregateTurn } from './aggregate';
 export { rankBy } from './ranking';
