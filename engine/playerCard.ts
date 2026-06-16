@@ -6,6 +6,8 @@ const pct = (v: number): number => Math.round(v * 100);
 
 const SAFE = new Set(['1:0', '0:1', '1:1', '0:0']);
 const keyOf = (s: Score): string => `${s.home}:${s.away}`;
+/** Rezultat meczu z perspektywy gospodarza: 1 = wygrana, 0 = remis (X), -1 = porażka. */
+const outcomeOf = (s: Score): number => (s.home > s.away ? 1 : s.home < s.away ? -1 : 0);
 
 /** Punkty meczu dla gracza: 0 bez typu, inaczej scoreMatchK1. Zakłada result≠null. */
 function matchPoints(mt: PlayerCardMatch): number {
@@ -64,9 +66,10 @@ export function playerCard(input: PlayerCardInput): CardStats {
       }
       const others = mt.allPicks.filter((q): q is Score => q != null);
       if (others.length > 0) {
-        const same = others.filter(
-          (q) => q.home === mt.pick!.home && q.away === mt.pick!.away,
-        ).length;
+        // Zgodność po REZULTACIE (1/X/2), nie po dokładnym wyniku — dokładne wyniki się
+        // rozdrabniają (każdy „indywidualistą"), rezultat różnicuje stawkę sensownie.
+        const myOut = outcomeOf(mt.pick);
+        const same = others.filter((q) => outcomeOf(q) === myOut).length;
         crowdSum += same / others.length;
         crowdMatches += 1;
       }
@@ -86,8 +89,9 @@ export function playerCard(input: PlayerCardInput): CardStats {
   }
 
   const zgodnoscPct = crowdMatches > 0 ? pct(crowdSum / crowdMatches) : 0;
+  // Progi dobrane do realnego pasma zgody na rezultat (~55–78%) — patrz spec §9.
   const osobowosc: CardStats['osobowosc'] =
-    zgodnoscPct < 33 ? 'INDYWIDUALISTA' : zgodnoscPct >= 60 ? 'OWCZY PĘD' : 'NEUTRALNY';
+    zgodnoscPct < 65 ? 'INDYWIDUALISTA' : zgodnoscPct > 73 ? 'OWCZY PĘD' : 'NEUTRALNY';
 
   // PO TURZE 2: dorobek per tura, licząc tylko tury, które mają jakikolwiek wynik.
   const turnPoints = input.turns

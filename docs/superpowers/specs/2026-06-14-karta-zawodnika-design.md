@@ -100,10 +100,16 @@ nie z `general.points` — to celowe rozróżnienie: hero = standing ogólny, se
 | OFENSYWA | śr. liczba goli w Twoich typach (`home+away`) | |
 | PEWNIAK | śr. pkt liczona TYLKO z meczów trafionych | brak trafień → `—` |
 | ULUBIONY WYNIK | najczęściej typowany wynik | remis częstości → niższa suma bramek → alfabetycznie |
-| ZGODNOŚĆ Z TŁUMEM | śr. (po meczach) % graczy z IDENTYCZNYM typem | → plakietka osobowości |
+| ZGODNOŚĆ Z TŁUMEM | śr. (po meczach) % graczy z TYM SAMYM REZULTATEM (1/X/2) | → plakietka osobowości |
 
-**Plakietka osobowości** (z ZGODNOŚCI Z TŁUMEM `c`): `c < 33%` → ★ INDYWIDUALISTA;
-`c ≥ 60%` → ★ OWCZY PĘD; w przeciwnym razie → ★ NEUTRALNY.
+**Plakietka osobowości** (z ZGODNOŚCI Z TŁUMEM `c`): `c < 65%` → ★ INDYWIDUALISTA;
+`c > 73%` → ★ OWCZY PĘD; w przeciwnym razie → ★ NEUTRALNY.
+
+> **Uwaga (2026-06-16):** miara ZGODNOŚCI liczy zgodę na **rezultat** (1/X/2), nie na dokładny
+> wynik. Powód: dokładne wyniki rozdrabniają się przy ~56 graczach — wszyscy lądują w 12–35%, więc
+> każdy wychodził „indywidualistą", a OWCZY PĘD (próg ≥60%) był martwy. Zgoda na rezultat mieści się
+> realnie w ~55–78%, stąd progi 65/73 (różnicują stawkę na 3 niepuste grupy). Progi bezwzględne
+> celowo — gracz sam je sprawdzi ze swojej liczby (warunek: jasne dla graczy + opis w legendzie).
 
 ### Sekcja PO TURZE 2 (aktywne, gdy ≥2 tury mają wyniki)
 
@@ -165,7 +171,7 @@ Dodajemy sekcję `cards` (mapa nick → staty). Przykład:
     "celnoscPct": 38, "dokladne": 2, "srPktMecz": 1.6,
     "odwagaPct": 63, "nosRemisowPct": 0, "nosRemisowNd": false,
     "seria": 2, "ofensywa": 2.0, "pewniak": 4.3, "pewniakNd": false,
-    "ulubionyWynik": "0:2", "zgodnoscPct": 23, "osobowosc": "INDYWIDUALISTA",
+    "ulubionyWynik": "0:2", "zgodnoscPct": 60, "osobowosc": "INDYWIDUALISTA",
     "forma": null, "najlepszaTura": null, "poTurze2Aktywne": false
   }
 }
@@ -187,7 +193,7 @@ Dodajemy sekcję `cards` (mapa nick → staty). Przykład:
 
 - **TDD `engine/playerCard.ts`** (vitest): asercje co do liczby na ręcznie zweryfikowanych
   wartościach (Talvik: 38% / 2 / 1.6 / 63% / 0% / seria 2 / ofensywa 2.0 / pewniak 4.3 /
-  ulubiony 0:2 / zgodność 23% → INDYWIDUALISTA; DarekJell: 63% / 3 / 2.6 / nos 100% / …).
+  ulubiony 0:2 / zgodność 60% → INDYWIDUALISTA; DarekJell: 63% / 3 / 2.6 / nos 100% / …).
   Testy edge (brak remisów, brak trafień, <2 tury).
 - **Smoke** rozszerzony: `out/karty/<id>.png` istnieją (56 plików), strony `/gracz` mają `og:image`.
 - **Bramka:** `npm test && npm run typecheck && npm run build && npm run build:cards && npm run smoke`

@@ -44,7 +44,7 @@ describe('buildResults — sekcja cards (ground truth z tury 1)', () => {
     expect(c.pewniak).toBeCloseTo(4.3, 5);
     expect(c.pewniakNd).toBe(false);
     expect(c.ulubionyWynik).toBe('0:2');
-    expect(c.zgodnoscPct).toBe(23);
+    expect(c.zgodnoscPct).toBe(60); // zgoda na REZULTAT 1/X/2 (po zmianie miary; <65 → indywidualista)
     expect(c.osobowosc).toBe('INDYWIDUALISTA');
     expect(c.poTurze2Aktywne).toBe(false);
     expect(c.forma).toBeNull();

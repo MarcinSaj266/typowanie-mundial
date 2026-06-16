@@ -86,7 +86,7 @@ export default async function KartaPage({ params }: { params: Promise<{ id: stri
           <dt>OFENSYWA</dt><dd>Średnia liczba goli w Twoich typach (gospodarze + goście).</dd>
           <dt>PEWNIAK</dt><dd>Średnia punktów liczona tylko z meczów, które trafiłeś. Brak trafień → „—".</dd>
           <dt>ULUBIONY WYNIK</dt><dd>Najczęściej typowany przez Ciebie wynik.</dd>
-          <dt>ZGODNOŚĆ Z TŁUMEM</dt><dd>Średni % graczy, którzy typowali identycznie jak Ty. Daje plakietkę: poniżej 33% — INDYWIDUALISTA, 60% i więcej — OWCZY PĘD, pomiędzy — NEUTRALNY.</dd>
+          <dt>ZGODNOŚĆ Z TŁUMEM</dt><dd>Średni % graczy, którzy obstawili ten sam wynik meczu co Ty (gospodarz wygra / remis / gość wygra). Daje plakietkę: poniżej 65% — INDYWIDUALISTA, powyżej 73% — OWCZY PĘD, pomiędzy — NEUTRALNY.</dd>
           <dt>FORMA</dt><dd>Trend: czy ostatnia tura z wynikami była lepsza, gorsza czy równa poprzedniej. Aktywne po 2 turach.</dd>
           <dt>NAJLEPSZA TURA</dt><dd>Tura z najwyższym dorobkiem. Aktywne po 2 turach.</dd>
         </dl>

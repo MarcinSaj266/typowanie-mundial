@@ -93,9 +93,9 @@ describe('playerCard — STYL GRY cz. 2', () => {
         {
           turn: 1,
           matches: [
-            m(s(1, 1), s(1, 1), [s(1, 1), s(1, 1), s(1, 1), s(1, 1)]), // remis trafiony (5), tłum 100%
-            m(s(0, 0), s(2, 1), [s(0, 0), s(3, 0), s(2, 1), s(1, 0)]),  // remis pudło, tłum 25%
-            m(s(2, 0), s(2, 0), [s(2, 0), s(0, 1), s(0, 1), s(0, 1)]),  // trafiony (5), tłum 25%
+            m(s(1, 1), s(1, 1), [s(1, 1), s(1, 1), s(1, 1), s(1, 1)]), // remis trafiony (5), rezultat X u 100%
+            m(s(0, 0), s(2, 1), [s(0, 0), s(3, 0), s(2, 1), s(1, 0)]),  // remis pudło, rezultat X u 1/4 = 25%
+            m(s(2, 0), s(2, 0), [s(2, 0), s(0, 1), s(0, 1), s(0, 1)]),  // trafiony (5), rezultat 1 u 1/4 = 25%
           ],
         },
       ],
@@ -104,20 +104,27 @@ describe('playerCard — STYL GRY cz. 2', () => {
     expect(c.nosRemisowNd).toBe(false);
     expect(c.pewniak).toBeCloseTo(5.0, 5); // trafione: 5 i 5
     expect(c.pewniakNd).toBe(false);
-    expect(c.zgodnoscPct).toBe(50); // (100+25+25)/3
-    expect(c.osobowosc).toBe('NEUTRALNY'); // 33 ≤ 50 < 60
+    expect(c.zgodnoscPct).toBe(50); // (100+25+25)/3 — liczone po rezultacie 1/X/2
+    expect(c.osobowosc).toBe('INDYWIDUALISTA'); // 50 < 65
   });
 
-  it('brak remisów → Nd; brak trafień → Nd; INDYWIDUALISTA przy <33%', () => {
+  it('zgodność liczona po REZULTACIE 1/X/2, nie po dokładnym wyniku', () => {
+    // mój typ 2:1, tłum ma różne dokładne wyniki, ale 3/4 to też zwycięstwo gospodarza
+    const c = playerCard({
+      ...base,
+      groupPos: 1,
+      turns: [{ turn: 1, matches: [m(s(2, 1), s(2, 1), [s(2, 1), s(3, 0), s(1, 0), s(0, 1)])] }],
+    });
+    expect(c.zgodnoscPct).toBe(75); // 3/4 ten sam rezultat (po DOKŁADNYM wyniku byłoby 25)
+    expect(c.osobowosc).toBe('OWCZY PĘD'); // 75 > 73
+  });
+
+  it('INDYWIDUALISTA gdy <65% zgody na rezultat; brak remisów/trafień → Nd', () => {
     const c = playerCard({
       ...base,
       groupPos: 7,
-      turns: [
-        {
-          turn: 1,
-          matches: [m(s(4, 0), s(0, 0), [s(4, 0), s(1, 0), s(1, 0), s(0, 1)])], // unikat, pudło, brak remisu
-        },
-      ],
+      // typ 4:0 (zwycięstwo gospodarza), reszta tłumu typuje zwycięstwo gości → tylko ja na "1"
+      turns: [{ turn: 1, matches: [m(s(4, 0), s(0, 0), [s(4, 0), s(0, 1), s(0, 2), s(1, 2)])] }],
     });
     expect(c.nosRemisowNd).toBe(true);
     expect(c.nosRemisowPct).toBe(0);
@@ -127,14 +134,27 @@ describe('playerCard — STYL GRY cz. 2', () => {
     expect(c.osobowosc).toBe('INDYWIDUALISTA');
   });
 
-  it('OWCZY PĘD przy ≥60% zgodności', () => {
+  it('NEUTRALNY na dolnej granicy 65% (65 nie jest <65)', () => {
+    const all = [...Array(13).fill(s(1, 0)), ...Array(7).fill(s(0, 1))]; // 13/20 = 65% na rezultat "1"
     const c = playerCard({
       ...base,
-      groupPos: 1,
-      turns: [{ turn: 1, matches: [m(s(1, 0), s(1, 0), [s(1, 0), s(1, 0), s(1, 0)])] }],
+      groupPos: 3,
+      turns: [{ turn: 1, matches: [m(s(1, 0), s(1, 0), all)] }],
     });
-    expect(c.zgodnoscPct).toBe(100);
-    expect(c.osobowosc).toBe('OWCZY PĘD');
+    expect(c.zgodnoscPct).toBe(65);
+    expect(c.osobowosc).toBe('NEUTRALNY');
+  });
+
+  it('NEUTRALNY na górnej granicy 73%; OWCZY PĘD dopiero powyżej', () => {
+    const neutr = [...Array(8).fill(s(1, 0)), ...Array(3).fill(s(0, 1))]; // 8/11 = 72.7 → 73%
+    const cN = playerCard({ ...base, groupPos: 4, turns: [{ turn: 1, matches: [m(s(1, 0), s(1, 0), neutr)] }] });
+    expect(cN.zgodnoscPct).toBe(73);
+    expect(cN.osobowosc).toBe('NEUTRALNY'); // 73 nie jest >73
+
+    const owczy = [...Array(3).fill(s(1, 0)), s(0, 1)]; // 3/4 = 75%
+    const cO = playerCard({ ...base, groupPos: 5, turns: [{ turn: 1, matches: [m(s(1, 0), s(1, 0), owczy)] }] });
+    expect(cO.zgodnoscPct).toBe(75);
+    expect(cO.osobowosc).toBe('OWCZY PĘD');
   });
 });
 
