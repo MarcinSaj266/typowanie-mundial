@@ -74,11 +74,7 @@ export default async function KartaPage({ params }: { params: Promise<{ id: stri
       <section className="card-legend" aria-label="Legenda atrybutów">
         <h2 className="turn-heading">★ JAK TO LICZYMY ★</h2>
         <dl>
-          <dt>MIEJSCE OGÓLNE</dt><dd>Twoja pozycja w tabeli ogólnej (wszyscy gracze). Aktualna przez cały turniej.</dd>
-          <dt>PUNKTY</dt><dd>Całkowity dorobek: punkty z 3 tur fazy grupowej + bonus grupowy + faza pucharowa.</dd>
-          <dt>MIEJSCE W GRUPIE</dt><dd>Pozycja w Twojej 7-osobowej grupie konkursowej.</dd>
-          <dt>CELNOŚĆ</dt><dd>% rozegranych meczów, w których trafiłeś (każde trafienie za 3/4/5 pkt).</dd>
-          <dt>DOKŁADNE WYNIKI</dt><dd>Ile razy trafiłeś wynik co do gola (mecz za 5 pkt).</dd>
+          <dt>DOKŁADNE WYNIKI</dt><dd>Ile razy trafiłeś wynik co do gola.</dd>
           <dt>ŚR. PKT / MECZ</dt><dd>Średni dorobek na rozegrany mecz fazy grupowej.</dd>
           <dt>ODWAGA</dt><dd>% Twoich typów spoza „bezpiecznych" wyników (1:0, 0:1, 1:1, 0:0). Im wyżej, tym śmielej typujesz.</dd>
           <dt>NOS DO REMISÓW</dt><dd>Z wytypowanych remisów ile trafiłeś (%). Brak typowanych remisów → „—".</dd>
