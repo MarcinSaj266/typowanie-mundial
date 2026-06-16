@@ -1,0 +1,5639 @@
+{
+  "turn": 1,
+  "fixtures": [
+    {
+      "no": 1,
+      "home": "Meksyk",
+      "away": "RPA",
+      "kickoff": "czwartek, 11 cze godz.21.00"
+    },
+    {
+      "no": 2,
+      "home": "Korea Płd.",
+      "away": "Czechy",
+      "kickoff": "piątek, 12 cze godz. 04.00"
+    },
+    {
+      "no": 3,
+      "home": "Kanada",
+      "away": "Bośnia i Hercegowina",
+      "kickoff": "piątek 12 cze godz. 21.00"
+    },
+    {
+      "no": 4,
+      "home": "USA",
+      "away": "Paragwaj",
+      "kickoff": "sobota, 13 cze godz. 03.00"
+    },
+    {
+      "no": 5,
+      "home": "Katar",
+      "away": "Szwajcaria",
+      "kickoff": "sobota, 13 cze godz. 21.00"
+    },
+    {
+      "no": 6,
+      "home": "Brazylia",
+      "away": "Maroko",
+      "kickoff": "niedziela, 14 cze godz. 00.00"
+    },
+    {
+      "no": 7,
+      "home": "Haiti",
+      "away": "Szkocja",
+      "kickoff": "niedziela, 14 cze godz. 03.00"
+    },
+    {
+      "no": 8,
+      "home": "Australia",
+      "away": "Turcja",
+      "kickoff": "niedziela, 14 cze godz. 06.00"
+    },
+    {
+      "no": 9,
+      "home": "Niemcy",
+      "away": "Curacao",
+      "kickoff": "niedziela, 14 cze godz. 19.00"
+    },
+    {
+      "no": 10,
+      "home": "Holandia",
+      "away": "Japonia",
+      "kickoff": "niedziela, 14 cze godz. 22.00"
+    },
+    {
+      "no": 11,
+      "home": "Wybrzeże Koś. Słon.",
+      "away": "Ekwador",
+      "kickoff": "poniedz., 15 cze godz. 01.00"
+    },
+    {
+      "no": 12,
+      "home": "Szwecja",
+      "away": "Tunezja",
+      "kickoff": "poniedz., 15 cze godz. 04.00"
+    },
+    {
+      "no": 13,
+      "home": "Hiszpania",
+      "away": "Rep. Ziel. Przylądka",
+      "kickoff": "poniedz., 15 cze godz. 18.00"
+    },
+    {
+      "no": 14,
+      "home": "Belgia",
+      "away": "Egipt",
+      "kickoff": "poniedz., 15 cze godz. 21.00"
+    },
+    {
+      "no": 15,
+      "home": "Arabia Saudyjska",
+      "away": "Urugwaj",
+      "kickoff": "wtorek, 16 cze godz. 00.00"
+    },
+    {
+      "no": 16,
+      "home": "Iran",
+      "away": "Nowa Zelandia",
+      "kickoff": "wtorek, 16 cze godz. 03.00"
+    },
+    {
+      "no": 17,
+      "home": "Francja",
+      "away": "Senegal",
+      "kickoff": "wtorek, 16 cze godz. 21.00"
+    },
+    {
+      "no": 18,
+      "home": "Irak",
+      "away": "Norwegia",
+      "kickoff": "środa, 17 cze godz. 00.00"
+    },
+    {
+      "no": 19,
+      "home": "Argentyna",
+      "away": "Algieria",
+      "kickoff": "środa, 17 cze godz. 03.00"
+    },
+    {
+      "no": 20,
+      "home": "Austria",
+      "away": "Jordania",
+      "kickoff": "środa, 17 cze godz. 06.00"
+    },
+    {
+      "no": 21,
+      "home": "Portugalia",
+      "away": "DR Konga",
+      "kickoff": "środa, 17 cze godz. 19.00"
+    },
+    {
+      "no": 22,
+      "home": "Anglia",
+      "away": "Chorwacja",
+      "kickoff": "środa, 17 cze godz. 22.00"
+    },
+    {
+      "no": 23,
+      "home": "Ghana",
+      "away": "Panama",
+      "kickoff": "czwartek, 18 cze godz. 01.00"
+    },
+    {
+      "no": 24,
+      "home": "Uzbekistan",
+      "away": "Kolumbia",
+      "kickoff": "czwartek, 18 cze godz. 04.00"
+    }
+  ],
+  "predictions": {
+    "Dario": {
+      "1": {
+        "home": 1,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 0,
+        "away": 1
+      },
+      "4": {
+        "home": 0,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 0,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 1
+      },
+      "13": {
+        "home": 4,
+        "away": 0
+      },
+      "14": {
+        "home": 1,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 1
+      },
+      "16": {
+        "home": 1,
+        "away": 1
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 4,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Wojtek": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 1,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 2
+      },
+      "12": {
+        "home": 1,
+        "away": 1
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 1,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 1
+      },
+      "17": {
+        "home": 1,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 1,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "KamUla": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 1,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 2,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 4,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 1,
+        "away": 3
+      },
+      "16": {
+        "home": 1,
+        "away": 2
+      },
+      "17": {
+        "home": 2,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 1
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 2
+      },
+      "24": {
+        "home": 1,
+        "away": 4
+      }
+    },
+    "MagdaS": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 0,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 0
+      },
+      "4": {
+        "home": 1,
+        "away": 1
+      },
+      "5": {
+        "home": 1,
+        "away": 0
+      },
+      "6": {
+        "home": 3,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 0,
+        "away": 1
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 0
+      },
+      "11": {
+        "home": 0,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 1
+      },
+      "16": {
+        "home": 1,
+        "away": 1
+      },
+      "17": {
+        "home": 3,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 1
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 3,
+        "away": 2
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 1
+      }
+    },
+    "KasiaJ": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 2
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 6,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 2
+      },
+      "11": {
+        "home": 2,
+        "away": 2
+      },
+      "12": {
+        "home": 2,
+        "away": 1
+      },
+      "13": {
+        "home": 6,
+        "away": 0
+      },
+      "14": {
+        "home": 1,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 3
+      },
+      "16": {
+        "home": 1,
+        "away": 1
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 4,
+        "away": 0
+      },
+      "22": {
+        "home": 3,
+        "away": 2
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "KrystianM": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 2
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 1,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    "PiotreG": {
+      "1": {
+        "home": 0,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 0
+      },
+      "3": {
+        "home": 0,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 2
+      },
+      "5": {
+        "home": 1,
+        "away": 2
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 1
+      },
+      "8": {
+        "home": 0,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 2
+      },
+      "12": {
+        "home": 1,
+        "away": 1
+      },
+      "13": {
+        "home": 5,
+        "away": 0
+      },
+      "14": {
+        "home": 3,
+        "away": 0
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 1
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 5
+      },
+      "19": {
+        "home": 4,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 4,
+        "away": 1
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 3
+      }
+    },
+    "Prozped": {
+      "1": {
+        "home": 3,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 1
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 1,
+        "away": 1
+      },
+      "18": {
+        "home": 1,
+        "away": 3
+      },
+      "19": {
+        "home": 2,
+        "away": 1
+      },
+      "20": {
+        "home": 3,
+        "away": 1
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 0
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    "Artur": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 0
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 2
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 3,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 1
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Sokółka": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 0
+      },
+      "3": {
+        "home": 1,
+        "away": 2
+      },
+      "4": {
+        "home": 1,
+        "away": 2
+      },
+      "5": {
+        "home": 1,
+        "away": 2
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 2
+      },
+      "12": {
+        "home": 2,
+        "away": 1
+      },
+      "13": {
+        "home": 5,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 1,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 1,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 2
+      },
+      "22": {
+        "home": 3,
+        "away": 2
+      },
+      "23": {
+        "home": 3,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "KasiaK": {
+      "1": {
+        "home": 3,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 3,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 1,
+        "away": 2
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 0,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 2
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 1,
+        "away": 0
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 3,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Seweryn": {
+      "1": {
+        "home": 3,
+        "away": 1
+      },
+      "2": {
+        "home": 2,
+        "away": 2
+      },
+      "3": {
+        "home": 1,
+        "away": 2
+      },
+      "4": {
+        "home": 2,
+        "away": 3
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 2,
+        "away": 2
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 5,
+        "away": 0
+      },
+      "10": {
+        "home": 3,
+        "away": 2
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 2
+      },
+      "13": {
+        "home": 4,
+        "away": 1
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 1,
+        "away": 3
+      },
+      "16": {
+        "home": 3,
+        "away": 1
+      },
+      "17": {
+        "home": 2,
+        "away": 2
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 3,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 1
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 3
+      }
+    },
+    "DarekL": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 0,
+        "away": 1
+      },
+      "4": {
+        "home": 1,
+        "away": 2
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 4
+      },
+      "8": {
+        "home": 2,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 3
+      },
+      "12": {
+        "home": 2,
+        "away": 2
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 3,
+        "away": 3
+      },
+      "15": {
+        "home": 2,
+        "away": 3
+      },
+      "16": {
+        "home": 0,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 2
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 5,
+        "away": 1
+      },
+      "20": {
+        "home": 0,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 0,
+        "away": 0
+      },
+      "24": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    "KrzysztoW": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 2
+      },
+      "3": {
+        "home": 2,
+        "away": 0
+      },
+      "4": {
+        "home": 1,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 1
+      },
+      "8": {
+        "home": 0,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Magiera": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 3,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 1
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 2
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 1,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 1
+      }
+    },
+    "Henryk": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 2,
+        "away": 0
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 2
+      },
+      "5": {
+        "home": 1,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 1
+      },
+      "8": {
+        "home": 2,
+        "away": 0
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 0
+      },
+      "11": {
+        "home": 2,
+        "away": 0
+      },
+      "12": {
+        "home": 2,
+        "away": 1
+      },
+      "13": {
+        "home": 4,
+        "away": 1
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 0
+      },
+      "18": {
+        "home": 1,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 1
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 3,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "PPP": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 2,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 1,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 1
+      },
+      "21": {
+        "home": 2,
+        "away": 1
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Żaklina": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 4,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 3,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 1
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 2
+      },
+      "17": {
+        "home": 3,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 1,
+        "away": 1
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 3,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 1
+      },
+      "24": {
+        "home": 1,
+        "away": 3
+      }
+    },
+    "Cezary": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 0,
+        "away": 1
+      },
+      "4": {
+        "home": 1,
+        "away": 2
+      },
+      "5": {
+        "home": 2,
+        "away": 0
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 5,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 1
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 1
+      },
+      "24": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    "Dziobak": {
+      "1": {
+        "home": 3,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 3,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 4
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 6,
+        "away": 0
+      },
+      "10": {
+        "home": 3,
+        "away": 1
+      },
+      "11": {
+        "home": 3,
+        "away": 2
+      },
+      "12": {
+        "home": 1,
+        "away": 1
+      },
+      "13": {
+        "home": 4,
+        "away": 0
+      },
+      "14": {
+        "home": 3,
+        "away": 1
+      },
+      "15": {
+        "home": 2,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 1
+      },
+      "20": {
+        "home": 3,
+        "away": 1
+      },
+      "21": {
+        "home": 4,
+        "away": 1
+      },
+      "22": {
+        "home": 3,
+        "away": 3
+      },
+      "23": {
+        "home": 2,
+        "away": 2
+      },
+      "24": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    "MateuszKn": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 2,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 1,
+        "away": 3
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 2
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 3
+      },
+      "9": {
+        "home": 5,
+        "away": 0
+      },
+      "10": {
+        "home": 3,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 1
+      },
+      "13": {
+        "home": 6,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 2,
+        "away": 1
+      },
+      "16": {
+        "home": 0,
+        "away": 0
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 1
+      },
+      "19": {
+        "home": 2,
+        "away": 1
+      },
+      "20": {
+        "home": 3,
+        "away": 0
+      },
+      "21": {
+        "home": 4,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Przemek": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 2
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 1,
+        "away": 2
+      },
+      "5": {
+        "home": 1,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 2
+      },
+      "7": {
+        "home": 1,
+        "away": 3
+      },
+      "8": {
+        "home": 2,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 2
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 2,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 2
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 1
+      },
+      "20": {
+        "home": 1,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 1,
+        "away": 3
+      }
+    },
+    "Borys": {
+      "1": {
+        "home": 1,
+        "away": 0
+      },
+      "2": {
+        "home": 3,
+        "away": 2
+      },
+      "3": {
+        "home": 2,
+        "away": 0
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 2,
+        "away": 2
+      },
+      "7": {
+        "home": 0,
+        "away": 4
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 6,
+        "away": 0
+      },
+      "10": {
+        "home": 3,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 5,
+        "away": 0
+      },
+      "14": {
+        "home": 3,
+        "away": 2
+      },
+      "15": {
+        "home": 1,
+        "away": 3
+      },
+      "16": {
+        "home": 0,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 2
+      },
+      "18": {
+        "home": 0,
+        "away": 1
+      },
+      "19": {
+        "home": 1,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 3
+      },
+      "23": {
+        "home": 3,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Turbo-Ryżu": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 2
+      },
+      "3": {
+        "home": 2,
+        "away": 2
+      },
+      "4": {
+        "home": 1,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 4,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 3,
+        "away": 2
+      },
+      "11": {
+        "home": 2,
+        "away": 2
+      },
+      "12": {
+        "home": 3,
+        "away": 1
+      },
+      "13": {
+        "home": 4,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 3
+      },
+      "16": {
+        "home": 2,
+        "away": 2
+      },
+      "17": {
+        "home": 3,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 1
+      },
+      "21": {
+        "home": 4,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 2
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    "MagdaP": {
+      "1": {
+        "home": 1,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 0
+      },
+      "3": {
+        "home": 1,
+        "away": 0
+      },
+      "4": {
+        "home": 1,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 1,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 1,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 1
+      },
+      "16": {
+        "home": 1,
+        "away": 1
+      },
+      "17": {
+        "home": 1,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 0
+      },
+      "23": {
+        "home": 1,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Małgorzata": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 0
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 3,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 0,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 2
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "KamilF": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 1,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 1,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "MichałCz": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 2
+      },
+      "3": {
+        "home": 1,
+        "away": 2
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 5,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 4,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 3,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 1
+      },
+      "21": {
+        "home": 3,
+        "away": 1
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 1
+      },
+      "24": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    "Talvik": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 2,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 0
+      },
+      "4": {
+        "home": 1,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 5,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 0
+      },
+      "12": {
+        "home": 1,
+        "away": 1
+      },
+      "13": {
+        "home": 2,
+        "away": 0
+      },
+      "14": {
+        "home": 1,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 0
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Rafał": {
+      "1": {
+        "home": 3,
+        "away": 0
+      },
+      "2": {
+        "home": 2,
+        "away": 3
+      },
+      "3": {
+        "home": 1,
+        "away": 2
+      },
+      "4": {
+        "home": 2,
+        "away": 2
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 4,
+        "away": 2
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 6,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 2
+      },
+      "12": {
+        "home": 3,
+        "away": 2
+      },
+      "13": {
+        "home": 5,
+        "away": 0
+      },
+      "14": {
+        "home": 3,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 3
+      },
+      "16": {
+        "home": 1,
+        "away": 1
+      },
+      "17": {
+        "home": 3,
+        "away": 2
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 4,
+        "away": 1
+      },
+      "20": {
+        "home": 3,
+        "away": 0
+      },
+      "21": {
+        "home": 4,
+        "away": 1
+      },
+      "22": {
+        "home": 2,
+        "away": 2
+      },
+      "23": {
+        "home": 2,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 3
+      }
+    },
+    "MarekS": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 1
+      },
+      "8": {
+        "home": 1,
+        "away": 3
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 0,
+        "away": 2
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 1,
+        "away": 3
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 1,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 1
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 0,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 1
+      }
+    },
+    "Karolina": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 2
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "AndrzejO": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "PiotreM": {
+      "1": {
+        "home": 3,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 2
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 3
+      },
+      "9": {
+        "home": 6,
+        "away": 0
+      },
+      "10": {
+        "home": 3,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 1
+      },
+      "13": {
+        "home": 5,
+        "away": 0
+      },
+      "14": {
+        "home": 3,
+        "away": 1
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 2
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 4
+      },
+      "19": {
+        "home": 3,
+        "away": 1
+      },
+      "20": {
+        "home": 3,
+        "away": 0
+      },
+      "21": {
+        "home": 4,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "DarekJell": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 2,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 0
+      },
+      "4": {
+        "home": 1,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 1,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 0,
+        "away": 1
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 0
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 4,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 1,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 1,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 0,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "MaciejM": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 0
+      },
+      "4": {
+        "home": 3,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 1
+      },
+      "6": {
+        "home": 2,
+        "away": 2
+      },
+      "7": {
+        "home": 0,
+        "away": 4
+      },
+      "8": {
+        "home": 0,
+        "away": 2
+      },
+      "9": {
+        "home": 6,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 2
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 5,
+        "away": 0
+      },
+      "14": {
+        "home": 3,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 2,
+        "away": 1
+      },
+      "20": {
+        "home": 3,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 0
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 3
+      }
+    },
+    "KSZ": {
+      "1": {
+        "home": 1,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 0,
+        "away": 2
+      },
+      "4": {
+        "home": 1,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 2
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 3
+      },
+      "9": {
+        "home": 5,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 0,
+        "away": 0
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 4,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 2
+      },
+      "15": {
+        "home": 1,
+        "away": 1
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 1,
+        "away": 0
+      },
+      "21": {
+        "home": 4,
+        "away": 1
+      },
+      "22": {
+        "home": 2,
+        "away": 0
+      },
+      "23": {
+        "home": 1,
+        "away": 0
+      },
+      "24": {
+        "home": 1,
+        "away": 4
+      }
+    },
+    "MarekP": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 0,
+        "away": 0
+      },
+      "3": {
+        "home": 2,
+        "away": 0
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 1,
+        "away": 0
+      },
+      "6": {
+        "home": 2,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 0
+      },
+      "9": {
+        "home": 5,
+        "away": 0
+      },
+      "10": {
+        "home": 3,
+        "away": 1
+      },
+      "11": {
+        "home": 0,
+        "away": 4
+      },
+      "12": {
+        "home": 3,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 1
+      },
+      "16": {
+        "home": 1,
+        "away": 3
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 1,
+        "away": 1
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 2
+      },
+      "23": {
+        "home": 2,
+        "away": 2
+      },
+      "24": {
+        "home": 0,
+        "away": 1
+      }
+    },
+    "KleoPatra": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 2
+      },
+      "5": {
+        "home": 1,
+        "away": 2
+      },
+      "6": {
+        "home": 1,
+        "away": 2
+      },
+      "7": {
+        "home": 1,
+        "away": 2
+      },
+      "8": {
+        "home": 0,
+        "away": 3
+      },
+      "9": {
+        "home": 2,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 2
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 3,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 0
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 3,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 1
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "MichałeK": {
+      "1": {
+        "home": 3,
+        "away": 0
+      },
+      "2": {
+        "home": 2,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 0,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 2
+      },
+      "11": {
+        "home": 0,
+        "away": 2
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 4,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 4
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 3,
+        "away": 0
+      },
+      "18": {
+        "home": 1,
+        "away": 2
+      },
+      "19": {
+        "home": 4,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 4,
+        "away": 3
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Witek": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 0,
+        "away": 0
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 3,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 1,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 2
+      },
+      "11": {
+        "home": 1,
+        "away": 2
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 3,
+        "away": 2
+      },
+      "15": {
+        "home": 0,
+        "away": 0
+      },
+      "16": {
+        "home": 0,
+        "away": 1
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 0
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 3,
+        "away": 1
+      },
+      "21": {
+        "home": 4,
+        "away": 1
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 3,
+        "away": 0
+      },
+      "24": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    "RobertLat": {
+      "1": {
+        "home": 1,
+        "away": 1
+      },
+      "2": {
+        "home": 0,
+        "away": 2
+      },
+      "3": {
+        "home": 1,
+        "away": 2
+      },
+      "4": {
+        "home": 1,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 3,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 0
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 0
+      },
+      "11": {
+        "home": 1,
+        "away": 2
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 3
+      },
+      "16": {
+        "home": 2,
+        "away": 1
+      },
+      "17": {
+        "home": 1,
+        "away": 2
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 1,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 0,
+        "away": 0
+      },
+      "23": {
+        "home": 0,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 3
+      }
+    },
+    "DeDe": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 2,
+        "away": 2
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 4
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 6,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 2
+      },
+      "12": {
+        "home": 1,
+        "away": 2
+      },
+      "13": {
+        "home": 5,
+        "away": 1
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 3,
+        "away": 3
+      },
+      "17": {
+        "home": 2,
+        "away": 2
+      },
+      "18": {
+        "home": 1,
+        "away": 1
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 2
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Cypryjka": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 0,
+        "away": 1
+      },
+      "3": {
+        "home": 0,
+        "away": 0
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 2,
+        "away": 0
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 0,
+        "away": 1
+      },
+      "9": {
+        "home": 2,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 0,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 1
+      },
+      "13": {
+        "home": 3,
+        "away": 1
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 1
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 1
+      },
+      "20": {
+        "home": 0,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 3
+      }
+    },
+    "Tabus": {
+      "1": {
+        "home": 3,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 0
+      },
+      "4": {
+        "home": 1,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 3,
+        "away": 2
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 2,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 1
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 2
+      },
+      "12": {
+        "home": 0,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 1,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 2
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 3
+      }
+    },
+    "AniaS": {
+      "1": {
+        "home": 3,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 1,
+        "away": 0
+      },
+      "4": {
+        "home": 1,
+        "away": 2
+      },
+      "5": {
+        "home": 1,
+        "away": 1
+      },
+      "6": {
+        "home": 3,
+        "away": 0
+      },
+      "7": {
+        "home": 0,
+        "away": 0
+      },
+      "8": {
+        "home": 0,
+        "away": 1
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 3
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 2,
+        "away": 2
+      },
+      "16": {
+        "home": 0,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 2
+      },
+      "18": {
+        "home": 0,
+        "away": 1
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 1,
+        "away": 1
+      },
+      "21": {
+        "home": 3,
+        "away": 1
+      },
+      "22": {
+        "home": 2,
+        "away": 0
+      },
+      "23": {
+        "home": 0,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Pimozid": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 0,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 1,
+        "away": 3
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 0
+      },
+      "8": {
+        "home": 2,
+        "away": 2
+      },
+      "9": {
+        "home": 3,
+        "away": 1
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 2,
+        "away": 0
+      },
+      "12": {
+        "home": 0,
+        "away": 0
+      },
+      "13": {
+        "home": 2,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 2
+      },
+      "15": {
+        "home": 1,
+        "away": 3
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 2
+      },
+      "18": {
+        "home": 0,
+        "away": 3
+      },
+      "19": {
+        "home": 3,
+        "away": 2
+      },
+      "20": {
+        "home": 1,
+        "away": 0
+      },
+      "21": {
+        "home": 1,
+        "away": 1
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 3,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "KrzysztoWś": {
+      "1": {
+        "home": 1,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 0
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 1
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 2
+      },
+      "11": {
+        "home": 0,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 1,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 1
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 1,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 1
+      },
+      "20": {
+        "home": 1,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    "Ruslan": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 1
+      },
+      "24": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    "PiotreK": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 1,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 1
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 1
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    "KaBed": {
+      "1": {
+        "home": 2,
+        "away": 0
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 2,
+        "away": 0
+      },
+      "7": {
+        "home": 1,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 1,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 0
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Mirella": {
+      "1": {
+        "home": 3,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 2
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 3
+      },
+      "6": {
+        "home": 2,
+        "away": 2
+      },
+      "7": {
+        "home": 1,
+        "away": 2
+      },
+      "8": {
+        "home": 0,
+        "away": 2
+      },
+      "9": {
+        "home": 4,
+        "away": 1
+      },
+      "10": {
+        "home": 2,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 0
+      },
+      "12": {
+        "home": 3,
+        "away": 1
+      },
+      "13": {
+        "home": 5,
+        "away": 0
+      },
+      "14": {
+        "home": 3,
+        "away": 1
+      },
+      "15": {
+        "home": 1,
+        "away": 1
+      },
+      "16": {
+        "home": 2,
+        "away": 1
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 4
+      },
+      "19": {
+        "home": 3,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 4,
+        "away": 2
+      },
+      "22": {
+        "home": 1,
+        "away": 2
+      },
+      "23": {
+        "home": 0,
+        "away": 0
+      },
+      "24": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    "Maria": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 1
+      },
+      "3": {
+        "home": 2,
+        "away": 1
+      },
+      "4": {
+        "home": 1,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 1,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 2
+      },
+      "8": {
+        "home": 1,
+        "away": 1
+      },
+      "9": {
+        "home": 3,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 0,
+        "away": 0
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 0,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 2
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 2,
+        "away": 0
+      },
+      "21": {
+        "home": 2,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "Sławek": {
+      "1": {
+        "home": 2,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 2
+      },
+      "3": {
+        "home": 2,
+        "away": 2
+      },
+      "4": {
+        "home": 3,
+        "away": 1
+      },
+      "5": {
+        "home": 0,
+        "away": 1
+      },
+      "6": {
+        "home": 3,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 2,
+        "away": 3
+      },
+      "9": {
+        "home": 2,
+        "away": 0
+      },
+      "10": {
+        "home": 3,
+        "away": 1
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 2,
+        "away": 1
+      },
+      "13": {
+        "home": 3,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 1
+      },
+      "15": {
+        "home": 2,
+        "away": 2
+      },
+      "16": {
+        "home": 1,
+        "away": 1
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 1
+      },
+      "19": {
+        "home": 2,
+        "away": 1
+      },
+      "20": {
+        "home": 2,
+        "away": 1
+      },
+      "21": {
+        "home": 2,
+        "away": 1
+      },
+      "22": {
+        "home": 1,
+        "away": 1
+      },
+      "23": {
+        "home": 1,
+        "away": 1
+      },
+      "24": {
+        "home": 1,
+        "away": 3
+      }
+    },
+    "PawełSt": {
+      "1": {
+        "home": 3,
+        "away": 2
+      },
+      "2": {
+        "home": 0,
+        "away": 2
+      },
+      "3": {
+        "home": 1,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 2
+      },
+      "5": {
+        "home": 0,
+        "away": 2
+      },
+      "6": {
+        "home": 4,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 0,
+        "away": 2
+      },
+      "9": {
+        "home": 5,
+        "away": 0
+      },
+      "10": {
+        "home": 1,
+        "away": 0
+      },
+      "11": {
+        "home": 2,
+        "away": 2
+      },
+      "12": {
+        "home": 0,
+        "away": 0
+      },
+      "13": {
+        "home": 4,
+        "away": 0
+      },
+      "14": {
+        "home": 1,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 3
+      },
+      "16": {
+        "home": 2,
+        "away": 0
+      },
+      "17": {
+        "home": 2,
+        "away": 1
+      },
+      "18": {
+        "home": 1,
+        "away": 3
+      },
+      "19": {
+        "home": 2,
+        "away": 0
+      },
+      "20": {
+        "home": 1,
+        "away": 0
+      },
+      "21": {
+        "home": 3,
+        "away": 0
+      },
+      "22": {
+        "home": 2,
+        "away": 2
+      },
+      "23": {
+        "home": 0,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    "KrzysztofeR": {
+      "1": {
+        "home": 3,
+        "away": 1
+      },
+      "2": {
+        "home": 1,
+        "away": 2
+      },
+      "3": {
+        "home": 0,
+        "away": 1
+      },
+      "4": {
+        "home": 2,
+        "away": 0
+      },
+      "5": {
+        "home": 0,
+        "away": 4
+      },
+      "6": {
+        "home": 2,
+        "away": 1
+      },
+      "7": {
+        "home": 0,
+        "away": 3
+      },
+      "8": {
+        "home": 0,
+        "away": 1
+      },
+      "9": {
+        "home": 6,
+        "away": 0
+      },
+      "10": {
+        "home": 2,
+        "away": 0
+      },
+      "11": {
+        "home": 1,
+        "away": 1
+      },
+      "12": {
+        "home": 3,
+        "away": 0
+      },
+      "13": {
+        "home": 7,
+        "away": 0
+      },
+      "14": {
+        "home": 2,
+        "away": 0
+      },
+      "15": {
+        "home": 0,
+        "away": 4
+      },
+      "16": {
+        "home": 0,
+        "away": 0
+      },
+      "17": {
+        "home": 3,
+        "away": 1
+      },
+      "18": {
+        "home": 0,
+        "away": 5
+      },
+      "19": {
+        "home": 3,
+        "away": 0
+      },
+      "20": {
+        "home": 4,
+        "away": 0
+      },
+      "21": {
+        "home": 5,
+        "away": 0
+      },
+      "22": {
+        "home": 3,
+        "away": 1
+      },
+      "23": {
+        "home": 2,
+        "away": 0
+      },
+      "24": {
+        "home": 0,
+        "away": 4
+      }
+    }
+  }
+}

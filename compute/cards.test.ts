@@ -4,11 +4,17 @@ import { buildResults } from './buildResults';
 
 const read = (p: string) => JSON.parse(readFileSync(p, 'utf8'));
 
+// UWAGA: ten test to ground-truth ze spec §9 — liczby zostały ręcznie zweryfikowane
+// na stanie danych z 8 rozegranych meczów tury 1. Dlatego czyta ZAMROŻONE fixture'y
+// (compute/fixtures/spec9/), a NIE żywe data/k1/*, które rosną z każdym meczem turnieju.
+// NIE „naprawiać" tego przez podmianę oczekiwanych liczb pod aktualny output produkcji —
+// to zerwałoby weryfikację poprawności silnika. Jeśli zmieni się LOGIKA silnika, zaktualizuj
+// liczby ręcznie i opisz dlaczego.
 describe('buildResults — sekcja cards (ground truth z tury 1)', () => {
   const out = buildResults(
-    read('data/k1/roster.json'),
-    [read('data/k1/tura-1.json')],
-    read('data/k1/results.json'),
+    read('compute/fixtures/spec9/roster.json'),
+    [read('compute/fixtures/spec9/tura-1.json')],
+    read('compute/fixtures/spec9/results.json'),
   );
 
   it('zawiera kartę każdego uczestnika', () => {

@@ -1,0 +1,226 @@
+[
+  {
+    "id": "Dario",
+    "group": "A"
+  },
+  {
+    "id": "Wojtek",
+    "group": "A"
+  },
+  {
+    "id": "KamUla",
+    "group": "A"
+  },
+  {
+    "id": "MagdaS",
+    "group": "A"
+  },
+  {
+    "id": "KasiaJ",
+    "group": "A"
+  },
+  {
+    "id": "KrystianM",
+    "group": "A"
+  },
+  {
+    "id": "PiotreG",
+    "group": "A"
+  },
+  {
+    "id": "Prozped",
+    "group": "B"
+  },
+  {
+    "id": "Artur",
+    "group": "B"
+  },
+  {
+    "id": "Sokółka",
+    "group": "B"
+  },
+  {
+    "id": "KasiaK",
+    "group": "B"
+  },
+  {
+    "id": "Seweryn",
+    "group": "B"
+  },
+  {
+    "id": "DarekL",
+    "group": "B"
+  },
+  {
+    "id": "KrzysztoW",
+    "group": "B"
+  },
+  {
+    "id": "Magiera",
+    "group": "C"
+  },
+  {
+    "id": "Henryk",
+    "group": "C"
+  },
+  {
+    "id": "PPP",
+    "group": "C"
+  },
+  {
+    "id": "Żaklina",
+    "group": "C"
+  },
+  {
+    "id": "Cezary",
+    "group": "C"
+  },
+  {
+    "id": "Dziobak",
+    "group": "C"
+  },
+  {
+    "id": "MateuszKn",
+    "group": "C"
+  },
+  {
+    "id": "Przemek",
+    "group": "D"
+  },
+  {
+    "id": "Borys",
+    "group": "D"
+  },
+  {
+    "id": "Turbo-Ryżu",
+    "group": "D"
+  },
+  {
+    "id": "MagdaP",
+    "group": "D"
+  },
+  {
+    "id": "Małgorzata",
+    "group": "D"
+  },
+  {
+    "id": "KamilF",
+    "group": "D"
+  },
+  {
+    "id": "MichałCz",
+    "group": "D"
+  },
+  {
+    "id": "Talvik",
+    "group": "E"
+  },
+  {
+    "id": "Rafał",
+    "group": "E"
+  },
+  {
+    "id": "MarekS",
+    "group": "E"
+  },
+  {
+    "id": "Karolina",
+    "group": "E"
+  },
+  {
+    "id": "AndrzejO",
+    "group": "E"
+  },
+  {
+    "id": "PiotreM",
+    "group": "E"
+  },
+  {
+    "id": "DarekJell",
+    "group": "E"
+  },
+  {
+    "id": "MaciejM",
+    "group": "F"
+  },
+  {
+    "id": "KSZ",
+    "group": "F"
+  },
+  {
+    "id": "MarekP",
+    "group": "F"
+  },
+  {
+    "id": "KleoPatra",
+    "group": "F"
+  },
+  {
+    "id": "MichałeK",
+    "group": "F"
+  },
+  {
+    "id": "Witek",
+    "group": "F"
+  },
+  {
+    "id": "RobertLat",
+    "group": "F"
+  },
+  {
+    "id": "DeDe",
+    "group": "G"
+  },
+  {
+    "id": "Cypryjka",
+    "group": "G"
+  },
+  {
+    "id": "Tabus",
+    "group": "G"
+  },
+  {
+    "id": "AniaS",
+    "group": "G"
+  },
+  {
+    "id": "Pimozid",
+    "group": "G"
+  },
+  {
+    "id": "KrzysztoWś",
+    "group": "G"
+  },
+  {
+    "id": "Ruslan",
+    "group": "G"
+  },
+  {
+    "id": "PiotreK",
+    "group": "H"
+  },
+  {
+    "id": "KaBed",
+    "group": "H"
+  },
+  {
+    "id": "Mirella",
+    "group": "H"
+  },
+  {
+    "id": "Maria",
+    "group": "H"
+  },
+  {
+    "id": "Sławek",
+    "group": "H"
+  },
+  {
+    "id": "PawełSt",
+    "group": "H"
+  },
+  {
+    "id": "KrzysztofeR",
+    "group": "H"
+  }
+]
