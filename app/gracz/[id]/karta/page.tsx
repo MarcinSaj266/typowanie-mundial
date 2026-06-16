@@ -74,13 +74,13 @@ export default async function KartaPage({ params }: { params: Promise<{ id: stri
       <section className="card-legend" aria-label="Legenda atrybutów">
         <h2 className="turn-heading">★ JAK TO LICZYMY ★</h2>
         <dl>
-          <dt>DOKŁADNE WYNIKI</dt><dd>Ile razy trafiłeś wynik co do gola.</dd>
+          <dt>DOKŁADNE WYNIKI</dt><dd>Ile razy trafiłeś-aś wynik co do gola.</dd>
           <dt>ŚR. PKT / MECZ</dt><dd>Średni dorobek na rozegrany mecz fazy grupowej.</dd>
           <dt>ODWAGA</dt><dd>% Twoich typów spoza „bezpiecznych" wyników (1:0, 0:1, 1:1, 0:0). Im wyżej, tym śmielej typujesz.</dd>
-          <dt>NOS DO REMISÓW</dt><dd>Z wytypowanych remisów ile trafiłeś (%). Brak typowanych remisów → „—".</dd>
+          <dt>NOS DO REMISÓW</dt><dd>Z wytypowanych remisów ile trafiłeś-aś (%). Brak typowanych remisów → „—".</dd>
           <dt>NAJDŁUŻSZA SERIA</dt><dd>Najdłuższy ciąg trafień pod rząd (w kolejności meczów).</dd>
           <dt>OFENSYWA</dt><dd>Średnia liczba goli w Twoich typach (gospodarze + goście).</dd>
-          <dt>PEWNIAK</dt><dd>Średnia punktów liczona tylko z meczów, które trafiłeś. Brak trafień → „—".</dd>
+          <dt>PEWNIAK</dt><dd>Średnia punktów liczona tylko z meczów, które trafiłeś-aś. Brak trafień → „—".</dd>
           <dt>ULUBIONY WYNIK</dt><dd>Najczęściej typowany przez Ciebie wynik.</dd>
           <dt>ZGODNOŚĆ Z TŁUMEM</dt><dd>Średni % graczy, którzy obstawili ten sam wynik meczu co Ty (gospodarz wygra / remis / gość wygra). Daje plakietkę: poniżej 65% — INDYWIDUALISTA, powyżej 73% — OWCZY PĘD, pomiędzy — NEUTRALNY.</dd>
           <dt>FORMA</dt><dd>Trend: czy ostatnia tura z wynikami była lepsza, gorsza czy równa poprzedniej. Aktywne po 2 turach.</dd>
