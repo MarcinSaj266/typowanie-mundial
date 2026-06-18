@@ -4,13 +4,16 @@ import { loadResults } from '../lib/results';
 
 export default function MeczePage() {
   const { turns } = loadResults();
+  // Najnowsza tura na wierzchu (malejąco) — bieżąca tura od razu widoczna.
+  const ordered = [...turns].sort((a, b) => b.turn - a.turn);
   return (
     <ScreenFrame title="MECZE">
-      {turns.map((t) => (
-        <section key={t.turn}>
-          <h2 className="turn-heading">★ TURA {t.turn} ★</h2>
+      {ordered.map((t, idx) => (
+        // Każda tura zwijana; najnowsza (idx 0) otwarta, starsze dostępne po kliknięciu.
+        <details key={t.turn} className="turn-section" open={idx === 0}>
+          <summary className="turn-heading">★ TURA {t.turn} ★</summary>
           {t.matches.map((m) => <MatchCard key={m.no} match={m} />)}
-        </section>
+        </details>
       ))}
     </ScreenFrame>
   );

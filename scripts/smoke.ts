@@ -9,9 +9,12 @@ if (!html.includes(lider)) {
   console.error(`SMOKE FAIL: brak lidera "${lider}" w out/tabela/index.html`);
   process.exit(1);
 }
-const matches = (readFileSync('out/mecze/index.html', 'utf8').match(/<details/g) ?? []).length;
-if (matches !== results.turns[0].matches.length) {
-  console.error(`SMOKE FAIL: ${matches} meczy w HTML, oczekiwano ${results.turns[0].matches.length}`);
+// Liczymy karty meczów po klasie (tury są też w <details>, więc nie liczymy gołego <details).
+const matches = (readFileSync('out/mecze/index.html', 'utf8').match(/class="match-card"/g) ?? []).length;
+// /mecze renderuje WSZYSTKIE tury — oczekujemy sumy meczów ze wszystkich tur.
+const expectedMatches = results.turns.reduce((acc: number, t: { matches: unknown[] }) => acc + t.matches.length, 0);
+if (matches !== expectedMatches) {
+  console.error(`SMOKE FAIL: ${matches} meczy w HTML, oczekiwano ${expectedMatches}`);
   process.exit(1);
 }
 // Intro + muzyka (spec intro, sekcja "Testy").

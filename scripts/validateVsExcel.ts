@@ -14,6 +14,8 @@ const STRIDE = 31;
 let checked = 0;
 let mismatches = 0;
 for (const turn of results.turns) {
+  // Arkusz grup-1 mastera zawiera WYŁĄCZNIE turę 1 — pozostałe tury walidujemy osobno.
+  if (turn.turn !== 1) continue;
   for (const match of turn.matches) {
     const headerRow = HEADER_ROW_1 + (match.no - 1) * STRIDE;
     const played = sheet.cell(`G${headerRow}`) !== undefined;

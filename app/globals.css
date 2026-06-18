@@ -237,6 +237,11 @@ a { color: inherit; }
 
 /* ── Mecze ─────────────────────────────────────────────────────── */
 .turn-heading { color: var(--zolty); font-size: 12px; font-weight: 400; }
+.turn-section { margin-bottom: 18px; }
+.turn-section > summary { list-style: none; cursor: pointer; padding: 6px 0; }
+.turn-section > summary::-webkit-details-marker { display: none; }
+.turn-section > summary::before { content: '▸ '; }
+.turn-section[open] > summary::before { content: '▾ '; }
 .match-card {
   border: 2px solid var(--zolty);
   margin-bottom: 10px;
