@@ -1,5 +1,6 @@
 import { aggregateTurn } from '../engine/aggregate';
 import { groupBonus } from '../engine/bonus';
+import { efficiencyBonus, type PhaseStanding } from '../engine/efficiencyBonus';
 import { buildSeason } from '../engine/buildSeason';
 import { generalTable } from '../engine/generalTable';
 import { rankBy } from '../engine/ranking';
@@ -22,16 +23,19 @@ import type {
  * późniejsza tura bije wcześniejszą). */
 const GROUP_ORDER = ['points', 'hitRate', 'grIII', 'grII', 'grI'] as const;
 
+/** Tura kompletna: wczytana i każdy jej mecz ma wynik. */
+function turnComplete(turns: TurnData[], results: ResultsByTurn, n: number): boolean {
+  const t = turns.find((turn) => turn.turn === n);
+  return (
+    !!t &&
+    t.fixtures.length > 0 &&
+    t.fixtures.every((f) => results[String(n)]?.[String(f.no)] != null)
+  );
+}
+
 /** Komplet fazy grupowej: wszystkie 3 tury wczytane i każdy ich mecz ma wynik. */
 function groupStageComplete(turns: TurnData[], results: ResultsByTurn): boolean {
-  return [1, 2, 3].every((n) => {
-    const t = turns.find((turn) => turn.turn === n);
-    return (
-      !!t &&
-      t.fixtures.length > 0 &&
-      t.fixtures.every((f) => results[String(n)]?.[String(f.no)] != null)
-    );
-  });
+  return [1, 2, 3].every((n) => turnComplete(turns, results, n));
 }
 
 /** Zlicza turę uczestnika: typ z tury + wynik z results; brak wyniku = nierozegrany. */
@@ -96,6 +100,19 @@ export function buildResults(
     return buildSeason(p.id, ts);
   });
 
+  // Bonus „skuteczności" (ukryty): top3 KAŻDEGO zamkniętego etapu po punktach etapu
+  // (tura → grI/grII/grIII; remis → sezonowe %). Liczony i zapamiętywany, nie wliczany
+  // do punktów. Puchar dojdzie wraz z fazą pucharową (tam staje się aktywnym tiebreakerem).
+  const PHASE_KEY = { 1: 'grI', 2: 'grII', 3: 'grIII' } as const;
+  const phases: PhaseStanding[] = [1, 2, 3].map((n) => ({
+    complete: turnComplete(turns, results, n),
+    standings: rankBy(
+      seasons.map((s) => ({ participantId: s.participantId, pts: s[PHASE_KEY[n as 1 | 2 | 3]], hitRate: s.hitRate })),
+      ['pts', 'hitRate'],
+    ).map((r) => r.participantId),
+  }));
+  const skutBonuses = efficiencyBonus(phases);
+
   // Tabele grupowe: pkt = suma samych tur (bez bns/puch) — jak SUM(grI:grIII)
   // w arkuszu „tab grup"; bonus liczy się z tych tabel, nie odwrotnie.
   const groupRows: Omit<TableRow, 'position'>[] = seasons.map((s) => ({
@@ -107,6 +124,7 @@ export function buildResults(
     grIII: s.grIII,
     bns: 0,
     puch: s.puch,
+    skutBonus: skutBonuses[s.participantId] ?? 0,
     hitRate: s.hitRate,
     ...counts.get(s.participantId)!,
   }));
@@ -137,6 +155,7 @@ export function buildResults(
     grIII: g.grIII,
     bns: g.bns,
     puch: g.puch,
+    skutBonus: skutBonuses[g.participantId] ?? 0,
     hitRate: g.hitRate,
     ...counts.get(g.participantId)!,
   }));

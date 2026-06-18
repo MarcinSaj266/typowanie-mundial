@@ -154,6 +154,18 @@ Tabela ogólna = `grI+grII+grIII+bns+puch`; tabela grupowa pokazuje pkt = `grI+g
 tabel grupowych: miejsca 1–3 w każdej grupie → 15/10/5; w grupie o najlepszej łącznej sumie
 punktów 7 graczy miejsca 4–7 → 4/3/2/1 (przy remisie najlepszej sumy — wszystkie zremisowane
 grupy, jak `IF(suma=$D$44,...)` w `tab grup`, kol. M/Z). Implementacja: `engine/bonus.ts`.
+**Bonus „skuteczności" `skutBonus` (nowa reguła organizatora, 2026-06-18):** top 3 KAŻDEGO
+z 4 etapów (tura 1, tura 2, tura 3, cała faza pucharowa) dostaje +3/+2/+1. To NIE są zwykłe
+punkty (nie dublują dorobku ani `bns`) — doliczane do skuteczności jako UKRYTY tiebreaker
+tabeli końcowej („as z rękawa przy równych punktach"). Organizator (WhatsApp 2026-06-18):
+ma być policzony i zapamiętany, ale NA RAZIE NIE wyświetlany, i ZACZNIE FUNKCJONOWAĆ dopiero
+od fazy pucharowej. Implementacja: `engine/efficiencyBonus.ts` (czysta, top3 per zamknięty
+etap, kumulacja) + wpięcie w `compute/buildResults.ts` (ranking etapu po grI/grII/grIII;
+remis → sezonowe %; pole `skutBonus` w `TableRow`, NIE wliczane do `points` ani do `rankBy`).
+Tura 1 (zamknięta): KSZ +3, Mirella +2, MateuszKn +1. Spec:
+`docs/superpowers/specs/2026-06-18-bonus-skutecznosci-design.md`. DO ZROBIENIA przy pucharze:
+ustalić mechanikę aktywacji (doliczanie do „%" vs osobny stopień) i wpiąć w tiebreaker tabeli
+ogólnej + dodać etap pucharowy.
 **Faza pucharowa (doprecyzowana 2026-06-12):** punkty ×2 (6/8/10/12), jedna wspólna tabela.
 Dogrywka: wynik po dogrywce liczy się jak wynik z 90 min. Karne: kto typuje remis, obowiązkowo
 wskazuje zwycięzcę karnych („krzyżyk"); trafiony zwycięzca +1, nietrafiony −1 do wartości

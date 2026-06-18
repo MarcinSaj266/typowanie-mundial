@@ -57,6 +57,9 @@ export interface TableRow {
   grIII: number;
   bns: number;
   puch: number;
+  /** Ukryty bonus „skuteczności" (top3 etapu, +3/+2/+1; reguła organizatora 2026-06-18).
+   *  Policzony i zapamiętany, NIE wliczany do punktów; tiebreaker aktywny od fazy pucharowej. */
+  skutBonus: number;
   /** Sezonowe „%" (sumarycznie: łączne trafienia / łączne rozegrane). */
   hitRate: number;
   count3: number;

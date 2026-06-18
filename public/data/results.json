@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T19:35:11.124Z",
+  "generatedAt": "2026-06-18T20:22:39.826Z",
   "general": [
     {
       "participantId": "MateuszKn",
@@ -11,6 +11,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 1,
       "hitRate": 0.6,
       "count3": 7,
       "count4": 3,
@@ -27,6 +28,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 3,
       "hitRate": 0.6,
       "count3": 7,
       "count4": 6,
@@ -43,6 +45,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 2,
       "hitRate": 0.56,
       "count3": 6,
       "count4": 4,
@@ -59,6 +62,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.56,
       "count3": 7,
       "count4": 4,
@@ -75,6 +79,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.52,
       "count3": 4,
       "count4": 5,
@@ -91,6 +96,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.56,
       "count3": 8,
       "count4": 3,
@@ -107,6 +113,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.56,
       "count3": 8,
       "count4": 3,
@@ -123,6 +130,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.56,
       "count3": 9,
       "count4": 2,
@@ -139,6 +147,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.52,
       "count3": 6,
       "count4": 3,
@@ -155,6 +164,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.56,
       "count3": 7,
       "count4": 7,
@@ -171,6 +181,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.56,
       "count3": 9,
       "count4": 3,
@@ -187,6 +198,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.56,
       "count3": 8,
       "count4": 5,
@@ -203,6 +215,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.52,
       "count3": 7,
       "count4": 3,
@@ -219,6 +232,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.52,
       "count3": 8,
       "count4": 2,
@@ -235,6 +249,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.52,
       "count3": 7,
       "count4": 4,
@@ -251,6 +266,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.52,
       "count3": 7,
       "count4": 4,
@@ -267,6 +283,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 6,
       "count4": 2,
@@ -283,6 +300,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.52,
       "count3": 9,
       "count4": 3,
@@ -299,6 +317,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.52,
       "count3": 10,
       "count4": 1,
@@ -315,6 +334,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.52,
       "count3": 9,
       "count4": 3,
@@ -331,6 +351,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 7,
       "count4": 2,
@@ -347,6 +368,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 6,
       "count4": 4,
@@ -363,6 +385,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 6,
       "count4": 5,
@@ -379,6 +402,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 3,
       "count4": 6,
@@ -395,6 +419,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 3,
       "count4": 6,
@@ -411,6 +436,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 7,
       "count4": 4,
@@ -427,6 +453,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 7,
       "count4": 4,
@@ -443,6 +470,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 8,
       "count4": 2,
@@ -459,6 +487,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 7,
       "count4": 4,
@@ -475,6 +504,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 7,
       "count4": 4,
@@ -491,6 +521,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 8,
       "count4": 2,
@@ -507,6 +538,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 9,
       "count4": 1,
@@ -523,6 +555,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 8,
       "count4": 3,
@@ -539,6 +572,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 9,
       "count4": 2,
@@ -555,6 +589,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 9,
       "count4": 2,
@@ -571,6 +606,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 6,
       "count4": 3,
@@ -587,6 +623,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.48,
       "count3": 9,
       "count4": 3,
@@ -603,6 +640,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 6,
       "count4": 4,
@@ -619,6 +657,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 7,
       "count4": 2,
@@ -635,6 +674,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 7,
       "count4": 3,
@@ -651,6 +691,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 7,
       "count4": 3,
@@ -667,6 +708,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 8,
       "count4": 1,
@@ -683,6 +725,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 6,
       "count4": 5,
@@ -699,6 +742,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 8,
       "count4": 1,
@@ -715,6 +759,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.4,
       "count3": 5,
       "count4": 2,
@@ -731,6 +776,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 9,
       "count4": 0,
@@ -747,6 +793,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.4,
       "count3": 6,
       "count4": 2,
@@ -763,6 +810,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.4,
       "count3": 6,
       "count4": 2,
@@ -779,6 +827,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.36,
       "count3": 2,
       "count4": 5,
@@ -795,6 +844,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.44,
       "count3": 10,
       "count4": 1,
@@ -811,6 +861,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.36,
       "count3": 4,
       "count4": 3,
@@ -827,6 +878,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.4,
       "count3": 7,
       "count4": 3,
@@ -843,6 +895,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.36,
       "count3": 5,
       "count4": 3,
@@ -859,6 +912,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.36,
       "count3": 6,
       "count4": 2,
@@ -875,6 +929,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.36,
       "count3": 7,
       "count4": 1,
@@ -891,6 +946,7 @@
       "grIII": 0,
       "bns": 0,
       "puch": 0,
+      "skutBonus": 0,
       "hitRate": 0.24,
       "count3": 5,
       "count4": 1,
@@ -909,6 +965,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.52,
         "count3": 4,
         "count4": 5,
@@ -925,6 +982,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.56,
         "count3": 9,
         "count4": 3,
@@ -941,6 +999,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 7,
         "count4": 4,
@@ -957,6 +1016,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 8,
         "count4": 3,
@@ -973,6 +1033,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 6,
         "count4": 3,
@@ -989,6 +1050,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 7,
         "count4": 3,
@@ -1005,6 +1067,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 10,
         "count4": 1,
@@ -1023,6 +1086,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.52,
         "count3": 8,
         "count4": 2,
@@ -1039,6 +1103,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.52,
         "count3": 7,
         "count4": 4,
@@ -1055,6 +1120,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 7,
         "count4": 4,
@@ -1071,6 +1137,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 8,
         "count4": 2,
@@ -1087,6 +1154,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.4,
         "count3": 6,
         "count4": 2,
@@ -1103,6 +1171,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.36,
         "count3": 5,
         "count4": 3,
@@ -1119,6 +1188,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.36,
         "count3": 6,
         "count4": 2,
@@ -1137,6 +1207,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 1,
         "hitRate": 0.6,
         "count3": 7,
         "count4": 3,
@@ -1153,6 +1224,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.56,
         "count3": 8,
         "count4": 3,
@@ -1169,6 +1241,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 6,
         "count4": 2,
@@ -1185,6 +1258,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 3,
         "count4": 6,
@@ -1201,6 +1275,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 9,
         "count4": 1,
@@ -1217,6 +1292,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 7,
         "count4": 2,
@@ -1233,6 +1309,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.4,
         "count3": 7,
         "count4": 3,
@@ -1251,6 +1328,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.56,
         "count3": 7,
         "count4": 7,
@@ -1267,6 +1345,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.56,
         "count3": 8,
         "count4": 5,
@@ -1283,6 +1362,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.52,
         "count3": 9,
         "count4": 3,
@@ -1299,6 +1379,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.52,
         "count3": 10,
         "count4": 1,
@@ -1315,6 +1396,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 6,
         "count4": 4,
@@ -1331,6 +1413,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 9,
         "count4": 2,
@@ -1347,6 +1430,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 8,
         "count4": 1,
@@ -1365,6 +1449,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.56,
         "count3": 9,
         "count4": 2,
@@ -1381,6 +1466,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.52,
         "count3": 6,
         "count4": 3,
@@ -1397,6 +1483,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.52,
         "count3": 7,
         "count4": 3,
@@ -1413,6 +1500,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 7,
         "count4": 4,
@@ -1429,6 +1517,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 6,
         "count4": 5,
@@ -1445,6 +1534,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.4,
         "count3": 5,
         "count4": 2,
@@ -1461,6 +1551,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.4,
         "count3": 6,
         "count4": 2,
@@ -1479,6 +1570,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 3,
         "hitRate": 0.6,
         "count3": 7,
         "count4": 6,
@@ -1495,6 +1587,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.56,
         "count3": 8,
         "count4": 3,
@@ -1511,6 +1604,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.52,
         "count3": 7,
         "count4": 4,
@@ -1527,6 +1621,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 7,
         "count4": 2,
@@ -1543,6 +1638,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 6,
         "count4": 4,
@@ -1559,6 +1655,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 9,
         "count4": 0,
@@ -1575,6 +1672,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.24,
         "count3": 5,
         "count4": 1,
@@ -1593,6 +1691,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 3,
         "count4": 6,
@@ -1609,6 +1708,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 8,
         "count4": 2,
@@ -1625,6 +1725,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 7,
         "count4": 4,
@@ -1641,6 +1742,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 9,
         "count4": 2,
@@ -1657,6 +1759,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 9,
         "count4": 3,
@@ -1673,6 +1776,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.36,
         "count3": 2,
         "count4": 5,
@@ -1689,6 +1793,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.36,
         "count3": 4,
         "count4": 3,
@@ -1707,6 +1812,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 2,
         "hitRate": 0.56,
         "count3": 6,
         "count4": 4,
@@ -1723,6 +1829,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.56,
         "count3": 7,
         "count4": 4,
@@ -1739,6 +1846,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.52,
         "count3": 9,
         "count4": 3,
@@ -1755,6 +1863,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.48,
         "count3": 6,
         "count4": 5,
@@ -1771,6 +1880,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 7,
         "count4": 3,
@@ -1787,6 +1897,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.44,
         "count3": 8,
         "count4": 1,
@@ -1803,6 +1914,7 @@
         "grIII": 0,
         "bns": 0,
         "puch": 0,
+        "skutBonus": 0,
         "hitRate": 0.36,
         "count3": 7,
         "count4": 1,
@@ -11639,8 +11751,8 @@
             },
             "Żaklina": {
               "pick": {
-                "home": 2,
-                "away": 0
+                "home": 4,
+                "away": 2
               },
               "points": 0
             },
@@ -12374,7 +12486,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 0
+              },
               "points": null
             },
             "DarekL": {
@@ -12414,8 +12529,8 @@
             },
             "Żaklina": {
               "pick": {
-                "home": 2,
-                "away": 0
+                "home": 3,
+                "away": 1
               },
               "points": null
             },
@@ -12766,7 +12881,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -12806,7 +12924,7 @@
             },
             "Żaklina": {
               "pick": {
-                "home": 1,
+                "home": 2,
                 "away": 1
               },
               "points": null
@@ -13158,7 +13276,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -13197,7 +13318,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "Cezary": {
@@ -13544,7 +13668,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 3
+              },
               "points": null
             },
             "DarekL": {
@@ -13933,7 +14060,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 4,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -13973,7 +14103,7 @@
             },
             "Żaklina": {
               "pick": {
-                "home": 3,
+                "home": 4,
                 "away": 0
               },
               "points": null
@@ -14322,7 +14452,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 0
+              },
               "points": null
             },
             "DarekL": {
@@ -14361,7 +14494,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "Cezary": {
@@ -14697,7 +14833,10 @@
               "points": null
             },
             "Sokółka": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "KasiaK": {
@@ -14705,7 +14844,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -14744,7 +14886,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "Cezary": {
@@ -15091,7 +15236,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -15130,7 +15278,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 0
+              },
               "points": null
             },
             "Cezary": {
@@ -15477,7 +15628,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 0
+              },
               "points": null
             },
             "DarekL": {
@@ -15516,7 +15670,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "Cezary": {
@@ -15863,7 +16020,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -15902,7 +16062,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 2
+              },
               "points": null
             },
             "Cezary": {
@@ -16249,7 +16412,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 0
+              },
               "points": null
             },
             "DarekL": {
@@ -16288,7 +16454,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 0
+              },
               "points": null
             },
             "Cezary": {
@@ -16635,7 +16804,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -16674,7 +16846,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 0
+              },
               "points": null
             },
             "Cezary": {
@@ -17021,7 +17196,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -17060,7 +17238,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 0
+              },
               "points": null
             },
             "Cezary": {
@@ -17407,7 +17588,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -17446,7 +17630,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 2
+              },
               "points": null
             },
             "Cezary": {
@@ -17793,7 +17980,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -17832,7 +18022,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "Cezary": {
@@ -18179,7 +18372,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 4,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -18218,7 +18414,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 0
+              },
               "points": null
             },
             "Cezary": {
@@ -18565,7 +18764,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -18604,7 +18806,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 4,
+                "away": 1
+              },
               "points": null
             },
             "Cezary": {
@@ -18951,7 +19156,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -18990,7 +19198,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 0
+              },
               "points": null
             },
             "Cezary": {
@@ -19337,7 +19548,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -19376,7 +19590,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 0
+              },
               "points": null
             },
             "Cezary": {
@@ -19723,7 +19940,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -19762,7 +19982,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "Cezary": {
@@ -20109,7 +20332,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 3
+              },
               "points": null
             },
             "DarekL": {
@@ -20148,7 +20374,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "Cezary": {
@@ -20495,7 +20724,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -20534,7 +20766,10 @@
               "points": null
             },
             "Żaklina": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "Cezary": {
@@ -21240,7 +21475,7 @@
       "nosRemisowPct": 25,
       "nosRemisowNd": false,
       "seria": 3,
-      "ofensywa": 2.8,
+      "ofensywa": 2.9,
       "pewniak": 3.8,
       "pewniakNd": false,
       "ulubionyWynik": "1:1",

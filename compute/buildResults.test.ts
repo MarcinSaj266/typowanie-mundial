@@ -143,6 +143,54 @@ describe('buildResults: bonus grupowy (bns)', () => {
   });
 });
 
+describe('buildResults: bonus skutecznosci (skutBonus)', () => {
+  const sbRoster: Participant[] = [
+    { id: 'a1', group: 'A' },
+    { id: 'a2', group: 'A' },
+    { id: 'b1', group: 'B' },
+    { id: 'b2', group: 'B' },
+  ];
+  // Wynik 2:1: a1 typ 2:1 -> 5, a2 typ 3:2 -> 4 (trafiona różnica), b1 typ 3:0 -> 3
+  // (trafiony rezultat, zła różnica), b2 typ 0:0 -> 0 (zły rezultat).
+  const fx = [{ no: 1, home: 'H', away: 'A', kickoff: 'k' }];
+  const turn: TurnData = {
+    turn: 1,
+    fixtures: fx,
+    predictions: {
+      a1: { '1': { home: 2, away: 1 } },
+      a2: { '1': { home: 3, away: 2 } },
+      b1: { '1': { home: 3, away: 0 } },
+      b2: { '1': { home: 0, away: 0 } },
+    },
+  };
+
+  it('po komplecie tury top3 etapu dostaje skutBonus 3/2/1, reszta 0', () => {
+    const done = buildResults(sbRoster, [turn], { '1': { '1': { home: 2, away: 1 } } }, 'test');
+    expect(done.general.map((r) => [r.participantId, r.grI, r.skutBonus])).toEqual([
+      ['a1', 5, 3],
+      ['a2', 4, 2],
+      ['b1', 3, 1],
+      ['b2', 0, 0],
+    ]);
+  });
+
+  it('skutBonus NIE wchodzi do punktow ani do pozycji (tylko zapis)', () => {
+    const done = buildResults(sbRoster, [turn], { '1': { '1': { home: 2, away: 1 } } }, 'test');
+    // points = sam grI (bonus nie dolicza sie do sumy), pozycje wg punktow.
+    expect(done.general.map((r) => [r.participantId, r.points, r.position])).toEqual([
+      ['a1', 5, 1],
+      ['a2', 4, 2],
+      ['b1', 3, 3],
+      ['b2', 0, 4],
+    ]);
+  });
+
+  it('tura niekompletna (mecz bez wyniku) → skutBonus 0 dla wszystkich', () => {
+    const inProgress = buildResults(sbRoster, [turn], {}, 'test');
+    for (const r of inProgress.general) expect(r.skutBonus).toBe(0);
+  });
+});
+
 describe('buildResults: sekcja turns', () => {
   const t1 = out.turns[0];
 

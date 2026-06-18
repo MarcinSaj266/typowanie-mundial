@@ -8,7 +8,8 @@ import { openXlsx } from './xlsx/workbook';
 import { parseBazaTura } from './k1/parseBazaTura';
 import type { Participant } from './k1/parseGrup1';
 
-const BAZA = 'Baza tura 2.xlsx';
+// Najnowszy eksport typów tury 2 (v2: Seweryn dodał typy 3–24, Żaklina uzupełniła komplet).
+const BAZA = 'Baza tura 2 v2.xlsx';
 const ROSTER = 'data/k1/roster.json';
 const OUT = 'data/k1/tura-2.json';
 
