@@ -93,9 +93,11 @@ export function playerCard(input: PlayerCardInput): CardStats {
   const osobowosc: CardStats['osobowosc'] =
     zgodnoscPct < 65 ? 'INDYWIDUALISTA' : zgodnoscPct > 73 ? 'OWCZY PĘD' : 'NEUTRALNY';
 
-  // PO TURZE 2: dorobek per tura, licząc tylko tury, które mają jakikolwiek wynik.
+  // PO TURZE 2: dorobek per tura, licząc tylko tury KOMPLETNE (wszystkie mecze
+  // rozegrane). Sekcja ma sens dopiero po zamknięciu tury — w trakcie tury (część
+  // meczów bez wyniku) forma porównywałaby pełną turę z jej ułamkiem (fałszywy trend).
   const turnPoints = input.turns
-    .filter((t) => t.matches.some((mt) => mt.result))
+    .filter((t) => t.matches.length > 0 && t.matches.every((mt) => mt.result))
     .map((t) => ({
       turn: t.turn,
       points: t.matches.reduce((acc, mt) => acc + matchPoints(mt), 0),

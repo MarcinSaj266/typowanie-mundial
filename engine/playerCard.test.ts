@@ -175,6 +175,21 @@ describe('playerCard — PO TURZE 2', () => {
     expect(c.najlepszaTura).toBeNull();
   });
 
+  it('tura 2 częściowo rozegrana (nie wszystkie mecze) → sekcja JESZCZE nieaktywna', () => {
+    // Realny scenariusz startu tury 2: tura 1 kompletna, tura 2 ma 1 z 2 meczów.
+    const c = playerCard({
+      ...base,
+      groupPos: 3,
+      turns: [
+        { turn: 1, matches: [m(s(1, 0), s(1, 0))] }, // kompletna
+        { turn: 2, matches: [m(s(2, 1), s(2, 1)), m(s(1, 1), null)] }, // 1 z 2 rozegrany
+      ],
+    });
+    expect(c.poTurze2Aktywne).toBe(false);
+    expect(c.forma).toBeNull();
+    expect(c.najlepszaTura).toBeNull();
+  });
+
   it('≥2 tury z wynikami → forma i najlepsza tura', () => {
     const c = playerCard({
       ...base,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T20:22:39.826Z",
+  "generatedAt": "2026-06-18T20:49:41.545Z",
   "general": [
     {
       "participantId": "MateuszKn",
@@ -21056,12 +21056,9 @@
       "ulubionyWynik": "0:2",
       "zgodnoscPct": 72,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 42
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Wojtek": {
       "group": "A",
@@ -21081,12 +21078,9 @@
       "ulubionyWynik": "1:1",
       "zgodnoscPct": 69,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 41
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KamUla": {
       "group": "A",
@@ -21106,12 +21100,9 @@
       "ulubionyWynik": "2:1",
       "zgodnoscPct": 77,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 38
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "MagdaS": {
       "group": "A",
@@ -21131,12 +21122,9 @@
       "ulubionyWynik": "0:1",
       "zgodnoscPct": 70,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 34
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KasiaJ": {
       "group": "A",
@@ -21156,12 +21144,9 @@
       "ulubionyWynik": "0:2",
       "zgodnoscPct": 75,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 52
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KrystianM": {
       "group": "A",
@@ -21181,12 +21166,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 76,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 49
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "PiotreG": {
       "group": "A",
@@ -21206,12 +21188,9 @@
       "ulubionyWynik": "1:1",
       "zgodnoscPct": 65,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 35
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Prozped": {
       "group": "B",
@@ -21231,12 +21210,9 @@
       "ulubionyWynik": "1:1",
       "zgodnoscPct": 71,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 47
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Artur": {
       "group": "B",
@@ -21256,12 +21232,9 @@
       "ulubionyWynik": "2:1",
       "zgodnoscPct": 78,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 47
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Sokółka": {
       "group": "B",
@@ -21281,12 +21254,9 @@
       "ulubionyWynik": "1:2",
       "zgodnoscPct": 73,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 42
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KasiaK": {
       "group": "B",
@@ -21306,12 +21276,9 @@
       "ulubionyWynik": "0:2",
       "zgodnoscPct": 76,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 42
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Seweryn": {
       "group": "B",
@@ -21331,12 +21298,9 @@
       "ulubionyWynik": "1:2",
       "zgodnoscPct": 67,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 31
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "DarekL": {
       "group": "B",
@@ -21356,12 +21320,9 @@
       "ulubionyWynik": "0:0",
       "zgodnoscPct": 58,
       "osobowosc": "INDYWIDUALISTA",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 32
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KrzysztoW": {
       "group": "B",
@@ -21381,12 +21342,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 76,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 36
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Magiera": {
       "group": "C",
@@ -21406,12 +21364,9 @@
       "ulubionyWynik": "1:1",
       "zgodnoscPct": 70,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 39
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Henryk": {
       "group": "C",
@@ -21431,12 +21386,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 71,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 51
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "PPP": {
       "group": "C",
@@ -21456,12 +21408,9 @@
       "ulubionyWynik": "2:1",
       "zgodnoscPct": 78,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 41
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Żaklina": {
       "group": "C",
@@ -21481,12 +21430,9 @@
       "ulubionyWynik": "1:1",
       "zgodnoscPct": 73,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 46
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Cezary": {
       "group": "C",
@@ -21506,12 +21452,9 @@
       "ulubionyWynik": "2:1",
       "zgodnoscPct": 69,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 33
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Dziobak": {
       "group": "C",
@@ -21531,12 +21474,9 @@
       "ulubionyWynik": "3:1",
       "zgodnoscPct": 65,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 39
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "MateuszKn": {
       "group": "C",
@@ -21556,12 +21496,9 @@
       "ulubionyWynik": "2:1",
       "zgodnoscPct": 63,
       "osobowosc": "INDYWIDUALISTA",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 53
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Przemek": {
       "group": "D",
@@ -21581,12 +21518,9 @@
       "ulubionyWynik": "1:2",
       "zgodnoscPct": 68,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 44
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Borys": {
       "group": "D",
@@ -21606,12 +21540,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 68,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 49
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Turbo-Ryżu": {
       "group": "D",
@@ -21631,12 +21562,9 @@
       "ulubionyWynik": "2:2",
       "zgodnoscPct": 70,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 38
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "MagdaP": {
       "group": "D",
@@ -21656,12 +21584,9 @@
       "ulubionyWynik": "1:0",
       "zgodnoscPct": 72,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 49
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Małgorzata": {
       "group": "D",
@@ -21681,12 +21606,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 78,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 44
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KamilF": {
       "group": "D",
@@ -21706,12 +21628,9 @@
       "ulubionyWynik": "2:1",
       "zgodnoscPct": 74,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 44
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "MichałCz": {
       "group": "D",
@@ -21731,12 +21650,9 @@
       "ulubionyWynik": "2:1",
       "zgodnoscPct": 75,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 40
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Talvik": {
       "group": "E",
@@ -21756,12 +21672,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 68,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 48
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Rafał": {
       "group": "E",
@@ -21781,12 +21694,9 @@
       "ulubionyWynik": "0:3",
       "zgodnoscPct": 74,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 38
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "MarekS": {
       "group": "E",
@@ -21806,12 +21716,9 @@
       "ulubionyWynik": "1:1",
       "zgodnoscPct": 72,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 45
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Karolina": {
       "group": "E",
@@ -21831,12 +21738,9 @@
       "ulubionyWynik": "0:2",
       "zgodnoscPct": 76,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 36
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "AndrzejO": {
       "group": "E",
@@ -21856,12 +21760,9 @@
       "ulubionyWynik": "0:2",
       "zgodnoscPct": 79,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 50
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "PiotreM": {
       "group": "E",
@@ -21881,12 +21782,9 @@
       "ulubionyWynik": "2:1",
       "zgodnoscPct": 76,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 42
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "DarekJell": {
       "group": "E",
@@ -21906,12 +21804,9 @@
       "ulubionyWynik": "0:2",
       "zgodnoscPct": 67,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 38
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "MaciejM": {
       "group": "F",
@@ -21931,12 +21826,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 77,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 47
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KSZ": {
       "group": "F",
@@ -21956,12 +21848,9 @@
       "ulubionyWynik": "1:0",
       "zgodnoscPct": 67,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 55
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "MarekP": {
       "group": "F",
@@ -21981,12 +21870,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 61,
       "osobowosc": "INDYWIDUALISTA",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 32
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KleoPatra": {
       "group": "F",
@@ -22006,12 +21892,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 73,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 39
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "MichałeK": {
       "group": "F",
@@ -22031,12 +21914,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 73,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 51
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Witek": {
       "group": "F",
@@ -22056,12 +21936,9 @@
       "ulubionyWynik": "0:0",
       "zgodnoscPct": 62,
       "osobowosc": "INDYWIDUALISTA",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 39
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "RobertLat": {
       "group": "F",
@@ -22081,12 +21958,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 61,
       "osobowosc": "INDYWIDUALISTA",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 19
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "DeDe": {
       "group": "G",
@@ -22106,12 +21980,9 @@
       "ulubionyWynik": "1:2",
       "zgodnoscPct": 64,
       "osobowosc": "INDYWIDUALISTA",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 36
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Cypryjka": {
       "group": "G",
@@ -22131,12 +22002,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 61,
       "osobowosc": "INDYWIDUALISTA",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 39
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Tabus": {
       "group": "G",
@@ -22156,12 +22024,9 @@
       "ulubionyWynik": "1:1",
       "zgodnoscPct": 71,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 34
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "AniaS": {
       "group": "G",
@@ -22181,12 +22046,9 @@
       "ulubionyWynik": "1:1",
       "zgodnoscPct": 57,
       "osobowosc": "INDYWIDUALISTA",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 43
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Pimozid": {
       "group": "G",
@@ -22206,12 +22068,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 58,
       "osobowosc": "INDYWIDUALISTA",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 42
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KrzysztoWś": {
       "group": "G",
@@ -22231,12 +22090,9 @@
       "ulubionyWynik": "1:1",
       "zgodnoscPct": 68,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 42
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Ruslan": {
       "group": "G",
@@ -22256,12 +22112,9 @@
       "ulubionyWynik": "2:1",
       "zgodnoscPct": 78,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 40
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "PiotreK": {
       "group": "H",
@@ -22281,12 +22134,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 77,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 38
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KaBed": {
       "group": "H",
@@ -22306,12 +22156,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 77,
       "osobowosc": "OWCZY PĘD",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 43
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Mirella": {
       "group": "H",
@@ -22331,12 +22178,9 @@
       "ulubionyWynik": "3:1",
       "zgodnoscPct": 67,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 54
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Maria": {
       "group": "H",
@@ -22356,12 +22200,9 @@
       "ulubionyWynik": "1:1",
       "zgodnoscPct": 69,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 38
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "Sławek": {
       "group": "H",
@@ -22381,12 +22222,9 @@
       "ulubionyWynik": "2:1",
       "zgodnoscPct": 72,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 44
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "PawełSt": {
       "group": "H",
@@ -22406,12 +22244,9 @@
       "ulubionyWynik": "0:2",
       "zgodnoscPct": 72,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 30
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     },
     "KrzysztofeR": {
       "group": "H",
@@ -22431,12 +22266,9 @@
       "ulubionyWynik": "2:0",
       "zgodnoscPct": 73,
       "osobowosc": "NEUTRALNY",
-      "forma": "DOWN",
-      "najlepszaTura": {
-        "turn": 1,
-        "points": 47
-      },
-      "poTurze2Aktywne": true
+      "forma": null,
+      "najlepszaTura": null,
+      "poTurze2Aktywne": false
     }
   }
 }
