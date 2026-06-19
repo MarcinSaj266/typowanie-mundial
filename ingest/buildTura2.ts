@@ -8,8 +8,8 @@ import { openXlsx } from './xlsx/workbook';
 import { parseBazaTura } from './k1/parseBazaTura';
 import type { Participant } from './k1/parseGrup1';
 
-// Najnowszy eksport typów tury 2 (v2: Seweryn dodał typy 3–24, Żaklina uzupełniła komplet).
-const BAZA = 'Baza tura 2 v2.xlsx';
+// Najnowszy eksport typów tury 2 (v3: Turbo-Ryżu i KrzysztoWś dosłali typy meczów 5–24).
+const BAZA = 'Baza tura 2 v3.xlsx';
 const ROSTER = 'data/k1/roster.json';
 const OUT = 'data/k1/tura-2.json';
 
@@ -32,7 +32,7 @@ const ET_SCHEDULE: Record<number, { day: number; etHour: number }> = {
   1: { day: 18, etHour: 12 }, // Czechy-RPA
   2: { day: 18, etHour: 15 }, // Szwajcaria-Bośnia
   3: { day: 18, etHour: 18 }, // Kanada-Katar
-  4: { day: 18, etHour: 23 }, // Meksyk-Korea Płd.
+  4: { day: 18, etHour: 21 }, // Meksyk-Korea Płd. (9 p.m. ET, Guadalajara — poprawione z 23)
   5: { day: 19, etHour: 15 }, // USA-Australia
   6: { day: 19, etHour: 18 }, // Szkocja-Maroko
   7: { day: 19, etHour: 21 }, // Brazylia-Haiti

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T03:10:46.425Z",
+  "generatedAt": "2026-06-19T20:48:32.221Z",
   "general": [
     {
       "participantId": "KasiaJ",
@@ -12809,7 +12809,7 @@
           "no": 4,
           "home": "Meksyk",
           "away": "Korea Płd.",
-          "kickoff": "piątek, 19 cze godz. 05.00",
+          "kickoff": "piątek, 19 cze godz. 03.00",
           "result": {
             "home": 1,
             "away": 0
@@ -13369,7 +13369,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 2
+              },
               "points": null
             },
             "MagdaP": {
@@ -13534,7 +13537,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "Ruslan": {
@@ -13761,7 +13767,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "MagdaP": {
@@ -13926,7 +13935,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "Ruslan": {
@@ -14153,7 +14165,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 0
+              },
               "points": null
             },
             "MagdaP": {
@@ -14318,7 +14333,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 0
+              },
               "points": null
             },
             "Ruslan": {
@@ -14545,7 +14563,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 0
+              },
               "points": null
             },
             "MagdaP": {
@@ -14710,7 +14731,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "Ruslan": {
@@ -14937,7 +14961,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "MagdaP": {
@@ -15102,7 +15129,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "Ruslan": {
@@ -15329,7 +15359,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 0
+              },
               "points": null
             },
             "MagdaP": {
@@ -15494,7 +15527,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "Ruslan": {
@@ -15721,7 +15757,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 4,
+                "away": 0
+              },
               "points": null
             },
             "MagdaP": {
@@ -15886,7 +15925,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "Ruslan": {
@@ -16113,7 +16155,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "MagdaP": {
@@ -16278,7 +16323,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 3
+              },
               "points": null
             },
             "Ruslan": {
@@ -16505,7 +16553,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 0
+              },
               "points": null
             },
             "MagdaP": {
@@ -16670,7 +16721,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "Ruslan": {
@@ -16897,7 +16951,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "MagdaP": {
@@ -17062,7 +17119,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "Ruslan": {
@@ -17289,7 +17349,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 0
+              },
               "points": null
             },
             "MagdaP": {
@@ -17454,7 +17517,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "Ruslan": {
@@ -17681,7 +17747,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "MagdaP": {
@@ -17846,7 +17915,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "Ruslan": {
@@ -18073,7 +18145,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 0
+              },
               "points": null
             },
             "MagdaP": {
@@ -18238,7 +18313,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "Ruslan": {
@@ -18465,7 +18543,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 0
+              },
               "points": null
             },
             "MagdaP": {
@@ -18630,7 +18711,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 4,
+                "away": 1
+              },
               "points": null
             },
             "Ruslan": {
@@ -18857,7 +18941,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "MagdaP": {
@@ -19022,7 +19109,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "Ruslan": {
@@ -19249,7 +19339,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "MagdaP": {
@@ -19414,7 +19507,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 3
+              },
               "points": null
             },
             "Ruslan": {
@@ -19641,7 +19737,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "MagdaP": {
@@ -19806,7 +19905,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "Ruslan": {
@@ -20033,7 +20135,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 0
+              },
               "points": null
             },
             "MagdaP": {
@@ -20198,7 +20303,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 4,
+                "away": 1
+              },
               "points": null
             },
             "Ruslan": {
@@ -20425,7 +20533,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 3
+              },
               "points": null
             },
             "MagdaP": {
@@ -20590,7 +20701,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 3
+              },
               "points": null
             },
             "Ruslan": {
@@ -20817,7 +20931,10 @@
               "points": null
             },
             "Turbo-Ryżu": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "MagdaP": {
@@ -20982,7 +21099,10 @@
               "points": null
             },
             "KrzysztoWś": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "Ruslan": {
