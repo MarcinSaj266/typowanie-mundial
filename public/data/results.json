@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T21:01:12.148Z",
+  "generatedAt": "2026-06-24T21:05:11.340Z",
   "general": [
     {
       "participantId": "Talvik",
@@ -852,9 +852,26 @@
       "played": 49
     },
     {
-      "participantId": "Sokółka",
+      "participantId": "Seweryn",
       "group": "B",
       "position": 51,
+      "points": 79,
+      "grI": 31,
+      "grII": 43,
+      "grIII": 5,
+      "bns": 0,
+      "puch": 0,
+      "skutBonus": 0,
+      "hitRate": 0.46938775510204084,
+      "count3": 15,
+      "count4": 6,
+      "count5": 2,
+      "played": 49
+    },
+    {
+      "participantId": "Sokółka",
+      "group": "B",
+      "position": 52,
       "points": 76,
       "grI": 42,
       "grII": 34,
@@ -866,23 +883,6 @@
       "count3": 18,
       "count4": 3,
       "count5": 2,
-      "played": 49
-    },
-    {
-      "participantId": "Seweryn",
-      "group": "B",
-      "position": 52,
-      "points": 74,
-      "grI": 31,
-      "grII": 43,
-      "grIII": 0,
-      "bns": 0,
-      "puch": 0,
-      "skutBonus": 0,
-      "hitRate": 0.4489795918367347,
-      "count3": 15,
-      "count4": 6,
-      "count5": 1,
       "played": 49
     },
     {
@@ -1129,6 +1129,23 @@
         "position": 3
       },
       {
+        "participantId": "Seweryn",
+        "group": "B",
+        "points": 79,
+        "grI": 31,
+        "grII": 43,
+        "grIII": 5,
+        "bns": 0,
+        "puch": 0,
+        "skutBonus": 0,
+        "hitRate": 0.46938775510204084,
+        "count3": 15,
+        "count4": 6,
+        "count5": 2,
+        "played": 49,
+        "position": 4
+      },
+      {
         "participantId": "Sokółka",
         "group": "B",
         "points": 76,
@@ -1142,23 +1159,6 @@
         "count3": 18,
         "count4": 3,
         "count5": 2,
-        "played": 49,
-        "position": 4
-      },
-      {
-        "participantId": "Seweryn",
-        "group": "B",
-        "points": 74,
-        "grI": 31,
-        "grII": 43,
-        "grIII": 0,
-        "bns": 0,
-        "puch": 0,
-        "skutBonus": 0,
-        "hitRate": 0.4489795918367347,
-        "count3": 15,
-        "count4": 6,
-        "count5": 1,
         "played": 49,
         "position": 5
       },
@@ -21310,8 +21310,11 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
-              "points": null
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
+              "points": 5
             },
             "DarekL": {
               "pick": null,
@@ -21699,7 +21702,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -30738,9 +30744,9 @@
     },
     "Sokółka": {
       "group": "B",
-      "generalPos": 51,
+      "generalPos": 52,
       "points": 76,
-      "groupPos": 4,
+      "groupPos": 5,
       "celnoscPct": 47,
       "dokladne": 2,
       "srPktMecz": 1.6,
@@ -30788,12 +30794,12 @@
     },
     "Seweryn": {
       "group": "B",
-      "generalPos": 52,
-      "points": 74,
-      "groupPos": 5,
-      "celnoscPct": 45,
-      "dokladne": 1,
-      "srPktMecz": 1.5,
+      "generalPos": 51,
+      "points": 79,
+      "groupPos": 4,
+      "celnoscPct": 47,
+      "dokladne": 2,
+      "srPktMecz": 1.6,
       "odwagaPct": 87,
       "nosRemisowPct": 18,
       "nosRemisowNd": false,
@@ -30802,7 +30808,7 @@
       "pewniak": 3.4,
       "pewniakNd": false,
       "ulubionyWynik": "1:2",
-      "zgodnoscPct": 67,
+      "zgodnoscPct": 66,
       "osobowosc": "NEUTRALNY",
       "forma": "UP",
       "najlepszaTura": {
