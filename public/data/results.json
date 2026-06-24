@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T21:07:59.073Z",
+  "generatedAt": "2026-06-24T22:06:21.509Z",
   "general": [
     {
       "participantId": "Talvik",
@@ -22097,7 +22097,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -22486,7 +22489,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -22875,7 +22881,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -22974,7 +22983,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "MichałCz": {
@@ -23261,7 +23273,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -23360,7 +23375,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "MichałCz": {
@@ -23647,7 +23665,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 3
+              },
               "points": null
             },
             "DarekL": {
@@ -23746,7 +23767,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 2
+              },
               "points": null
             },
             "MichałCz": {
@@ -24033,7 +24057,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 3
+              },
               "points": null
             },
             "DarekL": {
@@ -24132,7 +24159,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "MichałCz": {
@@ -24419,7 +24449,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -24518,7 +24551,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "MichałCz": {
@@ -24805,7 +24841,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -24904,7 +24943,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 2
+              },
               "points": null
             },
             "MichałCz": {
@@ -25191,7 +25233,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -25290,7 +25335,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "MichałCz": {
@@ -25577,7 +25625,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -25676,7 +25727,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 0
+              },
               "points": null
             },
             "MichałCz": {
@@ -25963,7 +26017,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -26062,7 +26119,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 3
+              },
               "points": null
             },
             "MichałCz": {
@@ -26349,7 +26409,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 3,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -26448,7 +26511,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "MichałCz": {
@@ -26735,7 +26801,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -26834,7 +26903,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "MichałCz": {
@@ -27121,7 +27193,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -27220,7 +27295,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "MichałCz": {
@@ -27507,7 +27585,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -27606,7 +27687,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "MichałCz": {
@@ -27893,7 +27977,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -27992,7 +28079,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "MichałCz": {
@@ -28279,7 +28369,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 2
+              },
               "points": null
             },
             "DarekL": {
@@ -28378,7 +28471,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "MichałCz": {
@@ -28665,7 +28761,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 3
+              },
               "points": null
             },
             "DarekL": {
@@ -28764,7 +28863,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 3
+              },
               "points": null
             },
             "MichałCz": {
@@ -29051,7 +29153,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 0
+              },
               "points": null
             },
             "DarekL": {
@@ -29150,7 +29255,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "MichałCz": {
@@ -29437,7 +29545,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 2,
+                "away": 1
+              },
               "points": null
             },
             "DarekL": {
@@ -29536,7 +29647,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 2
+              },
               "points": null
             },
             "MichałCz": {
@@ -29823,7 +29937,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 3
+              },
               "points": null
             },
             "DarekL": {
@@ -29922,7 +30039,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 1,
+                "away": 1
+              },
               "points": null
             },
             "MichałCz": {
@@ -30209,7 +30329,10 @@
               "points": null
             },
             "Seweryn": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 4
+              },
               "points": null
             },
             "DarekL": {
@@ -30308,7 +30431,10 @@
               "points": null
             },
             "KamilF": {
-              "pick": null,
+              "pick": {
+                "home": 0,
+                "away": 2
+              },
               "points": null
             },
             "MichałCz": {

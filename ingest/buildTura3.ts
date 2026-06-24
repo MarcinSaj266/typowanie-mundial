@@ -11,7 +11,7 @@ import { openXlsx } from './xlsx/workbook';
 import { parseBazaTura } from './k1/parseBazaTura';
 import type { Participant } from './k1/parseGrup1';
 
-const BAZA = 'Baza tura 3.xlsx';
+const BAZA = 'Baza tura 3 v2.xlsx'; // v2: spóźnialscy (Seweryn, KamilF) dosłali komplet typów
 const SHEET = 't2'; // organizator nazwał arkusz tak samo jak w turze 2
 const ROSTER = 'data/k1/roster.json';
 const OUT = 'data/k1/tura-3.json';
