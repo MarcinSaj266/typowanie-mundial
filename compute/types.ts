@@ -1,4 +1,4 @@
-import type { Score, CardStats } from '../engine/types';
+import type { Score, CardStats, PucharPick, PucharResult } from '../engine/types';
 import type { Group, Participant } from '../ingest/k1/parseGrup1';
 
 /** Wyniki meczów: numer tury → numer meczu → wynik. Brak klucza = mecz nierozegrany. */
@@ -68,15 +68,51 @@ export interface TableRow {
   played: number;
 }
 
+/** Runda pucharowa z ingestu (kształt data/k1/puchar.json → rounds[]). */
+export interface PucharRound {
+  round: string;
+  fixtures: Fixture[];
+  predictions: Record<string, Record<string, PucharPick>>;
+}
+/** Dane pucharowe (kształt data/k1/puchar.json). */
+export interface PucharData {
+  rounds: PucharRound[];
+}
+/** Typ uczestnika na mecz pucharowy w wyjściu. */
+export interface PucharPredictionOut {
+  pick: PucharPick | null;
+  points: number | null;
+}
+/** Mecz pucharowy w wyjściu (sekcja puchar). */
+export interface PucharMatchOut {
+  no: number;
+  home: string;
+  away: string;
+  kickoff: string;
+  result: PucharResult | null;
+  predictions: Record<string, PucharPredictionOut>;
+}
+/** Runda pucharowa w wyjściu. */
+export interface PucharRoundOut {
+  round: string;
+  matches: PucharMatchOut[];
+}
+/** Sekcja puchar w wyjściu. */
+export interface PucharOut {
+  rounds: PucharRoundOut[];
+}
+
 /** Wyjście dla UI: public/data/results.json. */
 export interface ResultsJson {
   generatedAt: string;
   general: TableRow[];
   groups: Record<Group, TableRow[]>;
   turns: TurnOut[];
+  /** Faza pucharowa: rundy → mecze → typy z punktami (widok /puchar). */
+  puchar: PucharOut;
   /** Statystyki karty zawodnika per uczestnik (nick → komplet stat). */
   cards: Record<string, CardStats>;
 }
 
 export const ALL_GROUPS: Group[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-export type { Group, Participant, Score, CardStats };
+export type { Group, Participant, Score, CardStats, PucharPick, PucharResult };

@@ -7,6 +7,8 @@ import { rankBy } from '../engine/ranking';
 import { scoreMatchK1 } from '../engine/scoreMatch';
 import { playerCard } from '../engine/playerCard';
 import type { MatchEntry, TurnScore, CardStats, PlayerCardInput } from '../engine/types';
+import { aggregatePuchar, scorePucharMatch, type PucharAgg } from '../engine/aggregatePuchar';
+import type { PucharData, PucharOut, PucharResult } from './types';
 import { ALL_GROUPS } from './types';
 import type {
   Group,
@@ -109,6 +111,30 @@ function buildTurns(roster: Participant[], turns: TurnData[], results: ResultsBy
     }));
 }
 
+/** Sekcja puchar: rundy → mecze → typy wszystkich graczy z punktami (widok /puchar). */
+function buildPuchar(
+  roster: Participant[],
+  puchar: PucharData,
+  puchResults: Record<string, PucharResult>,
+): PucharOut {
+  return {
+    rounds: puchar.rounds.map((round) => ({
+      round: round.round,
+      matches: round.fixtures.map((f) => {
+        const result = puchResults[String(f.no)] ?? null;
+        const predictions = Object.fromEntries(
+          roster.map((p) => {
+            const pick = round.predictions[p.id]?.[String(f.no)] ?? null;
+            const points = pick && result ? scorePucharMatch(pick, result) : null;
+            return [p.id, { pick, points }];
+          }),
+        );
+        return { no: f.no, home: f.home, away: f.away, kickoff: f.kickoff, result, predictions };
+      }),
+    })),
+  };
+}
+
 /**
  * Sklejka silnika z danymi kanonicznymi: roster + tury (typy) + wyniki →
  * tabela ogólna i tabele grup A–H (kształt public/data/results.json).
@@ -118,11 +144,14 @@ export function buildResults(
   roster: Participant[],
   turns: TurnData[],
   results: ResultsByTurn,
+  puchar: PucharData = { rounds: [] },
+  puchResults: Record<string, PucharResult> = {},
   generatedAt: string = new Date().toISOString(),
 ): ResultsJson {
   const groupOf = new Map(roster.map((p) => [p.id, p.group]));
   const counts = new Map<string, Pick<TableRow, 'count3' | 'count4' | 'count5' | 'played'>>();
 
+  const puchAgg = new Map<string, PucharAgg>();
   const seasons = roster.map((p) => {
     const ts = [1, 2, 3].map((n) =>
       scoreTurn(p.id, turns.find((t) => t.turn === n), n, results),
@@ -134,12 +163,30 @@ export function buildResults(
       count5: ts[0].count5 + ts[1].count5 + ts[2].count5,
       played: ts[0].played + ts[1].played + ts[2].played,
     });
-    return buildSeason(p.id, ts);
+    const entries = puchar.rounds.flatMap((round) =>
+      round.fixtures.map((f) => ({
+        prediction: round.predictions[p.id]?.[String(f.no)] ?? null,
+        result: puchResults[String(f.no)] ?? null,
+      })),
+    );
+    const agg = aggregatePuchar(entries);
+    puchAgg.set(p.id, agg);
+    return buildSeason(p.id, ts, { puch: agg.puch });
   });
+
+  // „%" tabeli OGÓLNEJ wlicza puchar (grupowa zostaje na buildSeason/s.hitRate).
+  const genHitRate = new Map<string, number>();
+  for (const p of roster) {
+    const g = counts.get(p.id)!;
+    const a = puchAgg.get(p.id)!;
+    const hits = g.count3 + g.count4 + g.count5 + a.count6 + a.count8 + a.count10 + a.count12;
+    const played = g.played + a.played;
+    genHitRate.set(p.id, played === 0 ? 0 : hits / played);
+  }
 
   // Bonus „skuteczności" (ukryty): top3 KAŻDEGO zamkniętego etapu po punktach etapu
   // (tura → grI/grII/grIII; remis → sezonowe %). Liczony i zapamiętywany, nie wliczany
-  // do punktów. Puchar dojdzie wraz z fazą pucharową (tam staje się aktywnym tiebreakerem).
+  // do punktów. Etap pucharowy dodany — staje się aktywnym tiebreakerem od fazy pucharowej.
   const PHASE_KEY = { 1: 'grI', 2: 'grII', 3: 'grIII' } as const;
   const phases: PhaseStanding[] = [1, 2, 3].map((n) => ({
     complete: turnComplete(turns, results, n),
@@ -148,7 +195,18 @@ export function buildResults(
       ['pts', 'hitRate'],
     ).map((r) => r.participantId),
   }));
-  const skutBonuses = efficiencyBonus(phases);
+  // Etap pucharowy: kompletny gdy każda runda ma wynik dla każdego meczu.
+  const puchComplete =
+    puchar.rounds.length > 0 &&
+    puchar.rounds.every((r) => r.fixtures.length > 0 && r.fixtures.every((f) => puchResults[String(f.no)] != null));
+  const puchPhase: PhaseStanding = {
+    complete: puchComplete,
+    standings: rankBy(
+      seasons.map((s) => ({ participantId: s.participantId, pts: s.puch, hitRate: genHitRate.get(s.participantId)! })),
+      ['pts', 'hitRate'],
+    ).map((r) => r.participantId),
+  };
+  const skutBonuses = efficiencyBonus([...phases, puchPhase]);
 
   // Tabele grupowe: pkt = suma samych tur (bez bns/puch) — jak SUM(grI:grIII)
   // w arkuszu „tab grup"; bonus liczy się z tych tabel, nie odwrotnie.
@@ -181,7 +239,12 @@ export function buildResults(
   }
 
   const general: TableRow[] = generalTable(
-    seasons.map((s) => ({ ...s, bns: bonuses[s.participantId] ?? 0 })),
+    seasons.map((s) => ({
+      ...s,
+      bns: bonuses[s.participantId] ?? 0,
+      hitRate: genHitRate.get(s.participantId)!,
+      skutBonus: skutBonuses[s.participantId] ?? 0,
+    })),
   ).map((g) => ({
     participantId: g.participantId,
     group: groupOf.get(g.participantId)!,
@@ -193,8 +256,11 @@ export function buildResults(
     bns: g.bns,
     puch: g.puch,
     skutBonus: skutBonuses[g.participantId] ?? 0,
-    hitRate: g.hitRate,
-    ...counts.get(g.participantId)!,
+    hitRate: genHitRate.get(g.participantId)!,
+    count3: counts.get(g.participantId)!.count3,
+    count4: counts.get(g.participantId)!.count4,
+    count5: counts.get(g.participantId)!.count5,
+    played: counts.get(g.participantId)!.played + puchAgg.get(g.participantId)!.played,
   }));
 
   // Karty: hero z tabeli ogólnej (evergreen), miejsce w grupie z tabeli grupowej,
@@ -225,5 +291,12 @@ export function buildResults(
     }),
   ) as Record<string, CardStats>;
 
-  return { generatedAt, general, groups, turns: buildTurns(roster, turns, results), cards };
+  return {
+    generatedAt,
+    general,
+    groups,
+    turns: buildTurns(roster, turns, results),
+    puchar: buildPuchar(roster, puchar, puchResults),
+    cards,
+  };
 }

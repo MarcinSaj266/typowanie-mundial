@@ -30,7 +30,7 @@ const results: ResultsByTurn = {
   '1': { '1': { home: 2, away: 1 }, '2': { home: 0, away: 0 } },
 };
 
-const out = buildResults(roster, [turn1], results, '2026-06-12T00:00:00Z');
+const out = buildResults(roster, [turn1], results, undefined, undefined, '2026-06-12T00:00:00Z');
 
 describe('buildResults (syntetycznie)', () => {
   it('liczy punkty wg scoreMatchK1 i rankuje tabele ogolna', () => {
@@ -89,7 +89,7 @@ describe('buildResults (syntetycznie)', () => {
       '1': { '1': { home: 1, away: 0 } },
       '3': { '1': { home: 1, away: 0 } },
     };
-    const tie = buildResults(tieRoster, [t1, t3], tieResults, 'test');
+    const tie = buildResults(tieRoster, [t1, t3], tieResults);
     expect(tie.groups.A.map((r) => [r.participantId, r.grI, r.grIII])).toEqual([
       ['y', 0, 5],
       ['x', 5, 0],
@@ -118,7 +118,7 @@ describe('buildResults: bonus grupowy (bns)', () => {
   };
 
   it('po komplecie wynikow 3 tur bns trafia do tabeli ogolnej (15/10 za miejsca w grupie)', () => {
-    const done = buildResults(bonusRoster, turns, fullResults, 'test');
+    const done = buildResults(bonusRoster, turns, fullResults);
     // grupy: A -> a1 (5 pkt), a2 (0); B -> b1 (10), b2 (5); bonus 15/10 w kazdej.
     expect(done.general.map((r) => [r.participantId, r.bns, r.points])).toEqual([
       ['b1', 15, 25],
@@ -129,7 +129,7 @@ describe('buildResults: bonus grupowy (bns)', () => {
   });
 
   it('punkty tabeli grupowej NIE zawieraja bns (jak SUM(grI:grIII) w arkuszu tab grup)', () => {
-    const done = buildResults(bonusRoster, turns, fullResults, 'test');
+    const done = buildResults(bonusRoster, turns, fullResults);
     expect(done.groups.A.map((r) => [r.participantId, r.points, r.bns])).toEqual([
       ['a1', 5, 15],
       ['a2', 0, 10],
@@ -138,7 +138,7 @@ describe('buildResults: bonus grupowy (bns)', () => {
 
   it('przed kompletem wynikow fazy grupowej bns = 0 dla wszystkich', () => {
     const partial: ResultsByTurn = { '1': { '1': exact }, '2': { '1': exact } };
-    const inProgress = buildResults(bonusRoster, turns, partial, 'test');
+    const inProgress = buildResults(bonusRoster, turns, partial);
     for (const r of inProgress.general) expect(r.bns).toBe(0);
   });
 });
@@ -165,7 +165,7 @@ describe('buildResults: bonus skutecznosci (skutBonus)', () => {
   };
 
   it('po komplecie tury top3 etapu dostaje skutBonus 3/2/1, reszta 0', () => {
-    const done = buildResults(sbRoster, [turn], { '1': { '1': { home: 2, away: 1 } } }, 'test');
+    const done = buildResults(sbRoster, [turn], { '1': { '1': { home: 2, away: 1 } } });
     expect(done.general.map((r) => [r.participantId, r.grI, r.skutBonus])).toEqual([
       ['a1', 5, 3],
       ['a2', 4, 2],
@@ -175,7 +175,7 @@ describe('buildResults: bonus skutecznosci (skutBonus)', () => {
   });
 
   it('skutBonus NIE wchodzi do punktow ani do pozycji (tylko zapis)', () => {
-    const done = buildResults(sbRoster, [turn], { '1': { '1': { home: 2, away: 1 } } }, 'test');
+    const done = buildResults(sbRoster, [turn], { '1': { '1': { home: 2, away: 1 } } });
     // points = sam grI (bonus nie dolicza sie do sumy), pozycje wg punktow.
     expect(done.general.map((r) => [r.participantId, r.points, r.position])).toEqual([
       ['a1', 5, 1],
@@ -186,7 +186,7 @@ describe('buildResults: bonus skutecznosci (skutBonus)', () => {
   });
 
   it('tura niekompletna (mecz bez wyniku) → skutBonus 0 dla wszystkich', () => {
-    const inProgress = buildResults(sbRoster, [turn], {}, 'test');
+    const inProgress = buildResults(sbRoster, [turn], {});
     for (const r of inProgress.general) expect(r.skutBonus).toBe(0);
   });
 });
@@ -253,7 +253,6 @@ describe('buildResults (realne dane + atrapy)', () => {
     read('data/k1/roster.json'),
     [read('data/k1/tura-1.json')],
     read('data/k1/results.json'),
-    'test',
   );
 
   it('56 osob w ogolnej, kazda grupa A-H po 7', () => {
@@ -279,5 +278,61 @@ describe('buildResults (realne dane + atrapy)', () => {
     for (const m of real.turns[0].matches) {
       expect(Object.keys(m.predictions)).toHaveLength(56);
     }
+  });
+});
+
+import type { PucharData, PucharResult } from './types';
+
+const roster2: Participant[] = [
+  { id: 'A', group: 'A' },
+  { id: 'B', group: 'A' },
+];
+
+const puchar1: PucharData = {
+  rounds: [
+    {
+      round: '1/16',
+      fixtures: [
+        { no: 1, home: 'Kanada', away: 'RPA', kickoff: '' },
+        { no: 2, home: 'Brazylia', away: 'Japonia', kickoff: '' },
+      ],
+      predictions: {
+        A: { '1': { home: 2, away: 1 }, '2': { home: 1, away: 1, pk: 'home' } },
+        B: { '1': { home: 0, away: 0 } },
+      },
+    },
+  ],
+};
+
+describe('buildResults — faza pucharowa', () => {
+  it('dolicza puch do tabeli ogólnej i sekcji puchar', () => {
+    const puchRes: Record<string, PucharResult> = {
+      '1': { home: 2, away: 1 }, // A: 10, B: 0
+      '2': { home: 1, away: 1, pk: 'home' }, // A: 12
+    };
+    const out = buildResults(roster2, [], {}, puchar1, puchRes);
+    const a = out.general.find((r) => r.participantId === 'A')!;
+    expect(a.puch).toBe(22);
+    expect(a.points).toBe(22); // brak punktów grupowych w tym teście
+    expect(out.puchar.rounds[0].matches[0].predictions.A.points).toBe(10);
+    expect(out.puchar.rounds[0].matches[1].predictions.A.points).toBe(12);
+    expect(out.puchar.rounds[0].matches[0].result).toEqual({ home: 2, away: 1 });
+  });
+
+  it('„%" tabeli ogólnej wlicza puchar (kategorie >0)', () => {
+    const puchRes: Record<string, PucharResult> = { '1': { home: 2, away: 1 } }; // tylko mecz 1
+    const out = buildResults(roster2, [], {}, puchar1, puchRes);
+    const a = out.general.find((r) => r.participantId === 'A')!;
+    // A: 1 mecz pucharowy rozegrany, trafiony → hitRate = 1/1 = 1
+    expect(a.hitRate).toBe(1);
+    const b = out.general.find((r) => r.participantId === 'B')!;
+    // B: 1 mecz rozegrany, pudło → hitRate = 0/1 = 0
+    expect(b.hitRate).toBe(0);
+  });
+
+  it('bez danych pucharowych zachowuje się jak dotąd (puch=0)', () => {
+    const out = buildResults(roster2, [], {});
+    expect(out.general.every((r) => r.puch === 0)).toBe(true);
+    expect(out.puchar.rounds).toEqual([]);
   });
 });
