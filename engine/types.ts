@@ -207,3 +207,21 @@ export interface CardStats {
   /** true gdy ≥2 tury mają wyniki (sekcja PO TURZE 2 aktywna). */
   poTurze2Aktywne: boolean;
 }
+
+/** Strona meczu — zwycięzca karnych / krzyżyk uczestnika. */
+export type Side = 'home' | 'away';
+
+/** Typ pucharowy uczestnika: wynik do 120 min + opcjonalny krzyżyk (zwycięzca karnych).
+ *  `pk` ustawiane tylko gdy home===away (remis). */
+export interface PucharPick {
+  home: number;
+  away: number;
+  pk?: Side;
+}
+
+/** Faktyczny wynik meczu pucharowego: wynik po 120 min + zwycięzca karnych (tylko remisy). */
+export interface PucharResult {
+  home: number;
+  away: number;
+  pk?: Side;
+}
