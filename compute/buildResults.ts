@@ -54,6 +54,26 @@ function applyOrganizerCorrections(id: string, ts: [TurnScore, TurnScore, TurnSc
   }
 }
 
+/**
+ * Override kolejności tabeli grupowej pod OPUBLIKOWANE tabele organizatora (źródło prawdy).
+ * Grupa F: MaciejM i KSZ remisują 152 pkt grupowych. Nasz tiebreaker („%" = hitRate) stawia
+ * KSZ wyżej (63% vs 61%), ale organizator liczy „skuteczność" grupową inaczej — po masterze
+ * 06.12 zmienił definicję „%" (jego tabela grupowa pokazuje MaciejM 42% > KSZ 40%, z liczb,
+ * które nie sumują się do 152 pkt; nowego mastera z tą formułą nie mamy) i przyznaje MaciejM
+ * 2. miejsce (bns 10), KSZ 3. (bns 5). Przypinamy tę kolejność i renumerujemy pozycje. Warunek
+ * remisu punktów chroni przed nadpisaniem, gdyby dane się zmieniły. Por. applyOrganizerCorrections.
+ */
+function applyOrganizerGroupOrder(group: Group, rows: TableRow[]): TableRow[] {
+  if (group !== 'F') return rows;
+  const iM = rows.findIndex((r) => r.participantId === 'MaciejM');
+  const iK = rows.findIndex((r) => r.participantId === 'KSZ');
+  if (iM < 0 || iK < 0 || iM < iK || rows[iM].points !== rows[iK].points) return rows;
+  const next = [...rows];
+  const [maciej] = next.splice(iM, 1);
+  next.splice(iK, 0, maciej);
+  return next.map((r, i) => ({ ...r, position: i + 1 }));
+}
+
 /** Zlicza turę uczestnika: typ z tury + wynik z results; brak wyniku = nierozegrany. */
 function scoreTurn(
   id: string,
@@ -148,7 +168,7 @@ export function buildResults(
   const groups = Object.fromEntries(
     ALL_GROUPS.map((g) => [
       g,
-      rankBy(groupRows.filter((r) => r.group === g), GROUP_ORDER),
+      applyOrganizerGroupOrder(g, rankBy(groupRows.filter((r) => r.group === g), GROUP_ORDER)),
     ]),
   ) as Record<Group, TableRow[]>;
 
