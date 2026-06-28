@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T04:10:42.353Z",
+  "generatedAt": "2026-06-28T11:29:17.066Z",
   "general": [
     {
       "participantId": "MagdaP",
@@ -546,26 +546,9 @@
       "played": 72
     },
     {
-      "participantId": "Wojtek",
-      "group": "A",
-      "position": 33,
-      "points": 144,
-      "grI": 41,
-      "grII": 52,
-      "grIII": 51,
-      "bns": 0,
-      "puch": 0,
-      "skutBonus": 0,
-      "hitRate": 0.5555555555555556,
-      "count3": 24,
-      "count4": 8,
-      "count5": 8,
-      "played": 72
-    },
-    {
       "participantId": "KrzysztoW",
       "group": "B",
-      "position": 34,
+      "position": 33,
       "points": 143,
       "grI": 36,
       "grII": 50,
@@ -577,6 +560,23 @@
       "count3": 19,
       "count4": 9,
       "count5": 9,
+      "played": 72
+    },
+    {
+      "participantId": "Wojtek",
+      "group": "A",
+      "position": 34,
+      "points": 142,
+      "grI": 41,
+      "grII": 50,
+      "grIII": 51,
+      "bns": 0,
+      "puch": 0,
+      "skutBonus": 0,
+      "hitRate": 0.5555555555555556,
+      "count3": 25,
+      "count4": 8,
+      "count5": 7,
       "played": 72
     },
     {
@@ -1010,17 +1010,17 @@
       {
         "participantId": "Wojtek",
         "group": "A",
-        "points": 144,
+        "points": 142,
         "grI": 41,
-        "grII": 52,
+        "grII": 50,
         "grIII": 51,
         "bns": 0,
         "puch": 0,
         "skutBonus": 0,
         "hitRate": 0.5555555555555556,
-        "count3": 24,
+        "count3": 25,
         "count4": 8,
-        "count5": 8,
+        "count5": 7,
         "played": 72,
         "position": 4
       },
@@ -30847,8 +30847,8 @@
     },
     "Wojtek": {
       "group": "A",
-      "generalPos": 33,
-      "points": 144,
+      "generalPos": 34,
+      "points": 142,
       "groupPos": 4,
       "celnoscPct": 56,
       "dokladne": 8,
@@ -31147,7 +31147,7 @@
     },
     "KrzysztoW": {
       "group": "B",
-      "generalPos": 34,
+      "generalPos": 33,
       "points": 143,
       "groupPos": 3,
       "celnoscPct": 51,

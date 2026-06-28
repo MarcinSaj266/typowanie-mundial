@@ -38,6 +38,22 @@ function groupStageComplete(turns: TurnData[], results: ResultsByTurn): boolean 
   return [1, 2, 3].every((n) => turnComplete(turns, results, n));
 }
 
+/**
+ * Korekta uzgadniająca produkcję z OPUBLIKOWANYMI tabelami organizatora (źródło prawdy).
+ * Wojtek (gr. A) ma w turze 2 wg organizatora 50 pkt (łącznie po 48 meczach 3p=17, 4p=5, 5p=4),
+ * a wg przysłanej „Baza tura 2" 52 — na jednym meczu master organizatora liczy trafiony rezultat
+ * (3 pkt), a Baza dokładny wynik (5 pkt). Nasz ingest jest WIERNY Bazie (zweryfikowane: v1/v2/v3
+ * = 52), więc korygujemy TU, zamieniając jeden mecz 5→3: −2 pkt, 5p−1, 3p+1. Trafienie zostaje
+ * trafieniem, więc „%" się nie zmienia. To samo robi `viz/race/data.ts` (SCORE_CORRECTIONS).
+ * Guard chroni przed ujemnymi licznikami, gdyby turę 2 liczono przed kompletem wyników.
+ */
+function applyOrganizerCorrections(id: string, ts: [TurnScore, TurnScore, TurnScore]): void {
+  if (id === 'Wojtek' && ts[1].count5 >= 1 && ts[1].points >= 2) {
+    const t2 = ts[1];
+    ts[1] = { ...t2, points: t2.points - 2, count5: t2.count5 - 1, count3: t2.count3 + 1 };
+  }
+}
+
 /** Zlicza turę uczestnika: typ z tury + wynik z results; brak wyniku = nierozegrany. */
 function scoreTurn(
   id: string,
@@ -91,6 +107,7 @@ export function buildResults(
     const ts = [1, 2, 3].map((n) =>
       scoreTurn(p.id, turns.find((t) => t.turn === n), n, results),
     ) as [TurnScore, TurnScore, TurnScore];
+    applyOrganizerCorrections(p.id, ts);
     counts.set(p.id, {
       count3: ts[0].count3 + ts[1].count3 + ts[2].count3,
       count4: ts[0].count4 + ts[1].count4 + ts[2].count4,
