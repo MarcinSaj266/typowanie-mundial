@@ -63,4 +63,18 @@ describe('generalTable', () => {
     // mimo że a ma wyższe grI — późniejsza tura ma pierwszeństwo.
     expect(out.map(r => r.participantId)).toEqual(['b', 'c', 'a']);
   });
+
+  it('przy równych pkt/%/puch/grIII/grII/grI wyżej jest większy skutBonus', () => {
+    const out = generalTable([
+      { ...season({ participantId: 'A' }), skutBonus: 0 },
+      { ...season({ participantId: 'B' }), skutBonus: 3 },
+    ]);
+    expect(out.map(r => r.participantId)).toEqual(['B', 'A']);
+  });
+
+  it('skutBonus NIE wchodzi do sumy punktów', () => {
+    const [row] = generalTable([{ ...season({ participantId: 'A', grI: 10, grII: 0, grIII: 0 }), skutBonus: 3 }]);
+    expect(row.points).toBe(10);
+    expect(row.total).toBe(10);
+  });
 });
