@@ -61,8 +61,8 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   Interpretacja ZWERYFIKOWANA z `rpuch`: `AI=AJ*6+AK*8+AL*10+AM*12`, `AJ:AM=COUNTIF(C:AH,6/8/10/12)`
   — wartości meczowe są parzyste {6,8,10,12}, więc ±1 działa przed ×2. Formuł liczących pojedynczy
   mecz pucharowy w masterze jeszcze NIE ma (C:AH puste) — porównać z nimi, gdy organizator je dopnie.
-  Do zrobienia przy starcie pucharu: ingest typów pucharowych (krzyżyk!), agregacja do `puch`
-  i wkład #6 w „%" tabeli ogólnej.
+  ✅ ZROBIONE (2026-06-29): ingest typów pucharowych (krzyżyk!), agregacja do `puch` i wkład #6
+  w „%" tabeli ogólnej — patrz wpis „Faza pucharowa K1 — WDROŻONA" niżej.
 - ✅ Poprawione typy uczestników (2026-06-12 wieczorem) — organizator przysłał
   `konkurs 2026.06.12 - poprawiony.xlsx` (AKTUALNY master; 383 poprawione typy: wyłącznie
   mecze 8–24, wyłącznie gracze grup E–H — naprawione przesunięcie wierszy po prawej stronie
@@ -118,8 +118,30 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   Do zrobienia po danych K2: ingest typów z arkusza `konkurs2` (parser + rozwiązanie drabinki:
   typy „1/2", rozstawienie, wariant 3. miejsc, karne finału → `champion`), ręczne faktyczne dane
   (`data/k2/results.json`), wpięcie w `compute/` + render.
-- ⏳ Następne: PWA (odłożone — patrz rozmowy), ingest + render Konkursu 2 (czekamy na typy K2
-  od organizatora), ingest typów pucharowych K1 (przy starcie 1/16).
+- ✅ Faza pucharowa K1 — WDROŻONA na produkcję (2026-06-29, Etap A + profil/tabela/karta). Spec:
+  `docs/superpowers/specs/2026-06-28-faza-pucharowa-design.md`, plan:
+  `docs/superpowers/plans/2026-06-28-faza-pucharowa.md`. Pipeline: parser tolerancyjny
+  `ingest/k1/parseBazaPuchar` (płaska „Baza puch vN.xlsx", arkusz `t2`; krzyżyk x/X = zwycięzca
+  karnych; NIE wymaga kompletu rosteru) → CLI `npm run build:puchar` → `data/k1/puchar.json`
+  (runda 1/16, 16 meczów, typy 52/56) → agregacja `engine/aggregatePuchar` (`scorePucharMatch`
+  reuse `scoreMatchPuchar`; kategorie 6/8/10/12) → wpięcie w `compute/buildResults`. Tabela
+  OGÓLNA: suma `grI+grII+grIII+bns+puch`, „%" wlicza puchar, liczniki ×3/×4/×5 wliczają trafienia
+  pucharowe (6→baza3, 8→4, 10→5) + kolumny ×6 (baza6=remis dokładny+karne) i PUCH — ZGODNE z
+  tabelą organizatora po 1/16. Tabele GRUPOWE celowo nietknięte (sama faza grupowa). `skutBonus`:
+  etap pucharowy dodany jako najniższy tiebreaker (`engine/generalTable.ts`). Widok `/puchar`
+  (rundy→mecze→typy, natywne `<details>`), sekcja „PUCHAR 1/16" w profilu `/gracz/[id]`, blok
+  „FAZA PUCHAROWA" na karcie (`engine/playerCard.ts`: punkty ×2, celność pucharowa, dokładne
+  10+12 — OSOBNY blok, statystyki grupowe zostają czyste; decyzja organizatora/użytkownika
+  2026-06-29 — bez mieszania skali ×1/×2). Wynik 1/16 wpisany ręcznie: Kanada 1:0 RPA (klucz
+  `"puch"` w `data/k1/results.json`). Bramka: 185 testów, typecheck, build, smoke.
+  ⏳ ETAP B (do zrobienia): robot football-data.org dla pucharu — robot `fetch:scores` pobiera
+  TYLKO mecze grupowe (`tura-*.json`), pucharu NIE ściąga (świadomie); `mergeScores` jest
+  bezpieczny (głęboka kopia results.json, tylko dokleja, NIE kasuje klucza `"puch"`). Auto-pobieranie
+  1/16+ wymaga dopasowania po DACIE (pary się powtarzają) + odczytu zwycięzcy karnych z API +
+  terminów w czasie PL w `kickoff`. Do startu kolejnych rund: reingest nowszej bazy + wpis wyników
+  ręcznie kluczem `"puch"` (przy remisie `"pk":"home"|"away"`).
+- ⏳ Następne: Etap B robota pucharowego (auto-pobieranie 1/16+), PWA (odłożone — patrz rozmowy),
+  ingest + render Konkursu 2 (czekamy na typy K2 od organizatora).
 
 ## Architektura (ustalona)
 
@@ -163,9 +185,10 @@ od fazy pucharowej. Implementacja: `engine/efficiencyBonus.ts` (czysta, top3 per
 etap, kumulacja) + wpięcie w `compute/buildResults.ts` (ranking etapu po grI/grII/grIII;
 remis → sezonowe %; pole `skutBonus` w `TableRow`, NIE wliczane do `points` ani do `rankBy`).
 Tura 1 (zamknięta): KSZ +3, Mirella +2, MateuszKn +1. Spec:
-`docs/superpowers/specs/2026-06-18-bonus-skutecznosci-design.md`. DO ZROBIENIA przy pucharze:
-ustalić mechanikę aktywacji (doliczanie do „%" vs osobny stopień) i wpiąć w tiebreaker tabeli
-ogólnej + dodać etap pucharowy.
+`docs/superpowers/specs/2026-06-18-bonus-skutecznosci-design.md`. ✅ ZROBIONE (2026-06-29):
+etap pucharowy dodany, `skutBonus` jest najniższym tiebreakerem tabeli ogólnej
+(`engine/generalTable.ts`: `pkt → % → puch → grIII → grII → grI → skutBonus`), aktywny od fazy
+pucharowej. Nadal NIE wyświetlany i NIE wliczany do `points`.
 **Faza pucharowa (doprecyzowana 2026-06-12):** punkty ×2 (6/8/10/12), jedna wspólna tabela.
 Dogrywka: wynik po dogrywce liczy się jak wynik z 90 min. Karne: kto typuje remis, obowiązkowo
 wskazuje zwycięzcę karnych („krzyżyk"); trafiony zwycięzca +1, nietrafiony −1 do wartości
@@ -207,8 +230,8 @@ Pliki Excel to archiwa ZIP; do podejrzenia formuł rozpakuj i parsuj XML (`xl/wo
 3. ✅ **ROZSTRZYGNIĘTE** (2026-06-12) — kategoria „6" = dokładny remis + trafiony zwycięzca
    karnych (5+1); pełne reguły dogrywek/karnych w „Reguły punktacji". „%" w tabeli ogólnej
    wlicza „6", w grupowej nie. Silnik pucharowy (`scoreMatchPuchar`) zaimplementowany,
-   interpretacja „±1 przed podwojeniem" zweryfikowana z agregacją `rpuch` (patrz Status);
-   przed startem 1/16 zostaje ingest typów pucharowych + wpięcie `puch` i #6 do tabel.
+   interpretacja „±1 przed podwojeniem" zweryfikowana z agregacją `rpuch` (patrz Status).
+   ✅ Ingest typów pucharowych + wpięcie `puch` i #6 do tabel ZROBIONE i WDROŻONE (2026-06-29).
 4. ✅ **ROZSTRZYGNIĘTE pragmatycznie** (2026-06-12) — tiebreakerów FIFA NIE implementujemy:
    realne końcowe układy grup turnieju weźmiemy z oficjalnych tabel FIFA jako ręczne dane
    wejściowe (jak wyniki meczów). Arkusz `zasady` w `k2.xlsx` sprawdzony — opisuje tylko
