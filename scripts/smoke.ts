@@ -17,6 +17,15 @@ if (matches !== expectedMatches) {
   console.error(`SMOKE FAIL: ${matches} meczy w HTML, oczekiwano ${expectedMatches}`);
   process.exit(1);
 }
+// Tabela ogólna: kolumny pucharowe (×6, PUCH) widoczne po starcie 1/16.
+if (results.puchar.rounds.length > 0) {
+  for (const marker of ['×6', 'PUCH']) {
+    if (!html.includes(marker)) {
+      console.error(`SMOKE FAIL: brak kolumny "${marker}" w out/tabela/index.html`);
+      process.exit(1);
+    }
+  }
+}
 // /puchar: liczba kart meczów pucharowych == suma meczów ze wszystkich rund.
 const puchHtml = readFileSync('out/puchar/index.html', 'utf8');
 const puchMatches = (puchHtml.match(/class="match-card puch-match-card"/g) ?? []).length;
@@ -49,6 +58,11 @@ const graczDir = readdirSync('out/gracz')[0];
 const profilHtml = readFileSync(`out/gracz/${graczDir}/index.html`, 'utf8');
 if (!profilHtml.includes('KARTA ZAWODNIKA')) {
   console.error(`SMOKE FAIL: brak przycisku „KARTA ZAWODNIKA" w out/gracz/${graczDir}/index.html`);
+  process.exit(1);
+}
+// Profil pokazuje fazę pucharową, gdy istnieje (sekcja „PUCHAR …").
+if (results.puchar.rounds.length > 0 && !profilHtml.includes('PUCHAR')) {
+  console.error(`SMOKE FAIL: brak sekcji „PUCHAR" w out/gracz/${graczDir}/index.html`);
   process.exit(1);
 }
 const kartaHtml = readFileSync(`out/gracz/${graczDir}/karta/index.html`, 'utf8');

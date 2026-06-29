@@ -65,6 +65,9 @@ export interface TableRow {
   count3: number;
   count4: number;
   count5: number;
+  /** Trafienia kategorii „6" (puchar: remis dokładny + karne, 12 pkt = baza 6).
+   *  Tylko tabela OGÓLNA — w grupowej zawsze 0/undefined. Kolumna „6p" u organizatora. */
+  count6?: number;
   played: number;
 }
 

@@ -335,4 +335,21 @@ describe('buildResults — faza pucharowa', () => {
     expect(out.general.every((r) => r.puch === 0)).toBe(true);
     expect(out.puchar.rounds).toEqual([]);
   });
+
+  it('tabela ogólna: trafienia pucharowe wliczone do ×3/×4/×5 i 6p (jak u organizatora)', () => {
+    const puchRes: Record<string, PucharResult> = {
+      '1': { home: 2, away: 1 }, // A 2:1 → 10 pkt = baza 5
+      '2': { home: 1, away: 1, pk: 'home' }, // A 1:1✚ → 12 pkt = baza 6
+    };
+    const out = buildResults(roster2, [], {}, puchar1, puchRes);
+    const a = out.general.find((r) => r.participantId === 'A')!;
+    expect(a.count5).toBe(1); // puchar 10 pkt → baza 5
+    expect(a.count6).toBe(1); // puchar 12 pkt → baza 6
+    expect(a.count3).toBe(0);
+    expect(a.count4).toBe(0);
+    // Tabela GRUPOWA pozostaje grupowa (bez pucharu).
+    const aGroup = out.groups.A.find((r) => r.participantId === 'A')!;
+    expect(aGroup.count5).toBe(0);
+    expect(aGroup.count6 ?? 0).toBe(0);
+  });
 });

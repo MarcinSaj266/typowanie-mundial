@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { fmtScore } from '../../../components/MatchCard';
+import { fmtPuchScore, fmtPick } from '../../../components/PucharMatchCard';
 import { ScreenFrame } from '../../../components/ScreenFrame';
 import { loadResults } from '../../lib/results';
 
@@ -46,6 +47,33 @@ export default async function GraczPage({ params }: { params: Promise<{ id: stri
                     <td>{m.home} – {m.away}</td>
                     <td className="num">{fmtScore(m.result)}</td>
                     <td className="num">{p.pick ? fmtScore(p.pick) : '—'}</td>
+                    <td className="pkt">{p.points ?? ''}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </section>
+      ))}
+      {data.puchar.rounds.map((round) => (
+        <section key={round.round}>
+          <h2 className="turn-heading">★ PUCHAR {round.round} ★</h2>
+          <table className="retro-table">
+            <thead>
+              <tr>
+                <th className="num">#</th><th>MECZ</th>
+                <th className="num">WYNIK</th><th className="num">TYP</th><th className="num">PKT</th>
+              </tr>
+            </thead>
+            <tbody>
+              {round.matches.map((m) => {
+                const p = m.predictions[id];
+                return (
+                  <tr key={m.no}>
+                    <td className="num">{m.no}</td>
+                    <td>{m.home} – {m.away}</td>
+                    <td className="num">{fmtPuchScore(m.result)}</td>
+                    <td className="num">{p.pick ? fmtPick(p.pick) : '—'}</td>
                     <td className="pkt">{p.points ?? ''}</td>
                   </tr>
                 );

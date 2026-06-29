@@ -245,23 +245,30 @@ export function buildResults(
       hitRate: genHitRate.get(s.participantId)!,
       skutBonus: skutBonuses[s.participantId] ?? 0,
     })),
-  ).map((g) => ({
-    participantId: g.participantId,
-    group: groupOf.get(g.participantId)!,
-    position: g.position,
-    points: g.points,
-    grI: g.grI,
-    grII: g.grII,
-    grIII: g.grIII,
-    bns: g.bns,
-    puch: g.puch,
-    skutBonus: skutBonuses[g.participantId] ?? 0,
-    hitRate: genHitRate.get(g.participantId)!,
-    count3: counts.get(g.participantId)!.count3,
-    count4: counts.get(g.participantId)!.count4,
-    count5: counts.get(g.participantId)!.count5,
-    played: counts.get(g.participantId)!.played + puchAgg.get(g.participantId)!.played,
-  }));
+  ).map((g) => {
+    const c = counts.get(g.participantId)!;
+    const a = puchAgg.get(g.participantId)!;
+    // Liczniki tabeli OGÓLNEJ wliczają trafienia pucharowe jak u organizatora:
+    // puchar 6 pkt → baza 3, 8 → baza 4, 10 → baza 5, 12 → baza 6 (kolumna „6p").
+    return {
+      participantId: g.participantId,
+      group: groupOf.get(g.participantId)!,
+      position: g.position,
+      points: g.points,
+      grI: g.grI,
+      grII: g.grII,
+      grIII: g.grIII,
+      bns: g.bns,
+      puch: g.puch,
+      skutBonus: skutBonuses[g.participantId] ?? 0,
+      hitRate: genHitRate.get(g.participantId)!,
+      count3: c.count3 + a.count6,
+      count4: c.count4 + a.count8,
+      count5: c.count5 + a.count10,
+      count6: a.count12,
+      played: c.played + a.played,
+    };
+  });
 
   // Karty: hero z tabeli ogólnej (evergreen), miejsce w grupie z tabeli grupowej,
   // sekcje szczegółowe z tur fazy grupowej.

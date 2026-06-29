@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T07:20:07.603Z",
+  "generatedAt": "2026-06-29T08:31:11.434Z",
   "general": [
     {
       "participantId": "MagdaP",
@@ -15,7 +15,8 @@
       "hitRate": 0.6712328767123288,
       "count3": 21,
       "count4": 14,
-      "count5": 13,
+      "count5": 14,
+      "count6": 0,
       "played": 73
     },
     {
@@ -32,7 +33,8 @@
       "hitRate": 0.6438356164383562,
       "count3": 24,
       "count4": 9,
-      "count5": 13,
+      "count5": 14,
+      "count6": 0,
       "played": 73
     },
     {
@@ -47,9 +49,10 @@
       "puch": 6,
       "skutBonus": 3,
       "hitRate": 0.6438356164383562,
-      "count3": 22,
+      "count3": 23,
       "count4": 13,
       "count5": 11,
+      "count6": 0,
       "played": 73
     },
     {
@@ -65,8 +68,9 @@
       "skutBonus": 3,
       "hitRate": 0.6438356164383562,
       "count3": 25,
-      "count4": 13,
+      "count4": 14,
       "count5": 8,
+      "count6": 0,
       "played": 73
     },
     {
@@ -82,8 +86,9 @@
       "skutBonus": 0,
       "hitRate": 0.6301369863013698,
       "count3": 24,
-      "count4": 15,
+      "count4": 16,
       "count5": 6,
+      "count6": 0,
       "played": 73
     },
     {
@@ -98,9 +103,10 @@
       "puch": 6,
       "skutBonus": 0,
       "hitRate": 0.6438356164383562,
-      "count3": 30,
+      "count3": 31,
       "count4": 9,
       "count5": 7,
+      "count6": 0,
       "played": 73
     },
     {
@@ -116,8 +122,9 @@
       "skutBonus": 2,
       "hitRate": 0.6301369863013698,
       "count3": 25,
-      "count4": 13,
+      "count4": 14,
       "count5": 7,
+      "count6": 0,
       "played": 73
     },
     {
@@ -133,8 +140,9 @@
       "skutBonus": 1,
       "hitRate": 0.6164383561643836,
       "count3": 28,
-      "count4": 7,
+      "count4": 8,
       "count5": 9,
+      "count6": 0,
       "played": 73
     },
     {
@@ -150,8 +158,9 @@
       "skutBonus": 0,
       "hitRate": 0.6027397260273972,
       "count3": 23,
-      "count4": 12,
+      "count4": 13,
       "count5": 8,
+      "count6": 0,
       "played": 73
     },
     {
@@ -167,8 +176,9 @@
       "skutBonus": 0,
       "hitRate": 0.589041095890411,
       "count3": 23,
-      "count4": 9,
+      "count4": 10,
       "count5": 10,
+      "count6": 0,
       "played": 73
     },
     {
@@ -184,8 +194,9 @@
       "skutBonus": 0,
       "hitRate": 0.6438356164383562,
       "count3": 30,
-      "count4": 11,
+      "count4": 12,
       "count5": 5,
+      "count6": 0,
       "played": 73
     },
     {
@@ -201,8 +212,9 @@
       "skutBonus": 0,
       "hitRate": 0.6164383561643836,
       "count3": 29,
-      "count4": 10,
+      "count4": 11,
       "count5": 5,
+      "count6": 0,
       "played": 73
     },
     {
@@ -218,8 +230,9 @@
       "skutBonus": 0,
       "hitRate": 0.6027397260273972,
       "count3": 31,
-      "count4": 6,
+      "count4": 7,
       "count5": 6,
+      "count6": 0,
       "played": 73
     },
     {
@@ -237,6 +250,7 @@
       "count3": 24,
       "count4": 12,
       "count5": 7,
+      "count6": 0,
       "played": 73
     },
     {
@@ -252,8 +266,9 @@
       "skutBonus": 0,
       "hitRate": 0.6301369863013698,
       "count3": 30,
-      "count4": 12,
+      "count4": 13,
       "count5": 3,
+      "count6": 0,
       "played": 73
     },
     {
@@ -269,8 +284,9 @@
       "skutBonus": 0,
       "hitRate": 0.6164383561643836,
       "count3": 30,
-      "count4": 6,
+      "count4": 7,
       "count5": 8,
+      "count6": 0,
       "played": 73
     },
     {
@@ -286,8 +302,9 @@
       "skutBonus": 0,
       "hitRate": 0.589041095890411,
       "count3": 22,
-      "count4": 13,
+      "count4": 14,
       "count5": 7,
+      "count6": 0,
       "played": 73
     },
     {
@@ -303,8 +320,9 @@
       "skutBonus": 0,
       "hitRate": 0.6164383561643836,
       "count3": 31,
-      "count4": 6,
+      "count4": 7,
       "count5": 7,
+      "count6": 0,
       "played": 73
     },
     {
@@ -320,8 +338,9 @@
       "skutBonus": 0,
       "hitRate": 0.6027397260273972,
       "count3": 26,
-      "count4": 11,
+      "count4": 12,
       "count5": 6,
+      "count6": 0,
       "played": 73
     },
     {
@@ -337,8 +356,9 @@
       "skutBonus": 0,
       "hitRate": 0.5753424657534246,
       "count3": 24,
-      "count4": 11,
+      "count4": 12,
       "count5": 6,
+      "count6": 0,
       "played": 73
     },
     {
@@ -353,9 +373,10 @@
       "puch": 6,
       "skutBonus": 3,
       "hitRate": 0.6301369863013698,
-      "count3": 32,
+      "count3": 33,
       "count4": 9,
       "count5": 4,
+      "count6": 0,
       "played": 73
     },
     {
@@ -373,6 +394,7 @@
       "count3": 24,
       "count4": 9,
       "count5": 9,
+      "count6": 0,
       "played": 73
     },
     {
@@ -388,8 +410,9 @@
       "skutBonus": 0,
       "hitRate": 0.589041095890411,
       "count3": 25,
-      "count4": 9,
+      "count4": 10,
       "count5": 8,
+      "count6": 0,
       "played": 73
     },
     {
@@ -405,8 +428,9 @@
       "skutBonus": 0,
       "hitRate": 0.589041095890411,
       "count3": 24,
-      "count4": 10,
+      "count4": 11,
       "count5": 8,
+      "count6": 0,
       "played": 73
     },
     {
@@ -422,8 +446,9 @@
       "skutBonus": 0,
       "hitRate": 0.6164383561643836,
       "count3": 30,
-      "count4": 11,
+      "count4": 12,
       "count5": 3,
+      "count6": 0,
       "played": 73
     },
     {
@@ -439,8 +464,9 @@
       "skutBonus": 0,
       "hitRate": 0.5753424657534246,
       "count3": 25,
-      "count4": 8,
+      "count4": 9,
       "count5": 8,
+      "count6": 0,
       "played": 73
     },
     {
@@ -458,6 +484,7 @@
       "count3": 21,
       "count4": 11,
       "count5": 8,
+      "count6": 0,
       "played": 73
     },
     {
@@ -473,8 +500,9 @@
       "skutBonus": 0,
       "hitRate": 0.5753424657534246,
       "count3": 27,
-      "count4": 4,
+      "count4": 5,
       "count5": 10,
+      "count6": 0,
       "played": 73
     },
     {
@@ -490,8 +518,9 @@
       "skutBonus": 2,
       "hitRate": 0.5753424657534246,
       "count3": 26,
-      "count4": 7,
+      "count4": 8,
       "count5": 8,
+      "count6": 0,
       "played": 73
     },
     {
@@ -506,9 +535,10 @@
       "puch": 6,
       "skutBonus": 0,
       "hitRate": 0.5753424657534246,
-      "count3": 24,
+      "count3": 25,
       "count4": 10,
       "count5": 7,
+      "count6": 0,
       "played": 73
     },
     {
@@ -524,8 +554,9 @@
       "skutBonus": 0,
       "hitRate": 0.5753424657534246,
       "count3": 27,
-      "count4": 7,
+      "count4": 8,
       "count5": 7,
+      "count6": 0,
       "played": 73
     },
     {
@@ -541,8 +572,9 @@
       "skutBonus": 0,
       "hitRate": 0.5205479452054794,
       "count3": 19,
-      "count4": 9,
+      "count4": 10,
       "count5": 9,
+      "count6": 0,
       "played": 73
     },
     {
@@ -558,8 +590,9 @@
       "skutBonus": 0,
       "hitRate": 0.5616438356164384,
       "count3": 25,
-      "count4": 8,
+      "count4": 9,
       "count5": 7,
+      "count6": 0,
       "played": 73
     },
     {
@@ -575,8 +608,9 @@
       "skutBonus": 0,
       "hitRate": 0.589041095890411,
       "count3": 31,
-      "count4": 7,
+      "count4": 8,
       "count5": 4,
+      "count6": 0,
       "played": 73
     },
     {
@@ -592,8 +626,9 @@
       "skutBonus": 0,
       "hitRate": 0.5753424657534246,
       "count3": 27,
-      "count4": 10,
+      "count4": 11,
       "count5": 4,
+      "count6": 0,
       "played": 73
     },
     {
@@ -609,8 +644,9 @@
       "skutBonus": 0,
       "hitRate": 0.5342465753424658,
       "count3": 22,
-      "count4": 10,
+      "count4": 11,
       "count5": 6,
+      "count6": 0,
       "played": 73
     },
     {
@@ -626,8 +662,9 @@
       "skutBonus": 0,
       "hitRate": 0.5616438356164384,
       "count3": 26,
-      "count4": 8,
+      "count4": 9,
       "count5": 6,
+      "count6": 0,
       "played": 73
     },
     {
@@ -644,7 +681,8 @@
       "hitRate": 0.547945205479452,
       "count3": 25,
       "count4": 7,
-      "count5": 7,
+      "count5": 8,
+      "count6": 0,
       "played": 73
     },
     {
@@ -659,9 +697,10 @@
       "puch": 6,
       "skutBonus": 0,
       "hitRate": 0.5753424657534246,
-      "count3": 30,
+      "count3": 31,
       "count4": 6,
       "count5": 5,
+      "count6": 0,
       "played": 73
     },
     {
@@ -679,6 +718,7 @@
       "count3": 26,
       "count4": 8,
       "count5": 7,
+      "count6": 0,
       "played": 73
     },
     {
@@ -694,8 +734,9 @@
       "skutBonus": 0,
       "hitRate": 0.547945205479452,
       "count3": 28,
-      "count4": 6,
+      "count4": 7,
       "count5": 5,
+      "count6": 0,
       "played": 73
     },
     {
@@ -711,8 +752,9 @@
       "skutBonus": 0,
       "hitRate": 0.547945205479452,
       "count3": 26,
-      "count4": 11,
+      "count4": 12,
       "count5": 2,
+      "count6": 0,
       "played": 73
     },
     {
@@ -727,9 +769,10 @@
       "puch": 6,
       "skutBonus": 0,
       "hitRate": 0.547945205479452,
-      "count3": 27,
+      "count3": 28,
       "count4": 8,
       "count5": 4,
+      "count6": 0,
       "played": 73
     },
     {
@@ -745,8 +788,9 @@
       "skutBonus": 0,
       "hitRate": 0.5205479452054794,
       "count3": 21,
-      "count4": 12,
+      "count4": 13,
       "count5": 4,
+      "count6": 0,
       "played": 73
     },
     {
@@ -764,6 +808,7 @@
       "count3": 26,
       "count4": 5,
       "count5": 7,
+      "count6": 0,
       "played": 73
     },
     {
@@ -778,9 +823,10 @@
       "puch": 6,
       "skutBonus": 1,
       "hitRate": 0.4931506849315068,
-      "count3": 19,
+      "count3": 20,
       "count4": 10,
       "count5": 6,
+      "count6": 0,
       "played": 73
     },
     {
@@ -798,6 +844,7 @@
       "count3": 18,
       "count4": 12,
       "count5": 6,
+      "count6": 0,
       "played": 73
     },
     {
@@ -815,6 +862,7 @@
       "count3": 24,
       "count4": 13,
       "count5": 1,
+      "count6": 0,
       "played": 73
     },
     {
@@ -832,6 +880,7 @@
       "count3": 24,
       "count4": 7,
       "count5": 6,
+      "count6": 0,
       "played": 72
     },
     {
@@ -849,6 +898,7 @@
       "count3": 22,
       "count4": 11,
       "count5": 4,
+      "count6": 0,
       "played": 73
     },
     {
@@ -866,6 +916,7 @@
       "count3": 29,
       "count4": 8,
       "count5": 2,
+      "count6": 0,
       "played": 73
     },
     {
@@ -883,6 +934,7 @@
       "count3": 28,
       "count4": 6,
       "count5": 4,
+      "count6": 0,
       "played": 72
     },
     {
@@ -897,9 +949,10 @@
       "puch": 6,
       "skutBonus": 0,
       "hitRate": 0.4931506849315068,
-      "count3": 22,
+      "count3": 23,
       "count4": 9,
       "count5": 4,
+      "count6": 0,
       "played": 73
     },
     {
@@ -917,6 +970,7 @@
       "count3": 28,
       "count4": 4,
       "count5": 2,
+      "count6": 0,
       "played": 73
     },
     {
@@ -934,6 +988,7 @@
       "count3": 16,
       "count4": 8,
       "count5": 3,
+      "count6": 0,
       "played": 72
     },
     {
@@ -951,6 +1006,7 @@
       "count3": 7,
       "count4": 4,
       "count5": 1,
+      "count6": 0,
       "played": 72
     }
   ],

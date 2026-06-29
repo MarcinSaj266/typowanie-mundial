@@ -3,7 +3,7 @@ import type { PucharMatchOut, PucharPick } from '../compute/types';
 import { PlayerLink } from './RetroTable';
 
 /** "2:1 (k. gosp.)" — wynik pucharowy z dopiskiem o karnych przy remisie. */
-function fmtPuchScore(s: { home: number; away: number; pk?: 'home' | 'away' } | null): string {
+export function fmtPuchScore(s: { home: number; away: number; pk?: 'home' | 'away' } | null): string {
   if (!s) return '–:–';
   const base = `${s.home}:${s.away}`;
   if (s.home === s.away && s.pk) return `${base} (k. ${s.pk === 'home' ? 'gosp.' : 'gości'})`;
@@ -11,7 +11,7 @@ function fmtPuchScore(s: { home: number; away: number; pk?: 'home' | 'away' } | 
 }
 
 /** Typ pucharowy gracza w komórce: "1:1 ✚gosp." gdy krzyżyk. */
-function fmtPick(p: PucharPick | null): string {
+export function fmtPick(p: PucharPick | null): string {
   if (!p) return '—';
   const base = `${p.home}:${p.away}`;
   if (p.home === p.away && p.pk) return `${base} ✚${p.pk === 'home' ? 'gosp.' : 'gości'}`;
