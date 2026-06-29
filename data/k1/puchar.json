@@ -7,97 +7,97 @@
           "no": 1,
           "home": "Kanada",
           "away": "RPA",
-          "kickoff": ""
+          "kickoff": "niedziela, 28 cze godz. 21.00"
         },
         {
           "no": 2,
           "home": "Brazylia",
           "away": "Japonia",
-          "kickoff": ""
+          "kickoff": "poniedz., 29 cze godz. 19.00"
         },
         {
           "no": 3,
           "home": "Niemcy",
           "away": "Paragwaj",
-          "kickoff": ""
+          "kickoff": "poniedz., 29 cze godz. 22.30"
         },
         {
           "no": 4,
           "home": "Holandia",
           "away": "Maroko",
-          "kickoff": ""
+          "kickoff": "wtorek, 30 cze godz. 03.00"
         },
         {
           "no": 5,
           "home": "Wybrzeże Kość. Słon.",
           "away": "Norwegia",
-          "kickoff": ""
+          "kickoff": "wtorek, 30 cze godz. 19.00"
         },
         {
           "no": 6,
           "home": "Francja",
           "away": "Szwecja",
-          "kickoff": ""
+          "kickoff": "wtorek, 30 cze godz. 23.00"
         },
         {
           "no": 7,
           "home": "Meksyk",
           "away": "Ekwador",
-          "kickoff": ""
+          "kickoff": "środa, 1 lip godz. 03.00"
         },
         {
           "no": 8,
           "home": "Anglia",
           "away": "DR Konga",
-          "kickoff": ""
+          "kickoff": "środa, 1 lip godz. 18.00"
         },
         {
           "no": 9,
           "home": "Belgia",
           "away": "Senegal",
-          "kickoff": ""
+          "kickoff": "środa, 1 lip godz. 22.00"
         },
         {
           "no": 10,
           "home": "USA",
           "away": "Bośnia i Hercegowina",
-          "kickoff": ""
+          "kickoff": "czwartek, 2 lip godz. 02.00"
         },
         {
           "no": 11,
           "home": "Hiszpania",
           "away": "Austria",
-          "kickoff": ""
+          "kickoff": "czwartek, 2 lip godz. 21.00"
         },
         {
           "no": 12,
           "home": "Portugalia",
           "away": "Chorwacja",
-          "kickoff": ""
+          "kickoff": "piątek, 3 lip godz. 01.00"
         },
         {
           "no": 13,
           "home": "Szwajcaria",
           "away": "Algieria",
-          "kickoff": ""
+          "kickoff": "piątek, 3 lip godz. 05.00"
         },
         {
           "no": 14,
           "home": "Australia",
           "away": "Egipt",
-          "kickoff": ""
+          "kickoff": "piątek, 3 lip godz. 20.00"
         },
         {
           "no": 15,
           "home": "Argentyna",
           "away": "Republika Ziel. Przylądka",
-          "kickoff": ""
+          "kickoff": "sobota, 4 lip godz. 00.00"
         },
         {
           "no": 16,
           "home": "Kolumbia",
           "away": "Ghana",
-          "kickoff": ""
+          "kickoff": "sobota, 4 lip godz. 03.30"
         }
       ],
       "predictions": {
@@ -172,6 +172,69 @@
           "1": {
             "home": 2,
             "away": 1
+          },
+          "2": {
+            "home": 3,
+            "away": 1
+          },
+          "3": {
+            "home": 1,
+            "away": 2
+          },
+          "4": {
+            "home": 2,
+            "away": 0
+          },
+          "5": {
+            "home": 1,
+            "away": 1,
+            "pk": "away"
+          },
+          "6": {
+            "home": 3,
+            "away": 0
+          },
+          "7": {
+            "home": 1,
+            "away": 2
+          },
+          "8": {
+            "home": 3,
+            "away": 0
+          },
+          "9": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "10": {
+            "home": 1,
+            "away": 0
+          },
+          "11": {
+            "home": 3,
+            "away": 0
+          },
+          "12": {
+            "home": 2,
+            "away": 2,
+            "pk": "home"
+          },
+          "13": {
+            "home": 1,
+            "away": 0
+          },
+          "14": {
+            "home": 2,
+            "away": 0
+          },
+          "15": {
+            "home": 3,
+            "away": 0
+          },
+          "16": {
+            "home": 3,
+            "away": 0
           }
         },
         "Artur": {
@@ -1067,6 +1130,67 @@
           "1": {
             "home": 2,
             "away": 1
+          },
+          "2": {
+            "home": 3,
+            "away": 2
+          },
+          "3": {
+            "home": 3,
+            "away": 1
+          },
+          "4": {
+            "home": 2,
+            "away": 1
+          },
+          "5": {
+            "home": 1,
+            "away": 2
+          },
+          "6": {
+            "home": 3,
+            "away": 1
+          },
+          "7": {
+            "home": 3,
+            "away": 1
+          },
+          "8": {
+            "home": 3,
+            "away": 0
+          },
+          "9": {
+            "home": 2,
+            "away": 1
+          },
+          "10": {
+            "home": 3,
+            "away": 1
+          },
+          "11": {
+            "home": 3,
+            "away": 2
+          },
+          "12": {
+            "home": 2,
+            "away": 2,
+            "pk": "home"
+          },
+          "13": {
+            "home": 3,
+            "away": 1
+          },
+          "14": {
+            "home": 1,
+            "away": 2
+          },
+          "15": {
+            "home": 4,
+            "away": 0
+          },
+          "16": {
+            "home": 3,
+            "away": 1
           }
         },
         "KleoPatra": {
@@ -1074,6 +1198,69 @@
             "home": 1,
             "away": 1,
             "pk": "away"
+          },
+          "2": {
+            "home": 3,
+            "away": 1
+          },
+          "3": {
+            "home": 3,
+            "away": 0
+          },
+          "4": {
+            "home": 1,
+            "away": 2
+          },
+          "5": {
+            "home": 2,
+            "away": 2,
+            "pk": "away"
+          },
+          "6": {
+            "home": 2,
+            "away": 1
+          },
+          "7": {
+            "home": 1,
+            "away": 2
+          },
+          "8": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "9": {
+            "home": 1,
+            "away": 2
+          },
+          "10": {
+            "home": 1,
+            "away": 0
+          },
+          "11": {
+            "home": 2,
+            "away": 1
+          },
+          "12": {
+            "home": 3,
+            "away": 1
+          },
+          "13": {
+            "home": 2,
+            "away": 1
+          },
+          "14": {
+            "home": 1,
+            "away": 1,
+            "pk": "away"
+          },
+          "15": {
+            "home": 3,
+            "away": 1
+          },
+          "16": {
+            "home": 3,
+            "away": 1
           }
         },
         "KrystianM": {
@@ -1265,6 +1452,68 @@
           "14": {
             "home": 1,
             "away": 0
+          },
+          "15": {
+            "home": 3,
+            "away": 0
+          },
+          "16": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "KrzysztoWś": {
+          "2": {
+            "home": 1,
+            "away": 2
+          },
+          "3": {
+            "home": 2,
+            "away": 1
+          },
+          "4": {
+            "home": 2,
+            "away": 1
+          },
+          "5": {
+            "home": 1,
+            "away": 3
+          },
+          "6": {
+            "home": 3,
+            "away": 0
+          },
+          "7": {
+            "home": 2,
+            "away": 1
+          },
+          "8": {
+            "home": 2,
+            "away": 0
+          },
+          "9": {
+            "home": 2,
+            "away": 1
+          },
+          "10": {
+            "home": 2,
+            "away": 1
+          },
+          "11": {
+            "home": 2,
+            "away": 0
+          },
+          "12": {
+            "home": 2,
+            "away": 3
+          },
+          "13": {
+            "home": 0,
+            "away": 2
+          },
+          "14": {
+            "home": 1,
+            "away": 2
           },
           "15": {
             "home": 3,
@@ -1483,6 +1732,66 @@
           "1": {
             "home": 1,
             "away": 2
+          },
+          "2": {
+            "home": 2,
+            "away": 0
+          },
+          "3": {
+            "home": 3,
+            "away": 0
+          },
+          "4": {
+            "home": 3,
+            "away": 0
+          },
+          "5": {
+            "home": 2,
+            "away": 1
+          },
+          "6": {
+            "home": 2,
+            "away": 0
+          },
+          "7": {
+            "home": 1,
+            "away": 1
+          },
+          "8": {
+            "home": 2,
+            "away": 0
+          },
+          "9": {
+            "home": 1,
+            "away": 1
+          },
+          "10": {
+            "home": 2,
+            "away": 1
+          },
+          "11": {
+            "home": 2,
+            "away": 0
+          },
+          "12": {
+            "home": 1,
+            "away": 2
+          },
+          "13": {
+            "home": 1,
+            "away": 1
+          },
+          "14": {
+            "home": 1,
+            "away": 0
+          },
+          "15": {
+            "home": 3,
+            "away": 0
+          },
+          "16": {
+            "home": 1,
+            "away": 0
           }
         },
         "Magiera": {
@@ -1558,6 +1867,69 @@
           "1": {
             "home": 2,
             "away": 1
+          },
+          "2": {
+            "home": 2,
+            "away": 1
+          },
+          "3": {
+            "home": 2,
+            "away": 0
+          },
+          "4": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "5": {
+            "home": 1,
+            "away": 2
+          },
+          "6": {
+            "home": 2,
+            "away": 0
+          },
+          "7": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "8": {
+            "home": 2,
+            "away": 0
+          },
+          "9": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "10": {
+            "home": 2,
+            "away": 1
+          },
+          "11": {
+            "home": 2,
+            "away": 0
+          },
+          "12": {
+            "home": 2,
+            "away": 1
+          },
+          "13": {
+            "home": 1,
+            "away": 0
+          },
+          "14": {
+            "home": 0,
+            "away": 1
+          },
+          "15": {
+            "home": 2,
+            "away": 0
+          },
+          "16": {
+            "home": 2,
+            "away": 0
           }
         },
         "MarekP": {
@@ -1980,6 +2352,69 @@
           "1": {
             "home": 2,
             "away": 1
+          },
+          "2": {
+            "home": 2,
+            "away": 2,
+            "pk": "home"
+          },
+          "3": {
+            "home": 3,
+            "away": 0
+          },
+          "4": {
+            "home": 2,
+            "away": 1
+          },
+          "5": {
+            "home": 1,
+            "away": 2
+          },
+          "6": {
+            "home": 3,
+            "away": 1
+          },
+          "7": {
+            "home": 1,
+            "away": 0
+          },
+          "8": {
+            "home": 2,
+            "away": 1
+          },
+          "9": {
+            "home": 2,
+            "away": 2,
+            "pk": "away"
+          },
+          "10": {
+            "home": 2,
+            "away": 1
+          },
+          "11": {
+            "home": 3,
+            "away": 1
+          },
+          "12": {
+            "home": 2,
+            "away": 1
+          },
+          "13": {
+            "home": 2,
+            "away": 1
+          },
+          "14": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "15": {
+            "home": 2,
+            "away": 0
+          },
+          "16": {
+            "home": 3,
+            "away": 1
           }
         },
         "PawełSt": {
@@ -2054,6 +2489,69 @@
         },
         "Pimozid": {
           "1": {
+            "home": 2,
+            "away": 1
+          },
+          "2": {
+            "home": 1,
+            "away": 0
+          },
+          "3": {
+            "home": 2,
+            "away": 1
+          },
+          "4": {
+            "home": 2,
+            "away": 1
+          },
+          "5": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "6": {
+            "home": 2,
+            "away": 0
+          },
+          "7": {
+            "home": 2,
+            "away": 0
+          },
+          "8": {
+            "home": 1,
+            "away": 0
+          },
+          "9": {
+            "home": 1,
+            "away": 1,
+            "pk": "away"
+          },
+          "10": {
+            "home": 1,
+            "away": 0
+          },
+          "11": {
+            "home": 3,
+            "away": 1
+          },
+          "12": {
+            "home": 2,
+            "away": 1
+          },
+          "13": {
+            "home": 2,
+            "away": 1
+          },
+          "14": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "15": {
+            "home": 3,
+            "away": 0
+          },
+          "16": {
             "home": 2,
             "away": 1
           }
@@ -2478,6 +2976,71 @@
             "home": 2,
             "away": 2,
             "pk": "home"
+          },
+          "2": {
+            "home": 3,
+            "away": 1
+          },
+          "3": {
+            "home": 2,
+            "away": 0
+          },
+          "4": {
+            "home": 2,
+            "away": 0
+          },
+          "5": {
+            "home": 1,
+            "away": 2
+          },
+          "6": {
+            "home": 3,
+            "away": 0
+          },
+          "7": {
+            "home": 2,
+            "away": 2,
+            "pk": "home"
+          },
+          "8": {
+            "home": 2,
+            "away": 1
+          },
+          "9": {
+            "home": 1,
+            "away": 1,
+            "pk": "away"
+          },
+          "10": {
+            "home": 2,
+            "away": 2,
+            "pk": "home"
+          },
+          "11": {
+            "home": 2,
+            "away": 0
+          },
+          "12": {
+            "home": 2,
+            "away": 1
+          },
+          "13": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "14": {
+            "home": 0,
+            "away": 1
+          },
+          "15": {
+            "home": 3,
+            "away": 0
+          },
+          "16": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
           }
         },
         "RobertLat": {
@@ -2754,6 +3317,72 @@
           },
           "16": {
             "home": 2,
+            "away": 1
+          }
+        },
+        "Sokółka": {
+          "1": {
+            "home": 2,
+            "away": 1
+          },
+          "2": {
+            "home": 3,
+            "away": 1
+          },
+          "3": {
+            "home": 2,
+            "away": 1
+          },
+          "4": {
+            "home": 1,
+            "away": 0
+          },
+          "5": {
+            "home": 1,
+            "away": 0
+          },
+          "6": {
+            "home": 3,
+            "away": 2
+          },
+          "7": {
+            "home": 2,
+            "away": 1
+          },
+          "8": {
+            "home": 2,
+            "away": 1
+          },
+          "9": {
+            "home": 2,
+            "away": 0
+          },
+          "10": {
+            "home": 1,
+            "away": 0
+          },
+          "11": {
+            "home": 3,
+            "away": 1
+          },
+          "12": {
+            "home": 3,
+            "away": 1
+          },
+          "13": {
+            "home": 1,
+            "away": 0
+          },
+          "14": {
+            "home": 1,
+            "away": 0
+          },
+          "15": {
+            "home": 3,
+            "away": 1
+          },
+          "16": {
+            "home": 0,
             "away": 1
           }
         },
@@ -3034,10 +3663,137 @@
           "1": {
             "home": 2,
             "away": 1
+          },
+          "2": {
+            "home": 3,
+            "away": 1
+          },
+          "3": {
+            "home": 2,
+            "away": 1
+          },
+          "4": {
+            "home": 2,
+            "away": 2,
+            "pk": "home"
+          },
+          "5": {
+            "home": 1,
+            "away": 2
+          },
+          "6": {
+            "home": 3,
+            "away": 1
+          },
+          "7": {
+            "home": 2,
+            "away": 1
+          },
+          "8": {
+            "home": 2,
+            "away": 0
+          },
+          "9": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "10": {
+            "home": 2,
+            "away": 1
+          },
+          "11": {
+            "home": 2,
+            "away": 1
+          },
+          "12": {
+            "home": 1,
+            "away": 1,
+            "pk": "away"
+          },
+          "13": {
+            "home": 2,
+            "away": 1
+          },
+          "14": {
+            "home": 1,
+            "away": 2
+          },
+          "15": {
+            "home": 2,
+            "away": 0
+          },
+          "16": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
           }
         },
         "Żaklina": {
           "1": {
+            "home": 2,
+            "away": 1
+          },
+          "2": {
+            "home": 2,
+            "away": 1
+          },
+          "3": {
+            "home": 3,
+            "away": 1
+          },
+          "4": {
+            "home": 2,
+            "away": 1
+          },
+          "5": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "6": {
+            "home": 2,
+            "away": 0
+          },
+          "7": {
+            "home": 2,
+            "away": 1
+          },
+          "8": {
+            "home": 3,
+            "away": 0
+          },
+          "9": {
+            "home": 2,
+            "away": 1
+          },
+          "10": {
+            "home": 2,
+            "away": 0
+          },
+          "11": {
+            "home": 2,
+            "away": 1
+          },
+          "12": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "13": {
+            "home": 1,
+            "away": 0
+          },
+          "14": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          },
+          "15": {
+            "home": 3,
+            "away": 0
+          },
+          "16": {
             "home": 2,
             "away": 1
           }

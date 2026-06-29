@@ -52,16 +52,21 @@ export function parseBazaPuchar(sheet: Sheet, opts: ParseBazaPucharOptions): Puc
   const fixtures = new Map<number, Fixture>();
   const predictions: Record<string, Record<number, PucharPick>> = {};
 
-  for (let r = 2; r <= sheet.maxRow; r++) {
+  for (let r = 1; r <= sheet.maxRow; r++) {
     const rawPlayer = asStr(sheet.cell(`B${r}`));
     if (rawPlayer === '') continue;
+
+    // Pomiń wiersze nagłówka/legendy ("uczestnik|mecz|kraj1|...") — baza bywa wklejana
+    // wieloblokowo z POWTÓRZONYM nagłówkiem w środku (v2: dobitka spóźnialskich od r1633),
+    // a niektóre wersje nie mają nagłówka na górze (dane od r1). Numer meczu = warunek wiersza
+    // danych; nagłówek ma C="mecz" → undefined → pomijamy ZANIM zadziała strażnik rosteru.
+    const match = asNum(sheet.cell(`C${r}`));
+    if (match === undefined) continue;
+
     const player = nickAlias[rawPlayer] ?? rawPlayer;
     if (!rosterIds.has(player)) {
       throw new Error(`Uczestnik spoza rosteru: "${player}" (sprawdź nickAlias)`);
     }
-
-    const match = asNum(sheet.cell(`C${r}`));
-    if (match === undefined) continue;
     const home = normTeam(asStr(sheet.cell(`D${r}`)));
     const away = normTeam(asStr(sheet.cell(`E${r}`)));
 
