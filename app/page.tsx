@@ -4,7 +4,7 @@ import PressStart from '../components/PressStart';
 const MENU = [
   { href: '/tabela/', label: 'TABELA OGÓLNA' },
   { href: '/grupy/', label: 'GRUPY A–H' },
-  { href: '/mecze/', label: 'MECZE I TYPY' },
+  { href: '/mecze/', label: 'FAZA GRUPOWA' },
   { href: '/puchar/', label: 'FAZA PUCHAROWA' },
 ] as const;
 
