@@ -17,9 +17,17 @@ if (matches !== expectedMatches) {
   console.error(`SMOKE FAIL: ${matches} meczy w HTML, oczekiwano ${expectedMatches}`);
   process.exit(1);
 }
+// /puchar: liczba kart meczów pucharowych == suma meczów ze wszystkich rund.
+const puchHtml = readFileSync('out/puchar/index.html', 'utf8');
+const puchMatches = (puchHtml.match(/class="match-card puch-match-card"/g) ?? []).length;
+const expectedPuch = results.puchar.rounds.reduce((acc: number, r: { matches: unknown[] }) => acc + r.matches.length, 0);
+if (puchMatches !== expectedPuch) {
+  console.error(`SMOKE FAIL: ${puchMatches} meczów puch w HTML, oczekiwano ${expectedPuch}`);
+  process.exit(1);
+}
 // Intro + muzyka (spec intro, sekcja "Testy").
 const menu = readFileSync('out/index.html', 'utf8');
-for (const marker of ['pixel-ball', 'music-toggle', 'press-start', 'Designed by MarcinS']) {
+for (const marker of ['pixel-ball', 'music-toggle', 'press-start', 'Designed by MarcinS', 'FAZA PUCHAROWA']) {
   if (!menu.includes(marker)) {
     console.error(`SMOKE FAIL: brak "${marker}" w out/index.html`);
     process.exit(1);

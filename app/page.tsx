@@ -5,6 +5,7 @@ const MENU = [
   { href: '/tabela/', label: 'TABELA OGÓLNA' },
   { href: '/grupy/', label: 'GRUPY A–H' },
   { href: '/mecze/', label: 'MECZE I TYPY' },
+  { href: '/puchar/', label: 'FAZA PUCHAROWA' },
 ] as const;
 
 export default function MenuPage() {
