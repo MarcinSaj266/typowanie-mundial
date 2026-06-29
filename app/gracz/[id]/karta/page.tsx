@@ -70,6 +70,20 @@ export default async function KartaPage({ params }: { params: Promise<{ id: stri
         </table>
       </section>
 
+      {/* Faza pucharowa: osobny blok (punkty ×2), nie miesza się ze statystykami grupowymi. */}
+      {c.puchAktywne && (
+        <section className="card-stats" aria-label="Faza pucharowa">
+          <h2 className="turn-heading">★ FAZA PUCHAROWA ★</h2>
+          <table className="retro-table">
+            <tbody>
+              <tr><td>PUNKTY PUCHAROWE</td><td className="num">{c.puchPunkty}</td></tr>
+              <tr><td>CELNOŚĆ PUCHAROWA</td><td className="num">{pct(c.puchCelnoscPct)}</td></tr>
+              <tr><td>DOKŁADNE WYNIKI (PUCHAR)</td><td className="num">{c.puchDokladne}</td></tr>
+            </tbody>
+          </table>
+        </section>
+      )}
+
       {/* Legenda: jak liczymy każdy atrybut (wszystko z typów i wyników). */}
       <section className="card-legend" aria-label="Legenda atrybutów">
         <h2 className="turn-heading">★ JAK TO LICZYMY ★</h2>
@@ -85,6 +99,7 @@ export default async function KartaPage({ params }: { params: Promise<{ id: stri
           <dt>ZGODNOŚĆ Z TŁUMEM</dt><dd>Średni % graczy, którzy obstawili ten sam wynik meczu co Ty (gospodarz wygra / remis / gość wygra). Daje plakietkę: poniżej 65% — INDYWIDUALISTA, powyżej 73% — OWCZY PĘD, pomiędzy — NEUTRALNY.</dd>
           <dt>FORMA</dt><dd>Trend: czy ostatnia tura z wynikami była lepsza, gorsza czy równa poprzedniej. Aktywne po 2 turach.</dd>
           <dt>NAJLEPSZA TURA</dt><dd>Tura z najwyższym dorobkiem. Aktywne po 2 turach.</dd>
+          <dt>FAZA PUCHAROWA</dt><dd>Osobny blok od startu 1/16: punkty pucharowe (liczone ×2), celność pucharowa (% trafionych meczów) i dokładne wyniki w pucharze. Statystyki grupowe wyżej zostają bez zmian.</dd>
         </dl>
       </section>
     </ScreenFrame>

@@ -161,6 +161,8 @@ export interface PlayerCardInput {
   totalPoints: number;
   /** Tury fazy grupowej w kolejności; mecze nierozegrane mają result=null. */
   turns: PlayerCardTurn[];
+  /** Mecze pucharowe gracza (typ + faktyczny wynik); brak/[] = faza pucharowa nieaktywna. */
+  puchar?: { prediction: PucharPick | null; result: PucharResult | null }[];
 }
 
 /**
@@ -206,6 +208,14 @@ export interface CardStats {
   najlepszaTura: BestTurn | null;
   /** true gdy ≥2 tury mają wyniki (sekcja PO TURZE 2 aktywna). */
   poTurze2Aktywne: boolean;
+  /** Punkty fazy pucharowej (×2: 6/8/10/12). Osobny blok karty. */
+  puchPunkty: number;
+  /** % trafionych meczów pucharowych z rozegranych. */
+  puchCelnoscPct: number;
+  /** Dokładne wyniki pucharowe (10 = remis-nie + dokładny, 12 = remis dokładny + karne). */
+  puchDokladne: number;
+  /** true gdy gracz rozegrał ≥1 mecz pucharowy (sekcja FAZA PUCHAROWA aktywna). */
+  puchAktywne: boolean;
 }
 
 /** Strona meczu — zwycięzca karnych / krzyżyk uczestnika. */

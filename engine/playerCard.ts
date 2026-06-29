@@ -1,5 +1,6 @@
 import type { CardStats, PlayerCardInput, PlayerCardMatch, Score } from './types';
 import { scoreMatchK1 } from './scoreMatch';
+import { aggregatePuchar } from './aggregatePuchar';
 
 const round1 = (v: number): number => Math.round(v * 10) / 10;
 const pct = (v: number): number => Math.round(v * 100);
@@ -103,6 +104,13 @@ export function playerCard(input: PlayerCardInput): CardStats {
       points: t.matches.reduce((acc, mt) => acc + matchPoints(mt), 0),
     }));
 
+  // FAZA PUCHAROWA: osobny blok (×2: 6/8/10/12), nie miesza się ze statystykami grupowymi.
+  const pAgg = aggregatePuchar(input.puchar ?? []);
+  const puchHits = pAgg.count6 + pAgg.count8 + pAgg.count10 + pAgg.count12;
+  const puchAktywne = pAgg.played > 0;
+  const puchCelnoscPct = puchAktywne ? pct(puchHits / pAgg.played) : 0;
+  const puchDokladne = pAgg.count10 + pAgg.count12; // dokładny wynik (nie-remis i remis+karne)
+
   const poTurze2Aktywne = turnPoints.length >= 2;
   let forma: CardStats['forma'] = null;
   let najlepszaTura: CardStats['najlepszaTura'] = null;
@@ -135,5 +143,9 @@ export function playerCard(input: PlayerCardInput): CardStats {
     forma,
     najlepszaTura,
     poTurze2Aktywne,
+    puchPunkty: pAgg.puch,
+    puchCelnoscPct,
+    puchDokladne,
+    puchAktywne,
   };
 }

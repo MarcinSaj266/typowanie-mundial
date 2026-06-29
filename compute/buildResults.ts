@@ -293,6 +293,12 @@ export function buildResults(
             allPicks: roster.map((q) => t.predictions[q.id]?.[String(f.no)] ?? null),
           })),
         })),
+        puchar: puchar.rounds.flatMap((round) =>
+          round.fixtures.map((f) => ({
+            prediction: round.predictions[p.id]?.[String(f.no)] ?? null,
+            result: puchResults[String(f.no)] ?? null,
+          })),
+        ),
       };
       return [p.id, playerCard(input)] as const;
     }),

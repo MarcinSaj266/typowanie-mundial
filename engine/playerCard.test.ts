@@ -218,3 +218,35 @@ describe('playerCard — PO TURZE 2', () => {
     expect(c.najlepszaTura).toEqual({ turn: 1, points: 5 });
   });
 });
+
+describe('playerCard — FAZA PUCHAROWA', () => {
+  const base = { group: 'F', groupPos: 1, generalPos: 1, totalPoints: 0, turns: [] };
+
+  it('brak danych pucharowych → sekcja nieaktywna, zera', () => {
+    const c = playerCard({ ...base });
+    expect(c.puchAktywne).toBe(false);
+    expect(c.puchPunkty).toBe(0);
+    expect(c.puchCelnoscPct).toBe(0);
+    expect(c.puchDokladne).toBe(0);
+  });
+
+  it('liczy punkty, celność i dokładne pucharowe (osobno od grupowych)', () => {
+    const c = playerCard({
+      ...base,
+      puchar: [
+        { prediction: s(2, 1), result: s(2, 1) }, // 10 (dokładny, nie-remis)
+        { prediction: { home: 1, away: 1, pk: 'home' }, result: { home: 1, away: 1, pk: 'home' } }, // 12 (dokładny remis + karne)
+        { prediction: s(3, 0), result: s(1, 0) }, // 6 (sam rezultat)
+        { prediction: s(2, 0), result: s(0, 1) }, // 0 (pudło)
+        { prediction: null, result: s(1, 0) }, // brak typu — pomijany
+      ],
+    });
+    expect(c.puchAktywne).toBe(true);
+    expect(c.puchPunkty).toBe(28); // 10+12+6
+    expect(c.puchCelnoscPct).toBe(75); // 3 trafienia / 4 rozegrane
+    expect(c.puchDokladne).toBe(2); // 10 i 12 to dokładne wyniki
+    // Statystyki grupowe pozostają nietknięte (brak tur → zera).
+    expect(c.dokladne).toBe(0);
+    expect(c.celnoscPct).toBe(0);
+  });
+});

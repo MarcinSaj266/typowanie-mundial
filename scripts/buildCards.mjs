@@ -89,6 +89,18 @@ function buildCard(nick, c) {
       sec('> PO TURZE 2', !c.poTurze2Aktywne),
       h({ display: 'flex', flexDirection: 'column', padding: `0 ${px(16)}px` },
         [attrRow('FORMA', forma, { dim: !c.poTurze2Aktywne }), attrRow('NAJLEPSZA TURA', najl, { dim: !c.poTurze2Aktywne })]),
+      // FAZA PUCHAROWA (osobny blok, ×2) — tylko gdy gracz rozegrał mecz pucharowy
+      ...(c.puchAktywne
+        ? [
+            sec('> FAZA PUCHAROWA'),
+            h({ display: 'flex', flexDirection: 'column', padding: `0 ${px(16)}px` },
+              [
+                attrRow('PUNKTY PUCHAROWE', c.puchPunkty),
+                attrRow('CELNOŚĆ PUCHAROWA', c.puchCelnoscPct + '%'),
+                attrRow('DOKŁADNE (PUCHAR)', c.puchDokladne),
+              ]),
+          ]
+        : []),
       // branding
       h({ display: 'flex', justifyContent: 'center', backgroundColor: '#143d16', padding: `${px(12)}px 0`, borderTop: `${px(3)}px solid #ffd600`, marginTop: px(10) },
         [txt({ fontSize: px(7), color: '#cde8c0' }, 'typowaniemundial.vercel.app')]),

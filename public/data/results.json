@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T08:31:11.434Z",
+  "generatedAt": "2026-06-29T08:40:30.987Z",
   "general": [
     {
       "participantId": "MagdaP",
@@ -36796,7 +36796,11 @@
         "turn": 3,
         "points": 50
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Wojtek": {
       "group": "A",
@@ -36821,7 +36825,11 @@
         "turn": 2,
         "points": 52
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "KamUla": {
       "group": "A",
@@ -36846,7 +36854,11 @@
         "turn": 2,
         "points": 53
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "MagdaS": {
       "group": "A",
@@ -36871,7 +36883,11 @@
         "turn": 2,
         "points": 45
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "KasiaJ": {
       "group": "A",
@@ -36896,7 +36912,11 @@
         "turn": 3,
         "points": 56
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "KrystianM": {
       "group": "A",
@@ -36921,7 +36941,11 @@
         "turn": 3,
         "points": 61
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 6,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "PiotreG": {
       "group": "A",
@@ -36946,7 +36970,11 @@
         "turn": 2,
         "points": 64
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Prozped": {
       "group": "B",
@@ -36971,7 +36999,11 @@
         "turn": 2,
         "points": 53
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Artur": {
       "group": "B",
@@ -36996,7 +37028,11 @@
         "turn": 3,
         "points": 52
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Sokółka": {
       "group": "B",
@@ -37021,7 +37057,11 @@
         "turn": 3,
         "points": 52
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": false
     },
     "KasiaK": {
       "group": "B",
@@ -37046,7 +37086,11 @@
         "turn": 1,
         "points": 42
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": false
     },
     "Seweryn": {
       "group": "B",
@@ -37071,7 +37115,11 @@
         "turn": 3,
         "points": 56
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "DarekL": {
       "group": "B",
@@ -37096,7 +37144,11 @@
         "turn": 2,
         "points": 34
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": false
     },
     "KrzysztoW": {
       "group": "B",
@@ -37121,7 +37173,11 @@
         "turn": 3,
         "points": 52
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Magiera": {
       "group": "C",
@@ -37146,7 +37202,11 @@
         "turn": 3,
         "points": 56
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Henryk": {
       "group": "C",
@@ -37171,7 +37231,11 @@
         "turn": 3,
         "points": 54
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "PPP": {
       "group": "C",
@@ -37196,7 +37260,11 @@
         "turn": 2,
         "points": 56
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Żaklina": {
       "group": "C",
@@ -37221,7 +37289,11 @@
         "turn": 3,
         "points": 54
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Cezary": {
       "group": "C",
@@ -37246,7 +37318,11 @@
         "turn": 2,
         "points": 59
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 6,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Dziobak": {
       "group": "C",
@@ -37271,7 +37347,11 @@
         "turn": 2,
         "points": 55
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "MateuszKn": {
       "group": "C",
@@ -37296,7 +37376,11 @@
         "turn": 3,
         "points": 57
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Przemek": {
       "group": "D",
@@ -37321,7 +37405,11 @@
         "turn": 3,
         "points": 48
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Borys": {
       "group": "D",
@@ -37346,7 +37434,11 @@
         "turn": 2,
         "points": 53
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Turbo-Ryżu": {
       "group": "D",
@@ -37371,7 +37463,11 @@
         "turn": 2,
         "points": 49
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "MagdaP": {
       "group": "D",
@@ -37396,7 +37492,11 @@
         "turn": 3,
         "points": 70
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 10,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 1,
+      "puchAktywne": true
     },
     "Małgorzata": {
       "group": "D",
@@ -37421,7 +37521,11 @@
         "turn": 2,
         "points": 57
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "KamilF": {
       "group": "D",
@@ -37446,7 +37550,11 @@
         "turn": 3,
         "points": 51
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "MichałCz": {
       "group": "D",
@@ -37471,7 +37579,11 @@
         "turn": 2,
         "points": 55
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Talvik": {
       "group": "E",
@@ -37496,7 +37608,11 @@
         "turn": 2,
         "points": 67
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Rafał": {
       "group": "E",
@@ -37521,7 +37637,11 @@
         "turn": 2,
         "points": 51
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "MarekS": {
       "group": "E",
@@ -37546,7 +37666,11 @@
         "turn": 2,
         "points": 58
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Karolina": {
       "group": "E",
@@ -37571,7 +37695,11 @@
         "turn": 2,
         "points": 61
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "AndrzejO": {
       "group": "E",
@@ -37596,7 +37724,11 @@
         "turn": 3,
         "points": 66
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 10,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 1,
+      "puchAktywne": true
     },
     "PiotreM": {
       "group": "E",
@@ -37621,7 +37753,11 @@
         "turn": 2,
         "points": 60
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "DarekJell": {
       "group": "E",
@@ -37646,7 +37782,11 @@
         "turn": 2,
         "points": 61
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "MaciejM": {
       "group": "F",
@@ -37671,7 +37811,11 @@
         "turn": 2,
         "points": 59
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "KSZ": {
       "group": "F",
@@ -37696,7 +37840,11 @@
         "turn": 1,
         "points": 55
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 6,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "MarekP": {
       "group": "F",
@@ -37721,7 +37869,11 @@
         "turn": 3,
         "points": 55
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 6,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "KleoPatra": {
       "group": "F",
@@ -37746,7 +37898,11 @@
         "turn": 3,
         "points": 59
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "MichałeK": {
       "group": "F",
@@ -37771,7 +37927,11 @@
         "turn": 1,
         "points": 51
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 10,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 1,
+      "puchAktywne": true
     },
     "Witek": {
       "group": "F",
@@ -37796,7 +37956,11 @@
         "turn": 2,
         "points": 66
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "RobertLat": {
       "group": "F",
@@ -37821,7 +37985,11 @@
         "turn": 3,
         "points": 70
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 6,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "DeDe": {
       "group": "G",
@@ -37846,7 +38014,11 @@
         "turn": 3,
         "points": 63
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Cypryjka": {
       "group": "G",
@@ -37871,7 +38043,11 @@
         "turn": 3,
         "points": 52
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Tabus": {
       "group": "G",
@@ -37896,7 +38072,11 @@
         "turn": 2,
         "points": 50
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 6,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "AniaS": {
       "group": "G",
@@ -37921,7 +38101,11 @@
         "turn": 2,
         "points": 49
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Pimozid": {
       "group": "G",
@@ -37946,7 +38130,11 @@
         "turn": 3,
         "points": 46
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "KrzysztoWś": {
       "group": "G",
@@ -37971,7 +38159,11 @@
         "turn": 3,
         "points": 50
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": false
     },
     "Ruslan": {
       "group": "G",
@@ -37996,7 +38188,11 @@
         "turn": 3,
         "points": 72
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 6,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "PiotreK": {
       "group": "H",
@@ -38021,7 +38217,11 @@
         "turn": 3,
         "points": 62
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "KaBed": {
       "group": "H",
@@ -38046,7 +38246,11 @@
         "turn": 2,
         "points": 60
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Mirella": {
       "group": "H",
@@ -38071,7 +38275,11 @@
         "turn": 3,
         "points": 56
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Maria": {
       "group": "H",
@@ -38096,7 +38304,11 @@
         "turn": 3,
         "points": 55
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 6,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "Sławek": {
       "group": "H",
@@ -38121,7 +38333,11 @@
         "turn": 3,
         "points": 56
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "PawełSt": {
       "group": "H",
@@ -38146,7 +38362,11 @@
         "turn": 3,
         "points": 60
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 0,
+      "puchCelnoscPct": 0,
+      "puchDokladne": 0,
+      "puchAktywne": true
     },
     "KrzysztofeR": {
       "group": "H",
@@ -38171,7 +38391,11 @@
         "turn": 2,
         "points": 54
       },
-      "poTurze2Aktywne": true
+      "poTurze2Aktywne": true,
+      "puchPunkty": 8,
+      "puchCelnoscPct": 100,
+      "puchDokladne": 0,
+      "puchAktywne": true
     }
   }
 }
