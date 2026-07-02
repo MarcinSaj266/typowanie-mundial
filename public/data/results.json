@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T06:53:57.441Z",
+  "generatedAt": "2026-07-02T07:43:34.149Z",
   "general": [
     {
       "participantId": "AndrzejO",
@@ -74,9 +74,27 @@
       "played": 82
     },
     {
+      "participantId": "KrystianM",
+      "group": "A",
+      "position": 5,
+      "points": 238,
+      "grI": 49,
+      "grII": 51,
+      "grIII": 61,
+      "bns": 15,
+      "puch": 62,
+      "skutBonus": 0,
+      "hitRate": 0.6707317073170732,
+      "count3": 36,
+      "count4": 11,
+      "count5": 8,
+      "count6": 0,
+      "played": 82
+    },
+    {
       "participantId": "MateuszKn",
       "group": "C",
-      "position": 5,
+      "position": 6,
       "points": 238,
       "grI": 53,
       "grII": 47,
@@ -94,7 +112,7 @@
     {
       "participantId": "Talvik",
       "group": "E",
-      "position": 6,
+      "position": 7,
       "points": 237,
       "grI": 48,
       "grII": 67,
@@ -112,7 +130,7 @@
     {
       "participantId": "PiotreM",
       "group": "E",
-      "position": 7,
+      "position": 8,
       "points": 230,
       "grI": 42,
       "grII": 60,
@@ -126,24 +144,6 @@
       "count5": 7,
       "count6": 0,
       "played": 82
-    },
-    {
-      "participantId": "KrystianM",
-      "group": "A",
-      "position": 8,
-      "points": 230,
-      "grI": 49,
-      "grII": 51,
-      "grIII": 61,
-      "bns": 15,
-      "puch": 54,
-      "skutBonus": 0,
-      "hitRate": 0.6666666666666666,
-      "count3": 36,
-      "count4": 10,
-      "count5": 8,
-      "count6": 0,
-      "played": 81
     },
     {
       "participantId": "PPP",
@@ -1020,7 +1020,7 @@
         "grII": 51,
         "grIII": 61,
         "bns": 15,
-        "puch": 54,
+        "puch": 62,
         "skutBonus": 0,
         "hitRate": 0.6388888888888888,
         "count3": 30,
@@ -34165,8 +34165,11 @@
                 "points": 8
               },
               "KrystianM": {
-                "pick": null,
-                "points": null
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": 8
               },
               "PiotreG": {
                 "pick": {
@@ -37013,7 +37016,10 @@
                 "points": null
               },
               "KrystianM": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
                 "points": null
               },
               "PiotreG": {
@@ -37520,8 +37526,8 @@
     },
     "KrystianM": {
       "group": "A",
-      "generalPos": 8,
-      "points": 230,
+      "generalPos": 5,
+      "points": 238,
       "groupPos": 1,
       "celnoscPct": 64,
       "dokladne": 7,
@@ -37542,8 +37548,8 @@
         "points": 61
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 54,
-      "puchCelnoscPct": 89,
+      "puchPunkty": 62,
+      "puchCelnoscPct": 90,
       "puchDokladne": 1,
       "puchAktywne": true
     },
@@ -37955,7 +37961,7 @@
     },
     "MateuszKn": {
       "group": "C",
-      "generalPos": 5,
+      "generalPos": 6,
       "points": 238,
       "groupPos": 1,
       "celnoscPct": 61,
@@ -38187,7 +38193,7 @@
     },
     "Talvik": {
       "group": "E",
-      "generalPos": 6,
+      "generalPos": 7,
       "points": 237,
       "groupPos": 2,
       "celnoscPct": 64,
@@ -38332,7 +38338,7 @@
     },
     "PiotreM": {
       "group": "E",
-      "generalPos": 7,
+      "generalPos": 8,
       "points": 230,
       "groupPos": 3,
       "celnoscPct": 64,
