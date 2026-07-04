@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T19:04:44.273Z",
+  "generatedAt": "2026-07-04T21:38:32.005Z",
   "general": [
     {
       "participantId": "AndrzejO",
@@ -37854,7 +37854,10 @@
                 "points": null
               },
               "Sokółka": {
-                "pick": null,
+                "pick": {
+                  "home": 0,
+                  "away": 3
+                },
                 "points": null
               },
               "KasiaK": {
@@ -37902,7 +37905,10 @@
                 "points": null
               },
               "Żaklina": {
-                "pick": null,
+                "pick": {
+                  "home": 0,
+                  "away": 3
+                },
                 "points": null
               },
               "Cezary": {
@@ -37952,11 +37958,17 @@
                 "points": null
               },
               "Małgorzata": {
-                "pick": null,
+                "pick": {
+                  "home": 0,
+                  "away": 2
+                },
                 "points": null
               },
               "KamilF": {
-                "pick": null,
+                "pick": {
+                  "home": 0,
+                  "away": 2
+                },
                 "points": null
               },
               "MichałCz": {
@@ -38095,7 +38107,10 @@
                 "points": null
               },
               "Pimozid": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 3
+                },
                 "points": null
               },
               "KrzysztoWś": {
@@ -38155,7 +38170,10 @@
                 "points": null
               },
               "KrzysztofeR": {
-                "pick": null,
+                "pick": {
+                  "home": 0,
+                  "away": 4
+                },
                 "points": null
               }
             }
@@ -38198,9 +38216,8 @@
               },
               "KasiaJ": {
                 "pick": {
-                  "home": 1,
-                  "away": 1,
-                  "pk": "home"
+                  "home": 2,
+                  "away": 1
                 },
                 "points": null
               },
@@ -38233,7 +38250,10 @@
                 "points": null
               },
               "Sokółka": {
-                "pick": null,
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
                 "points": null
               },
               "KasiaK": {
@@ -38279,7 +38299,11 @@
                 "points": null
               },
               "Żaklina": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
                 "points": null
               },
               "Cezary": {
@@ -38329,11 +38353,17 @@
                 "points": null
               },
               "Małgorzata": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "KamilF": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "MichałCz": {
@@ -38526,7 +38556,10 @@
                 "points": null
               },
               "KrzysztofeR": {
-                "pick": null,
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
                 "points": null
               }
             }
@@ -38572,8 +38605,7 @@
               "KasiaJ": {
                 "pick": {
                   "home": 1,
-                  "away": 1,
-                  "pk": "away"
+                  "away": 2
                 },
                 "points": null
               },
@@ -38653,7 +38685,10 @@
                 "points": null
               },
               "Żaklina": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
                 "points": null
               },
               "Cezary": {
@@ -38706,11 +38741,17 @@
                 "points": null
               },
               "Małgorzata": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
                 "points": null
               },
               "KamilF": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
                 "points": null
               },
               "MichałCz": {
@@ -38908,7 +38949,10 @@
                 "points": null
               },
               "KrzysztofeR": {
-                "pick": null,
+                "pick": {
+                  "home": 0,
+                  "away": 2
+                },
                 "points": null
               }
             }
@@ -38951,9 +38995,8 @@
               },
               "KasiaJ": {
                 "pick": {
-                  "home": 2,
-                  "away": 2,
-                  "pk": "away"
+                  "home": 3,
+                  "away": 2
                 },
                 "points": null
               },
@@ -38986,7 +39029,10 @@
                 "points": null
               },
               "Sokółka": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "KasiaK": {
@@ -39030,7 +39076,10 @@
                 "points": null
               },
               "Żaklina": {
-                "pick": null,
+                "pick": {
+                  "home": 0,
+                  "away": 2
+                },
                 "points": null
               },
               "Cezary": {
@@ -39082,11 +39131,18 @@
                 "points": null
               },
               "Małgorzata": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
                 "points": null
               },
               "KamilF": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "away"
+                },
                 "points": null
               },
               "MichałCz": {
@@ -39279,7 +39335,10 @@
                 "points": null
               },
               "KrzysztofeR": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
                 "points": null
               }
             }
@@ -39404,7 +39463,10 @@
                 "points": null
               },
               "Żaklina": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
                 "points": null
               },
               "Cezary": {
@@ -39455,11 +39517,17 @@
                 "points": null
               },
               "Małgorzata": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "KamilF": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "MichałCz": {
@@ -39653,7 +39721,10 @@
                 "points": null
               },
               "KrzysztofeR": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               }
             }
@@ -39729,7 +39800,10 @@
                 "points": null
               },
               "Sokółka": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "KasiaK": {
@@ -39774,7 +39848,10 @@
                 "points": null
               },
               "Żaklina": {
-                "pick": null,
+                "pick": {
+                  "home": 4,
+                  "away": 0
+                },
                 "points": null
               },
               "Cezary": {
@@ -39824,11 +39901,17 @@
                 "points": null
               },
               "Małgorzata": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
                 "points": null
               },
               "KamilF": {
-                "pick": null,
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
                 "points": null
               },
               "MichałCz": {
@@ -40017,7 +40100,10 @@
                 "points": null
               },
               "KrzysztofeR": {
-                "pick": null,
+                "pick": {
+                  "home": 3,
+                  "away": 0
+                },
                 "points": null
               }
             }
@@ -40061,8 +40147,7 @@
               "KasiaJ": {
                 "pick": {
                   "home": 1,
-                  "away": 1,
-                  "pk": "away"
+                  "away": 2
                 },
                 "points": null
               },
@@ -40096,7 +40181,10 @@
                 "points": null
               },
               "Sokółka": {
-                "pick": null,
+                "pick": {
+                  "home": 0,
+                  "away": 1
+                },
                 "points": null
               },
               "KasiaK": {
@@ -40141,7 +40229,11 @@
                 "points": null
               },
               "Żaklina": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "away"
+                },
                 "points": null
               },
               "Cezary": {
@@ -40193,11 +40285,18 @@
                 "points": null
               },
               "Małgorzata": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
                 "points": null
               },
               "KamilF": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "away"
+                },
                 "points": null
               },
               "MichałCz": {
@@ -40396,7 +40495,10 @@
                 "points": null
               },
               "KrzysztofeR": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               }
             }
