@@ -1,18 +1,24 @@
 // CLI ingestu typów pucharowych (Konkurs 1). Źródło: płaska baza organizatora
 // "Baza puch vN.xlsx" (arkusz 't2'). Pipeline:
-//   Baza puch v1.xlsx + roster.json → parseBazaPuchar → data/k1/puchar.json (runda 1/16)
-// Tolerancyjny: typy spływają etapami (v1 niepełny — 3 osoby + KasiaK bez typów). Reingest
-// nowszej bazy nadpisuje plik. Terminy 1/16 na razie puste (doda robot/Etap B w czasie PL).
+//   Baza puch v3 (2026.07.04).xlsx + roster.json → parseBazaPuchar × runda → data/k1/puchar.json
+// Baza jest WIELORUNDOWA: mecze 1–16 = 1/16, 17–24 = 1/8, 25–32 = przyszłe rundy (puste pary
+// → parser je pomija). Tolerancyjny: typy spływają etapami. Reingest nowszej bazy nadpisuje plik.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { openXlsx } from './xlsx/workbook';
 import { parseBazaPuchar, type PucharRound } from './k1/parseBazaPuchar';
 import type { Participant } from './k1/parseGrup1';
+import type { PucharPick } from '../engine/types';
 
-const BAZA = 'Baza puch v2.xlsx';
+const BAZA = 'Baza puch v3 (2026.07.04).xlsx';
 const SHEET = 't2';
 const ROSTER = 'data/k1/roster.json';
 const OUT = 'data/k1/puchar.json';
-const EXPECTED_FIXTURES = 16; // 1/16 finału (the last 32)
+
+// Rundy w bazie: etykieta + zakres numerów meczów + oczekiwana liczba par.
+const ROUNDS = [
+  { round: '1/16', matches: { from: 1, to: 16 }, expected: 16 },
+  { round: '1/8', matches: { from: 17, to: 24 }, expected: 8 },
+] as const;
 
 // Pisownia nicka w bazie → kanoniczny nick z rosteru (te same aliasy co tury 1–3).
 const NICK_ALIAS: Record<string, string> = {
@@ -23,9 +29,15 @@ const NICK_ALIAS: Record<string, string> = {
   PawełS: 'PawełSt',
 };
 
-// Terminarz 1/16 MŚ 2026 (źródło: ESPN / worldcupwiki, R32 28 cze – 3 lip), godziny ET.
-// W bazie terminów nie ma — jak w turach grupowych bierzemy z oficjalnego terminarza i
-// przeliczamy ET (EDT = UTC−4) → POLSKI (CEST = UTC+2), czyli ET + 6h. Numer naszego meczu →
+// Typy dosłane POZA bazą (np. WhatsApp do organizatora) — nakładane po parsowaniu.
+// Gdy nowsza baza już zawiera typ gracza: zgodny = no-op, różny = twardy błąd (do wyjaśnienia).
+const MANUAL_PICKS: { player: string; match: number; pick: PucharPick; note: string }[] = [
+  { player: 'Sokółka', match: 17, pick: { home: 1, away: 2 }, note: 'dosłane 2026-07-04 (Kanada-Maroko)' },
+];
+
+// Terminarz pucharowy MŚ 2026 (1/16: ESPN/worldcupwiki; 1/8: beIN/Al Jazeera, 2026-07-04),
+// godziny ET. W bazie terminów nie ma — jak w turach grupowych bierzemy z oficjalnego terminarza
+// i przeliczamy ET (EDT = UTC−4) → POLSKI (CEST = UTC+2), czyli ET + 6h. Numer naszego meczu →
 // {miesiąc, dzień, godzina ET, minuta ET}. Część meczów ma połówki godziny (16:30, 21:30).
 const ET_SCHEDULE: Record<number, { m: number; day: number; h: number; min: number }> = {
   1: { m: 6, day: 28, h: 15, min: 0 }, // Kanada-RPA (nd 28 cze 15:00 ET)
@@ -44,6 +56,14 @@ const ET_SCHEDULE: Record<number, { m: number; day: number; h: number; min: numb
   14: { m: 7, day: 3, h: 14, min: 0 }, // Australia-Egipt
   15: { m: 7, day: 3, h: 18, min: 0 }, // Argentyna-Republika Ziel. Przylądka
   16: { m: 7, day: 3, h: 21, min: 30 }, // Kolumbia-Ghana
+  17: { m: 7, day: 4, h: 13, min: 0 }, // Kanada-Maroko (sob 4 lip 13:00 ET → 19:00 PL)
+  18: { m: 7, day: 4, h: 17, min: 0 }, // Paragwaj-Francja
+  19: { m: 7, day: 5, h: 16, min: 0 }, // Brazylia-Norwegia
+  20: { m: 7, day: 5, h: 20, min: 0 }, // Meksyk-Anglia
+  21: { m: 7, day: 6, h: 15, min: 0 }, // Portugalia-Hiszpania
+  22: { m: 7, day: 6, h: 20, min: 0 }, // USA-Belgia
+  23: { m: 7, day: 7, h: 12, min: 0 }, // Argentyna-Egipt
+  24: { m: 7, day: 7, h: 16, min: 0 }, // Szwajcaria-Kolumbia
 };
 
 const DOW = ['niedziela', 'poniedz.', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
@@ -66,24 +86,51 @@ for (const [no, s] of Object.entries(ET_SCHEDULE)) {
 
 const roster: Participant[] = JSON.parse(readFileSync(ROSTER, 'utf8'));
 const sheet = openXlsx(readFileSync(BAZA)).sheet(SHEET);
-const round: PucharRound = parseBazaPuchar(sheet, { round: '1/16', roster, nickAlias: NICK_ALIAS, kickoffs });
 
-if (round.fixtures.length !== EXPECTED_FIXTURES) {
-  throw new Error(`Oczekiwano ${EXPECTED_FIXTURES} meczów 1/16, jest ${round.fixtures.length}`);
+const rounds: PucharRound[] = ROUNDS.map(({ round, matches, expected }) => {
+  const parsed = parseBazaPuchar(sheet, { round, roster, nickAlias: NICK_ALIAS, kickoffs, matches });
+  if (parsed.fixtures.length !== expected) {
+    throw new Error(`Oczekiwano ${expected} meczów ${round}, jest ${parsed.fixtures.length}`);
+  }
+  const missingKickoff = parsed.fixtures.filter((f) => f.kickoff === '');
+  if (missingKickoff.length > 0) {
+    throw new Error(`Brak terminu dla meczów: ${missingKickoff.map((f) => f.no).join(', ')}`);
+  }
+  return parsed;
+});
+
+// Nakładka typów dosłanych poza bazą.
+for (const { player, match, pick, note } of MANUAL_PICKS) {
+  const round = rounds.find((r) => r.fixtures.some((f) => f.no === match));
+  if (!round) throw new Error(`MANUAL_PICKS: mecz ${match} nie istnieje w żadnej rundzie`);
+  if (!roster.some((p) => p.id === player)) throw new Error(`MANUAL_PICKS: "${player}" spoza rosteru`);
+  const existing = round.predictions[player]?.[match];
+  if (existing) {
+    const same =
+      existing.home === pick.home && existing.away === pick.away && existing.pk === pick.pk;
+    if (!same) {
+      throw new Error(
+        `MANUAL_PICKS: konflikt dla ${player} mecz ${match}: baza ${existing.home}:${existing.away} vs ręczny ${pick.home}:${pick.away} (${note})`,
+      );
+    }
+    console.log(`MANUAL_PICKS: ${player} mecz ${match} już w bazie, zgodny — pomijam (${note})`);
+    continue;
+  }
+  (round.predictions[player] ??= {})[match] = pick;
+  console.log(`MANUAL_PICKS: dołożono ${player} mecz ${match} → ${pick.home}:${pick.away} (${note})`);
 }
-const missingKickoff = round.fixtures.filter((f) => f.kickoff === '');
-if (missingKickoff.length > 0) {
-  throw new Error(`Brak terminu dla meczów: ${missingKickoff.map((f) => f.no).join(', ')}`);
+
+writeFileSync(OUT, JSON.stringify({ rounds }, null, 2) + '\n');
+
+for (const round of rounds) {
+  const withTyp = Object.keys(round.predictions).length;
+  const noTyp = roster.filter((p) => !round.predictions[p.id]).map((p) => p.id);
+  let krzyzyki = 0;
+  for (const byMatch of Object.values(round.predictions))
+    for (const pick of Object.values(byMatch)) if (pick.pk) krzyzyki++;
+  console.log(`OK: ${round.fixtures.length} meczów ${round.round}, ${withTyp}/${roster.length} graczy z typami, ${krzyzyki} krzyżyków`);
+  console.log(`  Bez ŻADNEGO typu w ${round.round} (0 pkt): ${noTyp.length ? noTyp.join(', ') : '—'}`);
+  console.log(`  Terminarz ${round.round} (polski czas):`);
+  for (const f of round.fixtures) console.log(`   ${String(f.no).padStart(2)}: ${f.home} - ${f.away}  ||  ${f.kickoff}`);
 }
-
-writeFileSync(OUT, JSON.stringify({ rounds: [round] }, null, 2) + '\n');
-
-const withTyp = Object.keys(round.predictions).length;
-const noTyp = roster.filter((p) => !round.predictions[p.id]).map((p) => p.id);
-let krzyzyki = 0;
-for (const byMatch of Object.values(round.predictions))
-  for (const pick of Object.values(byMatch)) if (pick.pk) krzyzyki++;
-console.log(`OK: ${round.fixtures.length} meczów 1/16, ${withTyp}/${roster.length} graczy z typami, ${krzyzyki} krzyżyków → ${OUT}`);
-console.log(`Bez ŻADNEGO typu (0 pkt): ${noTyp.length ? noTyp.join(', ') : '—'}`);
-console.log('Terminarz 1/16 (polski czas):');
-for (const f of round.fixtures) console.log(`  ${String(f.no).padStart(2)}: ${f.home} - ${f.away}  ||  ${f.kickoff}`);
+console.log(`→ ${OUT}`);

@@ -91,6 +91,20 @@ describe('parseBazaPuchar', () => {
     expect(() => parseBazaPuchar(sheet, { round: '1/16', roster })).toThrow(/spoza rosteru/);
   });
 
+  it('zakres matches wycina jedną rundę z bazy wielorundowej', () => {
+    const sheet = fakeSheet({
+      ...row(2, 'AndrzejO', 16, 'Kolumbia', 'Ghana', 1, 0),
+      ...row(3, 'AndrzejO', 17, 'Kanada', 'Maroko', 1, 2),
+      ...row(4, 'Borys', 17, 'Kanada', 'Maroko', 2, 2, 'x'),
+      ...row(5, 'Borys', 25, '', ''), // przyszła runda: bez pary i bez typu
+    });
+    const out = parseBazaPuchar(sheet, { round: '1/8', roster, matches: { from: 17, to: 24 } });
+    expect(out.round).toBe('1/8');
+    expect(out.fixtures).toEqual([{ no: 17, home: 'Kanada', away: 'Maroko', kickoff: '' }]);
+    expect(out.predictions.AndrzejO).toEqual({ 17: { home: 1, away: 2 } });
+    expect(out.predictions.Borys).toEqual({ 17: { home: 2, away: 2, pk: 'home' } });
+  });
+
   it('rzuca przy niespójnej parze drużyn dla tego samego meczu', () => {
     const sheet = fakeSheet({
       ...row(2, 'AndrzejO', 1, 'Kanada', 'RPA', 2, 1),

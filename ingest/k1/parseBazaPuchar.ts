@@ -13,6 +13,8 @@ export interface ParseBazaPucharOptions {
   teamAlias?: Record<string, string>;
   /** Numer meczu → tekst terminu (kickoff). Brak = "". */
   kickoffs?: Record<number, string>;
+  /** Zakres numerów meczów tej rundy (baza wielorundowa, np. 1/8 = 17–24). Brak = wszystkie. */
+  matches?: { from: number; to: number };
 }
 
 export interface PucharRound {
@@ -62,6 +64,7 @@ export function parseBazaPuchar(sheet: Sheet, opts: ParseBazaPucharOptions): Puc
     // danych; nagłówek ma C="mecz" → undefined → pomijamy ZANIM zadziała strażnik rosteru.
     const match = asNum(sheet.cell(`C${r}`));
     if (match === undefined) continue;
+    if (opts.matches && (match < opts.matches.from || match > opts.matches.to)) continue;
 
     const player = nickAlias[rawPlayer] ?? rawPlayer;
     if (!rosterIds.has(player)) {
