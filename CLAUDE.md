@@ -148,6 +148,10 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   w `buildPuchar` = typy dosłane poza bazą (Sokółka mecz 17 Kanada-Maroko 1:2); zgodny typ
   w nowszej bazie = no-op, różny = twardy błąd. 1/8: 48/56 graczy z typami. Widoki/compute były
   już generyczne (iterują po `rounds`) — zero zmian w app/. Bramka: 186 testów.
+  ✅ Maruderzy 1/8 (2026-07-04, commit ba3c463): `BAZA` podmienione na „Baza puch v4 (2026.07.04).xlsx".
+  Doszło 5 graczy bez typu 1/8 w v3: Żaklina, Małgorzata, KamilF, KrzysztofeR (komplet 18–24) +
+  Pimozid (TYLKO mecz 18 — reszta pusta w bazie, tak dosłał). Sokółka mecz 17 już w bazie
+  (MANUAL_PICKS = no-op). 1/8: 48/56 → 53/56; bez typu 1/8 nadal: KasiaK, DarekL, Turbo-Ryżu.
 - ⏳ Następne: Etap B robota pucharowego (auto-pobieranie 1/16+), PWA (odłożone — patrz rozmowy),
   ingest + render Konkursu 2 (czekamy na typy K2 od organizatora).
 
