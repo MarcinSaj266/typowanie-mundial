@@ -140,6 +140,14 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   1/16+ wymaga dopasowania po DACIE (pary się powtarzają) + odczytu zwycięzcy karnych z API +
   terminów w czasie PL w `kickoff`. Do startu kolejnych rund: reingest nowszej bazy + wpis wyników
   ręcznie kluczem `"puch"` (przy remisie `"pk":"home"|"away"`).
+  ✅ Runda 1/8 WDROŻONA (2026-07-04): baza od v3 („Baza puch v3 (2026.07.04).xlsx") jest
+  WIELORUNDOWA — arkusz `t2` ma mecze 1–32 (1–16 = 1/16, 17–24 = 1/8, 25–32 = przyszłe rundy,
+  puste pary → parser pomija). `parseBazaPuchar` ma opcję `matches: {from,to}` (zakres numerów
+  meczów rundy, TDD), `buildPuchar` parsuje rundy osobno (stała `ROUNDS`) + terminarz 1/8 w PL
+  (ET+6h). Numery meczów GLOBALNE: wyniki 1/8 → klucz `"puch"`, numery 17–24. `MANUAL_PICKS`
+  w `buildPuchar` = typy dosłane poza bazą (Sokółka mecz 17 Kanada-Maroko 1:2); zgodny typ
+  w nowszej bazie = no-op, różny = twardy błąd. 1/8: 48/56 graczy z typami. Widoki/compute były
+  już generyczne (iterują po `rounds`) — zero zmian w app/. Bramka: 186 testów.
 - ⏳ Następne: Etap B robota pucharowego (auto-pobieranie 1/16+), PWA (odłożone — patrz rozmowy),
   ingest + render Konkursu 2 (czekamy na typy K2 od organizatora).
 
