@@ -134,12 +134,23 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   10+12 — OSOBNY blok, statystyki grupowe zostają czyste; decyzja organizatora/użytkownika
   2026-06-29 — bez mieszania skali ×1/×2). Wynik 1/16 wpisany ręcznie: Kanada 1:0 RPA (klucz
   `"puch"` w `data/k1/results.json`). Bramka: 185 testów, typecheck, build, smoke.
-  ⏳ ETAP B (do zrobienia): robot football-data.org dla pucharu — robot `fetch:scores` pobiera
-  TYLKO mecze grupowe (`tura-*.json`), pucharu NIE ściąga (świadomie); `mergeScores` jest
-  bezpieczny (głęboka kopia results.json, tylko dokleja, NIE kasuje klucza `"puch"`). Auto-pobieranie
-  1/16+ wymaga dopasowania po DACIE (pary się powtarzają) + odczytu zwycięzcy karnych z API +
-  terminów w czasie PL w `kickoff`. Do startu kolejnych rund: reingest nowszej bazy + wpis wyników
-  ręcznie kluczem `"puch"` (przy remisie `"pk":"home"|"away"`).
+  ✅ ETAP B WDROŻONY (2026-07-05): robot football-data.org pobiera też PUCHAR. Czysta
+  `mergePucharScores` (`ingest/scores/matchPucharScores.ts`, TDD 13 testów): dopasowanie po
+  **stage z API + parze drużyn** (NIE po dacie — w drabince para jest unikalna w obrębie rundy,
+  a powtórkę pary z fazy grupowej odcina stage; mapa `ROUND_TO_STAGE`: 1/16→`LAST_32`,
+  1/8→`LAST_16`, … `finał`→`FINAL`, nieznana runda = twardy błąd). Ekstrakcja (spike
+  `scripts/spikePuchar.ts` na żywym API): `duration REGULAR|EXTRA_TIME` → `fullTime` wprost
+  (dogrywka = wynik jak z 90'); `PENALTY_SHOOTOUT` → wynik 120' = `regularTime+extraTime`
+  (**`fullTime` przy karnych ZAWIERA bramki konkursu karnych!**) + `pk` z `score.winner`,
+  wynik I `pk` tłumaczone na orientację naszego fixture'a. Niespójność (remis bez karnych itp.)
+  → pomiń + warning (doklei następny bieg / ręcznie), permanentną lukę łapie `check:stale`
+  (rozszerzony o puchar: `findStalePucharMatches`). Ręczna nadpiska nadal wygrywa. `teamMap`:
+  aliasy pisowni z bazy puch („Wybrzeże Kość. Słon.", „Republika Ziel. Przylądka"). GOLDEN
+  zweryfikowany: robot odtworzył z API 18/18 ręcznych wpisów `puch` 1:1 (w tym karne meczów
+  3/4/14) — `scripts/goldenPuchar.ts` + workflow `spike-puchar.yml` (workflow_dispatch,
+  zostaje jako narzędzie diagnostyczne). Workflow `auto-scores.yml` bez zmian (git add już
+  obejmował `puch`); bieg e2e zielony, idempotentny. Kolejne rundy: nadal reingest bazy typów
+  od organizatora (`build:puchar`) — fixtures muszą być w `puchar.json`, wyniki zejdą już same.
   ✅ Runda 1/8 WDROŻONA (2026-07-04): baza od v3 („Baza puch v3 (2026.07.04).xlsx") jest
   WIELORUNDOWA — arkusz `t2` ma mecze 1–32 (1–16 = 1/16, 17–24 = 1/8, 25–32 = przyszłe rundy,
   puste pary → parser pomija). `parseBazaPuchar` ma opcję `matches: {from,to}` (zakres numerów
@@ -152,8 +163,9 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   Doszło 5 graczy bez typu 1/8 w v3: Żaklina, Małgorzata, KamilF, KrzysztofeR (komplet 18–24) +
   Pimozid (TYLKO mecz 18 — reszta pusta w bazie, tak dosłał). Sokółka mecz 17 już w bazie
   (MANUAL_PICKS = no-op). 1/8: 48/56 → 53/56; bez typu 1/8 nadal: KasiaK, DarekL, Turbo-Ryżu.
-- ⏳ Następne: Etap B robota pucharowego (auto-pobieranie 1/16+), PWA (odłożone — patrz rozmowy),
-  ingest + render Konkursu 2 (czekamy na typy K2 od organizatora).
+- ⏳ Następne: PWA (odłożone — patrz rozmowy), ingest + render Konkursu 2 (czekamy na typy K2
+  od organizatora); przy reingest rundy 1/4+ sprawdzić etykietę rundy w `ROUND_TO_STAGE`
+  (`ingest/scores/matchPucharScores.ts` + lustro w `staleCheck.ts`).
 
 ## Architektura (ustalona)
 
