@@ -1,6 +1,6 @@
 // CLI ingestu typów pucharowych (Konkurs 1). Źródło: płaska baza organizatora
 // "Baza puch vN.xlsx" (arkusz 't2'). Pipeline:
-//   Baza puch v4 (2026.07.04).xlsx + roster.json → parseBazaPuchar × runda → data/k1/puchar.json
+//   Baza puch v5 (2026.07.05).xlsx + roster.json → parseBazaPuchar × runda → data/k1/puchar.json
 // Baza jest WIELORUNDOWA: mecze 1–16 = 1/16, 17–24 = 1/8, 25–32 = przyszłe rundy (puste pary
 // → parser je pomija). Tolerancyjny: typy spływają etapami. Reingest nowszej bazy nadpisuje plik.
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -9,7 +9,7 @@ import { parseBazaPuchar, type PucharRound } from './k1/parseBazaPuchar';
 import type { Participant } from './k1/parseGrup1';
 import type { PucharPick } from '../engine/types';
 
-const BAZA = 'Baza puch v4 (2026.07.04).xlsx';
+const BAZA = 'Baza puch v5 (2026.07.05).xlsx';
 const SHEET = 't2';
 const ROSTER = 'data/k1/roster.json';
 const OUT = 'data/k1/puchar.json';

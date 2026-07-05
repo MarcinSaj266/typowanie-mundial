@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T05:42:54.461Z",
+  "generatedAt": "2026-07-05T19:31:23.245Z",
   "general": [
     {
       "participantId": "AndrzejO",
@@ -38276,7 +38276,10 @@
                 "points": null
               },
               "KrzysztoW": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
                 "points": null
               },
               "Magiera": {
@@ -38393,7 +38396,10 @@
                 "points": null
               },
               "MarekS": {
-                "pick": null,
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
                 "points": null
               },
               "Karolina": {
@@ -38505,11 +38511,17 @@
                 "points": null
               },
               "Pimozid": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "KrzysztoWś": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "Ruslan": {
@@ -38534,7 +38546,10 @@
                 "points": null
               },
               "Mirella": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "Maria": {
@@ -38642,7 +38657,11 @@
                 "points": null
               },
               "Sokółka": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "home"
+                },
                 "points": null
               },
               "KasiaK": {
@@ -38662,7 +38681,10 @@
                 "points": null
               },
               "KrzysztoW": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
                 "points": null
               },
               "Magiera": {
@@ -38780,7 +38802,10 @@
                 "points": null
               },
               "MarekS": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
                 "points": null
               },
               "Karolina": {
@@ -38894,11 +38919,17 @@
                 "points": null
               },
               "Pimozid": {
-                "pick": null,
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
                 "points": null
               },
               "KrzysztoWś": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "Ruslan": {
@@ -38925,7 +38956,10 @@
                 "points": null
               },
               "Mirella": {
-                "pick": null,
+                "pick": {
+                  "home": 0,
+                  "away": 1
+                },
                 "points": null
               },
               "Maria": {
@@ -39054,7 +39088,11 @@
                 "points": null
               },
               "KrzysztoW": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "home"
+                },
                 "points": null
               },
               "Magiera": {
@@ -39171,7 +39209,10 @@
                 "points": null
               },
               "MarekS": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 3
+                },
                 "points": null
               },
               "Karolina": {
@@ -39284,11 +39325,18 @@
                 "points": null
               },
               "Pimozid": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "KrzysztoWś": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
                 "points": null
               },
               "Ruslan": {
@@ -39313,7 +39361,10 @@
                 "points": null
               },
               "Mirella": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
                 "points": null
               },
               "Maria": {
@@ -39420,7 +39471,11 @@
                 "points": null
               },
               "Sokółka": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
                 "points": null
               },
               "KasiaK": {
@@ -39439,7 +39494,10 @@
                 "points": null
               },
               "KrzysztoW": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 3
+                },
                 "points": null
               },
               "Magiera": {
@@ -39557,7 +39615,11 @@
                 "points": null
               },
               "MarekS": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "away"
+                },
                 "points": null
               },
               "Karolina": {
@@ -39669,11 +39731,18 @@
                 "points": null
               },
               "Pimozid": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
                 "points": null
               },
               "KrzysztoWś": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
                 "points": null
               },
               "Ruslan": {
@@ -39699,7 +39768,10 @@
                 "points": null
               },
               "Mirella": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "Maria": {
@@ -39826,7 +39898,10 @@
                 "points": null
               },
               "KrzysztoW": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
                 "points": null
               },
               "Magiera": {
@@ -39939,7 +40014,10 @@
                 "points": null
               },
               "MarekS": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
                 "points": null
               },
               "Karolina": {
@@ -40049,11 +40127,17 @@
                 "points": null
               },
               "Pimozid": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
                 "points": null
               },
               "KrzysztoWś": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
                 "points": null
               },
               "Ruslan": {
@@ -40078,7 +40162,10 @@
                 "points": null
               },
               "Mirella": {
-                "pick": null,
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
                 "points": null
               },
               "Maria": {
@@ -40206,7 +40293,10 @@
                 "points": null
               },
               "KrzysztoW": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "Magiera": {
@@ -40325,7 +40415,11 @@
                 "points": null
               },
               "MarekS": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
                 "points": null
               },
               "Karolina": {
@@ -40442,11 +40536,18 @@
                 "points": null
               },
               "Pimozid": {
-                "pick": null,
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "away"
+                },
                 "points": null
               },
               "KrzysztoWś": {
-                "pick": null,
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
                 "points": null
               },
               "Ruslan": {
@@ -40472,7 +40573,10 @@
                 "points": null
               },
               "Mirella": {
-                "pick": null,
+                "pick": {
+                  "home": 0,
+                  "away": 1
+                },
                 "points": null
               },
               "Maria": {
