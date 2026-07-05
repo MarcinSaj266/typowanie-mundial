@@ -1,0 +1,28 @@
+name: Spike puchar (diagnostyka API)
+
+# Jednorazowa diagnostyka Etapu B: zrzuca surowe pola `stage`/`score` meczów pucharowych
+# z football-data.org do logów (bez tokena w logach). Odpalany wyłącznie ręcznie.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  spike:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Zrzut surowych meczów pucharowych
+        run: npx tsx scripts/spikePuchar.ts
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
