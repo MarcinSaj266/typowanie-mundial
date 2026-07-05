@@ -51,6 +51,10 @@ export const PL_TO_API: Record<string, string> = {
   Panama: 'Panama',
   Uzbekistan: 'Uzbekistan',
   Kolumbia: 'Colombia',
+  // Aliasy pisowni z bazy pucharowej organizatora ("Baza puch vN.xlsx" → data/k1/puchar.json) —
+  // te same drużyny co wyżej, inna pisownia niż w tura-*.json.
+  'Wybrzeże Kość. Słon.': 'Ivory Coast',
+  'Republika Ziel. Przylądka': 'Cape Verde Islands',
 };
 
 /** Nazwa drużyny w API dla polskiej nazwy z fixture'a. Brak mapowania = błąd. */
