@@ -163,6 +163,12 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   Doszło 5 graczy bez typu 1/8 w v3: Żaklina, Małgorzata, KamilF, KrzysztofeR (komplet 18–24) +
   Pimozid (TYLKO mecz 18 — reszta pusta w bazie, tak dosłał). Sokółka mecz 17 już w bazie
   (MANUAL_PICKS = no-op). 1/8: 48/56 → 53/56; bez typu 1/8 nadal: KasiaK, DarekL, Turbo-Ryżu.
+  ✅ Uzupełnienia 1/8 — Baza puch v5 (2026-07-05, commit f11bc4d): `BAZA` → „Baza puch v5
+  (2026.07.05).xlsx" (czysty nadzbiór v4 — tylko dopiski). Komplet 8 dostali: KrzysztoW, MarekS,
+  KrzysztoWś, Mirella (dopisane 19–24), Sokółka (20, 22); Pimozid 1→7. 1/8 nadal 53/56. 7/8
+  (brak TYLKO meczu 17 Kanada-Maroko, już rozegrany → 0 pkt za m.17): Żaklina, Małgorzata, KamilF,
+  Pimozid, KrzysztofeR. Bez żadnego typu 1/8: KasiaK, DarekL, Turbo-Ryżu. Diagnostyka:
+  `scripts/diffBazaV4V5.ts`. Bramka: 204 testy.
 - ⏳ Następne: PWA (odłożone — patrz rozmowy), ingest + render Konkursu 2 (czekamy na typy K2
   od organizatora); przy reingest rundy 1/4+ sprawdzić etykietę rundy w `ROUND_TO_STAGE`
   (`ingest/scores/matchPucharScores.ts` + lustro w `staleCheck.ts`).
