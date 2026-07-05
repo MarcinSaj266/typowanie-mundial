@@ -1,13 +1,20 @@
 // CLI auto-pobierania wyników (warstwa IO). Pipeline:
-//   tury (data/k1/tura-*.json) + dotychczasowe wyniki (results.json) + mecze z API
-//   → mergeScores → dopisz TYLKO brakujące mecze FINISHED → zapisz results.json.
+//   tury (data/k1/tura-*.json) + puchar (data/k1/puchar.json) + dotychczasowe wyniki
+//   (results.json) + mecze z API → mergeScores + mergePucharScores → dopisz TYLKO
+//   brakujące mecze FINISHED → zapisz results.json (puchar pod kluczem "puch").
 // Istniejące wpisy są nietykalne (ręczna nadpiska wygrywa). Token z env FOOTBALL_DATA_TOKEN.
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { fetchWorldCupMatches } from './footballData';
 import { mergeScores, type TurnFixtures, type Results } from './matchScores';
+import {
+  mergePucharScores,
+  type PucharRoundFixtures,
+  type PucharScore,
+} from './matchPucharScores';
 
 const DATA_DIR = 'data/k1';
 const RESULTS = `${DATA_DIR}/results.json`;
+const PUCHAR = `${DATA_DIR}/puchar.json`;
 
 async function main() {
   const token = process.env.FOOTBALL_DATA_TOKEN;
@@ -37,14 +44,28 @@ async function main() {
   const apiMatches = await fetchWorldCupMatches(token);
   const { results, added } = mergeScores(turns, existing, apiMatches);
 
-  if (added.length === 0) {
+  // Faza pucharowa: rundy z data/k1/puchar.json (brak pliku = jeszcze przed pucharem).
+  let puchAdded: ReturnType<typeof mergePucharScores>['added'] = [];
+  if (existsSync(PUCHAR)) {
+    const puchar = JSON.parse(readFileSync(PUCHAR, 'utf8')) as { rounds?: PucharRoundFixtures[] };
+    const existingPuch = ((existing as Record<string, unknown>).puch ?? {}) as Record<string, PucharScore>;
+    const merged = mergePucharScores(puchar.rounds ?? [], existingPuch, apiMatches);
+    // Ostrzeżenia NIE wywalają robota — mecz doklei się w kolejnym biegu albo ręcznie;
+    // permanentny brak złapie check:stale.
+    for (const w of merged.warnings) console.warn(`UWAGA: ${w}`);
+    puchAdded = merged.added;
+    (results as Record<string, unknown>).puch = merged.puch;
+  }
+
+  if (added.length === 0 && puchAdded.length === 0) {
     console.log('Brak nowych rozegranych meczów — results.json bez zmian.');
     return;
   }
 
   writeFileSync(RESULTS, JSON.stringify(results, null, 2) + '\n');
-  console.log(`Dopisano ${added.length} wynik(ów) do ${RESULTS}:`);
+  console.log(`Dopisano ${added.length + puchAdded.length} wynik(ów) do ${RESULTS}:`);
   for (const a of added) console.log(`  • tura ${a.turn}, mecz ${a.no}: ${a.label}`);
+  for (const a of puchAdded) console.log(`  • puchar ${a.round}, mecz ${a.no}: ${a.label}`);
 }
 
 main().catch((err) => {

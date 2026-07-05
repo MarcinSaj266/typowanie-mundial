@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { findStaleMatches } from './staleCheck';
+import { findStaleMatches, findStalePucharMatches } from './staleCheck';
 import type { TurnFixtures, ApiMatch } from './matchScores';
+import type { PucharRoundFixtures } from './matchPucharScores';
 
 /** Skrót: jedna tura z fixture'ami (nazwy PL jak w naszych danych). */
 const tura = (turn: number, fixtures: TurnFixtures['fixtures']): TurnFixtures => ({
@@ -67,5 +68,62 @@ describe('findStaleMatches', () => {
     const turns = [tura(1, [{ no: 9, home: 'Niemcy', away: 'Curacao' }])];
 
     expect(findStaleMatches(turns, {}, [], NOW, GRACE)).toHaveLength(0);
+  });
+});
+
+describe('findStalePucharMatches', () => {
+  const rundy: PucharRoundFixtures[] = [
+    { round: '1/8', fixtures: [{ no: 19, home: 'Brazylia', away: 'Norwegia' }] },
+  ];
+
+  it('zgłasza mecz pucharowy FINISHED w API, którego brak w results["puch"]', () => {
+    const stale = findStalePucharMatches(
+      rundy,
+      {},
+      [{ ...api('Brazil', 'Norway', { status: 'FINISHED', goals: [2, 1] }), stage: 'LAST_16' }],
+      NOW,
+      GRACE,
+    );
+
+    expect(stale).toHaveLength(1);
+    expect(stale[0]).toMatchObject({ no: 19, reason: 'finished-missing' });
+  });
+
+  it('nie zgłasza, gdy wynik pucharowy już wpisany', () => {
+    const stale = findStalePucharMatches(
+      rundy,
+      { '19': { home: 2, away: 1 } },
+      [{ ...api('Brazil', 'Norway', { status: 'FINISHED', goals: [2, 1] }), stage: 'LAST_16' }],
+      NOW,
+      GRACE,
+    );
+
+    expect(stale).toHaveLength(0);
+  });
+
+  it('ignoruje tę samą parę z innego stage (np. GROUP_STAGE)', () => {
+    const stale = findStalePucharMatches(
+      rundy,
+      {},
+      [{ ...api('Brazil', 'Norway', { status: 'FINISHED', goals: [2, 1] }), stage: 'GROUP_STAGE' }],
+      NOW,
+      GRACE,
+    );
+
+    expect(stale).toHaveLength(0);
+  });
+
+  it('zgłasza overdue, gdy dawno po starcie a wynik nie FINISHED', () => {
+    const start = new Date(NOW - GRACE - 60_000).toISOString();
+    const stale = findStalePucharMatches(
+      rundy,
+      {},
+      [{ ...api('Brazil', 'Norway', { status: 'IN_PLAY', utcDate: start }), stage: 'LAST_16' }],
+      NOW,
+      GRACE,
+    );
+
+    expect(stale).toHaveLength(1);
+    expect(stale[0]).toMatchObject({ no: 19, reason: 'overdue' });
   });
 });

@@ -20,6 +20,16 @@ export interface ApiMatch {
   awayGoals: number | null;
   status: string;
   utcDate?: string;
+  // Pola pucharowe (opcjonalne — merge grupowy ich nie używa). Semantyka zweryfikowana
+  // spikiem na żywym API (scripts/spikePuchar.ts, 2026-07-05):
+  // - fullTime przy karnych ZAWIERA bramki z konkursu karnych → wynik po 120' = regularTime+extraTime;
+  // - extraTime = bramki strzelone TYLKO w dogrywce (nie narastająco).
+  stage?: string; // GROUP_STAGE | LAST_32 | LAST_16 | QUARTER_FINALS | SEMI_FINALS | THIRD_PLACE | FINAL
+  duration?: string; // REGULAR | EXTRA_TIME | PENALTY_SHOOTOUT
+  winner?: string | null; // HOME_TEAM | AWAY_TEAM | DRAW | null
+  regularTime?: { home: number | null; away: number | null } | null;
+  extraTime?: { home: number | null; away: number | null } | null;
+  penalties?: { home: number | null; away: number | null } | null;
 }
 
 export type Score = { home: number; away: number };

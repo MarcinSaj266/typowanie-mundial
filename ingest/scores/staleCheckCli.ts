@@ -4,11 +4,13 @@
 // exit 2 = błąd (np. brak tokenu / API padło) — też wart alertu. Token z env FOOTBALL_DATA_TOKEN.
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { fetchWorldCupMatches } from './footballData';
-import { findStaleMatches } from './staleCheck';
+import { findStaleMatches, findStalePucharMatches } from './staleCheck';
 import type { TurnFixtures, Results } from './matchScores';
+import type { PucharRoundFixtures, PucharScore } from './matchPucharScores';
 
 const DATA_DIR = 'data/k1';
 const RESULTS = `${DATA_DIR}/results.json`;
+const PUCHAR = `${DATA_DIR}/puchar.json`;
 const GRACE_MS = 3.5 * 60 * 60 * 1000; // 3,5h od startu: 90 min + przerwy + ewentualna dogrywka/karne + poślizg API
 
 async function main() {
@@ -33,18 +35,29 @@ async function main() {
   const apiMatches = await fetchWorldCupMatches(token);
   const stale = findStaleMatches(turns, results, apiMatches, Date.now(), GRACE_MS);
 
-  if (stale.length === 0) {
+  // Puchar: te same reguły alertu dla rund z data/k1/puchar.json (brak pliku = przed pucharem).
+  const rounds: PucharRoundFixtures[] = existsSync(PUCHAR)
+    ? ((JSON.parse(readFileSync(PUCHAR, 'utf8')) as { rounds?: PucharRoundFixtures[] }).rounds ?? [])
+    : [];
+  const puchResults = ((results as Record<string, unknown>).puch ?? {}) as Record<string, PucharScore>;
+  const stalePuch = findStalePucharMatches(rounds, puchResults, apiMatches, Date.now(), GRACE_MS);
+
+  if (stale.length === 0 && stalePuch.length === 0) {
     console.log('Brak nieświeżych meczów — wszystko, co powinno mieć wynik, ma wynik.');
     return;
   }
 
-  console.error(`⚠️  ${stale.length} mecz(ów) bez wyniku mimo że powinny już go mieć:`);
+  const opisDla = (reason: string, status: string) =>
+    reason === 'finished-missing'
+      ? 'API: FINISHED, a u nas brak (luka mergera — sprawdź teamMap/orientację)'
+      : `dawno po starcie (>3,5h), API status=${status} (API się spóźnia — sprawdź ręcznie)`;
+
+  console.error(`⚠️  ${stale.length + stalePuch.length} mecz(ów) bez wyniku mimo że powinny już go mieć:`);
   for (const s of stale) {
-    const opis =
-      s.reason === 'finished-missing'
-        ? 'API: FINISHED, a u nas brak (luka mergera — sprawdź teamMap/orientację)'
-        : `dawno po starcie (>3,5h), API status=${s.status} (API się spóźnia — sprawdź ręcznie)`;
-    console.error(`  • tura ${s.turn}, mecz ${s.no}: ${s.label} — ${opis}`);
+    console.error(`  • tura ${s.turn}, mecz ${s.no}: ${s.label} — ${opisDla(s.reason, s.status)}`);
+  }
+  for (const s of stalePuch) {
+    console.error(`  • puchar ${s.round}, mecz ${s.no}: ${s.label} — ${opisDla(s.reason, s.status)}`);
   }
   process.exit(1);
 }

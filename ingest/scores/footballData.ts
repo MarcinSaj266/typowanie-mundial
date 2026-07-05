@@ -6,10 +6,25 @@ import type { ApiMatch } from './matchScores';
 
 const URL = 'https://api.football-data.org/v4/competitions/WC/matches';
 
+interface RawGoals {
+  home: number | null;
+  away: number | null;
+}
+
 interface RawMatch {
   homeTeam?: { name?: string };
   awayTeam?: { name?: string };
-  score?: { fullTime?: { home: number | null; away: number | null } };
+  // Pola score wg spike'a (scripts/spikePuchar.ts, 2026-07-05): przy karnych fullTime
+  // ZAWIERA bramki z konkursu karnych; regularTime/extraTime/penalties tylko po dogrywce.
+  score?: {
+    fullTime?: RawGoals;
+    winner?: string | null;
+    duration?: string;
+    regularTime?: RawGoals | null;
+    extraTime?: RawGoals | null;
+    penalties?: RawGoals | null;
+  };
+  stage?: string;
   status?: string;
   utcDate?: string;
 }
@@ -83,6 +98,12 @@ async function fetchOnce(token: string, fetchImpl: typeof fetch): Promise<ApiMat
     awayGoals: m.score?.fullTime?.away ?? null,
     status: m.status ?? '',
     utcDate: m.utcDate,
+    stage: m.stage,
+    duration: m.score?.duration,
+    winner: m.score?.winner ?? undefined,
+    regularTime: m.score?.regularTime ?? undefined,
+    extraTime: m.score?.extraTime ?? undefined,
+    penalties: m.score?.penalties ?? undefined,
   }));
 }
 

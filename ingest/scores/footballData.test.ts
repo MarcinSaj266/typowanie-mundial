@@ -102,6 +102,48 @@ describe('fetchWorldCupMatches', () => {
     expect(calls).toBe(1);
   });
 
+  it('mapuje pola pucharowe: stage, duration, winner, regularTime/extraTime/penalties', async () => {
+    // Realny kształt z API v4 (spike 2026-07-05): Niemcy–Paragwaj po karnych.
+    const fetchImpl = (async () =>
+      new Response(
+        JSON.stringify({
+          matches: [
+            {
+              homeTeam: { name: 'Germany' },
+              awayTeam: { name: 'Paraguay' },
+              stage: 'LAST_32',
+              status: 'FINISHED',
+              utcDate: '2026-06-29T20:30:00Z',
+              score: {
+                winner: 'AWAY_TEAM',
+                duration: 'PENALTY_SHOOTOUT',
+                fullTime: { home: 4, away: 5 },
+                halfTime: { home: 0, away: 1 },
+                regularTime: { home: 1, away: 1 },
+                extraTime: { home: 0, away: 0 },
+                penalties: { home: 3, away: 4 },
+              },
+            },
+          ],
+        }),
+        { status: 200 },
+      )) as unknown as typeof fetch;
+
+    const matches = await fetchWorldCupMatches('tok', { fetchImpl, retry: { sleep: noSleep } });
+    expect(matches[0]).toMatchObject({
+      home: 'Germany',
+      away: 'Paraguay',
+      homeGoals: 4,
+      awayGoals: 5,
+      stage: 'LAST_32',
+      duration: 'PENALTY_SHOOTOUT',
+      winner: 'AWAY_TEAM',
+      regularTime: { home: 1, away: 1 },
+      extraTime: { home: 0, away: 0 },
+      penalties: { home: 3, away: 4 },
+    });
+  });
+
   it('ponawia odpowiedź 5xx (błąd serwera) jako przejściową', async () => {
     let calls = 0;
     const fetchImpl = (async () => {

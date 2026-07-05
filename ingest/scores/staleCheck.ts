@@ -4,6 +4,7 @@
 // Nie wie o sieci ani plikach — dostaje gotowe dane, zwraca listę problemów.
 import { toApiName } from './teamMap';
 import type { TurnFixtures, ApiMatch, Results } from './matchScores';
+import type { PucharRoundFixtures, PucharScore } from './matchPucharScores';
 
 export type StaleReason = 'finished-missing' | 'overdue';
 
@@ -51,6 +52,63 @@ export function findStaleMatches(
         stale.push({ turn, no: fx.no, label, reason: 'finished-missing', status: match.status });
       } else if (match.utcDate && nowMs > Date.parse(match.utcDate) + graceMs) {
         stale.push({ turn, no: fx.no, label, reason: 'overdue', status: match.status });
+      }
+    }
+  }
+  return stale;
+}
+
+export interface StalePucharMatch {
+  round: string;
+  no: number; // numer GLOBALNY meczu pucharowego
+  label: string;
+  reason: StaleReason;
+  status: string;
+}
+
+/** Nasza etykieta rundy → stage w API (lustro ROUND_TO_STAGE z matchPucharScores; tu
+ *  tolerancyjnie — nieznana runda po prostu nie jest sprawdzana, alert to nie merger). */
+const ROUND_STAGE: Record<string, string> = {
+  '1/16': 'LAST_32',
+  '1/8': 'LAST_16',
+  '1/4': 'QUARTER_FINALS',
+  '1/2': 'SEMI_FINALS',
+  '3. miejsce': 'THIRD_PLACE',
+  finał: 'FINAL',
+};
+
+/**
+ * Jak `findStaleMatches`, ale dla meczów pucharowych (results.json["puch"]).
+ * Dopasowanie po stage + parze drużyn — ta sama para z fazy grupowej się nie łapie.
+ */
+export function findStalePucharMatches(
+  rounds: PucharRoundFixtures[],
+  puchResults: Record<string, PucharScore>,
+  apiMatches: ApiMatch[],
+  nowMs: number,
+  graceMs: number,
+): StalePucharMatch[] {
+  const byStagePair = new Map<string, ApiMatch>();
+  for (const m of apiMatches) byStagePair.set(`${m.stage ?? '?'} | ${pairKey(m.home, m.away)}`, m);
+
+  const stale: StalePucharMatch[] = [];
+  for (const { round, fixtures } of rounds) {
+    const stage = ROUND_STAGE[round];
+    if (!stage) continue;
+    for (const fx of fixtures) {
+      if (puchResults[String(fx.no)]) continue;
+
+      const match = byStagePair.get(`${stage} | ${pairKey(toApiName(fx.home), toApiName(fx.away))}`);
+      if (!match) continue;
+
+      const label = `${fx.home} vs ${fx.away}`;
+      const finished =
+        match.status === 'FINISHED' && match.homeGoals != null && match.awayGoals != null;
+
+      if (finished) {
+        stale.push({ round, no: fx.no, label, reason: 'finished-missing', status: match.status });
+      } else if (match.utcDate && nowMs > Date.parse(match.utcDate) + graceMs) {
+        stale.push({ round, no: fx.no, label, reason: 'overdue', status: match.status });
       }
     }
   }
