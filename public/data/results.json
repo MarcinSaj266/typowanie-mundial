@@ -1,424 +1,478 @@
 {
-  "generatedAt": "2026-07-07T02:10:59.148Z",
+  "generatedAt": "2026-07-07T18:11:08.255Z",
   "general": [
     {
       "participantId": "AndrzejO",
       "group": "E",
       "position": 1,
-      "points": 346,
+      "points": 352,
       "grI": 50,
       "grII": 57,
       "grIII": 66,
       "bns": 15,
-      "puch": 158,
+      "puch": 164,
       "skutBonus": 0,
-      "hitRate": 0.6914893617021277,
-      "count3": 30,
+      "hitRate": 0.6947368421052632,
+      "count3": 31,
       "count4": 13,
       "count5": 22,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "MagdaP",
       "group": "D",
       "position": 2,
-      "points": 321,
+      "points": 327,
       "grI": 49,
       "grII": 65,
       "grIII": 70,
       "bns": 15,
-      "puch": 122,
+      "puch": 128,
       "skutBonus": 3,
-      "hitRate": 0.6914893617021277,
-      "count3": 31,
+      "hitRate": 0.6947368421052632,
+      "count3": 32,
       "count4": 18,
       "count5": 16,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Ruslan",
       "group": "G",
       "position": 3,
-      "points": 312,
+      "points": 318,
       "grI": 40,
       "grII": 61,
       "grIII": 72,
       "bns": 15,
-      "puch": 124,
+      "puch": 130,
       "skutBonus": 3,
-      "hitRate": 0.6702127659574468,
-      "count3": 32,
+      "hitRate": 0.6736842105263158,
+      "count3": 33,
       "count4": 17,
       "count5": 13,
       "count6": 1,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Talvik",
       "group": "E",
       "position": 4,
-      "points": 299,
+      "points": 305,
       "grI": 48,
       "grII": 67,
       "grIII": 52,
       "bns": 10,
-      "puch": 122,
+      "puch": 128,
       "skutBonus": 3,
-      "hitRate": 0.6702127659574468,
-      "count3": 33,
+      "hitRate": 0.6736842105263158,
+      "count3": 34,
       "count4": 21,
       "count5": 9,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "PPP",
       "group": "C",
       "position": 5,
-      "points": 291,
+      "points": 299,
       "grI": 41,
       "grII": 56,
       "grIII": 56,
       "bns": 10,
-      "puch": 128,
+      "puch": 136,
       "skutBonus": 0,
-      "hitRate": 0.6170212765957447,
+      "hitRate": 0.6210526315789474,
       "count3": 31,
-      "count4": 11,
+      "count4": 12,
       "count5": 16,
       "count6": 0,
-      "played": 94
-    },
-    {
-      "participantId": "PiotreM",
-      "group": "E",
-      "position": 6,
-      "points": 288,
-      "grI": 42,
-      "grII": 60,
-      "grIII": 57,
-      "bns": 5,
-      "puch": 124,
-      "skutBonus": 0,
-      "hitRate": 0.6702127659574468,
-      "count3": 39,
-      "count4": 16,
-      "count5": 8,
-      "count6": 0,
-      "played": 94
-    },
-    {
-      "participantId": "KrystianM",
-      "group": "A",
-      "position": 7,
-      "points": 288,
-      "grI": 49,
-      "grII": 51,
-      "grIII": 61,
-      "bns": 15,
-      "puch": 112,
-      "skutBonus": 0,
-      "hitRate": 0.6595744680851063,
-      "count3": 40,
-      "count4": 13,
-      "count5": 9,
-      "count6": 0,
-      "played": 94
-    },
-    {
-      "participantId": "Mirella",
-      "group": "H",
-      "position": 8,
-      "points": 288,
-      "grI": 54,
-      "grII": 52,
-      "grIII": 56,
-      "bns": 10,
-      "puch": 116,
-      "skutBonus": 2,
-      "hitRate": 0.648936170212766,
-      "count3": 34,
-      "count4": 17,
-      "count5": 10,
-      "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "KaBed",
       "group": "H",
-      "position": 9,
-      "points": 287,
+      "position": 6,
+      "points": 295,
       "grI": 43,
       "grII": 60,
       "grIII": 59,
       "bns": 15,
-      "puch": 110,
+      "puch": 118,
       "skutBonus": 0,
-      "hitRate": 0.6276595744680851,
+      "hitRate": 0.631578947368421,
       "count3": 30,
-      "count4": 18,
+      "count4": 19,
       "count5": 11,
       "count6": 0,
-      "played": 94
+      "played": 95
+    },
+    {
+      "participantId": "PiotreM",
+      "group": "E",
+      "position": 7,
+      "points": 294,
+      "grI": 42,
+      "grII": 60,
+      "grIII": 57,
+      "bns": 5,
+      "puch": 130,
+      "skutBonus": 0,
+      "hitRate": 0.6736842105263158,
+      "count3": 40,
+      "count4": 16,
+      "count5": 8,
+      "count6": 0,
+      "played": 95
+    },
+    {
+      "participantId": "KrystianM",
+      "group": "A",
+      "position": 8,
+      "points": 294,
+      "grI": 49,
+      "grII": 51,
+      "grIII": 61,
+      "bns": 15,
+      "puch": 118,
+      "skutBonus": 0,
+      "hitRate": 0.6631578947368421,
+      "count3": 41,
+      "count4": 13,
+      "count5": 9,
+      "count6": 0,
+      "played": 95
+    },
+    {
+      "participantId": "Mirella",
+      "group": "H",
+      "position": 9,
+      "points": 294,
+      "grI": 54,
+      "grII": 52,
+      "grIII": 56,
+      "bns": 10,
+      "puch": 122,
+      "skutBonus": 2,
+      "hitRate": 0.6526315789473685,
+      "count3": 35,
+      "count4": 17,
+      "count5": 10,
+      "count6": 0,
+      "played": 95
     },
     {
       "participantId": "DarekJell",
       "group": "E",
       "position": 10,
-      "points": 284,
+      "points": 292,
       "grI": 38,
       "grII": 61,
       "grIII": 55,
       "bns": 4,
-      "puch": 126,
+      "puch": 134,
       "skutBonus": 0,
-      "hitRate": 0.6595744680851063,
+      "hitRate": 0.6631578947368421,
       "count3": 41,
-      "count4": 11,
+      "count4": 12,
       "count5": 10,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "MateuszKn",
       "group": "C",
       "position": 11,
-      "points": 278,
+      "points": 284,
       "grI": 53,
       "grII": 47,
       "grIII": 57,
       "bns": 15,
-      "puch": 106,
+      "puch": 112,
       "skutBonus": 1,
-      "hitRate": 0.5957446808510638,
-      "count3": 31,
+      "hitRate": 0.6,
+      "count3": 32,
       "count4": 9,
       "count5": 15,
       "count6": 1,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Małgorzata",
       "group": "D",
       "position": 12,
-      "points": 277,
+      "points": 283,
       "grI": 44,
       "grII": 57,
       "grIII": 56,
       "bns": 10,
-      "puch": 110,
+      "puch": 116,
       "skutBonus": 0,
-      "hitRate": 0.6236559139784946,
-      "count3": 31,
+      "hitRate": 0.6276595744680851,
+      "count3": 32,
       "count4": 16,
       "count5": 11,
       "count6": 0,
-      "played": 93
+      "played": 94
     },
     {
       "participantId": "Henryk",
       "group": "C",
       "position": 13,
-      "points": 275,
+      "points": 281,
       "grI": 51,
       "grII": 47,
       "grIII": 54,
       "bns": 5,
-      "puch": 118,
+      "puch": 124,
       "skutBonus": 0,
-      "hitRate": 0.6276595744680851,
-      "count3": 34,
+      "hitRate": 0.631578947368421,
+      "count3": 35,
       "count4": 16,
       "count5": 9,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "PiotreG",
       "group": "A",
       "position": 14,
-      "points": 271,
+      "points": 277,
       "grI": 35,
       "grII": 64,
       "grIII": 56,
       "bns": 10,
-      "puch": 106,
+      "puch": 112,
       "skutBonus": 0,
-      "hitRate": 0.6063829787234043,
-      "count3": 32,
+      "hitRate": 0.6105263157894737,
+      "count3": 33,
       "count4": 13,
       "count5": 12,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "KasiaJ",
       "group": "A",
       "position": 15,
-      "points": 266,
+      "points": 272,
       "grI": 52,
       "grII": 45,
       "grIII": 56,
       "bns": 5,
-      "puch": 108,
+      "puch": 114,
       "skutBonus": 0,
-      "hitRate": 0.6063829787234043,
-      "count3": 29,
+      "hitRate": 0.6105263157894737,
+      "count3": 30,
       "count4": 20,
       "count5": 8,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "MichałeK",
       "group": "F",
       "position": 16,
-      "points": 262,
+      "points": 268,
       "grI": 51,
       "grII": 50,
       "grIII": 37,
       "bns": 0,
-      "puch": 124,
+      "puch": 130,
       "skutBonus": 0,
-      "hitRate": 0.5957446808510638,
-      "count3": 34,
+      "hitRate": 0.6,
+      "count3": 35,
       "count4": 12,
       "count5": 10,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "KamilF",
       "group": "D",
       "position": 17,
-      "points": 261,
+      "points": 267,
       "grI": 44,
       "grII": 46,
       "grIII": 51,
       "bns": 0,
-      "puch": 120,
+      "puch": 126,
       "skutBonus": 0,
-      "hitRate": 0.6021505376344086,
-      "count3": 34,
+      "hitRate": 0.6063829787234043,
+      "count3": 35,
       "count4": 13,
       "count5": 7,
       "count6": 2,
-      "played": 93
+      "played": 94
     },
     {
       "participantId": "Karolina",
       "group": "E",
       "position": 18,
-      "points": 261,
+      "points": 267,
       "grI": 36,
       "grII": 61,
       "grIII": 50,
       "bns": 2,
-      "puch": 112,
+      "puch": 118,
       "skutBonus": 0,
-      "hitRate": 0.5957446808510638,
-      "count3": 33,
+      "hitRate": 0.6,
+      "count3": 34,
       "count4": 11,
       "count5": 12,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Żaklina",
       "group": "C",
       "position": 19,
-      "points": 260,
+      "points": 266,
       "grI": 46,
       "grII": 52,
       "grIII": 54,
       "bns": 0,
-      "puch": 108,
+      "puch": 114,
       "skutBonus": 0,
-      "hitRate": 0.6129032258064516,
-      "count3": 32,
+      "hitRate": 0.6170212765957447,
+      "count3": 33,
       "count4": 15,
       "count5": 10,
       "count6": 0,
-      "played": 93
+      "played": 94
     },
     {
       "participantId": "KrzysztofeR",
       "group": "H",
       "position": 20,
-      "points": 259,
+      "points": 265,
       "grI": 47,
       "grII": 54,
       "grIII": 51,
       "bns": 5,
-      "puch": 102,
+      "puch": 108,
       "skutBonus": 0,
-      "hitRate": 0.6236559139784946,
-      "count3": 39,
+      "hitRate": 0.6276595744680851,
+      "count3": 40,
       "count4": 9,
       "count5": 10,
       "count6": 0,
-      "played": 93
+      "played": 94
+    },
+    {
+      "participantId": "Borys",
+      "group": "D",
+      "position": 21,
+      "points": 262,
+      "grI": 49,
+      "grII": 53,
+      "grIII": 51,
+      "bns": 5,
+      "puch": 104,
+      "skutBonus": 0,
+      "hitRate": 0.6421052631578947,
+      "count3": 43,
+      "count4": 14,
+      "count5": 4,
+      "count6": 0,
+      "played": 95
     },
     {
       "participantId": "MarekS",
       "group": "E",
-      "position": 21,
-      "points": 256,
+      "position": 22,
+      "points": 262,
       "grI": 45,
       "grII": 58,
       "grIII": 48,
       "bns": 3,
-      "puch": 102,
+      "puch": 108,
       "skutBonus": 0,
-      "hitRate": 0.6063829787234043,
-      "count3": 36,
+      "hitRate": 0.6105263157894737,
+      "count3": 37,
       "count4": 11,
       "count5": 10,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Artur",
       "group": "B",
-      "position": 22,
-      "points": 256,
+      "position": 23,
+      "points": 262,
       "grI": 47,
       "grII": 48,
       "grIII": 52,
       "bns": 15,
-      "puch": 94,
+      "puch": 100,
       "skutBonus": 0,
-      "hitRate": 0.5957446808510638,
-      "count3": 38,
+      "hitRate": 0.6,
+      "count3": 39,
       "count4": 10,
       "count5": 8,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "MaciejM",
       "group": "F",
-      "position": 23,
-      "points": 256,
+      "position": 24,
+      "points": 262,
       "grI": 47,
       "grII": 59,
       "grIII": 46,
       "bns": 10,
-      "puch": 94,
+      "puch": 100,
       "skutBonus": 0,
-      "hitRate": 0.5957446808510638,
+      "hitRate": 0.6,
+      "count3": 36,
+      "count4": 11,
+      "count5": 10,
+      "count6": 0,
+      "played": 95
+    },
+    {
+      "participantId": "Witek",
+      "group": "F",
+      "position": 25,
+      "points": 258,
+      "grI": 39,
+      "grII": 66,
+      "grIII": 41,
+      "bns": 0,
+      "puch": 112,
+      "skutBonus": 2,
+      "hitRate": 0.6,
+      "count3": 36,
+      "count4": 11,
+      "count5": 10,
+      "count6": 0,
+      "played": 95
+    },
+    {
+      "participantId": "Dario",
+      "group": "A",
+      "position": 26,
+      "points": 258,
+      "grI": 42,
+      "grII": 48,
+      "grIII": 50,
+      "bns": 0,
+      "puch": 118,
+      "skutBonus": 0,
+      "hitRate": 0.5894736842105263,
       "count3": 35,
       "count4": 11,
       "count5": 10,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "KleoPatra",
       "group": "F",
-      "position": 24,
+      "position": 27,
       "points": 256,
       "grI": 39,
       "grII": 57,
@@ -426,377 +480,395 @@
       "bns": 15,
       "puch": 86,
       "skutBonus": 0,
-      "hitRate": 0.5957446808510638,
+      "hitRate": 0.5894736842105263,
       "count3": 35,
       "count4": 13,
       "count5": 7,
       "count6": 1,
-      "played": 94
-    },
-    {
-      "participantId": "Borys",
-      "group": "D",
-      "position": 25,
-      "points": 254,
-      "grI": 49,
-      "grII": 53,
-      "grIII": 51,
-      "bns": 5,
-      "puch": 96,
-      "skutBonus": 0,
-      "hitRate": 0.6382978723404256,
-      "count3": 43,
-      "count4": 13,
-      "count5": 4,
-      "count6": 0,
-      "played": 94
-    },
-    {
-      "participantId": "Witek",
-      "group": "F",
-      "position": 26,
-      "points": 252,
-      "grI": 39,
-      "grII": 66,
-      "grIII": 41,
-      "bns": 0,
-      "puch": 106,
-      "skutBonus": 2,
-      "hitRate": 0.5957446808510638,
-      "count3": 35,
-      "count4": 11,
-      "count5": 10,
-      "count6": 0,
-      "played": 94
-    },
-    {
-      "participantId": "Dario",
-      "group": "A",
-      "position": 27,
-      "points": 252,
-      "grI": 42,
-      "grII": 48,
-      "grIII": 50,
-      "bns": 0,
-      "puch": 112,
-      "skutBonus": 0,
-      "hitRate": 0.5851063829787234,
-      "count3": 34,
-      "count4": 11,
-      "count5": 10,
-      "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Prozped",
       "group": "B",
       "position": 28,
-      "points": 246,
+      "points": 252,
       "grI": 47,
       "grII": 53,
       "grIII": 46,
       "bns": 10,
-      "puch": 90,
+      "puch": 96,
       "skutBonus": 0,
-      "hitRate": 0.5638297872340425,
-      "count3": 30,
+      "hitRate": 0.5684210526315789,
+      "count3": 31,
       "count4": 14,
       "count5": 9,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "KSZ",
       "group": "F",
       "position": 29,
-      "points": 243,
+      "points": 251,
       "grI": 55,
       "grII": 44,
       "grIII": 53,
       "bns": 5,
-      "puch": 86,
+      "puch": 94,
       "skutBonus": 3,
-      "hitRate": 0.6170212765957447,
+      "hitRate": 0.6210526315789474,
       "count3": 43,
-      "count4": 10,
+      "count4": 11,
       "count5": 4,
       "count6": 1,
-      "played": 94
-    },
-    {
-      "participantId": "KrzysztoW",
-      "group": "B",
-      "position": 30,
-      "points": 243,
-      "grI": 36,
-      "grII": 50,
-      "grIII": 52,
-      "bns": 5,
-      "puch": 100,
-      "skutBonus": 0,
-      "hitRate": 0.5425531914893617,
-      "count3": 27,
-      "count4": 13,
-      "count5": 11,
-      "count6": 0,
-      "played": 94
-    },
-    {
-      "participantId": "KamUla",
-      "group": "A",
-      "position": 31,
-      "points": 241,
-      "grI": 38,
-      "grII": 53,
-      "grIII": 50,
-      "bns": 0,
-      "puch": 100,
-      "skutBonus": 0,
-      "hitRate": 0.6063829787234043,
-      "count3": 42,
-      "count4": 10,
-      "count5": 5,
-      "count6": 0,
-      "played": 94
-    },
-    {
-      "participantId": "Cezary",
-      "group": "C",
-      "position": 32,
-      "points": 241,
-      "grI": 33,
-      "grII": 59,
-      "grIII": 41,
-      "bns": 0,
-      "puch": 108,
-      "skutBonus": 0,
-      "hitRate": 0.5851063829787234,
-      "count3": 38,
-      "count4": 12,
-      "count5": 5,
-      "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Przemek",
       "group": "D",
-      "position": 33,
-      "points": 241,
+      "position": 30,
+      "points": 249,
       "grI": 44,
       "grII": 41,
       "grIII": 48,
       "bns": 0,
-      "puch": 108,
+      "puch": 116,
       "skutBonus": 0,
-      "hitRate": 0.574468085106383,
+      "hitRate": 0.5789473684210527,
       "count3": 37,
-      "count4": 9,
+      "count4": 10,
       "count5": 8,
       "count6": 0,
-      "played": 94
+      "played": 95
+    },
+    {
+      "participantId": "KrzysztoW",
+      "group": "B",
+      "position": 31,
+      "points": 249,
+      "grI": 36,
+      "grII": 50,
+      "grIII": 52,
+      "bns": 5,
+      "puch": 106,
+      "skutBonus": 0,
+      "hitRate": 0.5473684210526316,
+      "count3": 28,
+      "count4": 13,
+      "count5": 11,
+      "count6": 0,
+      "played": 95
+    },
+    {
+      "participantId": "KamUla",
+      "group": "A",
+      "position": 32,
+      "points": 247,
+      "grI": 38,
+      "grII": 53,
+      "grIII": 50,
+      "bns": 0,
+      "puch": 106,
+      "skutBonus": 0,
+      "hitRate": 0.6105263157894737,
+      "count3": 43,
+      "count4": 10,
+      "count5": 5,
+      "count6": 0,
+      "played": 95
+    },
+    {
+      "participantId": "Cezary",
+      "group": "C",
+      "position": 33,
+      "points": 247,
+      "grI": 33,
+      "grII": 59,
+      "grIII": 41,
+      "bns": 0,
+      "puch": 114,
+      "skutBonus": 0,
+      "hitRate": 0.5894736842105263,
+      "count3": 39,
+      "count4": 12,
+      "count5": 5,
+      "count6": 0,
+      "played": 95
     },
     {
       "participantId": "MichałCz",
       "group": "D",
       "position": 34,
-      "points": 238,
+      "points": 246,
       "grI": 40,
       "grII": 55,
       "grIII": 49,
       "bns": 0,
-      "puch": 94,
+      "puch": 102,
       "skutBonus": 0,
-      "hitRate": 0.5851063829787234,
+      "hitRate": 0.5894736842105263,
       "count3": 37,
-      "count4": 10,
+      "count4": 11,
       "count5": 8,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Tabus",
       "group": "G",
       "position": 35,
-      "points": 238,
+      "points": 244,
       "grI": 34,
       "grII": 50,
       "grIII": 38,
       "bns": 0,
-      "puch": 116,
+      "puch": 122,
       "skutBonus": 0,
-      "hitRate": 0.5425531914893617,
-      "count3": 32,
+      "hitRate": 0.5473684210526316,
+      "count3": 33,
       "count4": 12,
       "count5": 6,
       "count6": 1,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Sławek",
       "group": "H",
       "position": 36,
-      "points": 233,
+      "points": 239,
       "grI": 44,
       "grII": 49,
       "grIII": 56,
       "bns": 0,
-      "puch": 84,
+      "puch": 90,
       "skutBonus": 0,
-      "hitRate": 0.5957446808510638,
-      "count3": 37,
+      "hitRate": 0.6,
+      "count3": 38,
       "count4": 15,
       "count5": 4,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Maria",
       "group": "H",
       "position": 37,
-      "points": 231,
+      "points": 237,
       "grI": 38,
       "grII": 54,
       "grIII": 55,
       "bns": 0,
-      "puch": 84,
+      "puch": 90,
       "skutBonus": 0,
-      "hitRate": 0.574468085106383,
-      "count3": 34,
+      "hitRate": 0.5789473684210527,
+      "count3": 35,
       "count4": 13,
       "count5": 7,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "DeDe",
       "group": "G",
       "position": 38,
-      "points": 229,
+      "points": 237,
       "grI": 36,
       "grII": 48,
       "grIII": 63,
       "bns": 10,
-      "puch": 72,
+      "puch": 80,
       "skutBonus": 0,
-      "hitRate": 0.5425531914893617,
+      "hitRate": 0.5473684210526316,
       "count3": 30,
-      "count4": 12,
+      "count4": 13,
       "count5": 9,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "PawełSt",
       "group": "H",
       "position": 39,
-      "points": 227,
+      "points": 235,
       "grI": 30,
       "grII": 39,
       "grIII": 60,
       "bns": 0,
-      "puch": 98,
+      "puch": 106,
       "skutBonus": 0,
-      "hitRate": 0.5638297872340425,
+      "hitRate": 0.5684210526315789,
       "count3": 37,
-      "count4": 13,
+      "count4": 14,
       "count5": 3,
       "count6": 0,
-      "played": 94
-    },
-    {
-      "participantId": "MarekP",
-      "group": "F",
-      "position": 40,
-      "points": 227,
-      "grI": 32,
-      "grII": 52,
-      "grIII": 55,
-      "bns": 0,
-      "puch": 88,
-      "skutBonus": 0,
-      "hitRate": 0.5638297872340425,
-      "count3": 37,
-      "count4": 8,
-      "count5": 8,
-      "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Pimozid",
       "group": "G",
-      "position": 41,
-      "points": 227,
+      "position": 40,
+      "points": 235,
       "grI": 42,
       "grII": 43,
       "grIII": 46,
       "bns": 0,
-      "puch": 96,
+      "puch": 104,
       "skutBonus": 0,
-      "hitRate": 0.5376344086021505,
+      "hitRate": 0.5425531914893617,
       "count3": 27,
-      "count4": 17,
+      "count4": 18,
       "count5": 6,
       "count6": 0,
-      "played": 93
+      "played": 94
     },
     {
       "participantId": "Wojtek",
       "group": "A",
-      "position": 42,
-      "points": 226,
+      "position": 41,
+      "points": 234,
       "grI": 41,
       "grII": 50,
       "grIII": 51,
       "bns": 0,
-      "puch": 84,
+      "puch": 92,
       "skutBonus": 0,
-      "hitRate": 0.5638297872340425,
+      "hitRate": 0.5684210526315789,
       "count3": 36,
-      "count4": 9,
+      "count4": 10,
       "count5": 8,
       "count6": 0,
-      "played": 94
+      "played": 95
+    },
+    {
+      "participantId": "MarekP",
+      "group": "F",
+      "position": 42,
+      "points": 233,
+      "grI": 32,
+      "grII": 52,
+      "grIII": 55,
+      "bns": 0,
+      "puch": 94,
+      "skutBonus": 0,
+      "hitRate": 0.5684210526315789,
+      "count3": 38,
+      "count4": 8,
+      "count5": 8,
+      "count6": 0,
+      "played": 95
     },
     {
       "participantId": "Magiera",
       "group": "C",
       "position": 43,
-      "points": 225,
+      "points": 231,
       "grI": 39,
       "grII": 52,
       "grIII": 56,
       "bns": 0,
-      "puch": 78,
+      "puch": 84,
       "skutBonus": 0,
-      "hitRate": 0.5638297872340425,
-      "count3": 36,
+      "hitRate": 0.5684210526315789,
+      "count3": 37,
       "count4": 7,
       "count5": 10,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Dziobak",
       "group": "C",
       "position": 44,
-      "points": 220,
+      "points": 226,
       "grI": 39,
       "grII": 55,
       "grIII": 38,
       "bns": 0,
-      "puch": 88,
+      "puch": 94,
       "skutBonus": 0,
-      "hitRate": 0.5531914893617021,
-      "count3": 36,
+      "hitRate": 0.5578947368421052,
+      "count3": 37,
       "count4": 13,
       "count5": 2,
       "count6": 1,
+      "played": 95
+    },
+    {
+      "participantId": "PiotreK",
+      "group": "H",
+      "position": 45,
+      "points": 221,
+      "grI": 38,
+      "grII": 45,
+      "grIII": 62,
+      "bns": 0,
+      "puch": 76,
+      "skutBonus": 0,
+      "hitRate": 0.5473684210526316,
+      "count3": 34,
+      "count4": 9,
+      "count5": 9,
+      "count6": 0,
+      "played": 95
+    },
+    {
+      "participantId": "Sokółka",
+      "group": "B",
+      "position": 46,
+      "points": 220,
+      "grI": 42,
+      "grII": 34,
+      "grIII": 52,
+      "bns": 0,
+      "puch": 92,
+      "skutBonus": 0,
+      "hitRate": 0.5473684210526316,
+      "count3": 39,
+      "count4": 8,
+      "count5": 5,
+      "count6": 0,
+      "played": 95
+    },
+    {
+      "participantId": "AniaS",
+      "group": "G",
+      "position": 47,
+      "points": 219,
+      "grI": 43,
+      "grII": 49,
+      "grIII": 44,
+      "bns": 5,
+      "puch": 78,
+      "skutBonus": 0,
+      "hitRate": 0.5157894736842106,
+      "count3": 29,
+      "count4": 12,
+      "count5": 8,
+      "count6": 0,
+      "played": 95
+    },
+    {
+      "participantId": "KrzysztoWś",
+      "group": "G",
+      "position": 48,
+      "points": 218,
+      "grI": 42,
+      "grII": 38,
+      "grIII": 50,
+      "bns": 0,
+      "puch": 88,
+      "skutBonus": 0,
+      "hitRate": 0.5319148936170213,
+      "count3": 33,
+      "count4": 10,
+      "count5": 7,
+      "count6": 0,
       "played": 94
     },
     {
       "participantId": "Seweryn",
       "group": "B",
-      "position": 45,
+      "position": 49,
       "points": 218,
       "grI": 31,
       "grII": 43,
@@ -804,120 +876,48 @@
       "bns": 0,
       "puch": 88,
       "skutBonus": 0,
-      "hitRate": 0.5212765957446809,
+      "hitRate": 0.5157894736842106,
       "count3": 29,
       "count4": 14,
       "count5": 5,
       "count6": 1,
-      "played": 94
-    },
-    {
-      "participantId": "PiotreK",
-      "group": "H",
-      "position": 46,
-      "points": 215,
-      "grI": 38,
-      "grII": 45,
-      "grIII": 62,
-      "bns": 0,
-      "puch": 70,
-      "skutBonus": 0,
-      "hitRate": 0.5425531914893617,
-      "count3": 33,
-      "count4": 9,
-      "count5": 9,
-      "count6": 0,
-      "played": 94
-    },
-    {
-      "participantId": "Sokółka",
-      "group": "B",
-      "position": 47,
-      "points": 212,
-      "grI": 42,
-      "grII": 34,
-      "grIII": 52,
-      "bns": 0,
-      "puch": 84,
-      "skutBonus": 0,
-      "hitRate": 0.5425531914893617,
-      "count3": 39,
-      "count4": 7,
-      "count5": 5,
-      "count6": 0,
-      "played": 94
-    },
-    {
-      "participantId": "KrzysztoWś",
-      "group": "G",
-      "position": 48,
-      "points": 212,
-      "grI": 42,
-      "grII": 38,
-      "grIII": 50,
-      "bns": 0,
-      "puch": 82,
-      "skutBonus": 0,
-      "hitRate": 0.5268817204301075,
-      "count3": 32,
-      "count4": 10,
-      "count5": 7,
-      "count6": 0,
-      "played": 93
-    },
-    {
-      "participantId": "AniaS",
-      "group": "G",
-      "position": 49,
-      "points": 211,
-      "grI": 43,
-      "grII": 49,
-      "grIII": 44,
-      "bns": 5,
-      "puch": 70,
-      "skutBonus": 0,
-      "hitRate": 0.5106382978723404,
-      "count3": 29,
-      "count4": 11,
-      "count5": 8,
-      "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "RobertLat",
       "group": "F",
       "position": 50,
-      "points": 203,
+      "points": 209,
       "grI": 19,
       "grII": 38,
       "grIII": 70,
       "bns": 0,
-      "puch": 76,
+      "puch": 82,
       "skutBonus": 1,
-      "hitRate": 0.48936170212765956,
-      "count3": 27,
+      "hitRate": 0.49473684210526314,
+      "count3": 28,
       "count4": 11,
       "count5": 8,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Rafał",
       "group": "E",
       "position": 51,
-      "points": 200,
+      "points": 208,
       "grI": 38,
       "grII": 51,
       "grIII": 40,
       "bns": 1,
-      "puch": 70,
+      "puch": 78,
       "skutBonus": 0,
-      "hitRate": 0.5,
+      "hitRate": 0.5052631578947369,
       "count3": 29,
-      "count4": 13,
+      "count4": 14,
       "count5": 5,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "Turbo-Ryżu",
@@ -941,37 +941,37 @@
       "participantId": "Cypryjka",
       "group": "G",
       "position": 53,
-      "points": 188,
+      "points": 194,
       "grI": 39,
       "grII": 41,
       "grIII": 52,
       "bns": 0,
-      "puch": 56,
+      "puch": 62,
       "skutBonus": 0,
-      "hitRate": 0.46808510638297873,
-      "count3": 23,
+      "hitRate": 0.47368421052631576,
+      "count3": 24,
       "count4": 14,
       "count5": 7,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "MagdaS",
       "group": "A",
       "position": 54,
-      "points": 176,
+      "points": 182,
       "grI": 34,
       "grII": 45,
       "grIII": 31,
       "bns": 0,
-      "puch": 66,
+      "puch": 72,
       "skutBonus": 0,
-      "hitRate": 0.46808510638297873,
-      "count3": 36,
+      "hitRate": 0.47368421052631576,
+      "count3": 37,
       "count4": 5,
       "count5": 3,
       "count6": 0,
-      "played": 94
+      "played": 95
     },
     {
       "participantId": "DarekL",
@@ -1020,7 +1020,7 @@
         "grII": 51,
         "grIII": 61,
         "bns": 15,
-        "puch": 112,
+        "puch": 118,
         "skutBonus": 0,
         "hitRate": 0.6388888888888888,
         "count3": 30,
@@ -1037,7 +1037,7 @@
         "grII": 64,
         "grIII": 56,
         "bns": 10,
-        "puch": 106,
+        "puch": 112,
         "skutBonus": 0,
         "hitRate": 0.5833333333333334,
         "count3": 23,
@@ -1054,7 +1054,7 @@
         "grII": 45,
         "grIII": 56,
         "bns": 5,
-        "puch": 108,
+        "puch": 114,
         "skutBonus": 0,
         "hitRate": 0.5833333333333334,
         "count3": 22,
@@ -1071,7 +1071,7 @@
         "grII": 50,
         "grIII": 51,
         "bns": 0,
-        "puch": 84,
+        "puch": 92,
         "skutBonus": 0,
         "hitRate": 0.5555555555555556,
         "count3": 25,
@@ -1088,7 +1088,7 @@
         "grII": 53,
         "grIII": 50,
         "bns": 0,
-        "puch": 100,
+        "puch": 106,
         "skutBonus": 0,
         "hitRate": 0.5833333333333334,
         "count3": 31,
@@ -1105,7 +1105,7 @@
         "grII": 48,
         "grIII": 50,
         "bns": 0,
-        "puch": 112,
+        "puch": 118,
         "skutBonus": 0,
         "hitRate": 0.5555555555555556,
         "count3": 26,
@@ -1122,7 +1122,7 @@
         "grII": 45,
         "grIII": 31,
         "bns": 0,
-        "puch": 66,
+        "puch": 72,
         "skutBonus": 0,
         "hitRate": 0.4722222222222222,
         "count3": 28,
@@ -1141,7 +1141,7 @@
         "grII": 48,
         "grIII": 52,
         "bns": 15,
-        "puch": 94,
+        "puch": 100,
         "skutBonus": 0,
         "hitRate": 0.5972222222222222,
         "count3": 31,
@@ -1158,7 +1158,7 @@
         "grII": 53,
         "grIII": 46,
         "bns": 10,
-        "puch": 90,
+        "puch": 96,
         "skutBonus": 0,
         "hitRate": 0.5694444444444444,
         "count3": 24,
@@ -1175,7 +1175,7 @@
         "grII": 50,
         "grIII": 52,
         "bns": 5,
-        "puch": 100,
+        "puch": 106,
         "skutBonus": 0,
         "hitRate": 0.5138888888888888,
         "count3": 19,
@@ -1209,7 +1209,7 @@
         "grII": 34,
         "grIII": 52,
         "bns": 0,
-        "puch": 84,
+        "puch": 92,
         "skutBonus": 0,
         "hitRate": 0.5277777777777778,
         "count3": 28,
@@ -1262,7 +1262,7 @@
         "grII": 47,
         "grIII": 57,
         "bns": 15,
-        "puch": 106,
+        "puch": 112,
         "skutBonus": 1,
         "hitRate": 0.6111111111111112,
         "count3": 28,
@@ -1279,7 +1279,7 @@
         "grII": 56,
         "grIII": 56,
         "bns": 10,
-        "puch": 128,
+        "puch": 136,
         "skutBonus": 0,
         "hitRate": 0.5833333333333334,
         "count3": 24,
@@ -1296,7 +1296,7 @@
         "grII": 47,
         "grIII": 54,
         "bns": 5,
-        "puch": 118,
+        "puch": 124,
         "skutBonus": 0,
         "hitRate": 0.5972222222222222,
         "count3": 26,
@@ -1313,7 +1313,7 @@
         "grII": 52,
         "grIII": 54,
         "bns": 0,
-        "puch": 108,
+        "puch": 114,
         "skutBonus": 0,
         "hitRate": 0.5833333333333334,
         "count3": 24,
@@ -1330,7 +1330,7 @@
         "grII": 52,
         "grIII": 56,
         "bns": 0,
-        "puch": 78,
+        "puch": 84,
         "skutBonus": 0,
         "hitRate": 0.5694444444444444,
         "count3": 27,
@@ -1347,7 +1347,7 @@
         "grII": 59,
         "grIII": 41,
         "bns": 0,
-        "puch": 108,
+        "puch": 114,
         "skutBonus": 0,
         "hitRate": 0.5416666666666666,
         "count3": 27,
@@ -1364,7 +1364,7 @@
         "grII": 55,
         "grIII": 38,
         "bns": 0,
-        "puch": 88,
+        "puch": 94,
         "skutBonus": 0,
         "hitRate": 0.5416666666666666,
         "count3": 26,
@@ -1383,7 +1383,7 @@
         "grII": 65,
         "grIII": 70,
         "bns": 15,
-        "puch": 122,
+        "puch": 128,
         "skutBonus": 3,
         "hitRate": 0.6666666666666666,
         "count3": 21,
@@ -1400,7 +1400,7 @@
         "grII": 57,
         "grIII": 56,
         "bns": 10,
-        "puch": 110,
+        "puch": 116,
         "skutBonus": 0,
         "hitRate": 0.5972222222222222,
         "count3": 23,
@@ -1417,7 +1417,7 @@
         "grII": 53,
         "grIII": 51,
         "bns": 5,
-        "puch": 96,
+        "puch": 104,
         "skutBonus": 0,
         "hitRate": 0.625,
         "count3": 30,
@@ -1434,7 +1434,7 @@
         "grII": 55,
         "grIII": 49,
         "bns": 0,
-        "puch": 94,
+        "puch": 102,
         "skutBonus": 0,
         "hitRate": 0.5694444444444444,
         "count3": 27,
@@ -1451,7 +1451,7 @@
         "grII": 46,
         "grIII": 51,
         "bns": 0,
-        "puch": 120,
+        "puch": 126,
         "skutBonus": 0,
         "hitRate": 0.5694444444444444,
         "count3": 27,
@@ -1468,7 +1468,7 @@
         "grII": 41,
         "grIII": 48,
         "bns": 0,
-        "puch": 108,
+        "puch": 116,
         "skutBonus": 0,
         "hitRate": 0.5416666666666666,
         "count3": 28,
@@ -1504,7 +1504,7 @@
         "grII": 57,
         "grIII": 66,
         "bns": 15,
-        "puch": 158,
+        "puch": 164,
         "skutBonus": 0,
         "hitRate": 0.6388888888888888,
         "count3": 24,
@@ -1521,7 +1521,7 @@
         "grII": 67,
         "grIII": 52,
         "bns": 10,
-        "puch": 122,
+        "puch": 128,
         "skutBonus": 3,
         "hitRate": 0.6388888888888888,
         "count3": 25,
@@ -1538,7 +1538,7 @@
         "grII": 60,
         "grIII": 57,
         "bns": 5,
-        "puch": 124,
+        "puch": 130,
         "skutBonus": 0,
         "hitRate": 0.6388888888888888,
         "count3": 30,
@@ -1555,7 +1555,7 @@
         "grII": 61,
         "grIII": 55,
         "bns": 4,
-        "puch": 126,
+        "puch": 134,
         "skutBonus": 0,
         "hitRate": 0.6111111111111112,
         "count3": 30,
@@ -1572,7 +1572,7 @@
         "grII": 58,
         "grIII": 48,
         "bns": 3,
-        "puch": 102,
+        "puch": 108,
         "skutBonus": 0,
         "hitRate": 0.5833333333333334,
         "count3": 25,
@@ -1589,7 +1589,7 @@
         "grII": 61,
         "grIII": 50,
         "bns": 2,
-        "puch": 112,
+        "puch": 118,
         "skutBonus": 0,
         "hitRate": 0.5694444444444444,
         "count3": 25,
@@ -1606,7 +1606,7 @@
         "grII": 51,
         "grIII": 40,
         "bns": 1,
-        "puch": 70,
+        "puch": 78,
         "skutBonus": 0,
         "hitRate": 0.5277777777777778,
         "count3": 24,
@@ -1642,7 +1642,7 @@
         "grII": 59,
         "grIII": 46,
         "bns": 10,
-        "puch": 94,
+        "puch": 100,
         "skutBonus": 0,
         "hitRate": 0.6111111111111112,
         "count3": 29,
@@ -1659,7 +1659,7 @@
         "grII": 44,
         "grIII": 53,
         "bns": 5,
-        "puch": 86,
+        "puch": 94,
         "skutBonus": 3,
         "hitRate": 0.625,
         "count3": 32,
@@ -1676,7 +1676,7 @@
         "grII": 66,
         "grIII": 41,
         "bns": 0,
-        "puch": 106,
+        "puch": 112,
         "skutBonus": 2,
         "hitRate": 0.5694444444444444,
         "count3": 26,
@@ -1693,7 +1693,7 @@
         "grII": 52,
         "grIII": 55,
         "bns": 0,
-        "puch": 88,
+        "puch": 94,
         "skutBonus": 0,
         "hitRate": 0.5694444444444444,
         "count3": 30,
@@ -1710,7 +1710,7 @@
         "grII": 50,
         "grIII": 37,
         "bns": 0,
-        "puch": 124,
+        "puch": 130,
         "skutBonus": 0,
         "hitRate": 0.5416666666666666,
         "count3": 25,
@@ -1727,7 +1727,7 @@
         "grII": 38,
         "grIII": 70,
         "bns": 0,
-        "puch": 76,
+        "puch": 82,
         "skutBonus": 1,
         "hitRate": 0.4861111111111111,
         "count3": 19,
@@ -1746,7 +1746,7 @@
         "grII": 61,
         "grIII": 72,
         "bns": 15,
-        "puch": 124,
+        "puch": 130,
         "skutBonus": 3,
         "hitRate": 0.6388888888888888,
         "count3": 22,
@@ -1763,7 +1763,7 @@
         "grII": 48,
         "grIII": 63,
         "bns": 10,
-        "puch": 72,
+        "puch": 80,
         "skutBonus": 0,
         "hitRate": 0.5555555555555556,
         "count3": 21,
@@ -1780,7 +1780,7 @@
         "grII": 49,
         "grIII": 44,
         "bns": 5,
-        "puch": 70,
+        "puch": 78,
         "skutBonus": 0,
         "hitRate": 0.5277777777777778,
         "count3": 22,
@@ -1797,7 +1797,7 @@
         "grII": 41,
         "grIII": 52,
         "bns": 0,
-        "puch": 56,
+        "puch": 62,
         "skutBonus": 0,
         "hitRate": 0.5,
         "count3": 18,
@@ -1814,7 +1814,7 @@
         "grII": 43,
         "grIII": 46,
         "bns": 0,
-        "puch": 96,
+        "puch": 104,
         "skutBonus": 0,
         "hitRate": 0.5138888888888888,
         "count3": 21,
@@ -1831,7 +1831,7 @@
         "grII": 38,
         "grIII": 50,
         "bns": 0,
-        "puch": 82,
+        "puch": 88,
         "skutBonus": 0,
         "hitRate": 0.5138888888888888,
         "count3": 24,
@@ -1848,7 +1848,7 @@
         "grII": 50,
         "grIII": 38,
         "bns": 0,
-        "puch": 116,
+        "puch": 122,
         "skutBonus": 0,
         "hitRate": 0.4861111111111111,
         "count3": 22,
@@ -1867,7 +1867,7 @@
         "grII": 60,
         "grIII": 59,
         "bns": 15,
-        "puch": 110,
+        "puch": 118,
         "skutBonus": 0,
         "hitRate": 0.625,
         "count3": 24,
@@ -1884,7 +1884,7 @@
         "grII": 52,
         "grIII": 56,
         "bns": 10,
-        "puch": 116,
+        "puch": 122,
         "skutBonus": 2,
         "hitRate": 0.625,
         "count3": 25,
@@ -1901,7 +1901,7 @@
         "grII": 54,
         "grIII": 51,
         "bns": 5,
-        "puch": 102,
+        "puch": 108,
         "skutBonus": 0,
         "hitRate": 0.6111111111111112,
         "count3": 31,
@@ -1918,7 +1918,7 @@
         "grII": 49,
         "grIII": 56,
         "bns": 0,
-        "puch": 84,
+        "puch": 90,
         "skutBonus": 0,
         "hitRate": 0.6111111111111112,
         "count3": 30,
@@ -1935,7 +1935,7 @@
         "grII": 54,
         "grIII": 55,
         "bns": 0,
-        "puch": 84,
+        "puch": 90,
         "skutBonus": 0,
         "hitRate": 0.5694444444444444,
         "count3": 24,
@@ -1952,7 +1952,7 @@
         "grII": 45,
         "grIII": 62,
         "bns": 0,
-        "puch": 70,
+        "puch": 76,
         "skutBonus": 0,
         "hitRate": 0.5694444444444444,
         "count3": 26,
@@ -1969,7 +1969,7 @@
         "grII": 39,
         "grIII": 60,
         "bns": 0,
-        "puch": 98,
+        "puch": 106,
         "skutBonus": 0,
         "hitRate": 0.5416666666666666,
         "count3": 29,
@@ -39821,77 +39821,80 @@
             "home": "Argentyna",
             "away": "Egipt",
             "kickoff": "wtorek, 7 lip godz. 18.00",
-            "result": null,
+            "result": {
+              "home": 3,
+              "away": 2
+            },
             "predictions": {
               "Dario": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Wojtek": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "KamUla": {
                 "pick": {
                   "home": 3,
                   "away": 1
                 },
-                "points": null
+                "points": 6
               },
               "MagdaS": {
                 "pick": {
                   "home": 3,
                   "away": 1
                 },
-                "points": null
+                "points": 6
               },
               "KasiaJ": {
                 "pick": {
                   "home": 3,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "KrystianM": {
                 "pick": {
                   "home": 3,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "PiotreG": {
                 "pick": {
                   "home": 3,
                   "away": 1
                 },
-                "points": null
+                "points": 6
               },
               "Prozped": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Artur": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Sokółka": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "KasiaK": {
                 "pick": null,
@@ -39903,7 +39906,7 @@
                   "away": 1,
                   "pk": "home"
                 },
-                "points": null
+                "points": 0
               },
               "DarekL": {
                 "pick": null,
@@ -39914,70 +39917,70 @@
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Magiera": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Henryk": {
                 "pick": {
                   "home": 3,
                   "away": 1
                 },
-                "points": null
+                "points": 6
               },
               "PPP": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "Żaklina": {
                 "pick": {
                   "home": 4,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Cezary": {
                 "pick": {
                   "home": 3,
                   "away": 1
                 },
-                "points": null
+                "points": 6
               },
               "Dziobak": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "MateuszKn": {
                 "pick": {
                   "home": 3,
                   "away": 1
                 },
-                "points": null
+                "points": 6
               },
               "Przemek": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "Borys": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "Turbo-Ryżu": {
                 "pick": null,
@@ -39988,98 +39991,98 @@
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Małgorzata": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "KamilF": {
                 "pick": {
                   "home": 3,
                   "away": 1
                 },
-                "points": null
+                "points": 6
               },
               "MichałCz": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "Talvik": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Rafał": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "MarekS": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Karolina": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "AndrzejO": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "PiotreM": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "DarekJell": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "MaciejM": {
                 "pick": {
                   "home": 3,
                   "away": 1
                 },
-                "points": null
+                "points": 6
               },
               "KSZ": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "MarekP": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "KleoPatra": {
                 "pick": {
@@ -40087,126 +40090,126 @@
                   "away": 1,
                   "pk": "away"
                 },
-                "points": null
+                "points": 0
               },
               "MichałeK": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Witek": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "RobertLat": {
                 "pick": {
                   "home": 3,
                   "away": 1
                 },
-                "points": null
+                "points": 6
               },
               "DeDe": {
                 "pick": {
                   "home": 1,
                   "away": 0
                 },
-                "points": null
+                "points": 8
               },
               "Cypryjka": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Tabus": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "AniaS": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "Pimozid": {
                 "pick": {
                   "home": 1,
                   "away": 0
                 },
-                "points": null
+                "points": 8
               },
               "KrzysztoWś": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Ruslan": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "PiotreK": {
                 "pick": {
                   "home": 3,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "KaBed": {
                 "pick": {
                   "home": 2,
                   "away": 1
                 },
-                "points": null
+                "points": 8
               },
               "Mirella": {
                 "pick": {
                   "home": 3,
                   "away": 1
                 },
-                "points": null
+                "points": 6
               },
               "Maria": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "Sławek": {
                 "pick": {
                   "home": 2,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               },
               "PawełSt": {
                 "pick": {
                   "home": 1,
                   "away": 0
                 },
-                "points": null
+                "points": 8
               },
               "KrzysztofeR": {
                 "pick": {
                   "home": 3,
                   "away": 0
                 },
-                "points": null
+                "points": 6
               }
             }
           },
@@ -40629,8 +40632,8 @@
   "cards": {
     "Dario": {
       "group": "A",
-      "generalPos": 27,
-      "points": 252,
+      "generalPos": 26,
+      "points": 258,
       "groupPos": 6,
       "celnoscPct": 56,
       "dokladne": 6,
@@ -40651,15 +40654,15 @@
         "points": 50
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 112,
-      "puchCelnoscPct": 68,
+      "puchPunkty": 118,
+      "puchCelnoscPct": 70,
       "puchDokladne": 4,
       "puchAktywne": true
     },
     "Wojtek": {
       "group": "A",
-      "generalPos": 42,
-      "points": 226,
+      "generalPos": 41,
+      "points": 234,
       "groupPos": 4,
       "celnoscPct": 56,
       "dokladne": 8,
@@ -40680,15 +40683,15 @@
         "points": 52
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 84,
-      "puchCelnoscPct": 59,
+      "puchPunkty": 92,
+      "puchCelnoscPct": 61,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "KamUla": {
       "group": "A",
-      "generalPos": 31,
-      "points": 241,
+      "generalPos": 32,
+      "points": 247,
       "groupPos": 5,
       "celnoscPct": 58,
       "dokladne": 4,
@@ -40709,15 +40712,15 @@
         "points": 53
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 100,
-      "puchCelnoscPct": 68,
+      "puchPunkty": 106,
+      "puchCelnoscPct": 70,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "MagdaS": {
       "group": "A",
       "generalPos": 54,
-      "points": 176,
+      "points": 182,
       "groupPos": 7,
       "celnoscPct": 47,
       "dokladne": 2,
@@ -40738,15 +40741,15 @@
         "points": 45
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 66,
-      "puchCelnoscPct": 45,
+      "puchPunkty": 72,
+      "puchCelnoscPct": 48,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "KasiaJ": {
       "group": "A",
       "generalPos": 15,
-      "points": 266,
+      "points": 272,
       "groupPos": 3,
       "celnoscPct": 58,
       "dokladne": 7,
@@ -40767,15 +40770,15 @@
         "points": 56
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 108,
-      "puchCelnoscPct": 68,
+      "puchPunkty": 114,
+      "puchCelnoscPct": 70,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "KrystianM": {
       "group": "A",
-      "generalPos": 7,
-      "points": 288,
+      "generalPos": 8,
+      "points": 294,
       "groupPos": 1,
       "celnoscPct": 64,
       "dokladne": 7,
@@ -40796,15 +40799,15 @@
         "points": 61
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 112,
-      "puchCelnoscPct": 73,
+      "puchPunkty": 118,
+      "puchCelnoscPct": 74,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "PiotreG": {
       "group": "A",
       "generalPos": 14,
-      "points": 271,
+      "points": 277,
       "groupPos": 2,
       "celnoscPct": 58,
       "dokladne": 10,
@@ -40825,15 +40828,15 @@
         "points": 64
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 106,
-      "puchCelnoscPct": 68,
+      "puchPunkty": 112,
+      "puchCelnoscPct": 70,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "Prozped": {
       "group": "B",
       "generalPos": 28,
-      "points": 246,
+      "points": 252,
       "groupPos": 2,
       "celnoscPct": 57,
       "dokladne": 6,
@@ -40854,15 +40857,15 @@
         "points": 53
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 90,
-      "puchCelnoscPct": 55,
+      "puchPunkty": 96,
+      "puchCelnoscPct": 57,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "Artur": {
       "group": "B",
-      "generalPos": 22,
-      "points": 256,
+      "generalPos": 23,
+      "points": 262,
       "groupPos": 1,
       "celnoscPct": 60,
       "dokladne": 6,
@@ -40883,15 +40886,15 @@
         "points": 52
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 94,
-      "puchCelnoscPct": 59,
+      "puchPunkty": 100,
+      "puchCelnoscPct": 61,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "Sokółka": {
       "group": "B",
-      "generalPos": 47,
-      "points": 212,
+      "generalPos": 46,
+      "points": 220,
       "groupPos": 5,
       "celnoscPct": 53,
       "dokladne": 4,
@@ -40912,8 +40915,8 @@
         "points": 52
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 84,
-      "puchCelnoscPct": 59,
+      "puchPunkty": 92,
+      "puchCelnoscPct": 61,
       "puchDokladne": 1,
       "puchAktywne": true
     },
@@ -40948,7 +40951,7 @@
     },
     "Seweryn": {
       "group": "B",
-      "generalPos": 45,
+      "generalPos": 49,
       "points": 218,
       "groupPos": 4,
       "celnoscPct": 51,
@@ -40971,7 +40974,7 @@
       },
       "poTurze2Aktywne": true,
       "puchPunkty": 88,
-      "puchCelnoscPct": 55,
+      "puchCelnoscPct": 52,
       "puchDokladne": 2,
       "puchAktywne": true
     },
@@ -41006,8 +41009,8 @@
     },
     "KrzysztoW": {
       "group": "B",
-      "generalPos": 30,
-      "points": 243,
+      "generalPos": 31,
+      "points": 249,
       "groupPos": 3,
       "celnoscPct": 51,
       "dokladne": 9,
@@ -41028,15 +41031,15 @@
         "points": 52
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 100,
-      "puchCelnoscPct": 64,
+      "puchPunkty": 106,
+      "puchCelnoscPct": 65,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "Magiera": {
       "group": "C",
       "generalPos": 43,
-      "points": 225,
+      "points": 231,
       "groupPos": 5,
       "celnoscPct": 57,
       "dokladne": 10,
@@ -41057,15 +41060,15 @@
         "points": 56
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 78,
-      "puchCelnoscPct": 55,
+      "puchPunkty": 84,
+      "puchCelnoscPct": 57,
       "puchDokladne": 0,
       "puchAktywne": true
     },
     "Henryk": {
       "group": "C",
       "generalPos": 13,
-      "points": 275,
+      "points": 281,
       "groupPos": 3,
       "celnoscPct": 60,
       "dokladne": 6,
@@ -41086,15 +41089,15 @@
         "points": 54
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 118,
-      "puchCelnoscPct": 73,
+      "puchPunkty": 124,
+      "puchCelnoscPct": 74,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "PPP": {
       "group": "C",
       "generalPos": 5,
-      "points": 291,
+      "points": 299,
       "groupPos": 2,
       "celnoscPct": 58,
       "dokladne": 9,
@@ -41115,15 +41118,15 @@
         "points": 56
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 128,
-      "puchCelnoscPct": 73,
+      "puchPunkty": 136,
+      "puchCelnoscPct": 74,
       "puchDokladne": 7,
       "puchAktywne": true
     },
     "Żaklina": {
       "group": "C",
       "generalPos": 19,
-      "points": 260,
+      "points": 266,
       "groupPos": 4,
       "celnoscPct": 58,
       "dokladne": 8,
@@ -41144,15 +41147,15 @@
         "points": 54
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 108,
-      "puchCelnoscPct": 71,
+      "puchPunkty": 114,
+      "puchCelnoscPct": 73,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "Cezary": {
       "group": "C",
-      "generalPos": 32,
-      "points": 241,
+      "generalPos": 33,
+      "points": 247,
       "groupPos": 6,
       "celnoscPct": 54,
       "dokladne": 4,
@@ -41173,15 +41176,15 @@
         "points": 59
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 108,
-      "puchCelnoscPct": 73,
+      "puchPunkty": 114,
+      "puchCelnoscPct": 74,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "Dziobak": {
       "group": "C",
       "generalPos": 44,
-      "points": 220,
+      "points": 226,
       "groupPos": 7,
       "celnoscPct": 54,
       "dokladne": 2,
@@ -41202,15 +41205,15 @@
         "points": 55
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 88,
-      "puchCelnoscPct": 59,
+      "puchPunkty": 94,
+      "puchCelnoscPct": 61,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "MateuszKn": {
       "group": "C",
       "generalPos": 11,
-      "points": 278,
+      "points": 284,
       "groupPos": 1,
       "celnoscPct": 61,
       "dokladne": 9,
@@ -41231,15 +41234,15 @@
         "points": 57
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 106,
-      "puchCelnoscPct": 55,
+      "puchPunkty": 112,
+      "puchCelnoscPct": 57,
       "puchDokladne": 7,
       "puchAktywne": true
     },
     "Przemek": {
       "group": "D",
-      "generalPos": 33,
-      "points": 241,
+      "generalPos": 30,
+      "points": 249,
       "groupPos": 6,
       "celnoscPct": 54,
       "dokladne": 5,
@@ -41260,15 +41263,15 @@
         "points": 48
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 108,
-      "puchCelnoscPct": 68,
+      "puchPunkty": 116,
+      "puchCelnoscPct": 70,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "Borys": {
       "group": "D",
-      "generalPos": 25,
-      "points": 254,
+      "generalPos": 21,
+      "points": 262,
       "groupPos": 3,
       "celnoscPct": 63,
       "dokladne": 3,
@@ -41289,8 +41292,8 @@
         "points": 53
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 96,
-      "puchCelnoscPct": 68,
+      "puchPunkty": 104,
+      "puchCelnoscPct": 70,
       "puchDokladne": 1,
       "puchAktywne": true
     },
@@ -41326,7 +41329,7 @@
     "MagdaP": {
       "group": "D",
       "generalPos": 2,
-      "points": 321,
+      "points": 327,
       "groupPos": 1,
       "celnoscPct": 67,
       "dokladne": 13,
@@ -41347,15 +41350,15 @@
         "points": 70
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 122,
-      "puchCelnoscPct": 77,
+      "puchPunkty": 128,
+      "puchCelnoscPct": 78,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "Małgorzata": {
       "group": "D",
       "generalPos": 12,
-      "points": 277,
+      "points": 283,
       "groupPos": 2,
       "celnoscPct": 60,
       "dokladne": 8,
@@ -41376,15 +41379,15 @@
         "points": 57
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 110,
-      "puchCelnoscPct": 71,
+      "puchPunkty": 116,
+      "puchCelnoscPct": 73,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "KamilF": {
       "group": "D",
       "generalPos": 17,
-      "points": 261,
+      "points": 267,
       "groupPos": 5,
       "celnoscPct": 57,
       "dokladne": 4,
@@ -41405,15 +41408,15 @@
         "points": 51
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 120,
-      "puchCelnoscPct": 71,
+      "puchPunkty": 126,
+      "puchCelnoscPct": 73,
       "puchDokladne": 5,
       "puchAktywne": true
     },
     "MichałCz": {
       "group": "D",
       "generalPos": 34,
-      "points": 238,
+      "points": 246,
       "groupPos": 4,
       "celnoscPct": 57,
       "dokladne": 7,
@@ -41434,15 +41437,15 @@
         "points": 55
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 94,
-      "puchCelnoscPct": 64,
+      "puchPunkty": 102,
+      "puchCelnoscPct": 65,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "Talvik": {
       "group": "E",
       "generalPos": 4,
-      "points": 299,
+      "points": 305,
       "groupPos": 2,
       "celnoscPct": 64,
       "dokladne": 8,
@@ -41463,15 +41466,15 @@
         "points": 67
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 122,
-      "puchCelnoscPct": 77,
+      "puchPunkty": 128,
+      "puchCelnoscPct": 78,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "Rafał": {
       "group": "E",
       "generalPos": 51,
-      "points": 200,
+      "points": 208,
       "groupPos": 7,
       "celnoscPct": 53,
       "dokladne": 1,
@@ -41492,15 +41495,15 @@
         "points": 51
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 70,
-      "puchCelnoscPct": 41,
+      "puchPunkty": 78,
+      "puchCelnoscPct": 43,
       "puchDokladne": 4,
       "puchAktywne": true
     },
     "MarekS": {
       "group": "E",
-      "generalPos": 21,
-      "points": 256,
+      "generalPos": 22,
+      "points": 262,
       "groupPos": 5,
       "celnoscPct": 58,
       "dokladne": 8,
@@ -41521,15 +41524,15 @@
         "points": 58
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 102,
-      "puchCelnoscPct": 68,
+      "puchPunkty": 108,
+      "puchCelnoscPct": 70,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "Karolina": {
       "group": "E",
       "generalPos": 18,
-      "points": 261,
+      "points": 267,
       "groupPos": 6,
       "celnoscPct": 57,
       "dokladne": 8,
@@ -41550,15 +41553,15 @@
         "points": 61
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 112,
-      "puchCelnoscPct": 68,
+      "puchPunkty": 118,
+      "puchCelnoscPct": 70,
       "puchDokladne": 4,
       "puchAktywne": true
     },
     "AndrzejO": {
       "group": "E",
       "generalPos": 1,
-      "points": 346,
+      "points": 352,
       "groupPos": 1,
       "celnoscPct": 64,
       "dokladne": 13,
@@ -41579,15 +41582,15 @@
         "points": 66
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 158,
-      "puchCelnoscPct": 86,
+      "puchPunkty": 164,
+      "puchCelnoscPct": 87,
       "puchDokladne": 9,
       "puchAktywne": true
     },
     "PiotreM": {
       "group": "E",
-      "generalPos": 6,
-      "points": 288,
+      "generalPos": 7,
+      "points": 294,
       "groupPos": 3,
       "celnoscPct": 64,
       "dokladne": 5,
@@ -41608,15 +41611,15 @@
         "points": 60
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 124,
-      "puchCelnoscPct": 77,
+      "puchPunkty": 130,
+      "puchCelnoscPct": 78,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "DarekJell": {
       "group": "E",
       "generalPos": 10,
-      "points": 284,
+      "points": 292,
       "groupPos": 4,
       "celnoscPct": 61,
       "dokladne": 8,
@@ -41637,15 +41640,15 @@
         "points": 61
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 126,
-      "puchCelnoscPct": 82,
+      "puchPunkty": 134,
+      "puchCelnoscPct": 83,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "MaciejM": {
       "group": "F",
-      "generalPos": 23,
-      "points": 256,
+      "generalPos": 24,
+      "points": 262,
       "groupPos": 2,
       "celnoscPct": 61,
       "dokladne": 5,
@@ -41666,15 +41669,15 @@
         "points": 59
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 94,
-      "puchCelnoscPct": 55,
+      "puchPunkty": 100,
+      "puchCelnoscPct": 57,
       "puchDokladne": 5,
       "puchAktywne": true
     },
     "KSZ": {
       "group": "F",
       "generalPos": 29,
-      "points": 243,
+      "points": 251,
       "groupPos": 3,
       "celnoscPct": 63,
       "dokladne": 4,
@@ -41695,15 +41698,15 @@
         "points": 55
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 86,
-      "puchCelnoscPct": 59,
+      "puchPunkty": 94,
+      "puchCelnoscPct": 61,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "MarekP": {
       "group": "F",
-      "generalPos": 40,
-      "points": 227,
+      "generalPos": 42,
+      "points": 233,
       "groupPos": 5,
       "celnoscPct": 57,
       "dokladne": 5,
@@ -41724,14 +41727,14 @@
         "points": 55
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 88,
-      "puchCelnoscPct": 55,
+      "puchPunkty": 94,
+      "puchCelnoscPct": 57,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "KleoPatra": {
       "group": "F",
-      "generalPos": 24,
+      "generalPos": 27,
       "points": 256,
       "groupPos": 1,
       "celnoscPct": 60,
@@ -41754,14 +41757,14 @@
       },
       "poTurze2Aktywne": true,
       "puchPunkty": 86,
-      "puchCelnoscPct": 59,
+      "puchCelnoscPct": 57,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "MichałeK": {
       "group": "F",
       "generalPos": 16,
-      "points": 262,
+      "points": 268,
       "groupPos": 6,
       "celnoscPct": 54,
       "dokladne": 7,
@@ -41782,15 +41785,15 @@
         "points": 51
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 124,
-      "puchCelnoscPct": 77,
+      "puchPunkty": 130,
+      "puchCelnoscPct": 78,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "Witek": {
       "group": "F",
-      "generalPos": 26,
-      "points": 252,
+      "generalPos": 25,
+      "points": 258,
       "groupPos": 4,
       "celnoscPct": 57,
       "dokladne": 8,
@@ -41811,15 +41814,15 @@
         "points": 66
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 106,
-      "puchCelnoscPct": 68,
+      "puchPunkty": 112,
+      "puchCelnoscPct": 70,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "RobertLat": {
       "group": "F",
       "generalPos": 50,
-      "points": 203,
+      "points": 209,
       "groupPos": 7,
       "celnoscPct": 49,
       "dokladne": 6,
@@ -41840,15 +41843,15 @@
         "points": 70
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 76,
-      "puchCelnoscPct": 50,
+      "puchPunkty": 82,
+      "puchCelnoscPct": 52,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "DeDe": {
       "group": "G",
       "generalPos": 38,
-      "points": 229,
+      "points": 237,
       "groupPos": 2,
       "celnoscPct": 56,
       "dokladne": 8,
@@ -41869,15 +41872,15 @@
         "points": 63
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 72,
-      "puchCelnoscPct": 50,
+      "puchPunkty": 80,
+      "puchCelnoscPct": 52,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "Cypryjka": {
       "group": "G",
       "generalPos": 53,
-      "points": 188,
+      "points": 194,
       "groupPos": 4,
       "celnoscPct": 50,
       "dokladne": 6,
@@ -41898,15 +41901,15 @@
         "points": 52
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 56,
-      "puchCelnoscPct": 36,
+      "puchPunkty": 62,
+      "puchCelnoscPct": 39,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "Tabus": {
       "group": "G",
       "generalPos": 35,
-      "points": 238,
+      "points": 244,
       "groupPos": 7,
       "celnoscPct": 49,
       "dokladne": 4,
@@ -41927,15 +41930,15 @@
         "points": 50
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 116,
-      "puchCelnoscPct": 73,
+      "puchPunkty": 122,
+      "puchCelnoscPct": 74,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "AniaS": {
       "group": "G",
-      "generalPos": 49,
-      "points": 211,
+      "generalPos": 47,
+      "points": 219,
       "groupPos": 3,
       "celnoscPct": 53,
       "dokladne": 6,
@@ -41956,15 +41959,15 @@
         "points": 49
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 70,
-      "puchCelnoscPct": 45,
+      "puchPunkty": 78,
+      "puchCelnoscPct": 48,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "Pimozid": {
       "group": "G",
-      "generalPos": 41,
-      "points": 227,
+      "generalPos": 40,
+      "points": 235,
       "groupPos": 5,
       "celnoscPct": 51,
       "dokladne": 4,
@@ -41985,15 +41988,15 @@
         "points": 46
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 96,
-      "puchCelnoscPct": 62,
+      "puchPunkty": 104,
+      "puchCelnoscPct": 64,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "KrzysztoWś": {
       "group": "G",
       "generalPos": 48,
-      "points": 212,
+      "points": 218,
       "groupPos": 6,
       "celnoscPct": 51,
       "dokladne": 6,
@@ -42014,15 +42017,15 @@
         "points": 50
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 82,
-      "puchCelnoscPct": 57,
+      "puchPunkty": 88,
+      "puchCelnoscPct": 59,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "Ruslan": {
       "group": "G",
       "generalPos": 3,
-      "points": 312,
+      "points": 318,
       "groupPos": 1,
       "celnoscPct": 64,
       "dokladne": 11,
@@ -42043,15 +42046,15 @@
         "points": 72
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 124,
-      "puchCelnoscPct": 77,
+      "puchPunkty": 130,
+      "puchCelnoscPct": 78,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "PiotreK": {
       "group": "H",
-      "generalPos": 46,
-      "points": 215,
+      "generalPos": 45,
+      "points": 221,
       "groupPos": 6,
       "celnoscPct": 57,
       "dokladne": 7,
@@ -42072,15 +42075,15 @@
         "points": 62
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 70,
-      "puchCelnoscPct": 45,
+      "puchPunkty": 76,
+      "puchCelnoscPct": 48,
       "puchDokladne": 2,
       "puchAktywne": true
     },
     "KaBed": {
       "group": "H",
-      "generalPos": 9,
-      "points": 287,
+      "generalPos": 6,
+      "points": 295,
       "groupPos": 1,
       "celnoscPct": 63,
       "dokladne": 6,
@@ -42101,15 +42104,15 @@
         "points": 60
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 110,
-      "puchCelnoscPct": 64,
+      "puchPunkty": 118,
+      "puchCelnoscPct": 65,
       "puchDokladne": 5,
       "puchAktywne": true
     },
     "Mirella": {
       "group": "H",
-      "generalPos": 8,
-      "points": 288,
+      "generalPos": 9,
+      "points": 294,
       "groupPos": 2,
       "celnoscPct": 63,
       "dokladne": 7,
@@ -42130,15 +42133,15 @@
         "points": 56
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 116,
-      "puchCelnoscPct": 73,
+      "puchPunkty": 122,
+      "puchCelnoscPct": 74,
       "puchDokladne": 3,
       "puchAktywne": true
     },
     "Maria": {
       "group": "H",
       "generalPos": 37,
-      "points": 231,
+      "points": 237,
       "groupPos": 5,
       "celnoscPct": 57,
       "dokladne": 7,
@@ -42159,15 +42162,15 @@
         "points": 55
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 84,
-      "puchCelnoscPct": 59,
+      "puchPunkty": 90,
+      "puchCelnoscPct": 61,
       "puchDokladne": 0,
       "puchAktywne": true
     },
     "Sławek": {
       "group": "H",
       "generalPos": 36,
-      "points": 233,
+      "points": 239,
       "groupPos": 4,
       "celnoscPct": 61,
       "dokladne": 3,
@@ -42188,15 +42191,15 @@
         "points": 56
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 84,
-      "puchCelnoscPct": 55,
+      "puchPunkty": 90,
+      "puchCelnoscPct": 57,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "PawełSt": {
       "group": "H",
       "generalPos": 39,
-      "points": 227,
+      "points": 235,
       "groupPos": 7,
       "celnoscPct": 54,
       "dokladne": 2,
@@ -42217,15 +42220,15 @@
         "points": 60
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 98,
-      "puchCelnoscPct": 64,
+      "puchPunkty": 106,
+      "puchCelnoscPct": 65,
       "puchDokladne": 1,
       "puchAktywne": true
     },
     "KrzysztofeR": {
       "group": "H",
       "generalPos": 20,
-      "points": 259,
+      "points": 265,
       "groupPos": 3,
       "celnoscPct": 61,
       "dokladne": 7,
@@ -42246,8 +42249,8 @@
         "points": 54
       },
       "poTurze2Aktywne": true,
-      "puchPunkty": 102,
-      "puchCelnoscPct": 67,
+      "puchPunkty": 108,
+      "puchCelnoscPct": 68,
       "puchDokladne": 3,
       "puchAktywne": true
     }
