@@ -36,6 +36,13 @@ const MANUAL_PICKS: { player: string; match: number; pick: PucharPick; note: str
   { player: 'Sokółka', match: 17, pick: { home: 1, away: 2 }, note: 'dosłane 2026-07-04 (Kanada-Maroko)' },
 ];
 
+// KOREKTY — organizator BŁĘDNIE wpisał typ w bazie (ludzki błąd). W odróżnieniu od MANUAL_PICKS
+// (uzupełnia luki, konflikt = błąd) korekta ŚWIADOMIE NADPISUJE wartość z bazy poprawną.
+// Samonaprawcze: gdy nowsza baza już ma poprawny typ → no-op (log), inaczej → nadpisanie (log).
+const CORRECTIONS: { player: string; match: number; pick: PucharPick; note: string }[] = [
+  { player: 'Magiera', match: 25, pick: { home: 1, away: 0 }, note: 'korekta 2026-07-09: organizator wpisał odwrotnie; realny typ Francja-Maroko 1:0' },
+];
+
 // Terminarz pucharowy MŚ 2026 (1/16: ESPN/worldcupwiki; 1/8: beIN/Al Jazeera, 2026-07-04),
 // godziny ET. W bazie terminów nie ma — jak w turach grupowych bierzemy z oficjalnego terminarza
 // i przeliczamy ET (EDT = UTC−4) → POLSKI (CEST = UTC+2), czyli ET + 6h. Numer naszego meczu →
@@ -124,6 +131,23 @@ for (const { player, match, pick, note } of MANUAL_PICKS) {
   }
   (round.predictions[player] ??= {})[match] = pick;
   console.log(`MANUAL_PICKS: dołożono ${player} mecz ${match} → ${pick.home}:${pick.away} (${note})`);
+}
+
+// Nakładka korekt — nadpisuje błędny typ z bazy poprawną wartością.
+for (const { player, match, pick, note } of CORRECTIONS) {
+  const round = rounds.find((r) => r.fixtures.some((f) => f.no === match));
+  if (!round) throw new Error(`CORRECTIONS: mecz ${match} nie istnieje w żadnej rundzie`);
+  if (!roster.some((p) => p.id === player)) throw new Error(`CORRECTIONS: "${player}" spoza rosteru`);
+  const existing = round.predictions[player]?.[match];
+  const same =
+    existing && existing.home === pick.home && existing.away === pick.away && existing.pk === pick.pk;
+  if (same) {
+    console.log(`CORRECTIONS: ${player} mecz ${match} już poprawny w bazie — pomijam (${note})`);
+    continue;
+  }
+  const before = existing ? `${existing.home}:${existing.away}` : 'brak';
+  (round.predictions[player] ??= {})[match] = pick;
+  console.log(`CORRECTIONS: ${player} mecz ${match}: ${before} → ${pick.home}:${pick.away} (${note})`);
 }
 
 writeFileSync(OUT, JSON.stringify({ rounds }, null, 2) + '\n');

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T17:16:28.145Z",
+  "generatedAt": "2026-07-09T21:12:24.264Z",
   "general": [
     {
       "participantId": "AndrzejO",
@@ -40735,8 +40735,8 @@
               },
               "Magiera": {
                 "pick": {
-                  "home": 0,
-                  "away": 1
+                  "home": 1,
+                  "away": 0
                 },
                 "points": null
               },
