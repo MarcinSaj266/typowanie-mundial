@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T04:36:29.507Z",
+  "generatedAt": "2026-07-09T17:16:28.145Z",
   "general": [
     {
       "participantId": "AndrzejO",
@@ -11,7 +11,7 @@
       "grIII": 66,
       "bns": 15,
       "puch": 164,
-      "skutBonus": 3,
+      "skutBonus": 0,
       "hitRate": 0.6875,
       "count3": 31,
       "count4": 13,
@@ -83,7 +83,7 @@
       "grIII": 56,
       "bns": 10,
       "puch": 142,
-      "skutBonus": 1,
+      "skutBonus": 0,
       "hitRate": 0.625,
       "count3": 32,
       "count4": 12,
@@ -119,7 +119,7 @@
       "grIII": 55,
       "bns": 4,
       "puch": 144,
-      "skutBonus": 2,
+      "skutBonus": 0,
       "hitRate": 0.6666666666666666,
       "count3": 41,
       "count4": 12,
@@ -1280,7 +1280,7 @@
         "grIII": 56,
         "bns": 10,
         "puch": 142,
-        "skutBonus": 1,
+        "skutBonus": 0,
         "hitRate": 0.5833333333333334,
         "count3": 24,
         "count4": 9,
@@ -1505,7 +1505,7 @@
         "grIII": 66,
         "bns": 15,
         "puch": 164,
-        "skutBonus": 3,
+        "skutBonus": 0,
         "hitRate": 0.6388888888888888,
         "count3": 24,
         "count4": 9,
@@ -1556,7 +1556,7 @@
         "grIII": 55,
         "bns": 4,
         "puch": 144,
-        "skutBonus": 2,
+        "skutBonus": 0,
         "hitRate": 0.6111111111111112,
         "count3": 30,
         "count4": 6,
@@ -40626,6 +40626,1613 @@
                   "away": 1
                 },
                 "points": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "round": "1/4",
+        "matches": [
+          {
+            "no": 25,
+            "home": "Francja",
+            "away": "Maroko",
+            "kickoff": "czwartek, 9 lip godz. 22.00",
+            "result": null,
+            "predictions": {
+              "Dario": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Wojtek": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KamUla": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "MagdaS": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KasiaJ": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KrystianM": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "PiotreG": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Prozped": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Artur": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Sokółka": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KasiaK": {
+                "pick": null,
+                "points": null
+              },
+              "Seweryn": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "DarekL": {
+                "pick": null,
+                "points": null
+              },
+              "KrzysztoW": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Magiera": {
+                "pick": {
+                  "home": 0,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Henryk": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "PPP": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Żaklina": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Cezary": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Dziobak": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MateuszKn": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Przemek": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Borys": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Turbo-Ryżu": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MagdaP": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Małgorzata": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KamilF": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "MichałCz": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Talvik": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Rafał": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MarekS": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Karolina": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "AndrzejO": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "PiotreM": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "DarekJell": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MaciejM": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KSZ": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "MarekP": {
+                "pick": {
+                  "home": 0,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KleoPatra": {
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "MichałeK": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Witek": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "RobertLat": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "DeDe": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Cypryjka": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Tabus": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "AniaS": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Pimozid": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KrzysztoWś": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Ruslan": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "PiotreK": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KaBed": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Mirella": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Maria": {
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "Sławek": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "PawełSt": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KrzysztofeR": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              }
+            }
+          },
+          {
+            "no": 26,
+            "home": "Hiszpania",
+            "away": "Belgia",
+            "kickoff": "piątek, 10 lip godz. 21.00",
+            "result": null,
+            "predictions": {
+              "Dario": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Wojtek": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "KamUla": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "MagdaS": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KasiaJ": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KrystianM": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "PiotreG": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Prozped": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Artur": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Sokółka": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KasiaK": {
+                "pick": null,
+                "points": null
+              },
+              "Seweryn": {
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "DarekL": {
+                "pick": null,
+                "points": null
+              },
+              "KrzysztoW": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Magiera": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Henryk": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "PPP": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
+                "points": null
+              },
+              "Żaklina": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Cezary": {
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "Dziobak": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MateuszKn": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Przemek": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Borys": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Turbo-Ryżu": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MagdaP": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Małgorzata": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "KamilF": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MichałCz": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Talvik": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Rafał": {
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "home"
+                },
+                "points": null
+              },
+              "MarekS": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Karolina": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "AndrzejO": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "PiotreM": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "DarekJell": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "MaciejM": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KSZ": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "MarekP": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "KleoPatra": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "MichałeK": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Witek": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "RobertLat": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "DeDe": {
+                "pick": {
+                  "home": 2,
+                  "away": 3
+                },
+                "points": null
+              },
+              "Cypryjka": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Tabus": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "AniaS": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Pimozid": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "KrzysztoWś": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Ruslan": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "PiotreK": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KaBed": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Mirella": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Maria": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Sławek": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "PawełSt": {
+                "pick": {
+                  "home": 4,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KrzysztofeR": {
+                "pick": {
+                  "home": 0,
+                  "away": 1
+                },
+                "points": null
+              }
+            }
+          },
+          {
+            "no": 27,
+            "home": "Norwegia",
+            "away": "Anglia",
+            "kickoff": "sobota, 11 lip godz. 23.00",
+            "result": null,
+            "predictions": {
+              "Dario": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
+                "points": null
+              },
+              "Wojtek": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KamUla": {
+                "pick": {
+                  "home": 1,
+                  "away": 3
+                },
+                "points": null
+              },
+              "MagdaS": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KasiaJ": {
+                "pick": {
+                  "home": 2,
+                  "away": 3
+                },
+                "points": null
+              },
+              "KrystianM": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "PiotreG": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Prozped": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Artur": {
+                "pick": {
+                  "home": 0,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Sokółka": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
+                "points": null
+              },
+              "KasiaK": {
+                "pick": null,
+                "points": null
+              },
+              "Seweryn": {
+                "pick": {
+                  "home": 1,
+                  "away": 3
+                },
+                "points": null
+              },
+              "DarekL": {
+                "pick": null,
+                "points": null
+              },
+              "KrzysztoW": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Magiera": {
+                "pick": {
+                  "home": 0,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Henryk": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "PPP": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
+                "points": null
+              },
+              "Żaklina": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Cezary": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Dziobak": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MateuszKn": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Przemek": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Borys": {
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "Turbo-Ryżu": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "MagdaP": {
+                "pick": {
+                  "home": 0,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Małgorzata": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KamilF": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MichałCz": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Talvik": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Rafał": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MarekS": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "Karolina": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "AndrzejO": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "PiotreM": {
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "home"
+                },
+                "points": null
+              },
+              "DarekJell": {
+                "pick": {
+                  "home": 2,
+                  "away": 3
+                },
+                "points": null
+              },
+              "MaciejM": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "KSZ": {
+                "pick": {
+                  "home": 2,
+                  "away": 3
+                },
+                "points": null
+              },
+              "MarekP": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
+                "points": null
+              },
+              "KleoPatra": {
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "home"
+                },
+                "points": null
+              },
+              "MichałeK": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Witek": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "home"
+                },
+                "points": null
+              },
+              "RobertLat": {
+                "pick": {
+                  "home": 2,
+                  "away": 2,
+                  "pk": "home"
+                },
+                "points": null
+              },
+              "DeDe": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Cypryjka": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Tabus": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "AniaS": {
+                "pick": {
+                  "home": 0,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Pimozid": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KrzysztoWś": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "Ruslan": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "PiotreK": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "KaBed": {
+                "pick": {
+                  "home": 2,
+                  "away": 3
+                },
+                "points": null
+              },
+              "Mirella": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Maria": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Sławek": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "PawełSt": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KrzysztofeR": {
+                "pick": {
+                  "home": 1,
+                  "away": 2
+                },
+                "points": null
+              }
+            }
+          },
+          {
+            "no": 28,
+            "home": "Argentyna",
+            "away": "Szwajcaria",
+            "kickoff": "niedziela, 12 lip godz. 03.00",
+            "result": null,
+            "predictions": {
+              "Dario": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Wojtek": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "KamUla": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "MagdaS": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "KasiaJ": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KrystianM": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "PiotreG": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Prozped": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "Artur": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Sokółka": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KasiaK": {
+                "pick": null,
+                "points": null
+              },
+              "Seweryn": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "DarekL": {
+                "pick": null,
+                "points": null
+              },
+              "KrzysztoW": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Magiera": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "Henryk": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "PPP": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Żaklina": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Cezary": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Dziobak": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MateuszKn": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Przemek": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Borys": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Turbo-Ryżu": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "MagdaP": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Małgorzata": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KamilF": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MichałCz": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Talvik": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Rafał": {
+                "pick": {
+                  "home": 3,
+                  "away": 0
+                },
+                "points": null
+              },
+              "MarekS": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Karolina": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "AndrzejO": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "PiotreM": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "DarekJell": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MaciejM": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KSZ": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MarekP": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "KleoPatra": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "MichałeK": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Witek": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "RobertLat": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "DeDe": {
+                "pick": {
+                  "home": 0,
+                  "away": 0,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "Cypryjka": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Tabus": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "AniaS": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Pimozid": {
+                "pick": {
+                  "home": 3,
+                  "away": 2
+                },
+                "points": null
+              },
+              "KrzysztoWś": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Ruslan": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "PiotreK": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "KaBed": {
+                "pick": {
+                  "home": 1,
+                  "away": 0
+                },
+                "points": null
+              },
+              "Mirella": {
+                "pick": {
+                  "home": 2,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Maria": {
+                "pick": {
+                  "home": 3,
+                  "away": 1
+                },
+                "points": null
+              },
+              "Sławek": {
+                "pick": {
+                  "home": 2,
+                  "away": 0
+                },
+                "points": null
+              },
+              "PawełSt": {
+                "pick": {
+                  "home": 1,
+                  "away": 1,
+                  "pk": "away"
+                },
+                "points": null
+              },
+              "KrzysztofeR": {
+                "pick": {
+                  "home": 3,
+                  "away": 0
+                },
+                "points": null
               }
             }
           }

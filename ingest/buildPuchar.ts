@@ -9,7 +9,7 @@ import { parseBazaPuchar, type PucharRound } from './k1/parseBazaPuchar';
 import type { Participant } from './k1/parseGrup1';
 import type { PucharPick } from '../engine/types';
 
-const BAZA = 'Baza puch v5 (2026.07.05).xlsx';
+const BAZA = 'Baza puch v6 2026.07.09.xlsx';
 const SHEET = 't2';
 const ROSTER = 'data/k1/roster.json';
 const OUT = 'data/k1/puchar.json';
@@ -18,6 +18,7 @@ const OUT = 'data/k1/puchar.json';
 const ROUNDS = [
   { round: '1/16', matches: { from: 1, to: 16 }, expected: 16 },
   { round: '1/8', matches: { from: 17, to: 24 }, expected: 8 },
+  { round: '1/4', matches: { from: 25, to: 28 }, expected: 4 },
 ] as const;
 
 // Pisownia nicka w bazie → kanoniczny nick z rosteru (te same aliasy co tury 1–3).
@@ -64,6 +65,11 @@ const ET_SCHEDULE: Record<number, { m: number; day: number; h: number; min: numb
   22: { m: 7, day: 6, h: 20, min: 0 }, // USA-Belgia
   23: { m: 7, day: 7, h: 12, min: 0 }, // Argentyna-Egipt
   24: { m: 7, day: 7, h: 16, min: 0 }, // Szwajcaria-Kolumbia
+  // 1/4 (ćwierćfinały, terminarz FIFA/Yahoo 2026-07-09; godziny ET):
+  25: { m: 7, day: 9, h: 16, min: 0 }, // Francja-Maroko (czw 9 lip 16:00 ET → 22:00 PL)
+  26: { m: 7, day: 10, h: 15, min: 0 }, // Hiszpania-Belgia (pt 10 lip 15:00 ET → 21:00 PL)
+  27: { m: 7, day: 11, h: 17, min: 0 }, // Norwegia-Anglia (sob 11 lip 17:00 ET → 23:00 PL)
+  28: { m: 7, day: 11, h: 21, min: 0 }, // Argentyna-Szwajcaria (sob 11 lip 21:00 ET → niedz 12 lip 03:00 PL)
 };
 
 const DOW = ['niedziela', 'poniedz.', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
