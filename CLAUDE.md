@@ -169,9 +169,21 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   (brak TYLKO meczu 17 Kanada-Maroko, już rozegrany → 0 pkt za m.17): Żaklina, Małgorzata, KamilF,
   Pimozid, KrzysztofeR. Bez żadnego typu 1/8: KasiaK, DarekL, Turbo-Ryżu. Diagnostyka:
   `scripts/diffBazaV4V5.ts`. Bramka: 204 testy.
+  ✅ Runda 1/4 WDROŻONA (2026-07-09, commit 74e3309): `BAZA` → „Baza puch v6 2026.07.09.xlsx"
+  (czysty nadzbiór v5), `ROUNDS` + mecze 25–28 (Francja-Maroko, Hiszpania-Belgia, Norwegia-Anglia,
+  Argentyna-Szwajcaria), terminarz ET→PL. 54/56 z typami (bez typu: KasiaK, DarekL).
+  `ROUND_TO_STAGE` miał już 1/4. Nowość: `CORRECTIONS` w `buildPuchar` — organizator wpisał
+  błędny typ do bazy (Magiera mecz 25 odwrotnie) → świadome nadpisanie, samonaprawcze przy
+  nowszej bazie.
+  ✅ Runda 1/2 WDROŻONA (2026-07-14, commit 2fef086): `BAZA` → „Baza puch v7 2026.07.14.xlsx".
+  UWAGA: od v7 arkusz nazywa się `typy` (wcześniej `t2`) — stała `SHEET` w `buildPuchar.ts`.
+  v7 = czysty nadzbiór v6 (diff puchar.json: same insercje). Mecze 29–30: Francja-Hiszpania
+  (wt 14 lip 21:00 PL), Anglia-Argentyna (śr 15 lip 21:00 PL) — terminy z football-data.org
+  (workflow `spike-puchar.yml` zrzuca utcDate; 19:00Z = 15:00 ET). 1/2: 54/56 z typami,
+  18 krzyżyków (bez typu: KasiaK, DarekL). Bramka: 204 testy. Finał wg API: 2026-07-19 19:00Z
+  (21:00 PL) — przy reingest finału sprawdzić numer meczu w bazie i dodać wpis w `ROUNDS`.
 - ⏳ Następne: PWA (odłożone — patrz rozmowy), ingest + render Konkursu 2 (czekamy na typy K2
-  od organizatora); przy reingest rundy 1/4+ sprawdzić etykietę rundy w `ROUND_TO_STAGE`
-  (`ingest/scores/matchPucharScores.ts` + lustro w `staleCheck.ts`).
+  od organizatora); reingest finału po bazie v8 (etykieta `finał` jest już w `ROUND_TO_STAGE`).
 
 ## Architektura (ustalona)
 
