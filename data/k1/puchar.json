@@ -6754,6 +6754,583 @@
           }
         }
       }
+    },
+    {
+      "round": "1/2",
+      "fixtures": [
+        {
+          "no": 29,
+          "home": "Francja",
+          "away": "Hiszpania",
+          "kickoff": "wtorek, 14 lip godz. 21.00"
+        },
+        {
+          "no": 30,
+          "home": "Anglia",
+          "away": "Argentyna",
+          "kickoff": "środa, 15 lip godz. 21.00"
+        }
+      ],
+      "predictions": {
+        "AndrzejO": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "AniaS": {
+          "29": {
+            "home": 3,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "Artur": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "Borys": {
+          "29": {
+            "home": 3,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 2,
+            "pk": "home"
+          }
+        },
+        "Cezary": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "Cypryjka": {
+          "29": {
+            "home": 2,
+            "away": 4
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "DarekJell": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 2,
+            "pk": "away"
+          }
+        },
+        "Dario": {
+          "29": {
+            "home": 1,
+            "away": 1,
+            "pk": "away"
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "DeDe": {
+          "29": {
+            "home": 2,
+            "away": 2,
+            "pk": "home"
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "Dziobak": {
+          "29": {
+            "home": 2,
+            "away": 3
+          },
+          "30": {
+            "home": 1,
+            "away": 3
+          }
+        },
+        "Henryk": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "KaBed": {
+          "29": {
+            "home": 1,
+            "away": 0
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "KamilF": {
+          "29": {
+            "home": 1,
+            "away": 1,
+            "pk": "away"
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "KamUla": {
+          "29": {
+            "home": 3,
+            "away": 2
+          },
+          "30": {
+            "home": 3,
+            "away": 2
+          }
+        },
+        "Karolina": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "KasiaJ": {
+          "29": {
+            "home": 3,
+            "away": 2
+          },
+          "30": {
+            "home": 3,
+            "away": 2
+          }
+        },
+        "KleoPatra": {
+          "29": {
+            "home": 3,
+            "away": 2
+          },
+          "30": {
+            "home": 3,
+            "away": 2
+          }
+        },
+        "KrystianM": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "KrzysztofeR": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 1,
+            "away": 0
+          }
+        },
+        "KrzysztoW": {
+          "29": {
+            "home": 3,
+            "away": 2
+          },
+          "30": {
+            "home": 1,
+            "away": 3
+          }
+        },
+        "KrzysztoWś": {
+          "29": {
+            "home": 3,
+            "away": 2
+          },
+          "30": {
+            "home": 3,
+            "away": 1
+          }
+        },
+        "KSZ": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 2,
+            "pk": "home"
+          }
+        },
+        "MaciejM": {
+          "29": {
+            "home": 3,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 2,
+            "pk": "home"
+          }
+        },
+        "MagdaP": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "MagdaS": {
+          "29": {
+            "home": 2,
+            "away": 3
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "Magiera": {
+          "29": {
+            "home": 1,
+            "away": 2
+          },
+          "30": {
+            "home": 0,
+            "away": 1
+          }
+        },
+        "Małgorzata": {
+          "29": {
+            "home": 1,
+            "away": 0
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "MarekP": {
+          "29": {
+            "home": 2,
+            "away": 3
+          },
+          "30": {
+            "home": 2,
+            "away": 2,
+            "pk": "away"
+          }
+        },
+        "MarekS": {
+          "29": {
+            "home": 3,
+            "away": 2
+          },
+          "30": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          }
+        },
+        "Maria": {
+          "29": {
+            "home": 2,
+            "away": 3
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "MateuszKn": {
+          "29": {
+            "home": 3,
+            "away": 1
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "MichałCz": {
+          "29": {
+            "home": 2,
+            "away": 3
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "MichałeK": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "Mirella": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "PawełSt": {
+          "29": {
+            "home": 3,
+            "away": 1
+          },
+          "30": {
+            "home": 1,
+            "away": 1,
+            "pk": "away"
+          }
+        },
+        "Pimozid": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 0,
+            "away": 1
+          }
+        },
+        "PiotreG": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 2,
+            "pk": "away"
+          }
+        },
+        "PiotreK": {
+          "29": {
+            "home": 1,
+            "away": 1,
+            "pk": "away"
+          },
+          "30": {
+            "home": 3,
+            "away": 2
+          }
+        },
+        "PiotreM": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          }
+        },
+        "PPP": {
+          "29": {
+            "home": 1,
+            "away": 2
+          },
+          "30": {
+            "home": 2,
+            "away": 2,
+            "pk": "away"
+          }
+        },
+        "Prozped": {
+          "29": {
+            "home": 1,
+            "away": 1,
+            "pk": "away"
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "Przemek": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "Rafał": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "RobertLat": {
+          "29": {
+            "home": 1,
+            "away": 2
+          },
+          "30": {
+            "home": 1,
+            "away": 3
+          }
+        },
+        "Ruslan": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "Seweryn": {
+          "29": {
+            "home": 2,
+            "away": 2,
+            "pk": "away"
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "Sławek": {
+          "29": {
+            "home": 1,
+            "away": 2
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "Sokółka": {
+          "29": {
+            "home": 3,
+            "away": 2
+          },
+          "30": {
+            "home": 2,
+            "away": 3
+          }
+        },
+        "Tabus": {
+          "29": {
+            "home": 3,
+            "away": 2
+          },
+          "30": {
+            "home": 2,
+            "away": 4
+          }
+        },
+        "Talvik": {
+          "29": {
+            "home": 1,
+            "away": 2
+          },
+          "30": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          }
+        },
+        "Turbo-Ryżu": {
+          "29": {
+            "home": 3,
+            "away": 2
+          },
+          "30": {
+            "home": 2,
+            "away": 1
+          }
+        },
+        "Witek": {
+          "29": {
+            "home": 2,
+            "away": 3
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "Wojtek": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 1,
+            "away": 2
+          }
+        },
+        "Żaklina": {
+          "29": {
+            "home": 2,
+            "away": 1
+          },
+          "30": {
+            "home": 1,
+            "away": 1,
+            "pk": "home"
+          }
+        }
+      }
     }
   ]
 }

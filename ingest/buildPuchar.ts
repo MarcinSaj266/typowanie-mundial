@@ -1,7 +1,7 @@
 // CLI ingestu typów pucharowych (Konkurs 1). Źródło: płaska baza organizatora
-// "Baza puch vN.xlsx" (arkusz 't2'). Pipeline:
-//   Baza puch v5 (2026.07.05).xlsx + roster.json → parseBazaPuchar × runda → data/k1/puchar.json
-// Baza jest WIELORUNDOWA: mecze 1–16 = 1/16, 17–24 = 1/8, 25–32 = przyszłe rundy (puste pary
+// "Baza puch vN.xlsx" (arkusz 'typy'; do v6 włącznie nazywał się 't2'). Pipeline:
+//   Baza puch v7 2026.07.14.xlsx + roster.json → parseBazaPuchar × runda → data/k1/puchar.json
+// Baza jest WIELORUNDOWA: mecze 1–16 = 1/16, 17–24 = 1/8, 25–28 = 1/4, 29–30 = 1/2 (puste pary
 // → parser je pomija). Tolerancyjny: typy spływają etapami. Reingest nowszej bazy nadpisuje plik.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { openXlsx } from './xlsx/workbook';
@@ -9,8 +9,8 @@ import { parseBazaPuchar, type PucharRound } from './k1/parseBazaPuchar';
 import type { Participant } from './k1/parseGrup1';
 import type { PucharPick } from '../engine/types';
 
-const BAZA = 'Baza puch v6 2026.07.09.xlsx';
-const SHEET = 't2';
+const BAZA = 'Baza puch v7 2026.07.14.xlsx';
+const SHEET = 'typy';
 const ROSTER = 'data/k1/roster.json';
 const OUT = 'data/k1/puchar.json';
 
@@ -19,6 +19,7 @@ const ROUNDS = [
   { round: '1/16', matches: { from: 1, to: 16 }, expected: 16 },
   { round: '1/8', matches: { from: 17, to: 24 }, expected: 8 },
   { round: '1/4', matches: { from: 25, to: 28 }, expected: 4 },
+  { round: '1/2', matches: { from: 29, to: 30 }, expected: 2 },
 ] as const;
 
 // Pisownia nicka w bazie → kanoniczny nick z rosteru (te same aliasy co tury 1–3).
@@ -77,6 +78,9 @@ const ET_SCHEDULE: Record<number, { m: number; day: number; h: number; min: numb
   26: { m: 7, day: 10, h: 15, min: 0 }, // Hiszpania-Belgia (pt 10 lip 15:00 ET → 21:00 PL)
   27: { m: 7, day: 11, h: 17, min: 0 }, // Norwegia-Anglia (sob 11 lip 17:00 ET → 23:00 PL)
   28: { m: 7, day: 11, h: 21, min: 0 }, // Argentyna-Szwajcaria (sob 11 lip 21:00 ET → niedz 12 lip 03:00 PL)
+  // 1/2 (półfinały, terminy z football-data.org 2026-07-14: utcDate 19:00Z = 15:00 ET):
+  29: { m: 7, day: 14, h: 15, min: 0 }, // Francja-Hiszpania (wt 14 lip 15:00 ET → 21:00 PL)
+  30: { m: 7, day: 15, h: 15, min: 0 }, // Anglia-Argentyna (śr 15 lip 15:00 ET → 21:00 PL)
 };
 
 const DOW = ['niedziela', 'poniedz.', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
