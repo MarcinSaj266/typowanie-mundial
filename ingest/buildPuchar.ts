@@ -42,6 +42,7 @@ const MANUAL_PICKS: { player: string; match: number; pick: PucharPick; note: str
 // Samonaprawcze: gdy nowsza baza już ma poprawny typ → no-op (log), inaczej → nadpisanie (log).
 const CORRECTIONS: { player: string; match: number; pick: PucharPick; note: string }[] = [
   { player: 'Magiera', match: 25, pick: { home: 1, away: 0 }, note: 'korekta 2026-07-09: organizator wpisał odwrotnie; realny typ Francja-Maroko 1:0' },
+  { player: 'Mirella', match: 30, pick: { home: 1, away: 2 }, note: 'zmiana typu 2026-07-15 przed meczem: Anglia-Argentyna 2:1 → 1:2 (2-1 dla Argentyny)' },
 ];
 
 // Terminarz pucharowy MŚ 2026 (1/16: ESPN/worldcupwiki; 1/8: beIN/Al Jazeera, 2026-07-04),
