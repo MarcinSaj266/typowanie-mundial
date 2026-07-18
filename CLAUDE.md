@@ -182,8 +182,15 @@ Dino Dini's Goal) z dźwiękiem i intro. **Najpierw jednak logika i dane, potem 
   (workflow `spike-puchar.yml` zrzuca utcDate; 19:00Z = 15:00 ET). 1/2: 54/56 z typami,
   18 krzyżyków (bez typu: KasiaK, DarekL). Bramka: 204 testy. Finał wg API: 2026-07-19 19:00Z
   (21:00 PL) — przy reingest finału sprawdzić numer meczu w bazie i dodać wpis w `ROUNDS`.
+  ✅ Mecz o 3. MIEJSCE + FINAŁ WDROŻONE (2026-07-18, commit c3c0952): `BAZA` → „Baza puch v8
+  2026.07.18.xlsx" (czysty nadzbiór v7 — diff puchar.json: same insercje). `ROUNDS` + rundy
+  `3. miejsce` (mecz 31 Francja-Anglia, sob 18 lip 23:00 PL, 5 krzyżyków) i `finał` (mecz 32
+  Hiszpania-Argentyna, nd 19 lip 21:00 PL, 8 krzyżyków) — etykiety zgodne z `ROUND_TO_STAGE`
+  (THIRD_PLACE/FINAL), terminy z API (spike-puchar: 21:00Z/19:00Z). Obie rundy 54/56 z typami
+  (bez typu: KasiaK, DarekL). UWAGA: KamUla ma w bazie typ finału **12:0** — podejrzana wartość
+  (możliwa literówka organizatora), zgłoszona użytkownikowi 2026-07-18. Bramka: 204 testy.
 - ⏳ Następne: PWA (odłożone — patrz rozmowy), ingest + render Konkursu 2 (czekamy na typy K2
-  od organizatora); reingest finału po bazie v8 (etykieta `finał` jest już w `ROUND_TO_STAGE`).
+  od organizatora); po finale: komplet wyników zejdzie robotem, turniej domknięty.
 
 ## Architektura (ustalona)
 
